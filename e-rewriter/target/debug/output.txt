@@ -1,1 +1,0 @@
-(concat (concat (! (* pi0 pi5)) (* (* pi0 pi1) pi3)) pi3)
