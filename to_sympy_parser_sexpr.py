@@ -1,5 +1,5 @@
 import ply.yacc as yacc
-from sympy import symbols, And, Or, Not, Xor
+from sympy import symbols, And, Or, Not, Xor, Nand, Nor, Implies, Equivalent
 from prop_lexer import PropLexer
 
 class PropParser(object):
@@ -42,7 +42,16 @@ class PropParser(object):
         
     def p_prop_concat(self, p):
         "prop : LPAREN CONCAT prop prop RPAREN"
-        p[0] = Xor(p[3], p[4])
+        # if p[3], p[4] both not start with `po`
+        if not str(p[3]).startswith("po") and not str(p[4]).startswith("po"):
+            p[0] = Xor(p[3], p[4])
+        elif str(p[3]).startswith("po") and not str(p[4]).startswith("po"):
+            p[0] = Nand(p[3], p[4])
+        elif not str(p[3]).startswith("po") and str(p[4]).startswith("po"):
+            p[0] = Nand(p[4], p[3])
+        else:
+            p[0] = Nand(p[3], p[4])
+            
 
     def p_prop_not(self, p):
         "prop : LPAREN NOT prop RPAREN"

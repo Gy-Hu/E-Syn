@@ -51,11 +51,11 @@ def sympy_to_abc_eqn_normal_bool(expr): # sympy to abc eqn s-expression
     # (((pi0 * pi1) + (!(pi0 * pi1))) & ((pi0 * pi1 * pi2 * pi3) + ((!(pi0 * pi1)) * (!(pi2 * pi3)))) & (((pi0 * pi1) + (pi2 * pi3)) * ((!(pi0 * pi1)) + (!(pi2 * pi3)))))
 
 def conver_to_sexpr(data, multiple_output = False):
-    global order
+   # global order
     if not multiple_output:
         eqn = data.split(" = ")[1].rstrip() #strip the `;` ?
     else:
-        eqn, order = concatenate_equations(data) # concatenate the equations, strip the `;` ?
+        eqn = concatenate_equations(data) # concatenate the equations, strip the `;` ?
     print("success load file")
 
     # use `sympy_to_rust_sexpr()` to convert to s-expression
@@ -66,6 +66,8 @@ def conver_to_sexpr(data, multiple_output = False):
     print("success convert to s-expression")
     with open ("test_data/sexpr_for_egg.txt", "w") as myfile: 
         myfile.write(result)
+        
+
         
 def convert_to_abc_eqn(data, multiple_output = False):
     # read the s-expression file and convert to aag
@@ -87,9 +89,22 @@ def convert_to_abc_eqn(data, multiple_output = False):
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
         components =  list(parser.parse(sexpr[0]).args)
+        global order; order = components[0]
+        components = components[1:]
+        
+        def pre(expr,lst):
+            if isinstance(expr, Symbol):
+                lst.append(str(expr).replace("po",""))
+            for arg in expr.args:
+                pre(arg,lst)
+        
+        symbol_order = []; pre(order, symbol_order)
+        
+        
         # Use OrderedDict to keep the order of components
         # components = OrderedDict((str(component), component) for component in components)
         result = [str(sympy_to_abc_eqn_normal_bool(component)) for component in components]
+        
         print("multiple output circuit parse success")
         # write a new eqn file
         with open("test_data/optimized_circuit.txt", "w") as myfile:
@@ -98,17 +113,17 @@ def convert_to_abc_eqn(data, multiple_output = False):
                 myfile.write(data[i])
             # write the new eqn
             for i in range(len(result)):
-                myfile.write(data[3+i].split(" = ")[0] + " = " + result[len(result) - 1 - i] + ";" + "\n")
+                myfile.write(data[3+i].split(" = ")[0] + " = " + result[int(symbol_order[i])] + ";" + "\n")
         
         
         
 def concatenate_equations(lines):
-    equations = [line.split('= ')[1].rstrip().strip(';') for line in lines if line.startswith('po')]  # extract the equations
-    order = [line.split('= ')[0] for line in lines if line.startswith('po')]
+    equations = [f"({line.split('= ')[0]}) & ({line.split('= ')[1].rstrip().strip(';')})" for line in lines if line.startswith('po')]  # extract the equations
+    #order = [line.split('= ')[0] for line in lines if line.startswith('po')]
     while len(equations) > 1:  # while there are more than one equation left
         equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
         del equations[1]  # remove the second equation
-    return equations[0], order  # return the single remaining equation
+    return equations[0]  # return the single remaining equation
 
 # python main function
 if __name__ == "__main__":
@@ -173,15 +188,15 @@ if __name__ == "__main__":
     
     # for original circuit
     print("\n\n------------------------------------Original circuit------------------------------------")
-    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
-    #command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
+    #command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
+    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
     # for optized circuit
     print("\n\n------------------------------------Optimized circuit------------------------------------")
-    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
-    #command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
+    #command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
+    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     '''
