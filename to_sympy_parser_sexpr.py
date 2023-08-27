@@ -64,7 +64,7 @@ class PropParser(object):
 
 
 # test string
-parser = PropParser()
-parser.build()
-result = parser.parse("(* pi2 pi3)")
-print(result)
+# parser = PropParser()
+# parser.build()
+# result = parser.parse("(* pi2 pi3)")
+# print(result)

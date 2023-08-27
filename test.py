@@ -48,12 +48,12 @@ def conver_to_sexpr(data):
     parser.build()
     result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
     print("success convert to s-expression")
-    with open ("test_data/out_test_abc_eqn_sexpr_for_egg.txt", "w") as myfile: 
+    with open ("test_data/sexpr_for_egg.txt", "w") as myfile: 
         myfile.write(result)
         
 def convert_to_abc_eqn(data):
     # read the s-expression file and convert to aag
-    with open ("test_data/out_test_abc_eqn_sexpr.txt", "r") as myfile:
+    with open ("test_data/output_from_egg.txt", "r") as myfile:
         # read line by line
         sexpr=myfile.readlines()
 
@@ -62,7 +62,7 @@ def convert_to_abc_eqn(data):
     result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
 
     # write a new eqn file
-    with open ("test_data/out_test_abc_eqn_new.txt", "w") as myfile: 
+    with open ("test_data/optimized_circuit.txt", "w") as myfile: 
         # write the first 3 lines of the original file - from data[0] to data[2]
         for i in range(3):
             myfile.write(data[i])
@@ -74,12 +74,13 @@ if __name__ == "__main__":
     # -------------------------------------------------------------------------------------------------
 
     # load file to convert to s-expression (test)
-    with open ("test_data/out_test_abc_eqn.txt", "r") as myfile:
+    with open ("test_data/original_circuit.txt", "r") as myfile:
         # read line by line
         data=myfile.readlines()
     
     # if data[2] is 'OUTORDER = po0;\n':
     if data[2].split(" = ")[1].rstrip() == "po0;":
+        # one output circuit
         '''
         #############################################################################
         #
@@ -97,7 +98,7 @@ if __name__ == "__main__":
         '''
             
         # run egg
-        command = "e-rewriter/target/debug/e-rewriter -i test_data/out_test_abc_eqn_sexpr_for_egg.txt -o test_data/out_test_abc_eqn_sexpr.txt"
+        command = "e-rewriter/target/debug/e-rewriter test_data/sexpr_for_egg.txt test_data/output_from_egg.txt"
         os.system(command)
         
         '''
@@ -117,13 +118,17 @@ if __name__ == "__main__":
         #############################################################################   
         '''
         
-        # for optized circuit
-        print("------------------------------------Optimized circuit------------------------------------")
-        command = "abc -c \"read_eqn test_data/out_test_abc_eqn_new.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
-        os.system(command)
         # for original circuit
-        print("------------------------------------Original circuit------------------------------------")
-        command = "abc -c \"read_eqn test_data/out_test_abc_eqn.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
+        print("\n\n------------------------------------Original circuit------------------------------------")
+        command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
         os.system(command)
+        print("----------------------------------------------------------------------------------------")
+        
+        # for optized circuit
+        print("\n\n------------------------------------Optimized circuit------------------------------------")
+        command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
+        os.system(command)
+        print("----------------------------------------------------------------------------------------")
+        
         
         
