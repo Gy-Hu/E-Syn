@@ -1,5 +1,7 @@
 
-from sympy import symbols, sympify, simplify, Symbol, Eq
+from sympy import symbols, sympify, simplify, Symbol, Eq, simplify_logic
+from sympy.logic.boolalg import Equivalent
+from sympy.logic.inference import satisfiable
 from sympy.logic import simplify_logic
 from sympy.logic.boolalg import And, Not, Or, Xor
 from sympy import sqrt, simplify, count_ops, oo, S
@@ -11,10 +13,13 @@ from tqdm import tqdm
 
 def check_equal(FORMULA_LIST, components):
     result = []
-    for i in tqdm(range(len(FORMULA_LIST)), desc='Processing Formulas'):
+    pbar = tqdm(total=len(FORMULA_LIST)*len(components), desc='Processing Formulas')
+    for i in range(len(FORMULA_LIST)):
         for j in range(len(components)):
-            if FORMULA_LIST[i].equals(components[j]):
+            if not satisfiable(Not(Equivalent(FORMULA_LIST[i], components[j]))):
                 result.append((i,j))
+            pbar.update(1)
+    pbar.close()
     return result
 
 
