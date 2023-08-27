@@ -57,9 +57,12 @@ def conver_to_sexpr(data, multiple_output = False):
     else:
         eqn = concatenate_equations(data) # concatenate the equations, strip the `;` ?
     print("success load file")
+    
+
 
     # use `sympy_to_rust_sexpr()` to convert to s-expression
     # parse the string to sympy
+    
     parser = to_sympy_parser.PropParser()
     parser.build()
     result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
@@ -119,22 +122,31 @@ def convert_to_abc_eqn(data, multiple_output = False):
                 myfile.write(data[i])
             # write the new eqn
             for i in range(len(result)):
-                myfile.write(data[3+i].split(" = ")[0] + " = " + result[int(symbol_order[i])] + ";" + "\n")
+                #myfile.write(data[3+i].split(" = ")[0] + " = " + result[int(symbol_order[i])] + ";" + "\n")
+                myfile.write(data[3+i].split(" = ")[0] + " = " + result[i] + ";" + "\n")
         
         
         
 def concatenate_equations(lines):
     equations = [f"({line.split('= ')[0]}) & ({line.split('= ')[1].rstrip().strip(';')})" for line in lines if line.startswith('po')]  # extract the equations
     #order = [line.split('= ')[0] for line in lines if line.startswith('po')]
+    global output_formula_before_optimize
+    
+    
     while len(equations) > 1:  # while there are more than one equation left
         equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
         del equations[1]  # remove the second equation
-    return equations[0]  # return the single remaining equation
+    return equations[0], formula_before_optimized  # return the single remaining equation
 
 # python main function
 if __name__ == "__main__":
     # -------------------------------------------------------------------------------------------------
     multiple_output_flag = False
+    
+    # process the raw circuit file
+    command = "./a.out test_data/raw_circuit.txt test_data/original_circuit.txt"
+    os.system(command)
+    
     # load file to convert to s-expression (test)
     with open ("test_data/original_circuit.txt", "r") as myfile:
         # read line by line
@@ -214,5 +226,25 @@ if __name__ == "__main__":
     #############################################################################
     '''
     # for original circuit
-    command = "abc -c \"cec test_data/original_circuit.aig test_data/optimized_circuit.aig\""
+    print("\n\n------------------------------------Equivalence checking------------------------------------")
+    verify_command = "abc -c \"cec test_data/original_circuit.aig test_data/optimized_circuit.aig\""
+    os.system(verify_command)
+    print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
+    
+    '''
+    #############################################################################
+    #
+    #               Additional quivalence checking between original and optimized circuit
+    #
+    #############################################################################
+    '''
+    # additional test
+    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit.aig\""
     os.system(command)
+    
+    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
+    os.system(command)
+    
+    print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
+    os.system(verify_command)
+    print("-----------------------------------------Finish Equivalence checking-----------------------------------------")

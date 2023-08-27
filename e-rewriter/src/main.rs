@@ -106,6 +106,7 @@ fn simplify(s: &str) -> String {
     let runner = Runner::default().with_explanations_enabled().with_expr(&expr).run(&make_rules());
     let root = runner.roots[0];
     let extractor = Extractor::new(&runner.egraph, AstDepth);
+    //let extractor = Extractor::new(&runner.egraph, AstSize);
     let (best_cost, best) = extractor.find_best(root);
     let mut egraphout =EGraph::new(ConstantFold {});
     egraphout.add_expr(&best);

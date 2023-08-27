@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     string outputFileName = argv[2];
     ifstream inputFile(inputFileName);
     if (!inputFile.is_open()) {
-        cerr << "无法打开输入文件" << endl;
+        cerr << "Unable to open input file" << endl;
         return 1;
     }
     map<string, string> variableExpressions;
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
     ofstream outputFile(outputFileName);
     ifstream inputFile1(inputFileName);
     if (!inputFile1.is_open()) {
-        cerr << "无法打开输入文件" << endl;
+        cerr << "Unable to open input file" << endl;
         return 1;
     }
     
