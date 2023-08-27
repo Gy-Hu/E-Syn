@@ -1,2 +1,3 @@
 e-rewriter/target
 *.ipynb
+__pycache__
