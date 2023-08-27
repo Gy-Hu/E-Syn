@@ -11,7 +11,7 @@ define_language! {
         "+" = Or([Id; 2]),
         "->" = Implies([Id; 2]),
         "let" = Let([Id; 2]),
-        "concat" = Concat([Id; 2]),
+        "&" = Concat([Id; 2]),
         Symbol(Symbol),
     }
 }
@@ -49,7 +49,7 @@ impl Analysis<Prop> for ConstantFold {
             )),
             Prop::Concat([a, b])=>Some((
                 x(a)? > x(b)?,
-                format!("(concat {} {})", x(a)?, x(b)?).parse().unwrap(),
+                format!("(& {} {})", x(a)?, x(b)?).parse().unwrap(),
             )),
             Prop::Symbol(_) => None,
         };
@@ -77,8 +77,8 @@ fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
         rewrite!("e"; "(+ ?a (* ?b ?c))"=> "(* (+ ?a ?b) (+ ?a ?c))"),
         rewrite!("f"; "(+ ?a ?b)"       =>        "(+ ?b ?a)"              ),
         rewrite!("r"; "(* ?a ?b)"       =>        "(* ?b ?a)"              ),
-        rewrite!("q"; "(+ ?a (! ?a))"   =>    "true"                   ) ,  
-        rewrite!("s"; "(+ ?a true)"     =>         "true"                ) ,     
+        //rewrite!("q"; "(+ ?a (! ?a))"   =>    "true"                   ) ,  
+        //rewrite!("s"; "(+ ?a true)"     =>         "true"                ) ,     
         rewrite!("g"; "(* ?a true)"     =>         "?a"                  ) ,  
         rewrite!("y"; "(-> ?a ?b)"      =>    "(-> (! ?b) (! ?a))"     ),
         rewrite!("th1"; "(+ ?x (* ?x ?y))" => "?x"),

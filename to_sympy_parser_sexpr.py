@@ -1,5 +1,5 @@
 import ply.yacc as yacc
-from sympy import symbols, And, Or, Not
+from sympy import symbols, And, Or, Not, Xor
 from prop_lexer import PropLexer
 
 class PropParser(object):
@@ -10,6 +10,7 @@ class PropParser(object):
         prop: term
             | ( * prop prop )
             | ( + prop prop )
+            | ( & prop prop )
             | ( ! prop )
     """
 
@@ -17,6 +18,7 @@ class PropParser(object):
     precedence = (
         ("left", "OR"),
         ("left", "AND"),
+        ("left", "CONCAT"),
         ("right", "NOT"),
     )
 
@@ -37,6 +39,10 @@ class PropParser(object):
     def p_prop_or(self, p):
         "prop : LPAREN OR prop prop RPAREN"
         p[0] = Or(p[3], p[4])
+        
+    def p_prop_concat(self, p):
+        "prop : LPAREN CONCAT prop prop RPAREN"
+        p[0] = Xor(p[3], p[4])
 
     def p_prop_not(self, p):
         "prop : LPAREN NOT prop RPAREN"

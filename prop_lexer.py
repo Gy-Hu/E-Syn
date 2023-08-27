@@ -1,11 +1,12 @@
 import ply.lex as lex
 
 class PropLexer(object):
-    tokens = ("AND", "OR", "NOT", "SYMBOL", "LPAREN", "RPAREN")
+    tokens = ("AND", "OR", "NOT", "CONCAT", "SYMBOL", "LPAREN", "RPAREN")
 
     # Regular expression rules for simple tokens
     t_AND = r"\*"
     t_OR = r"\+"
+    t_CONCAT = r"\&"
     t_NOT = r"!"
     t_LPAREN = r"\("
     t_RPAREN = r"\)"
