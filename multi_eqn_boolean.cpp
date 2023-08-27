@@ -3,16 +3,19 @@
 #include <map>
 #include <string>
 #include <regex>
-
 using namespace std;
-
-int main() {
-    ifstream inputFile("3.txt");
+int main(int argc, char* argv[]) {
+    if(argc != 3){
+        cerr << "Usage: " << argv[0] << " <input file> <output file>" << endl;
+        return 1;
+    }
+    string inputFileName = argv[1];
+    string outputFileName = argv[2];
+    ifstream inputFile(inputFileName);
     if (!inputFile.is_open()) {
         cerr << "无法打开输入文件" << endl;
         return 1;
     }
-
     map<string, string> variableExpressions;
     map<string, string> out_Expressions;
     string line;
@@ -30,7 +33,6 @@ int main() {
             }
         }
     }
-
     for (const auto& pair : variableExpressions) {
         cout << pair.first << "=" << pair.second << endl;
     }
@@ -49,17 +51,14 @@ int main() {
                 if (startPos == string::npos) {
                     break;  // No more "new_n" found, exit loop
                 }
-
                 size_t endPos = newExpression.find('_', startPos);
                 if (endPos == string::npos) {
                     break;  // Invalid format, exit loop
                 }
-
                 size_t secondEndPos = newExpression.find('_', endPos + 1);
                 if (secondEndPos == string::npos) {
                     break;  // Invalid format, exit loop
                 }
-
                 string variable = newExpression.substr(startPos, secondEndPos - startPos + 1) + (" ");
                 if (variableExpressions.find(variable) != variableExpressions.end()) {
                     newExpression.replace(startPos, secondEndPos - startPos + 1, "(" + variableExpressions[variable] + ")");
@@ -73,10 +72,8 @@ int main() {
         }
         newExpressions[pair.first] = newExpression; // Store the modified expression
     }
-
-    ofstream outputFile("out.txt");
-
-    ifstream inputFile1("3.txt");
+    ofstream outputFile(outputFileName);
+    ifstream inputFile1(inputFileName);
     if (!inputFile1.is_open()) {
         cerr << "无法打开输入文件" << endl;
         return 1;
@@ -87,12 +84,10 @@ int main() {
         getline(inputFile1, line);
         outputFile << line << endl;
     }
-
    // Write output expressions for each po
     for (const auto& pair : newExpressions) {
-        outputFile << pair.first << " = " << pair.second << endl;
+        outputFile << pair.first << " = " << pair.second << ";" << endl;
     }
-
     outputFile.close();
     inputFile1.close();
     return 0;

@@ -53,7 +53,7 @@ def sympy_to_abc_eqn_normal_bool(expr): # sympy to abc eqn s-expression
 def conver_to_sexpr(data, multiple_output = False):
    # global order
     if not multiple_output:
-        eqn = data.split(" = ")[1].rstrip() #strip the `;` ?
+        eqn = data.split(" = ")[1].rstrip().strip(";") #strip the `;` ?
     else:
         eqn = concatenate_equations(data) # concatenate the equations, strip the `;` ?
     print("success load file")
@@ -89,12 +89,18 @@ def convert_to_abc_eqn(data, multiple_output = False):
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
         components =  list(parser.parse(sexpr[0]).args)
-        global order; order = components[0]
-        components = components[1:]
+        global order
+        # get the key component, if str(component) start with `~(po`, then it is the key component
+        # find the key component
+        for component in components:
+            if str(component).startswith("~(po"):
+                order = component
+                break
+        components.remove(order)
         
         def pre(expr,lst):
             if isinstance(expr, Symbol):
-                lst.append(str(expr).replace("po",""))
+                if str(expr).startswith("po"): lst.append(str(expr).replace("po",""))
             for arg in expr.args:
                 pre(arg,lst)
         
@@ -188,15 +194,15 @@ if __name__ == "__main__":
     
     # for original circuit
     print("\n\n------------------------------------Original circuit------------------------------------")
-    #command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
-    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
+    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
+    #command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
     # for optized circuit
     print("\n\n------------------------------------Optimized circuit------------------------------------")
-    #command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
-    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
+    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
+    #command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     '''
