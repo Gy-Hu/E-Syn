@@ -38,47 +38,92 @@ def sympy_to_abc_eqn_normal_bool(expr): # sympy to abc eqn s-expression
     else:  # Base case, assuming it's a symbol
         return str(expr)
 
-# -------------------------------------------------------------------------------------------------
+def conver_to_sexpr(data):
+    eqn = data[3].split(" = ")[1].rstrip()
+    print("success load file")
 
-# load file to convert to s-expression (test)
-with open ("test_data/out_test_abc_eqn.txt", "r") as myfile:
-    # read line by line
-    data=myfile.readlines()
+    # use `sympy_to_rust_sexpr()` to convert to s-expression
+    # parse the string to sympy
+    parser = to_sympy_parser.PropParser()
+    parser.build()
+    result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
+    print("success convert to s-expression")
+    with open ("test_data/out_test_abc_eqn_sexpr_for_egg.txt", "w") as myfile: 
+        myfile.write(result)
+        
+def convert_to_abc_eqn(data):
+    # read the s-expression file and convert to aag
+    with open ("test_data/out_test_abc_eqn_sexpr.txt", "r") as myfile:
+        # read line by line
+        sexpr=myfile.readlines()
 
-eqn = data[3].split(" = ")[1].rstrip()
-print("success load file")
+    parser = to_sympy_parser_sexpr.PropParser()
+    parser.build()
+    result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
 
-# use `sympy_to_rust_sexpr()` to convert to s-expression
-# parse the string to sympy
-parser = to_sympy_parser.PropParser()
-parser.build()
-result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
-print("success convert to s-expression")
-with open ("test_data/out_test_abc_eqn_sexpr.txt", "w") as myfile: 
-    myfile.write(result)
+    # write a new eqn file
+    with open ("test_data/out_test_abc_eqn_new.txt", "w") as myfile: 
+        # write the first 3 lines of the original file - from data[0] to data[2]
+        for i in range(3):
+            myfile.write(data[i])
+        # write the new eqn
+        myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
+
+# python main function
+if __name__ == "__main__":
+    # -------------------------------------------------------------------------------------------------
+
+    # load file to convert to s-expression (test)
+    with open ("test_data/out_test_abc_eqn.txt", "r") as myfile:
+        # read line by line
+        data=myfile.readlines()
     
-'''
-#############################################################################
-#
-#                     Using egg to optimize the circuit .... 
-#
-#############################################################################
-'''    
-
-
-# read the s-expression file and convert to aag
-with open ("test_data/out_test_abc_eqn_sexpr.txt", "r") as myfile:
-    # read line by line
-    sexpr=myfile.readlines()
-
-parser = to_sympy_parser_sexpr.PropParser()
-parser.build()
-result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
-
-# write a new eqn file
-with open ("test_data/out_test_abc_eqn_new.txt", "w") as myfile: 
-    # write the first 3 lines of the original file - from data[0] to data[2]
-    for i in range(3):
-        myfile.write(data[i])
-    # write the new eqn
-    myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
+    # if data[2] is 'OUTORDER = po0;\n':
+    if data[2].split(" = ")[1].rstrip() == "po0;":
+        '''
+        #############################################################################
+        #
+        #                    Pre-processing the circuit for egg ....
+        #
+        #############################################################################
+        '''
+        conver_to_sexpr(data)
+        '''
+        #############################################################################
+        #
+        #                     Using egg to optimize the circuit .... 
+        #
+        #############################################################################
+        '''
+            
+        # run egg
+        command = "e-rewriter/target/debug/e-rewriter -i test_data/out_test_abc_eqn_sexpr_for_egg.txt -o test_data/out_test_abc_eqn_sexpr.txt"
+        os.system(command)
+        
+        '''
+        #############################################################################
+        #
+        #                  Post-processing the circuit for abc .... 
+        #
+        #############################################################################
+        '''
+        convert_to_abc_eqn(data)
+        
+        '''
+        #############################################################################
+        #
+        #                  Using abc to optimize/test the circuit ....
+        #   
+        #############################################################################   
+        '''
+        
+        # for optized circuit
+        print("------------------------------------Optimized circuit------------------------------------")
+        command = "abc -c \"read_eqn test_data/out_test_abc_eqn_new.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
+        os.system(command)
+        # for original circuit
+        print("------------------------------------Original circuit------------------------------------")
+        command = "abc -c \"read_eqn test_data/out_test_abc_eqn.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
+        os.system(command)
+        
+        
