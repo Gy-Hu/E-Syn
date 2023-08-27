@@ -1,12 +1,23 @@
 
-from sympy import symbols, sympify, simplify, Symbol
+from sympy import symbols, sympify, simplify, Symbol, Eq
 from sympy.logic import simplify_logic
 from sympy.logic.boolalg import And, Not, Or, Xor
 from sympy import sqrt, simplify, count_ops, oo, S
 import os
 import to_sympy_parser, to_sympy_parser_sexpr
 from collections import OrderedDict
-    
+from sympy.parsing.sympy_parser import parse_expr
+from tqdm import tqdm
+
+def check_equal(FORMULA_LIST, components):
+    result = []
+    for i in tqdm(range(len(FORMULA_LIST)), desc='Processing Formulas'):
+        for j in range(len(components)):
+            if FORMULA_LIST[i].equals(components[j]):
+                result.append((i,j))
+    return result
+
+
 def sympy_to_rust_sexpr(expr_str): # sympy to rust s-expression
     def recurse(expr):
         if isinstance(expr, And):
@@ -55,10 +66,9 @@ def conver_to_sexpr(data, multiple_output = False):
     if not multiple_output:
         eqn = data.split(" = ")[1].rstrip().strip(";") #strip the `;` ?
     else:
-        eqn = concatenate_equations(data) # concatenate the equations, strip the `;` ?
+        eqn, FORMULA_LIST = concatenate_equations(data) # concatenate the equations, strip the `;` ?
     print("success load file")
     
-
 
     # use `sympy_to_rust_sexpr()` to convert to s-expression
     # parse the string to sympy
@@ -66,13 +76,19 @@ def conver_to_sexpr(data, multiple_output = False):
     parser = to_sympy_parser.PropParser()
     parser.build()
     result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
+    
     print("success convert to s-expression")
     with open ("test_data/sexpr_for_egg.txt", "w") as myfile: 
         myfile.write(result)
         
+    if multiple_output: 
+        FORMULA_LIST = [parser.parse(eqn) for eqn in FORMULA_LIST]
+        return FORMULA_LIST
+    
+        
 
         
-def convert_to_abc_eqn(data, multiple_output = False):
+def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
     # read the s-expression file and convert to aag
     with open ("test_data/output_from_egg.txt", "r") as myfile:
         # read line by line
@@ -114,6 +130,9 @@ def convert_to_abc_eqn(data, multiple_output = False):
         # components = OrderedDict((str(component), component) for component in components)
         result = [str(sympy_to_abc_eqn_normal_bool(component)) for component in components]
         
+        # Use the function
+        equ_check_result = check_equal(FORMULA_LIST, components)
+        
         print("multiple output circuit parse success")
         # write a new eqn file
         with open("test_data/optimized_circuit.txt", "w") as myfile:
@@ -130,16 +149,17 @@ def convert_to_abc_eqn(data, multiple_output = False):
 def concatenate_equations(lines):
     equations = [f"({line.split('= ')[0]}) & ({line.split('= ')[1].rstrip().strip(';')})" for line in lines if line.startswith('po')]  # extract the equations
     #order = [line.split('= ')[0] for line in lines if line.startswith('po')]
-    global output_formula_before_optimize
     
+    FORMULA_LIST = [line.split('= ')[1].rstrip().strip(';') for line in lines if line.startswith('po')]
     
     while len(equations) > 1:  # while there are more than one equation left
         equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
         del equations[1]  # remove the second equation
-    return equations[0], formula_before_optimized  # return the single remaining equation
+    return equations[0], FORMULA_LIST  # return the single remaining equation
 
 # python main function
 if __name__ == "__main__":
+    global FORMULA_LIST
     # -------------------------------------------------------------------------------------------------
     multiple_output_flag = False
     
@@ -173,7 +193,7 @@ if __name__ == "__main__":
         
         # load all the content to `convert_to_sexpr()`
         # file to input string
-        conver_to_sexpr(data, multiple_output = multiple_output_flag)    
+        FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)    
         
 
     '''
@@ -194,7 +214,7 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    convert_to_abc_eqn(data, multiple_output= multiple_output_flag)
+    convert_to_abc_eqn(data, FORMULA_LIST, multiple_output= multiple_output_flag)
     
     '''
     #############################################################################
