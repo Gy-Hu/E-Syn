@@ -10,6 +10,7 @@ import to_sympy_parser, to_sympy_parser_sexpr
 from collections import OrderedDict
 from sympy.parsing.sympy_parser import parse_expr
 from tqdm import tqdm
+import copy
 
 def check_equal(FORMULA_LIST, components):
     result = []
@@ -113,6 +114,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
         components =  list(parser.parse(sexpr[0]).args)
+        
+        '''
         global order
         # get the key component, if str(component) start with `~(po`, then it is the key component
         # find the key component
@@ -122,6 +125,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
                 break
         components.remove(order)
         
+        
         def pre(expr,lst):
             if isinstance(expr, Symbol):
                 if str(expr).startswith("po"): lst.append(str(expr).replace("po",""))
@@ -129,14 +133,14 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
                 pre(arg,lst)
         
         symbol_order = []; pre(order, symbol_order)
-        
+        '''
         
         # Use OrderedDict to keep the order of components
         # components = OrderedDict((str(component), component) for component in components)
         result = [str(sympy_to_abc_eqn_normal_bool(component)) for component in components]
         
         # Use the function
-        equ_check_result = check_equal(FORMULA_LIST, components)
+        #equ_check_result = check_equal(FORMULA_LIST, components)
         
         print("multiple output circuit parse success")
         # write a new eqn file
@@ -152,10 +156,13 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         
 def concatenate_equations(lines):
-    equations = [f"({line.split('= ')[0]}) & ({line.split('= ')[1].rstrip().strip(';')})" for line in lines if line.startswith('po')]  # extract the equations
+    #equations = [f"({line.split('= ')[0]}) & ({line.split('= ')[1].rstrip().strip(';')})" for line in lines if line.startswith('po')]  # extract the equations
+    
     #order = [line.split('= ')[0] for line in lines if line.startswith('po')]
     
     FORMULA_LIST = [line.split('= ')[1].rstrip().strip(';') for line in lines if line.startswith('po')]
+    # copy the FORMULA_LIST to equations
+    equations = copy.deepcopy(FORMULA_LIST)
     
     while len(equations) > 1:  # while there are more than one equation left
         equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
