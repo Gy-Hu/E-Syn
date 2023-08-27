@@ -3,3 +3,5 @@ e-rewriter/target
 __pycache__
 parser.out
 parsetab.py
+*.out
+hadi.txt

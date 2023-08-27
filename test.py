@@ -5,6 +5,7 @@ from sympy.logic.boolalg import And, Not, Or, Xor
 from sympy import sqrt, simplify, count_ops, oo, S
 import os
 import to_sympy_parser, to_sympy_parser_sexpr
+from collections import OrderedDict
     
 def sympy_to_rust_sexpr(expr_str): # sympy to rust s-expression
     def recurse(expr):
@@ -50,10 +51,11 @@ def sympy_to_abc_eqn_normal_bool(expr): # sympy to abc eqn s-expression
     # (((pi0 * pi1) + (!(pi0 * pi1))) & ((pi0 * pi1 * pi2 * pi3) + ((!(pi0 * pi1)) * (!(pi2 * pi3)))) & (((pi0 * pi1) + (pi2 * pi3)) * ((!(pi0 * pi1)) + (!(pi2 * pi3)))))
 
 def conver_to_sexpr(data, multiple_output = False):
+    global order
     if not multiple_output:
         eqn = data.split(" = ")[1].rstrip() #strip the `;` ?
     else:
-        eqn = concatenate_equations(data) # concatenate the equations, strip the `;` ?
+        eqn, order = concatenate_equations(data) # concatenate the equations, strip the `;` ?
     print("success load file")
 
     # use `sympy_to_rust_sexpr()` to convert to s-expression
@@ -85,6 +87,8 @@ def convert_to_abc_eqn(data, multiple_output = False):
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
         components =  list(parser.parse(sexpr[0]).args)
+        # Use OrderedDict to keep the order of components
+        # components = OrderedDict((str(component), component) for component in components)
         result = [str(sympy_to_abc_eqn_normal_bool(component)) for component in components]
         print("multiple output circuit parse success")
         # write a new eqn file
@@ -94,16 +98,17 @@ def convert_to_abc_eqn(data, multiple_output = False):
                 myfile.write(data[i])
             # write the new eqn
             for i in range(len(result)):
-                myfile.write(data[3+i].split(" = ")[0] + " = " + result[i] + ";" + "\n")
+                myfile.write(data[3+i].split(" = ")[0] + " = " + result[len(result) - 1 - i] + ";" + "\n")
         
         
         
 def concatenate_equations(lines):
     equations = [line.split('= ')[1].rstrip().strip(';') for line in lines if line.startswith('po')]  # extract the equations
+    order = [line.split('= ')[0] for line in lines if line.startswith('po')]
     while len(equations) > 1:  # while there are more than one equation left
         equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
         del equations[1]  # remove the second equation
-    return equations[0]  # return the single remaining equation
+    return equations[0], order  # return the single remaining equation
 
 # python main function
 if __name__ == "__main__":
@@ -168,12 +173,25 @@ if __name__ == "__main__":
     
     # for original circuit
     print("\n\n------------------------------------Original circuit------------------------------------")
-    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
+    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
+    #command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
     # for optized circuit
     print("\n\n------------------------------------Optimized circuit------------------------------------")
-    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime\""
+    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
+    #command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
+    '''
+    
+    #############################################################################
+    #
+    #               Equivalence checking between original and optimized circuit
+    #
+    #############################################################################
+    '''
+    # for original circuit
+    command = "abc -c \"cec test_data/original_circuit.aig test_data/optimized_circuit.aig\""
+    os.system(command)
