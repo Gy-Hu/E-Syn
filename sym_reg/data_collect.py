@@ -3,6 +3,7 @@ import sys
 import pandas as pd
 import re
 
+# The current network is not in a topo order (run "topo").?
 
 
 def run_aigfuzz(file_count):

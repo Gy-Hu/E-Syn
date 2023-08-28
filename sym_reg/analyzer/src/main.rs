@@ -29,6 +29,38 @@ fn count_operators(s: &str) -> HashMap<String, i32> {
     }
     operator_counts
 }
+
+pub struct AstSize;
+impl<L: Language> CostFunction<L> for AstSize {
+    type Cost = usize;
+    fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
+    where
+        C: FnMut(Id) -> Self::Cost,
+    {
+        enode.fold(1, |sum, id| sum.saturating_add(costs(id)))
+    }
+}
+
+pub struct AstDepth;
+impl<L: Language> CostFunction<L> for AstDepth {
+    type Cost = usize;
+    fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
+    where
+        C: FnMut(Id) -> Self::Cost,
+    {
+        1 + enode.fold(0, |max, id| max.max(costs(id)))
+    }
+}
+
+fn count_ast_size_and_depth(s: &str) -> (usize, usize) {
+    let expr: RecExpr<Prop> = s.parse().unwrap();
+    let mut ast_size = AstSize;
+    let mut ast_depth = AstDepth;
+    let size = ast_size.cost_rec(&expr);
+    let depth = ast_depth.cost_rec(&expr);
+    (size, depth)
+}
+
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
     let input_path = &args[1];
@@ -39,5 +71,9 @@ fn main() -> std::io::Result<()> {
     for (operator, count) in operator_counts {
         println!("{}: {}", operator, count);
     }
+    let (size, depth) = count_ast_size_and_depth(&contents);
+    //println!("AST size: {}, AST depth: {}", size, depth);
+    println!("ASTSize: {}", size);
+    println!("ASTDepth: {}", depth);
     Ok(())
 }
