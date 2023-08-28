@@ -6,21 +6,41 @@ class CircuitParser:
 
     def parse_circuit(self):
         with open(self.input_file_path, 'r') as f:
-            lines = f.read().split("\n")
+            lines = f.readlines()
+        
+        comments = lines[0].rstrip()
+        lines = lines[1:]
 
         output = []
+        in_order = ""
+        out_order = ""
+        current_line = ""
         for line in lines:
             line = line.strip()
-            if line.startswith("new_n"):
-                new_n_name, new_n_expr = line.split(" = ")
-                self.new_n_dict[new_n_name] = new_n_expr.strip(";")
+            current_line += " " + line
+            if line.endswith(";"):
+                if current_line.startswith(" INORDER"):
+                    in_order += current_line
+                elif current_line.startswith(" OUTORDER"):
+                    out_order += current_line
+                elif current_line.startswith(" new_n"):
+                    new_n_name, new_n_expr = current_line.split(" = ")
+                    self.new_n_dict[new_n_name.strip()] = new_n_expr.strip(";")
+                else:
+                    output.append(self.replace_new_n(current_line))
+                current_line = ""
+
+        # Add INORDER and OUTORDER lines
+        output.insert(0, in_order.strip())
+        output.insert(1, out_order.strip())
 
         for key in self.new_n_dict:
             self.new_n_dict[key] = self.replace_new_n(self.new_n_dict[key])
 
-        for line in lines:
-            if not line.startswith("new_n"):
-                output.append(self.replace_new_n(line))
+        output = [self.replace_new_n(line) for line in output]
+        
+        # insert comments in the beginning
+        output.insert(0, comments)
 
         return "\n".join(output)
 

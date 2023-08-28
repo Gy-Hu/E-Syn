@@ -180,7 +180,7 @@ if __name__ == "__main__":
     input_file_path = "test_data/raw_circuit.txt"
     output_file_path = "test_data/original_circuit.txt"
 
-    parser = CircuitParser(input_file_path, output_file_path)
+    parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
     parser.process()
     
     # load file to convert to s-expression (test)
