@@ -14,7 +14,8 @@ class PropLexer(object):
     t_ignore = " \t"
 
     def t_SYMBOL(self, t):
-        r"[a-zA-Z_?][a-zA-Z_0-9]*"
+        #r"[a-zA-Z_?][a-zA-Z_0-9]*" 
+        r"[a-zA-Z_?][a-zA-Z_0-9\[\]]*"
         t.value = str(t.value)  # Converting symbol to string
         return t
 
