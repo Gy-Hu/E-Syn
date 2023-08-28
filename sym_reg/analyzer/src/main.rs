@@ -69,7 +69,13 @@ fn main() -> std::io::Result<()> {
     input_file.read_to_string(&mut contents)?;
     let operator_counts = count_operators(&contents);
     for (operator, count) in operator_counts {
-        println!("{}: {}", operator, count);
+        //println!("{}: {}", operator, count);
+        if count > 0 {
+            println!("{}: {}", operator, count);
+        }
+        else {
+            println!("{}: 0", operator);
+        }
     }
     let (size, depth) = count_ast_size_and_depth(&contents);
     //println!("AST size: {}, AST depth: {}", size, depth);
