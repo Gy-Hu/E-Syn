@@ -140,7 +140,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         result = [str(sympy_to_abc_eqn_normal_bool(component)) for component in components]
         
         # Use the function
-        #equ_check_result = check_equal(FORMULA_LIST, components)
+        #equ_check_result = check_equal(FORMULA_LIST, components); print(len(equ_check_result)); print(equ_check_result)
         
         print("multiple output circuit parse success")
         # write a new eqn file
@@ -238,14 +238,14 @@ if __name__ == "__main__":
     
     # for original circuit
     print("\n\n------------------------------------Original circuit------------------------------------")
-    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
+    command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
     #command = "abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
     # for optized circuit
     print("\n\n------------------------------------Optimized circuit------------------------------------")
-    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
+    command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
     #command = "abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
