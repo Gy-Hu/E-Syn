@@ -11,6 +11,7 @@ from collections import OrderedDict
 from sympy.parsing.sympy_parser import parse_expr
 from tqdm import tqdm
 import copy
+import CircuitParser
 
 def check_equal(FORMULA_LIST, components):
     result = []
@@ -176,8 +177,11 @@ if __name__ == "__main__":
     multiple_output_flag = False
     
     # process the raw circuit file
-    command = "./a.out test_data/raw_circuit.txt test_data/original_circuit.txt"
-    os.system(command)
+    input_file_path = "test_data/raw_circuit.txt"
+    output_file_path = "test_data/original_circuit.txt"
+
+    parser = CircuitParser(input_file_path, output_file_path)
+    parser.process()
     
     # load file to convert to s-expression (test)
     with open ("test_data/original_circuit.txt", "r") as myfile:

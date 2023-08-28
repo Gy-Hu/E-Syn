@@ -15,3 +15,6 @@ test_data/multi_output_case.txt
 test_data/one_output_case.txt
 test_data/sexpr_for_egg.txt
 test_data/output_from_egg.txt
+test_data/raw_circuit.txt
+.vscode/
+multi_eqn_boolean

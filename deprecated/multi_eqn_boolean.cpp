@@ -19,7 +19,9 @@ int main(int argc, char* argv[]) {
     map<string, string> variableExpressions;
     map<string, string> out_Expressions;
     string line;
+    regex varFormat("^[a-zA-Z_]"); // Regex for the desired variable format
     while (getline(inputFile, line)) {
+        
         size_t equalPos = line.find('=');
         if (equalPos != string::npos) {
             string variable = line.substr(0, equalPos);
@@ -28,7 +30,7 @@ int main(int argc, char* argv[]) {
             if (variable.find("new_n") == 0) {
                 variableExpressions[variable] = expression;
             }
-            if (variable.find("po") == 0) {
+            if (regex_match(variable, varFormat) && variable.find("new_n") == string::npos) { // Check for the desired format and exclude "new_n"
                 out_Expressions[variable] = expression;
             }
         }
