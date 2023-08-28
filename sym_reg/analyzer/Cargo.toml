@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 egg = "0.9.5"
+num = "0.4.0"

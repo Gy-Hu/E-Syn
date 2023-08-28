@@ -10,9 +10,10 @@ model1 = PySRRegressor(
     # ^ 2 populations per core, so one is always running.
     population_size=50,
     # ^ Slightly larger populations, for greater diversity.
-    ncyclesperiteration=500, 
+    ncyclesperiteration=500,
     # ^ Generations between migrations.
-    niterations=10000000,  # Run forever
+    # niterations=10000000,  # Run forever
+    niterations=100,
     early_stop_condition=(
         "stop_if(loss, complexity) = loss < 1e-6 && complexity < 10"
         # Stop early if we find a good and simple equation
@@ -73,7 +74,7 @@ model1 = PySRRegressor(
     # is how you define custom torch operators.
     # extra_jax_mappings={sympy.cos: "jnp.cos"},
     # ^ For JAX, one passes a string.
-    )
+)
 '''
 # ---------------------------------------------------Model 1 End Point (default)-------------------------------------------------
 '''
@@ -134,13 +135,16 @@ model3 = PySRRegressor(
     ncyclesperiteration=500,
     niterations=10000000,
     early_stop_condition=(
-        "stop_if(loss, complexity) = loss < 1e-6 && complexity < 15"  # Increased complexity constraint
+        # Increased complexity constraint
+        "stop_if(loss, complexity) = loss < 1e-6 && complexity < 15"
     ),
     timeout_in_seconds=60 * 60 * 24,
     maxsize=50,
     maxdepth=15,  # Increased maximum depth
-    binary_operators=["*", "+", "-", "/", "**"],  # Added exponentiation operator
-    unary_operators=["square", "exp", "log"],  # Removed "cube" and "cos2(x)" operators, added "log" operator
+    # Added exponentiation operator
+    binary_operators=["*", "+", "-", "/", "**"],
+    # Removed "cube" and "cos2(x)" operators, added "log" operator
+    unary_operators=["square", "exp", "log"],
     constraints={
         "/": (-1, 9),
         "square": 9,
@@ -150,9 +154,11 @@ model3 = PySRRegressor(
     nested_constraints={
         "square": {"square": 1, "exp": 0, "log": 0},
         "exp": {"square": 1, "exp": 0, "log": 0},
-        "log": {"square": 1, "exp": 1, "log": 0},  # Added constraints on "log" operator
+        # Added constraints on "log" operator
+        "log": {"square": 1, "exp": 1, "log": 0},
     },
-    complexity_of_operators={"/": 2, "**": 3, "exp": 3, "log": 4},  # Adjusted complexity of operators
+    complexity_of_operators={"/": 2, "**": 3, "exp": 3,
+                             "log": 4},  # Adjusted complexity of operators
     complexity_of_constants=2,
     select_k_features=4,
     progress=True,
@@ -179,13 +185,16 @@ model4 = PySRRegressor(
     ncyclesperiteration=500,
     niterations=10000000,
     early_stop_condition=(
-        "stop_if(loss, complexity) = loss < 1e-6 && complexity < 20"  # Increased complexity constraint
+        # Increased complexity constraint
+        "stop_if(loss, complexity) = loss < 1e-6 && complexity < 20"
     ),
     timeout_in_seconds=60 * 60 * 24,
     maxsize=100,
     maxdepth=20,  # Increased maximum depth
-    binary_operators=["*", "+", "-", "/", "**", "sin", "cos"],  # Added trigonometric functions
-    unary_operators=["exp", "log", "abs"],  # Removed "square" and "cube", added "abs"
+    binary_operators=["*", "+", "-", "/", "**", "sin",
+                      "cos"],  # Added trigonometric functions
+    # Removed "square" and "cube", added "abs"
+    unary_operators=["exp", "log", "abs"],
     constraints={
         "/": (-10, 10),  # Expanded range of division operator
         "**": (0, 5),  # Limited exponentiation operator to positive exponents only
@@ -196,8 +205,10 @@ model4 = PySRRegressor(
         "abs": (-10, 10),  # Added absolute value operator
     },
     nested_constraints={
-        "/": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},  # Allowed division to be nested with all operators
-        "**": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},  # Allowed exponentiation to be nested with all operators
+        # Allowed division to be nested with all operators
+        "/": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},
+        # Allowed exponentiation to be nested with all operators
+        "**": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},
         "sin": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},
         "cos": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},
         "exp": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},
@@ -205,12 +216,12 @@ model4 = PySRRegressor(
         "abs": {"**": 1, "sin": 1, "cos": 1, "exp": 1, "log": 1, "abs": 1},
     },
     complexity_of_operators={
-        "/": 2, 
-        "**": 3, 
-        "sin": 4, 
-        "cos": 4, 
-        "exp": 5, 
-        "log": 5, 
+        "/": 2,
+        "**": 3,
+        "sin": 4,
+        "cos": 4,
+        "exp": 5,
+        "log": 5,
         "abs": 2
     },  # Adjusted complexity of operators
     complexity_of_constants=2,
@@ -227,4 +238,44 @@ model4 = PySRRegressor(
 
 '''
 ---------------------------------------------------Model 4 End Point (By chatGPT)-------------------------------------------------
+'''
+
+'''
+---------------------------------------------------Model 5 Starting Point (Linear Operations Only)-------------------------------------------------
+'''
+model5 = PySRRegressor(
+    procs=4,
+    populations=20,  # Retaining increased population size from Model 4
+    population_size=100,
+    ncyclesperiteration=500,
+    niterations=1000,
+    # niterations=10000000,
+    early_stop_condition=(
+        # Retaining complexity constraint from Model 4
+        "stop_if(loss, complexity) = loss < 1e-6 && complexity < 20"
+    ),
+    timeout_in_seconds=60 * 60 * 24,
+    maxsize=100,
+    maxdepth=20,  # Retaining maximum depth from Model 4
+    binary_operators=["*", "+"],  # Only linear operations
+    unary_operators=[],  # No unary operations
+    constraints={},
+    nested_constraints={},
+    complexity_of_operators={
+        "*": 2,
+        "+": 2,
+    },  # Complexity of linear operations
+    complexity_of_constants=2,
+    select_k_features=4,
+    progress=True,
+    weight_randomize=0.1,
+    cluster_manager=None,
+    precision=64,
+    warm_start=True,
+    turbo=True,
+    julia_project=None,
+    update=False,
+)
+'''
+---------------------------------------------------Model 5 End Point (Linear Operations Only)-------------------------------------------------
 '''
