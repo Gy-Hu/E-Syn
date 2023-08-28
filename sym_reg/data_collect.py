@@ -8,6 +8,8 @@ from tqdm import tqdm
 
 
 def run_aigfuzz(file_count):
+    # check aigfuzz/ is esist, if not, create it
+    if not os.path.exists("aigfuzz"): os.mkdir("aigfuzz")
     for i in tqdm(range(file_count), desc='Run circuit generator'):
         os.system(f"aigfuzz -c -s > aigfuzz/simple_circuit_{i}.aig")
         os.system(
@@ -73,7 +75,7 @@ def parse_data(file_count):
                              'ASTDepth', 'lev', 'power', 'area', 'delay'])
     
     
-    df.to_csv("simple_circuit_analysis.csv", index=False)
+    df.to_csv("simple_circuit_analysis_large.csv", index=False)
 
 
 if __name__ == "__main__":
@@ -83,7 +85,7 @@ if __name__ == "__main__":
     import run 
     from CircuitParser import CircuitParser
     print(run.__file__)
-    file_count = 10
+    file_count = 500
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)

@@ -32,11 +32,11 @@ if __name__ == '__main__':
     
     df = parse_table("simple_circuit_analysis.csv")
     # convert the dataframe to numpy array, X = [power, lev, area, delay, *, !, +]
-    X = df.iloc[:, 4:].to_numpy()
+    X = df.iloc[:, :6].to_numpy()
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
     # y = [&]
-    y = df.iloc[:, 3].to_numpy()
+    y = df.iloc[:, -1].to_numpy()
 
     if args.validate: validate_model(X, y, args.model_file)
 
