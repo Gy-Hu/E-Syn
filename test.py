@@ -12,6 +12,8 @@ from sympy.parsing.sympy_parser import parse_expr
 from tqdm import tqdm
 import copy
 import CircuitParser
+import sys   
+sys.setrecursionlimit(100000)
 
 def check_equal(FORMULA_LIST, components):
     result = []
@@ -201,6 +203,7 @@ if __name__ == "__main__":
         # one output circuit
         
         conver_to_sexpr(data[3]) # put the only one equation to the function
+        FORMULA_LIST = None
    
     else:
         # multiple output circuit

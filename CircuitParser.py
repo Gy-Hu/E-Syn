@@ -37,7 +37,7 @@ class CircuitParser:
         for key in self.new_n_dict:
             self.new_n_dict[key] = self.replace_new_n(self.new_n_dict[key])
 
-        output = [self.replace_new_n(line) for line in output]
+        output = [self.replace_new_n(line).lstrip() for line in output]
         
         # insert comments in the beginning
         output.insert(0, comments)
