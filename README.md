@@ -1,6 +1,6 @@
 # E-Brush
 
-1. Modify `abc` function `Parse_StackFnPush` and `Parse_StackOpPush` in `xxx/abc/src/misc/parse/parseStack.c` to allow large stack size
+1. Enter `abc` directory and run `make`
 2. Install necessary dependencies in `package.txt`
 ## Usage
 
