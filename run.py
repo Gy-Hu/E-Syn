@@ -70,7 +70,7 @@ def sympy_to_abc_eqn_normal_bool(expr): # sympy to abc eqn s-expression
     # Return :
     # (((pi0 * pi1) + (!(pi0 * pi1))) & ((pi0 * pi1 * pi2 * pi3) + ((!(pi0 * pi1)) * (!(pi2 * pi3)))) & (((pi0 * pi1) + (pi2 * pi3)) * ((!(pi0 * pi1)) + (!(pi2 * pi3)))))
 
-def conver_to_sexpr(data, multiple_output = False):
+def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data/sexpr_for_egg.txt"):
    # global order
     if not multiple_output:
         eqn = data.split(" = ")[1].rstrip().strip(";") #strip the `;` ?
@@ -87,7 +87,7 @@ def conver_to_sexpr(data, multiple_output = False):
     result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
     
     print("success convert to s-expression")
-    with open ("test_data/sexpr_for_egg.txt", "w") as myfile: 
+    with open (output_file_path, "w") as myfile: 
         myfile.write(result)
         
     if multiple_output: 
