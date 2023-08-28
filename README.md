@@ -1,5 +1,7 @@
 # E-Brush
 
+1. Modify `abc` function `Parse_StackFnPush` and `Parse_StackOpPush` in `xxx/abc/src/misc/parse/parseStack.c` to allow large stack size
+2. Install necessary dependencies in `package.txt`
 ## Usage
 
 1. Convert the circuit to eqn format by using `write_eqn` in `abc`
