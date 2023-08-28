@@ -1,4 +1,5 @@
 e-rewriter/target
+sym_reg/analyzer/target
 *.ipynb
 __pycache__
 parser.out

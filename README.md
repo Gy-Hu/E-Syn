@@ -1,7 +1,9 @@
 # E-Brush
 
+## Prerequisite
 1. Enter `abc` directory and run `make`
 2. Install necessary dependencies in `package.txt`
+
 ## Usage
 
 1. Convert the circuit to eqn format by using `write_eqn` in `abc`
