@@ -160,7 +160,7 @@ def concatenate_equations(lines):
     
     #order = [line.split('= ')[0] for line in lines if line.startswith('po')]
     
-    FORMULA_LIST = [line.split('= ')[1].rstrip().strip(';') for line in lines if line.startswith('po')]
+    FORMULA_LIST = [line.split('= ')[1].rstrip().strip(';') for line in lines[3:]]
     # copy the FORMULA_LIST to equations
     equations = copy.deepcopy(FORMULA_LIST)
     
@@ -193,7 +193,7 @@ if __name__ == "__main__":
     '''
         
     # if data[2] is 'OUTORDER = po0;\n':
-    if data[2].split(" = ")[1].rstrip() == "po0;":
+    if len(data[2].split(" = ")[1].rstrip().strip(";").split()) == 1:
         # one output circuit
         
         conver_to_sexpr(data[3]) # put the only one equation to the function
