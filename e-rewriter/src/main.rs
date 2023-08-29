@@ -162,10 +162,15 @@ fn simplify(s: &str) -> String {
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
+        .with_time_limit(std::time::Duration::from_secs(1200))
+        .with_iter_limit(1000000)
+        .with_node_limit(1000000)
         .run(&make_rules());
     let root = runner.roots[0];
-    let extractor = Extractor::new(&runner.egraph, AstDepth);
+    runner.print_report();
+    //let extractor = Extractor::new(&runner.egraph, AstDepth);
     //let extractor = Extractor::new(&runner.egraph, AstSize);
+    let extractor = Extractor::new(&runner.egraph, OperatorCount);
     let (best_cost, best) = extractor.find_best(root);
     let mut egraphout = EGraph::new(ConstantFold {});
     egraphout.add_expr(&best);

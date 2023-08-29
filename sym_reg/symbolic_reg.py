@@ -32,7 +32,7 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=int, default=1, help='Determin which model to use')
     args = parser.parse_args()
     
-    df = parse_table("simple_circuit_analysis.csv")
+    df = parse_table("simple_circuit_analysis_large.csv")
     # convert the dataframe to numpy array, X = [power, lev, area, delay, *, !, +]
     X = df.iloc[:, :6].to_numpy()
     scaler = StandardScaler()
