@@ -3,7 +3,7 @@ use std::env;
 use std::fs::File;
 use std::io::prelude::*;
 use std::io::Write;
-
+use std::time::{Duration,Instant};
 use num::pow;
 use std::f64::consts::PI;
 
@@ -159,13 +159,31 @@ fn simplify(s: &str) -> String {
     let expr: RecExpr<Prop> = s.parse().unwrap();
     let mut egraphin = EGraph::new(ConstantFold {});
     egraphin.add_expr(&expr);
+    egraphin.dot().to_png("./image/fooin.png").unwrap();
+    println!("input node{}", egraphin.total_size());
+    println!("input class{}", egraphin.number_of_classes());
+
+    // ruuner configure
+    let runner_iteration_limit = 10000000;
+    let egraph_node_limit = 25000000000;
+    let start = Instant::now();
+
+
+
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
         .with_time_limit(std::time::Duration::from_secs(1200))
-        .with_iter_limit(1000000)
-        .with_node_limit(1000000)
+        .with_iter_limit(runner_iteration_limit)
+        .with_node_limit(egraph_node_limit)
         .run(&make_rules());
+    let duration = start.elapsed();
+    runner.print_report();
+    println!("Runner stopped: {:?}. Time take for runner: {:?}, Classes: {}, Nodes: {}, Size: {}\n\n",
+            runner.stop_reason, duration, runner.egraph.number_of_classes(),
+            runner.egraph.total_number_of_nodes(), runner.egraph.total_size());
+
+
     let root = runner.roots[0];
     runner.print_report();
     //let extractor = Extractor::new(&runner.egraph, AstDepth);
@@ -174,6 +192,9 @@ fn simplify(s: &str) -> String {
     let (best_cost, best) = extractor.find_best(root);
     let mut egraphout = EGraph::new(ConstantFold {});
     egraphout.add_expr(&best);
+    println!("output node{}", egraphout.total_size());
+    println!("output class{}", egraphout.number_of_classes());
+    egraphout.dot().to_png("./image/fooout.png").unwrap();
     best.to_string()
 }
 fn main() -> std::io::Result<()> {
