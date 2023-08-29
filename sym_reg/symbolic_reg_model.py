@@ -5,7 +5,7 @@ import sympy
 # ---------------------------------------------------Model 1 Starting Point (default)-------------------------------------------------
 '''
 model1 = PySRRegressor(
-    procs=4,
+    procs=64,
     populations=8,
     # ^ 2 populations per core, so one is always running.
     population_size=50,
@@ -13,9 +13,10 @@ model1 = PySRRegressor(
     ncyclesperiteration=500,
     # ^ Generations between migrations.
     # niterations=10000000,  # Run forever
-    niterations=100,
+    niterations=1000,
     early_stop_condition=(
-        "stop_if(loss, complexity) = loss < 1e-6 && complexity < 10"
+        #"stop_if(loss, complexity) = loss < 1e-6 && complexity < 10"
+        "stop_if(loss, complexity) = loss < 1e-8 && complexity < 15"
         # Stop early if we find a good and simple equation
     ),
     timeout_in_seconds=60 * 60 * 24,
