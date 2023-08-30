@@ -90,3 +90,7 @@ sym_reg/aigfuzz
 sym_reg/hall_of_fame*
 *.pkl
 
+test_data/optimized_circuit.aig
+test_data/original_circuit.aig
+
+benchmark/AIO_bak

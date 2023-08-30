@@ -245,7 +245,7 @@ model4 = PySRRegressor(
 ---------------------------------------------------Model 5 Starting Point (Linear Operations Only)-------------------------------------------------
 '''
 model5 = PySRRegressor(
-    procs=4,
+    procs=64,
     populations=20,  # Retaining increased population size from Model 4
     population_size=100,
     ncyclesperiteration=500,
@@ -258,12 +258,13 @@ model5 = PySRRegressor(
     timeout_in_seconds=60 * 60 * 24,
     maxsize=100,
     maxdepth=20,  # Retaining maximum depth from Model 4
-    binary_operators=["*", "+"],  # Only linear operations
+    #binary_operators=["*", "+"],  # Only linear operations
+    binary_operators=["+"],  # Only linear operations
     unary_operators=[],  # No unary operations
     constraints={},
     nested_constraints={},
     complexity_of_operators={
-        "*": 2,
+        #"*": 2,
         "+": 2,
     },  # Complexity of linear operations
     complexity_of_constants=2,

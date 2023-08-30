@@ -1,6 +1,7 @@
 # E-Brush
 
 ## Prerequisite
+
 1. Enter `abc` directory and run `make`
 2. Install necessary dependencies in `package.txt`
 
@@ -8,7 +9,7 @@
 
 1. Convert the circuit to eqn format by using `write_eqn` in `abc`
 2. Copy and paste the eqn to `test/raw_circuit.txt`
-2. Run `python test.py`
+2. Run `python run.py`
 
 ## Benchamrk Description
 
@@ -17,3 +18,9 @@
 3. EPFL benchmark: https://github.com/lsils/benchmarks
 4. Addtional benchmark1: https://pld.ttu.ee/~maksim/benchmarks/
 5. Addtional benchmark2: https://github.com/jpsety/verilog_benchmark_circuits
+
+## TODO
+
+- [ ] Shell script to run all benchmarks
+- [ ] Fine-tune the parameters of egg and symREG
+- [ ] Add more rewrite rules in egg

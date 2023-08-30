@@ -38,7 +38,7 @@ if __name__ == '__main__':
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
     # y = [&]
-    y = df.iloc[:, -1].to_numpy()
+    y = df.iloc[:, -2].to_numpy()
 
     if args.validate: validate_model(X, y, args.model_file)
 
@@ -49,4 +49,8 @@ if __name__ == '__main__':
     y_pred = model.predict(X_test)
     mse = np.mean((y_test - y_pred)**2)
     mae = np.mean(np.abs(y_test - y_pred))
-    print(f"MSE: {mse}, MAE: {mae}")
+    # add RRSE
+    rrse = np.sqrt(np.sum((y_test - y_pred)**2) / np.sum((y_test - np.mean(y_test))**2))
+    # add MAPE: \text { MAPE }=\frac{1}{n} \sum_{i=1}^n \frac{\left|y_i-\hat{y}_i\right|}{y_i} \times 100 \%
+    mape = 100 * np.mean(np.abs((y_test - y_pred) / y_test))
+    print(f"MSE: {mse}, MAE: {mae}", f"MAPE: {mape}", f"RRSE: {rrse}")
