@@ -167,8 +167,11 @@ def concatenate_equations(lines):
     # copy the FORMULA_LIST to equations
     equations = copy.deepcopy(FORMULA_LIST)
     
+    num_concat = 0
+    
     while len(equations) > 1:  # while there are more than one equation left
         equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
+        num_concat += 1
         del equations[1]  # remove the second equation
     return equations[0], FORMULA_LIST  # return the single remaining equation
 

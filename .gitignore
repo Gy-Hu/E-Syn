@@ -94,3 +94,5 @@ test_data/optimized_circuit.aig
 test_data/original_circuit.aig
 
 benchmark/AIO_bak
+!ParseResult.ipynb
+result_bak/

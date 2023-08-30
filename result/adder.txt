@@ -1,0 +1,593 @@
+Make: Symbol("a[0]") -> None
+Make: Symbol("b[0]") -> None
+Make: Symbol("a[1]") -> None
+Make: Symbol("b[1]") -> None
+Make: Symbol("a[2]") -> None
+Make: Symbol("b[2]") -> None
+Make: Symbol("a[3]") -> None
+Make: Symbol("b[3]") -> None
+Make: Symbol("a[4]") -> None
+Make: Symbol("b[4]") -> None
+Make: Symbol("a[5]") -> None
+Make: Symbol("b[5]") -> None
+Make: Symbol("a[6]") -> None
+Make: Symbol("b[6]") -> None
+Make: Symbol("a[7]") -> None
+Make: Symbol("b[7]") -> None
+Make: Symbol("a[8]") -> None
+Make: Symbol("b[8]") -> None
+Make: Symbol("a[9]") -> None
+Make: Symbol("b[9]") -> None
+Make: Symbol("a[10]") -> None
+Make: Symbol("b[10]") -> None
+Make: Symbol("a[11]") -> None
+Make: Symbol("b[11]") -> None
+Make: Symbol("a[12]") -> None
+Make: Symbol("b[12]") -> None
+Make: Symbol("a[13]") -> None
+Make: Symbol("b[13]") -> None
+Make: Symbol("a[14]") -> None
+Make: Symbol("b[14]") -> None
+Make: Symbol("a[15]") -> None
+Make: Symbol("b[15]") -> None
+Make: Symbol("a[16]") -> None
+Make: Symbol("b[16]") -> None
+Make: Symbol("a[17]") -> None
+Make: Symbol("b[17]") -> None
+Make: Symbol("a[18]") -> None
+Make: Symbol("b[18]") -> None
+Make: Symbol("a[19]") -> None
+Make: Symbol("b[19]") -> None
+Make: Symbol("a[20]") -> None
+Make: Symbol("b[20]") -> None
+Make: Symbol("a[21]") -> None
+Make: Symbol("b[21]") -> None
+Make: Symbol("a[22]") -> None
+Make: Symbol("b[22]") -> None
+Make: Symbol("a[23]") -> None
+Make: Symbol("b[23]") -> None
+Make: Symbol("a[24]") -> None
+Make: Symbol("b[24]") -> None
+Make: Symbol("a[25]") -> None
+Make: Symbol("b[25]") -> None
+Make: Symbol("a[26]") -> None
+Make: Symbol("b[26]") -> None
+Make: Symbol("a[27]") -> None
+Make: Symbol("b[27]") -> None
+Make: Symbol("a[28]") -> None
+Make: Symbol("b[28]") -> None
+Make: Symbol("a[29]") -> None
+Make: Symbol("b[29]") -> None
+Make: Symbol("a[30]") -> None
+Make: Symbol("b[30]") -> None
+Make: Symbol("a[31]") -> None
+Make: Symbol("b[31]") -> None
+Make: Symbol("a[32]") -> None
+Make: Symbol("b[32]") -> None
+Make: Symbol("a[33]") -> None
+Make: Symbol("b[33]") -> None
+Make: Symbol("a[34]") -> None
+Make: Symbol("b[34]") -> None
+Make: Symbol("a[35]") -> None
+Make: Symbol("b[35]") -> None
+Make: Symbol("a[36]") -> None
+Make: Symbol("b[36]") -> None
+Make: Symbol("a[37]") -> None
+Make: Symbol("b[37]") -> None
+Make: Symbol("a[38]") -> None
+Make: Symbol("b[38]") -> None
+Make: Symbol("a[39]") -> None
+Make: Symbol("b[39]") -> None
+Make: Symbol("a[40]") -> None
+Make: Symbol("b[40]") -> None
+Make: Symbol("a[41]") -> None
+Make: Symbol("b[41]") -> None
+Make: Symbol("a[42]") -> None
+Make: Symbol("b[42]") -> None
+Make: Symbol("a[43]") -> None
+Make: Symbol("b[43]") -> None
+Make: Symbol("a[44]") -> None
+Make: Symbol("b[44]") -> None
+Make: Symbol("a[45]") -> None
+Make: Symbol("b[45]") -> None
+Make: Symbol("a[46]") -> None
+Make: Symbol("b[46]") -> None
+Make: Symbol("a[47]") -> None
+Make: Symbol("b[47]") -> None
+Make: Symbol("a[48]") -> None
+Make: Symbol("b[48]") -> None
+Make: Symbol("a[49]") -> None
+Make: Symbol("b[49]") -> None
+Make: Symbol("a[50]") -> None
+Make: Symbol("b[50]") -> None
+Make: Symbol("a[51]") -> None
+Make: Symbol("b[51]") -> None
+Make: Symbol("a[52]") -> None
+Make: Symbol("b[52]") -> None
+Make: Symbol("a[53]") -> None
+Make: Symbol("b[53]") -> None
+Make: Symbol("a[54]") -> None
+Make: Symbol("b[54]") -> None
+Make: Symbol("a[55]") -> None
+Make: Symbol("b[55]") -> None
+Make: Symbol("a[56]") -> None
+Make: Symbol("b[56]") -> None
+Make: Symbol("a[57]") -> None
+Make: Symbol("b[57]") -> None
+Make: Symbol("a[58]") -> None
+Make: Symbol("b[58]") -> None
+Make: Symbol("a[59]") -> None
+Make: Symbol("b[59]") -> None
+Make: Symbol("a[60]") -> None
+Make: Symbol("b[60]") -> None
+Make: Symbol("a[61]") -> None
+Make: Symbol("b[61]") -> None
+Make: Symbol("a[62]") -> None
+Make: Symbol("b[62]") -> None
+Make: Symbol("a[63]") -> None
+Make: Symbol("b[63]") -> None
+Make: Symbol("a[127]") -> None
+Make: Symbol("b[127]") -> None
+Make: Symbol("a[126]") -> None
+Make: Symbol("b[126]") -> None
+Make: Symbol("a[125]") -> None
+Make: Symbol("b[125]") -> None
+Make: Symbol("a[124]") -> None
+Make: Symbol("b[124]") -> None
+Make: Symbol("a[123]") -> None
+Make: Symbol("b[123]") -> None
+Make: Symbol("a[122]") -> None
+Make: Symbol("b[122]") -> None
+Make: Symbol("a[121]") -> None
+Make: Symbol("b[121]") -> None
+Make: Symbol("a[120]") -> None
+Make: Symbol("b[120]") -> None
+Make: Symbol("a[119]") -> None
+Make: Symbol("b[119]") -> None
+Make: Symbol("a[118]") -> None
+Make: Symbol("b[118]") -> None
+Make: Symbol("a[117]") -> None
+Make: Symbol("b[117]") -> None
+Make: Symbol("a[116]") -> None
+Make: Symbol("b[116]") -> None
+Make: Symbol("a[115]") -> None
+Make: Symbol("b[115]") -> None
+Make: Symbol("a[114]") -> None
+Make: Symbol("b[114]") -> None
+Make: Symbol("a[113]") -> None
+Make: Symbol("b[113]") -> None
+Make: Symbol("a[112]") -> None
+Make: Symbol("b[112]") -> None
+Make: Symbol("a[111]") -> None
+Make: Symbol("b[111]") -> None
+Make: Symbol("a[110]") -> None
+Make: Symbol("b[110]") -> None
+Make: Symbol("a[109]") -> None
+Make: Symbol("b[109]") -> None
+Make: Symbol("a[108]") -> None
+Make: Symbol("b[108]") -> None
+Make: Symbol("a[107]") -> None
+Make: Symbol("b[107]") -> None
+Make: Symbol("a[106]") -> None
+Make: Symbol("b[106]") -> None
+Make: Symbol("a[105]") -> None
+Make: Symbol("b[105]") -> None
+Make: Symbol("a[104]") -> None
+Make: Symbol("b[104]") -> None
+Make: Symbol("a[103]") -> None
+Make: Symbol("b[103]") -> None
+Make: Symbol("a[102]") -> None
+Make: Symbol("b[102]") -> None
+Make: Symbol("a[101]") -> None
+Make: Symbol("b[101]") -> None
+Make: Symbol("a[100]") -> None
+Make: Symbol("b[100]") -> None
+Make: Symbol("a[99]") -> None
+Make: Symbol("b[99]") -> None
+Make: Symbol("a[98]") -> None
+Make: Symbol("b[98]") -> None
+Make: Symbol("a[97]") -> None
+Make: Symbol("b[97]") -> None
+Make: Symbol("a[96]") -> None
+Make: Symbol("b[96]") -> None
+Make: Symbol("a[95]") -> None
+Make: Symbol("b[95]") -> None
+Make: Symbol("a[94]") -> None
+Make: Symbol("b[94]") -> None
+Make: Symbol("a[93]") -> None
+Make: Symbol("b[93]") -> None
+Make: Symbol("a[92]") -> None
+Make: Symbol("b[92]") -> None
+Make: Symbol("a[91]") -> None
+Make: Symbol("b[91]") -> None
+Make: Symbol("a[90]") -> None
+Make: Symbol("b[90]") -> None
+Make: Symbol("a[89]") -> None
+Make: Symbol("b[89]") -> None
+Make: Symbol("a[88]") -> None
+Make: Symbol("b[88]") -> None
+Make: Symbol("a[87]") -> None
+Make: Symbol("b[87]") -> None
+Make: Symbol("a[86]") -> None
+Make: Symbol("b[86]") -> None
+Make: Symbol("a[85]") -> None
+Make: Symbol("b[85]") -> None
+Make: Symbol("a[84]") -> None
+Make: Symbol("b[84]") -> None
+Make: Symbol("a[83]") -> None
+Make: Symbol("b[83]") -> None
+Make: Symbol("a[82]") -> None
+Make: Symbol("b[82]") -> None
+Make: Symbol("a[81]") -> None
+Make: Symbol("b[81]") -> None
+Make: Symbol("a[80]") -> None
+Make: Symbol("b[80]") -> None
+Make: Symbol("a[79]") -> None
+Make: Symbol("b[79]") -> None
+Make: Symbol("a[78]") -> None
+Make: Symbol("b[78]") -> None
+Make: Symbol("a[77]") -> None
+Make: Symbol("b[77]") -> None
+Make: Symbol("a[76]") -> None
+Make: Symbol("b[76]") -> None
+Make: Symbol("a[75]") -> None
+Make: Symbol("b[75]") -> None
+Make: Symbol("a[74]") -> None
+Make: Symbol("b[74]") -> None
+Make: Symbol("a[73]") -> None
+Make: Symbol("b[73]") -> None
+Make: Symbol("a[72]") -> None
+Make: Symbol("b[72]") -> None
+Make: Symbol("a[71]") -> None
+Make: Symbol("b[71]") -> None
+Make: Symbol("a[70]") -> None
+Make: Symbol("b[70]") -> None
+Make: Symbol("a[69]") -> None
+Make: Symbol("b[69]") -> None
+Make: Symbol("a[68]") -> None
+Make: Symbol("b[68]") -> None
+Make: Symbol("a[67]") -> None
+Make: Symbol("b[67]") -> None
+Make: Symbol("a[66]") -> None
+Make: Symbol("b[66]") -> None
+Make: Symbol("a[65]") -> None
+Make: Symbol("b[65]") -> None
+Make: Symbol("a[64]") -> None
+Make: Symbol("b[64]") -> None
+input node2672
+input class2672
+Make: Symbol("a[0]") -> None
+Make: Symbol("b[0]") -> None
+Make: Symbol("a[1]") -> None
+Make: Symbol("b[1]") -> None
+Make: Symbol("a[2]") -> None
+Make: Symbol("b[2]") -> None
+Make: Symbol("a[3]") -> None
+Make: Symbol("b[3]") -> None
+Make: Symbol("a[4]") -> None
+Make: Symbol("b[4]") -> None
+Make: Symbol("a[5]") -> None
+Make: Symbol("b[5]") -> None
+Make: Symbol("a[6]") -> None
+Make: Symbol("b[6]") -> None
+Make: Symbol("a[7]") -> None
+Make: Symbol("b[7]") -> None
+Make: Symbol("a[8]") -> None
+Make: Symbol("b[8]") -> None
+Make: Symbol("a[9]") -> None
+Make: Symbol("b[9]") -> None
+Make: Symbol("a[10]") -> None
+Make: Symbol("b[10]") -> None
+Make: Symbol("a[11]") -> None
+Make: Symbol("b[11]") -> None
+Make: Symbol("a[12]") -> None
+Make: Symbol("b[12]") -> None
+Make: Symbol("a[13]") -> None
+Make: Symbol("b[13]") -> None
+Make: Symbol("a[14]") -> None
+Make: Symbol("b[14]") -> None
+Make: Symbol("a[15]") -> None
+Make: Symbol("b[15]") -> None
+Make: Symbol("a[16]") -> None
+Make: Symbol("b[16]") -> None
+Make: Symbol("a[17]") -> None
+Make: Symbol("b[17]") -> None
+Make: Symbol("a[18]") -> None
+Make: Symbol("b[18]") -> None
+Make: Symbol("a[19]") -> None
+Make: Symbol("b[19]") -> None
+Make: Symbol("a[20]") -> None
+Make: Symbol("b[20]") -> None
+Make: Symbol("a[21]") -> None
+Make: Symbol("b[21]") -> None
+Make: Symbol("a[22]") -> None
+Make: Symbol("b[22]") -> None
+Make: Symbol("a[23]") -> None
+Make: Symbol("b[23]") -> None
+Make: Symbol("a[24]") -> None
+Make: Symbol("b[24]") -> None
+Make: Symbol("a[25]") -> None
+Make: Symbol("b[25]") -> None
+Make: Symbol("a[26]") -> None
+Make: Symbol("b[26]") -> None
+Make: Symbol("a[27]") -> None
+Make: Symbol("b[27]") -> None
+Make: Symbol("a[28]") -> None
+Make: Symbol("b[28]") -> None
+Make: Symbol("a[29]") -> None
+Make: Symbol("b[29]") -> None
+Make: Symbol("a[30]") -> None
+Make: Symbol("b[30]") -> None
+Make: Symbol("a[31]") -> None
+Make: Symbol("b[31]") -> None
+Make: Symbol("a[32]") -> None
+Make: Symbol("b[32]") -> None
+Make: Symbol("a[33]") -> None
+Make: Symbol("b[33]") -> None
+Make: Symbol("a[34]") -> None
+Make: Symbol("b[34]") -> None
+Make: Symbol("a[35]") -> None
+Make: Symbol("b[35]") -> None
+Make: Symbol("a[36]") -> None
+Make: Symbol("b[36]") -> None
+Make: Symbol("a[37]") -> None
+Make: Symbol("b[37]") -> None
+Make: Symbol("a[38]") -> None
+Make: Symbol("b[38]") -> None
+Make: Symbol("a[39]") -> None
+Make: Symbol("b[39]") -> None
+Make: Symbol("a[40]") -> None
+Make: Symbol("b[40]") -> None
+Make: Symbol("a[41]") -> None
+Make: Symbol("b[41]") -> None
+Make: Symbol("a[42]") -> None
+Make: Symbol("b[42]") -> None
+Make: Symbol("a[43]") -> None
+Make: Symbol("b[43]") -> None
+Make: Symbol("a[44]") -> None
+Make: Symbol("b[44]") -> None
+Make: Symbol("a[45]") -> None
+Make: Symbol("b[45]") -> None
+Make: Symbol("a[46]") -> None
+Make: Symbol("b[46]") -> None
+Make: Symbol("a[47]") -> None
+Make: Symbol("b[47]") -> None
+Make: Symbol("a[48]") -> None
+Make: Symbol("b[48]") -> None
+Make: Symbol("a[49]") -> None
+Make: Symbol("b[49]") -> None
+Make: Symbol("a[50]") -> None
+Make: Symbol("b[50]") -> None
+Make: Symbol("a[51]") -> None
+Make: Symbol("b[51]") -> None
+Make: Symbol("a[52]") -> None
+Make: Symbol("b[52]") -> None
+Make: Symbol("a[53]") -> None
+Make: Symbol("b[53]") -> None
+Make: Symbol("a[54]") -> None
+Make: Symbol("b[54]") -> None
+Make: Symbol("a[55]") -> None
+Make: Symbol("b[55]") -> None
+Make: Symbol("a[56]") -> None
+Make: Symbol("b[56]") -> None
+Make: Symbol("a[57]") -> None
+Make: Symbol("b[57]") -> None
+Make: Symbol("a[58]") -> None
+Make: Symbol("b[58]") -> None
+Make: Symbol("a[59]") -> None
+Make: Symbol("b[59]") -> None
+Make: Symbol("a[60]") -> None
+Make: Symbol("b[60]") -> None
+Make: Symbol("a[61]") -> None
+Make: Symbol("b[61]") -> None
+Make: Symbol("a[62]") -> None
+Make: Symbol("b[62]") -> None
+Make: Symbol("a[63]") -> None
+Make: Symbol("b[63]") -> None
+Make: Symbol("a[127]") -> None
+Make: Symbol("b[127]") -> None
+Make: Symbol("a[126]") -> None
+Make: Symbol("b[126]") -> None
+Make: Symbol("a[125]") -> None
+Make: Symbol("b[125]") -> None
+Make: Symbol("a[124]") -> None
+Make: Symbol("b[124]") -> None
+Make: Symbol("a[123]") -> None
+Make: Symbol("b[123]") -> None
+Make: Symbol("a[122]") -> None
+Make: Symbol("b[122]") -> None
+Make: Symbol("a[121]") -> None
+Make: Symbol("b[121]") -> None
+Make: Symbol("a[120]") -> None
+Make: Symbol("b[120]") -> None
+Make: Symbol("a[119]") -> None
+Make: Symbol("b[119]") -> None
+Make: Symbol("a[118]") -> None
+Make: Symbol("b[118]") -> None
+Make: Symbol("a[117]") -> None
+Make: Symbol("b[117]") -> None
+Make: Symbol("a[116]") -> None
+Make: Symbol("b[116]") -> None
+Make: Symbol("a[115]") -> None
+Make: Symbol("b[115]") -> None
+Make: Symbol("a[114]") -> None
+Make: Symbol("b[114]") -> None
+Make: Symbol("a[113]") -> None
+Make: Symbol("b[113]") -> None
+Make: Symbol("a[112]") -> None
+Make: Symbol("b[112]") -> None
+Make: Symbol("a[111]") -> None
+Make: Symbol("b[111]") -> None
+Make: Symbol("a[110]") -> None
+Make: Symbol("b[110]") -> None
+Make: Symbol("a[109]") -> None
+Make: Symbol("b[109]") -> None
+Make: Symbol("a[108]") -> None
+Make: Symbol("b[108]") -> None
+Make: Symbol("a[107]") -> None
+Make: Symbol("b[107]") -> None
+Make: Symbol("a[106]") -> None
+Make: Symbol("b[106]") -> None
+Make: Symbol("a[105]") -> None
+Make: Symbol("b[105]") -> None
+Make: Symbol("a[104]") -> None
+Make: Symbol("b[104]") -> None
+Make: Symbol("a[103]") -> None
+Make: Symbol("b[103]") -> None
+Make: Symbol("a[102]") -> None
+Make: Symbol("b[102]") -> None
+Make: Symbol("a[101]") -> None
+Make: Symbol("b[101]") -> None
+Make: Symbol("a[100]") -> None
+Make: Symbol("b[100]") -> None
+Make: Symbol("a[99]") -> None
+Make: Symbol("b[99]") -> None
+Make: Symbol("a[98]") -> None
+Make: Symbol("b[98]") -> None
+Make: Symbol("a[97]") -> None
+Make: Symbol("b[97]") -> None
+Make: Symbol("a[96]") -> None
+Make: Symbol("b[96]") -> None
+Make: Symbol("a[95]") -> None
+Make: Symbol("b[95]") -> None
+Make: Symbol("a[94]") -> None
+Make: Symbol("b[94]") -> None
+Make: Symbol("a[93]") -> None
+Make: Symbol("b[93]") -> None
+Make: Symbol("a[92]") -> None
+Make: Symbol("b[92]") -> None
+Make: Symbol("a[91]") -> None
+Make: Symbol("b[91]") -> None
+Make: Symbol("a[90]") -> None
+Make: Symbol("b[90]") -> None
+Make: Symbol("a[89]") -> None
+Make: Symbol("b[89]") -> None
+Make: Symbol("a[88]") -> None
+Make: Symbol("b[88]") -> None
+Make: Symbol("a[87]") -> None
+Make: Symbol("b[87]") -> None
+Make: Symbol("a[86]") -> None
+Make: Symbol("b[86]") -> None
+Make: Symbol("a[85]") -> None
+Make: Symbol("b[85]") -> None
+Make: Symbol("a[84]") -> None
+Make: Symbol("b[84]") -> None
+Make: Symbol("a[83]") -> None
+Make: Symbol("b[83]") -> None
+Make: Symbol("a[82]") -> None
+Make: Symbol("b[82]") -> None
+Make: Symbol("a[81]") -> None
+Make: Symbol("b[81]") -> None
+Make: Symbol("a[80]") -> None
+Make: Symbol("b[80]") -> None
+Make: Symbol("a[79]") -> None
+Make: Symbol("b[79]") -> None
+Make: Symbol("a[78]") -> None
+Make: Symbol("b[78]") -> None
+Make: Symbol("a[77]") -> None
+Make: Symbol("b[77]") -> None
+Make: Symbol("a[76]") -> None
+Make: Symbol("b[76]") -> None
+Make: Symbol("a[75]") -> None
+Make: Symbol("b[75]") -> None
+Make: Symbol("a[74]") -> None
+Make: Symbol("b[74]") -> None
+Make: Symbol("a[73]") -> None
+Make: Symbol("b[73]") -> None
+Make: Symbol("a[72]") -> None
+Make: Symbol("b[72]") -> None
+Make: Symbol("a[71]") -> None
+Make: Symbol("b[71]") -> None
+Make: Symbol("a[70]") -> None
+Make: Symbol("b[70]") -> None
+Make: Symbol("a[69]") -> None
+Make: Symbol("b[69]") -> None
+Make: Symbol("a[68]") -> None
+Make: Symbol("b[68]") -> None
+Make: Symbol("a[67]") -> None
+Make: Symbol("b[67]") -> None
+Make: Symbol("a[66]") -> None
+Make: Symbol("b[66]") -> None
+Make: Symbol("a[65]") -> None
+Make: Symbol("b[65]") -> None
+Make: Symbol("a[64]") -> None
+Make: Symbol("b[64]") -> None
+Runner report
+=============
+  Stop reason: TimeLimit(103.428974096)
+  Iterations: 19
+  Egraph size: 5561 nodes, 2911 classes, 8639 memo
+  Rebuilds: 652
+  Total time: 103.428846489
+    Search:  (0.08) 8.777486048
+    Apply:   (0.00) 0.270730052
+    Rebuild: (0.91) 94.380580005
+
+Runner stopped: Some(TimeLimit(103.428974096)). Time take for runner: 103.747056925s, Classes: 2911, Nodes: 5561, Size: 8639
+
+
+Runner report
+=============
+  Stop reason: TimeLimit(103.428974096)
+  Iterations: 19
+  Egraph size: 5561 nodes, 2911 classes, 8639 memo
+  Rebuilds: 652
+  Total time: 103.428846489
+    Search:  (0.08) 8.777486048
+    Apply:   (0.00) 0.270730052
+    Rebuild: (0.91) 94.380580005
+
+ABC command line: "read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig".
+
+[1;37mtest_data/original_circuit    :[0m i/o =  256/  129  lat =    0  and =   1019  lev =255  power = 981.44
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.85 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+WireLoad = "none"  [1;33mGates =    587[0m ( 11.9 %)   [1;32mCap =  0.6 ff[0m (  2.2 %)   [1;36mArea =      898.13[0m ( 88.1 %)   [1;35mDelay =  3767.95 ps[0m  ( 23.9 %)               
+ABC command line: "read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig".
+
+[1;37mtest_data/optimized_circuit   :[0m i/o =  256/  129  lat =    0  and =   1114  lev =255  power =1058.68
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.84 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+WireLoad = "none"  [1;33mGates =   1061[0m ( 12.4 %)   [1;32mCap =  0.7 ff[0m (  2.3 %)   [1;36mArea =     1210.96[0m ( 87.6 %)   [1;35mDelay =  3223.92 ps[0m  ( 13.9 %)               
+ABC command line: "cec test_data/original_circuit.aig test_data/optimized_circuit.aig".
+
+Networks are equivalent.  Time =     0.02 sec
+ABC command line: "read_eqn test_data/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit.aig".
+
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.84 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+ABC command line: "read_eqn test_data/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit.aig".
+
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.70 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.84 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+ABC command line: "cec test_data/original_circuit.aig test_data/optimized_circuit.aig".
+
+Networks are equivalent.  Time =     0.03 sec
+multiple output circuit
+success load file
+success convert to s-expression
+multiple output circuit parse success
+
+
+------------------------------------Original circuit------------------------------------
+----------------------------------------------------------------------------------------
+
+
+------------------------------------Optimized circuit------------------------------------
+----------------------------------------------------------------------------------------
+
+
+------------------------------------Equivalence checking------------------------------------
+-----------------------------------------Finish Equivalence checking-----------------------------------------
+
+
+------------------------------------Additional Equivalence checking------------------------------------
+-----------------------------------------Finish Equivalence checking-----------------------------------------

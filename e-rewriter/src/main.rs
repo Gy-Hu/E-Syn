@@ -159,7 +159,7 @@ fn simplify(s: &str) -> String {
     let expr: RecExpr<Prop> = s.parse().unwrap();
     let mut egraphin = EGraph::new(ConstantFold {});
     egraphin.add_expr(&expr);
-    egraphin.dot().to_png("./image/fooin.png").unwrap();
+    //egraphin.dot().to_png("./image/fooin.png").unwrap();
     println!("input node{}", egraphin.total_size());
     println!("input class{}", egraphin.number_of_classes());
 
@@ -186,15 +186,15 @@ fn simplify(s: &str) -> String {
 
     let root = runner.roots[0];
     runner.print_report();
-    //let extractor = Extractor::new(&runner.egraph, AstDepth);
+    let extractor = Extractor::new(&runner.egraph, AstDepth);
     //let extractor = Extractor::new(&runner.egraph, AstSize);
-    let extractor = Extractor::new(&runner.egraph, OperatorCount);
+    //let extractor = Extractor::new(&runner.egraph, OperatorCount);
     let (best_cost, best) = extractor.find_best(root);
     let mut egraphout = EGraph::new(ConstantFold {});
     egraphout.add_expr(&best);
     println!("output node{}", egraphout.total_size());
     println!("output class{}", egraphout.number_of_classes());
-    egraphout.dot().to_png("./image/fooout.png").unwrap();
+    //egraphout.dot().to_png("./image/fooout.png").unwrap();
     best.to_string()
 }
 fn main() -> std::io::Result<()> {
