@@ -10,6 +10,8 @@ run_script="/data/guangyuh/coding_env/E-Brush/run.py"
 # Iterate over each file in the source directory
 for file in "$source_dir"/*
 do
+  # print begin to process which file
+  echo "begin to process $file"
   # Get the base name of the file (without path)
   base_name=$(basename "$file")
   
@@ -18,5 +20,6 @@ do
   # Replace the contents of raw_circuit.txt with the contents of the current file
   cp "$file" "$raw_circuit_file"
   # Run the script and redirect the output to a file in the output directory with the same prefix as the processed file
+  #timeout 20m python "$run_script" > "$output_dir/$prefix.txt"
   python "$run_script" > "$output_dir/$prefix.txt"
 done

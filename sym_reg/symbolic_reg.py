@@ -34,16 +34,19 @@ if __name__ == '__main__':
     
     df = parse_table("simple_circuit_analysis_large.csv")
     # convert the dataframe to numpy array, X = [power, lev, area, delay, *, !, +]
-    X = df.iloc[:, :6].to_numpy()
+    #X = df.iloc[:, :6].to_numpy()
+    # X -> 1,2,3,5,6
+    #X = df.iloc[:, [0, 1, 2, 4, 5]].to_numpy()
+    X = df.iloc[:,:6].to_numpy()
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
     # y = [&]
-    y = df.iloc[:, -2].to_numpy()
+    y = df.iloc[:, -1].to_numpy()
 
     if args.validate: validate_model(X, y, args.model_file)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    model = model1 if args.model == 1 else model2 if args.model == 2 else model3 if args.model == 3 else model4 if args.model == 4 else model5 if args.model == 5 else None
+    model = model1 if args.model == 1 else model2 if args.model == 2 else model3 if args.model == 3 else model4 if args.model == 4 else model5 if args.model == 5 else model6 if args.model == 6 else None
     model.fit(X_train, y_train)
     
     y_pred = model.predict(X_test)

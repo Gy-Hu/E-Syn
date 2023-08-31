@@ -24,3 +24,5 @@
 - [ ] Shell script to run all benchmarks
 - [ ] Fine-tune the parameters of egg and symREG
 - [ ] Add more rewrite rules in egg
+- [ ] Add BDD to do equivalence checking
+- [ ] Using monotonic cost function in symREG
