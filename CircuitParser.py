@@ -51,7 +51,7 @@ class CircuitParser:
 
     def replace_new_n(self, expr):
         for key in self.new_n_dict:
-            expr = expr.replace(key, " ("+self.new_n_dict[key]+")")
+            expr = expr.replace(key, "("+self.new_n_dict[key]+")")
         return expr
 
     def write_to_file(self, content):

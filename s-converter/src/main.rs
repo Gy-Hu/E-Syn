@@ -33,13 +33,43 @@ impl Expr {
         }
     }
 
-    fn gather_and_expressions(&self, expressions: &mut HashMap<usize, String>, id: &mut usize) {
+    // fn gather_and_expressions(&self, expressions: &mut HashMap<usize, String>, id: &mut usize) {
+    //     match self {
+    //         Expr::VariableStr(_) => {},
+    //         Expr::Lisp(op, e1, e2) => {
+    //             if op == "&" {
+    //                 e1.gather_and_expressions(expressions, id);
+    //                 e2.gather_and_expressions(expressions, id);
+    //             } else {
+    //                 expressions.insert(*id, self.to_infix());
+    //                 *id += 1;
+    //             }
+    //         },
+    //         Expr::Infix(op, e1, e2) => {
+    //             if op == "&" {
+    //                 e1.gather_and_expressions(expressions, id);
+    //                 e2.gather_and_expressions(expressions, id);
+    //             } else {
+    //                 expressions.insert(*id, self.to_infix());
+    //                 *id += 1;
+    //             }
+    //         },
+    //         Expr::Not(e) => e.gather_and_expressions(expressions, id),
+    //     }
+    // }
+
+    fn gather_and_expressions(&self, expressions: &mut HashMap<usize, String>, id: &mut usize, nested: bool) {
         match self {
-            Expr::VariableStr(_) => {},
+            Expr::VariableStr(_) => {
+                if !nested {
+                    expressions.insert(*id, self.to_infix());
+                    *id += 1;
+                }
+            },
             Expr::Lisp(op, e1, e2) => {
                 if op == "&" {
-                    e1.gather_and_expressions(expressions, id);
-                    e2.gather_and_expressions(expressions, id);
+                    e1.gather_and_expressions(expressions, id, true);
+                    e2.gather_and_expressions(expressions, id, true);
                 } else {
                     expressions.insert(*id, self.to_infix());
                     *id += 1;
@@ -47,14 +77,14 @@ impl Expr {
             },
             Expr::Infix(op, e1, e2) => {
                 if op == "&" {
-                    e1.gather_and_expressions(expressions, id);
-                    e2.gather_and_expressions(expressions, id);
+                    e1.gather_and_expressions(expressions, id, true);
+                    e2.gather_and_expressions(expressions, id, true);
                 } else {
                     expressions.insert(*id, self.to_infix());
                     *id += 1;
                 }
             },
-            Expr::Not(e) => e.gather_and_expressions(expressions, id),
+            Expr::Not(e) => e.gather_and_expressions(expressions, id, true),
         }
     }
 }
@@ -63,7 +93,7 @@ impl Expr {
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() < 3 {
-        eprintln!("Usage: {} <input_file> <output_file>", args[0]);
+        eprintln!("Usage: {} <input_file> <output_file> <split_concat>/lisp", args[0]);
         process::exit(1);
     }
 
@@ -73,6 +103,7 @@ fn main() {
     });
 
     let output_file = &args[2];
+    //let split_concat = &args[3];
 
     match parser::ExprParser::new().parse(&input) {
         Ok(expr) => {
@@ -90,11 +121,15 @@ fn main() {
                 eprintln!("Error writing to file: {:?}", err);
                 process::exit(1);
             });
+
+            // if args.len() == 3 and args[3] is not "lisp"
+            if args.len() > 3 && args[3] != "lisp" {
+            let split_concat = &args[3];
             let mut map = HashMap::new();
             let mut id = 0;
-            expr.gather_and_expressions(&mut map, &mut id);
+            expr.gather_and_expressions(&mut map, &mut id, false);
             //expr.gather_and_expressions(&mut id, &mut map);
-            let mut file = File::create("split_concat.txt").unwrap_or_else(|err| {
+            let mut file = File::create(split_concat).unwrap_or_else(|err| {
                 eprintln!("Error creating file: {:?}", err);
                 process::exit(1);
             });
@@ -108,7 +143,11 @@ fn main() {
                     process::exit(1);
                 });
             }
+
+        }
         },
-        Err(err) => eprintln!("Error: {:?}", err),
+        Err(err) => {eprintln!("Error: {:?}", err);
+        //print the error expression
+    },
     }
 }
