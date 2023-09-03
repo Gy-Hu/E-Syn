@@ -37,7 +37,12 @@ class CircuitParser:
         for key in self.new_n_dict:
             self.new_n_dict[key] = self.replace_new_n(self.new_n_dict[key])
 
-        output = [self.replace_new_n(line).lstrip() for line in output]
+        output = [self.replace_new_n(line).lstrip() for line in output ]
+        
+        output[2:] = [f"{expr.split('=')[0]} = ({expr.split('=')[1].replace(';', '')});" for expr in output[2:]]
+        
+        # for `!` replace to `! `
+        output[2:] = [expr.replace("!", "! ") for expr in output[2:]]
         
         # insert comments in the beginning
         output.insert(0, comments)
@@ -46,7 +51,7 @@ class CircuitParser:
 
     def replace_new_n(self, expr):
         for key in self.new_n_dict:
-            expr = expr.replace(key, "("+self.new_n_dict[key]+")")
+            expr = expr.replace(key, " ("+self.new_n_dict[key]+")")
         return expr
 
     def write_to_file(self, content):
