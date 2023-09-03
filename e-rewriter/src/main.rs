@@ -6,6 +6,9 @@ use std::io::Write;
 use std::time::{Duration,Instant};
 use num::pow;
 use std::f64::consts::PI;
+use std::collections::HashSet;
+use rand::Rng;
+use std::collections::HashMap;
 
 define_language! {
     enum Prop {
@@ -110,7 +113,7 @@ impl<L: Language> CostFunction<L> for AstSize {
     where
         C: FnMut(Id) -> Self::Cost,
     {
-        enode.fold(1, |sum, id| sum.saturating_add(costs(id)))
+        enode.fold(1, |sum, id: Id| sum.saturating_add(costs(id)))
     }
 }
 
@@ -125,25 +128,34 @@ impl<L: Language> CostFunction<L> for AstDepth {
     }
 }
 
-pub struct OperatorCount;
-impl CostFunction<Prop> for OperatorCount {
-    type Cost = f64;
-    fn cost<C>(&mut self, e: &Prop, mut costs: C) -> Self::Cost
-    where
-        C: FnMut(Id) -> Self::Cost,
-    {
-        let x1 = if let Prop::Or(_) = e { 1.0 } else { 0.0 };
-        let x2 = if let Prop::Not(_) = e { 1.0 } else { 0.0 };
-        let x4 = if let Prop::Concat(_) = e { 1.0 } else { 0.0 };
-        // get AstSize for x5
-        let x5 = e.fold(1.0, |sum, id| sum + costs(id));
-        // Implementing the formula
-        let cost = ((cube(x1) * (((x4 * -60.6726861683498) - x5) + 128.3127559231758))
-            + ((138.49679515109216 + x2) - ((x5 / 0.20209527706229327) / x2)))
-            + (cos2(cube(x5 / (x2 + 0.024815471829498798)))
-                * (square(square(-1.549131586967952)) + -1.4213765980328845));
-        cost
-    }
+// pub struct OperatorCount;
+// impl CostFunction<Prop> for OperatorCount {
+//     type Cost = f64;
+//     fn cost<C>(&mut self, e: &Prop, mut costs: C) -> Self::Cost
+//     where
+//         C: FnMut(Id) -> Self::Cost,
+//     {
+//         let x1 = if let Prop::Or(_) = e { 1.0 } else { 0.0 };
+//         let x2 = if let Prop::Not(_) = e { 1.0 } else { 0.0 };
+//         let x4 = if let Prop::Concat(_) = e { 1.0 } else { 0.0 };
+//         // get AstSize for x5
+//         let x5 = e.fold(1.0, |sum, id| sum + costs(id));
+//         // Implementing the formula
+        // let cost = ((cube(x1) * (((x4 * -60.6726861683498) - x5) + 128.3127559231758))
+        //     + ((138.49679515109216 + x2) - ((x5 / 0.20209527706229327) / x2)))
+        //     + (cos2(cube(x5 / (x2 + 0.024815471829498798)))
+        //         * (square(square(-1.549131586967952)) + -1.4213765980328845));
+       //  cost
+//     }
+// }
+
+pub fn calculate_cost(x1: f64, x2: f64, x4: f64, x5: f64) -> f64 {
+    let cost = (cube(x1) * (((x4 * -60.6726861683498) - x5) + 128.3127559231758))
+        + ((138.49679515109216 + x2) - ((x5 / 0.20209527706229327) / x2))
+        + (cos2(cube(x5 / (x2 + 0.024815471829498798)))
+            * (square(square(-1.549131586967952)) + -1.4213765980328845));
+    
+    cost
 }
 fn cube(n: f64) -> f64 {
     pow(n, 3)
@@ -155,8 +167,103 @@ fn cos2(n: f64) -> f64 {
     (2.0 * PI * n).cos().powi(2)
 }
 
-fn simplify(s: &str) -> String {
+// fn simplify(s: &str) -> String {
+//     let expr: RecExpr<Prop> = s.parse().unwrap();
+//     let mut egraphin = EGraph::new(ConstantFold {});
+//     egraphin.add_expr(&expr);
+//     //egraphin.dot().to_png("./image/fooin.png").unwrap();
+//     println!("input node{}", egraphin.total_size());
+//     println!("input class{}", egraphin.number_of_classes());
+
+//     // ruuner configure
+//     let runner_iteration_limit = 10000000;
+//     let egraph_node_limit = 25000000000;
+//     let start = Instant::now();
+
+
+
+//     let runner = Runner::default()
+//         .with_explanations_enabled()
+//         .with_expr(&expr)
+//         .with_time_limit(std::time::Duration::from_secs(100))
+//         .with_iter_limit(runner_iteration_limit)
+//         .with_node_limit(egraph_node_limit)
+//         .run(&make_rules());
+//     let duration = start.elapsed();
+//     runner.print_report();
+//     println!("Runner stopped: {:?}. Time take for runner: {:?}, Classes: {}, Nodes: {}, Size: {}\n\n",
+//             runner.stop_reason, duration, runner.egraph.number_of_classes(),
+//             runner.egraph.total_number_of_nodes(), runner.egraph.total_size());
+
+
+//     let root = runner.roots[0];
+//     runner.print_report();
+//     let extractor = Extractor::new(&runner.egraph, AstSize);
+//     //let extractor = Extractor::new(&runner.egraph, AstSize);
+//     //let extractor = Extractor::new(&runner.egraph, OperatorCount);
+//     let (best_cost, best) = extractor.find_best(root);
+//     let mut egraphout = EGraph::new(ConstantFold {});
+//     egraphout.add_expr(&best);
+//     println!("output node{}", egraphout.total_size());
+//     println!("output class{}", egraphout.number_of_classes());
+//     //egraphout.dot().to_png("./image/fooout.png").unwrap();
+//     best.to_string()
+// }
+
+pub fn generate_random_float() -> f64 {
+    let mut rng = rand::thread_rng();
+    let random_float: f64 = rng.gen_range(0.0..0.5);
+    random_float
+}
+pub struct Mixcost;
+    impl<L: Language> CostFunction<L> for Mixcost{
+        
+            type Cost = i32;
+            fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
+            where
+                C: FnMut(Id) -> Self::Cost,
+            {
+                let alpha = generate_random_float();
+                let costsize = (enode.fold(1.0, |sum, id: Id| sum + f64::from(costs(id))));
+                let costdepth =  1 + enode.fold(0, |max, id| max.max( i32::from(costs(id))));
+                let result = alpha * costsize + (((1.0-alpha)*costdepth as f64) as f64);
+                result as i32
+            }
+            
+        }
+
+pub fn count_operators(s: &str) -> HashMap<String, f64> {
+    let mut operator_counts = HashMap::new();
+    for c in s.chars() {
+        match c {
+                '*' | '!' | '+' | '-' | '>' | '&' => {
+                 let entry = operator_counts.entry(c.to_string()).or_insert(0.0);
+                        *entry += 1.0;
+                    },
+                    _ => {},
+                }
+            }
+            operator_counts
+        }
+
+
+pub fn count_ast_size_and_depth(s: &str) -> (f64, f64) {
     let expr: RecExpr<Prop> = s.parse().unwrap();
+    let mut ast_size = AstSize;
+    let mut ast_depth = AstDepth;
+    let size = ast_size.cost_rec(&expr) as f64;
+    let depth = ast_depth.cost_rec(&expr) as f64;
+    (size, depth)
+}
+
+fn main() -> std::io::Result<()> {
+    let args: Vec<String> = env::args().collect();
+    let input_path = &args[1];
+    let output_path = &args[2];
+    let mut input_file = File::open(input_path)?;
+    let mut contents = String::new();
+    input_file.read_to_string(&mut contents)?;
+    let expr: RecExpr<Prop> = contents.parse().unwrap();
     let mut egraphin = EGraph::new(ConstantFold {});
     egraphin.add_expr(&expr);
     //egraphin.dot().to_png("./image/fooin.png").unwrap();
@@ -167,9 +274,7 @@ fn simplify(s: &str) -> String {
     let runner_iteration_limit = 10000000;
     let egraph_node_limit = 25000000000;
     let start = Instant::now();
-
-
-
+    let iterations = 500 as i32;
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
@@ -178,34 +283,50 @@ fn simplify(s: &str) -> String {
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());
     let duration = start.elapsed();
-    runner.print_report();
     println!("Runner stopped: {:?}. Time take for runner: {:?}, Classes: {}, Nodes: {}, Size: {}\n\n",
             runner.stop_reason, duration, runner.egraph.number_of_classes(),
             runner.egraph.total_number_of_nodes(), runner.egraph.total_size());
+    //let mut unique_solutions = HashSet::new();
+    let mut results: HashMap<i32, RecExpr<Prop>> = HashMap::new();
+    for i in 0..iterations+1 {
+        
+        let extractor = Extractor::new(&runner.egraph, Mixcost);
+        let root = runner.roots[0];
+        let (best_cost, best) = extractor.find_best(root);
+        results.insert(i, best);
 
+    }
+    let mut sym_cost_dict: HashMap<i32, f64> = HashMap::new();
+    for (key, best) in &results {
+        let result_string =best.to_string();
+        let (size, depth) = count_ast_size_and_depth(&result_string);
+        let operator_counts = count_operators(&result_string);
+        let x1 = operator_counts.get("*").copied().unwrap_or(0.0);
+        let x2 = operator_counts.get("!").copied().unwrap_or(0.0);
+        let x3 = operator_counts.get("+").copied().unwrap_or(0.0);
+        let x4 = operator_counts.get("&").copied().unwrap_or(0.0);
+        let sym_cost =calculate_cost(x3,x2,x4,size);
+        sym_cost_dict.insert(*key, sym_cost);
+    }
+    for(key,value)in &sym_cost_dict{
+        println!("Inserted key: {}, value: {}", key, value);
+    }
+    let mut min_value = f64::INFINITY;
+    let mut min_key = 0; 
 
-    let root = runner.roots[0];
-    runner.print_report();
-    let extractor = Extractor::new(&runner.egraph, AstDepth);
-    //let extractor = Extractor::new(&runner.egraph, AstSize);
-    //let extractor = Extractor::new(&runner.egraph, OperatorCount);
-    let (best_cost, best) = extractor.find_best(root);
-    let mut egraphout = EGraph::new(ConstantFold {});
-    egraphout.add_expr(&best);
-    println!("output node{}", egraphout.total_size());
-    println!("output class{}", egraphout.number_of_classes());
-    //egraphout.dot().to_png("./image/fooout.png").unwrap();
-    best.to_string()
-}
-fn main() -> std::io::Result<()> {
-    let args: Vec<String> = env::args().collect();
-    let input_path = &args[1];
-    let output_path = &args[2];
-    let mut input_file = File::open(input_path)?;
-    let mut contents = String::new();
-    input_file.read_to_string(&mut contents)?;
-    let result = simplify(&contents);
+    for (key, &value) in &sym_cost_dict {
+        if value < min_value {
+            min_value = value;
+            min_key = *key;
+        }
+        // println!("最小值的键: {}", min_key);
+        // println!("最小值: {}", min_value);
+
+    }
+    let output = results.get(&min_key).map(|result| result.to_string()).unwrap_or_default();
+    //let result = simplify(&contents);
+    println!("{}", output);
     let mut output_file = File::create(output_path)?;
-    output_file.write(result.as_bytes())?;
+    output_file.write(output.as_bytes())?;
     Ok(())
 }
