@@ -106,3 +106,11 @@ s-converter/.vscode
 
 s-converter/target
 s-converter/release
+
+s-converter/split_concat.txt
+
+s-converter/target
+s-converter/input.txt
+s-converter/output.txt
+s-converter/.vscode/launch.json
+s-converter/split_concat.txt

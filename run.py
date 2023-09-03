@@ -250,7 +250,7 @@ if __name__ == "__main__":
     print("\n\n------------------------------------Original circuit------------------------------------")
     #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
-    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; collapse write_blif test_data/original_circuit.blif\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -258,7 +258,7 @@ if __name__ == "__main__":
     print("\n\n------------------------------------Optimized circuit------------------------------------")
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
-    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; collapse; write_blif test_data/optimized_circuit.blif\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     '''
@@ -271,24 +271,7 @@ if __name__ == "__main__":
     '''
     # for original circuit
     print("\n\n------------------------------------Equivalence checking------------------------------------")
-    verify_command = "./abc/abc -c \"cec test_data/original_circuit.aig test_data/optimized_circuit.aig\""
+    verify_command = "./abc/abc -c \"cec test_data/original_circuit.blif test_data/optimized_circuit.blif\""
     os.system(verify_command)
     print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
     
-    '''
-    #############################################################################
-    #
-    #               Additional quivalence checking between original and optimized circuit
-    #
-    #############################################################################
-    '''
-    # additional test
-    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit.aig\""
-    os.system(command)
-    
-    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
-    os.system(command)
-    
-    print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
-    os.system(verify_command)
-    print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
