@@ -8,7 +8,7 @@
 ## Usage
 
 1. Convert the circuit to eqn format by using `write_eqn` in `abc`
-2. Copy and paste the eqn to `test/raw_circuit.txt`
+2. Copy and paste the eqn to `test_data/raw_circuit.txt`
 2. Run `python run.py`
 
 ## Benchamrk Description

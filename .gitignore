@@ -101,3 +101,8 @@ run/target
 result/
 
 circuitparser/target
+
+s-converter/.vscode
+
+s-converter/target
+s-converter/release
