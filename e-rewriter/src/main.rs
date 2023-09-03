@@ -57,7 +57,7 @@ impl Analysis<Prop> for ConstantFold {
             )),
             Prop::Symbol(_) => None,
         };
-        println!("Make: {:?} -> {:?}", enode, result);
+        //println!("Make: {:?} -> {:?}", enode, result);
         result
     }
     fn modify(egraph: &mut EGraph, id: Id) {
@@ -160,8 +160,8 @@ fn simplify(s: &str) -> String {
     let mut egraphin = EGraph::new(ConstantFold {});
     egraphin.add_expr(&expr);
     //egraphin.dot().to_png("./image/fooin.png").unwrap();
-    println!("input node{}", egraphin.total_size());
-    println!("input class{}", egraphin.number_of_classes());
+    println!("input node:{}", egraphin.total_size());
+    println!("input class:{}", egraphin.number_of_classes());
 
     // ruuner configure
     let runner_iteration_limit = 10000000;
@@ -173,7 +173,7 @@ fn simplify(s: &str) -> String {
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
-        .with_time_limit(std::time::Duration::from_secs(1200))
+        .with_time_limit(std::time::Duration::from_secs(100))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());
@@ -185,15 +185,15 @@ fn simplify(s: &str) -> String {
 
 
     let root = runner.roots[0];
-    runner.print_report();
+    //runner.print_report();
     let extractor = Extractor::new(&runner.egraph, AstDepth);
     //let extractor = Extractor::new(&runner.egraph, AstSize);
     //let extractor = Extractor::new(&runner.egraph, OperatorCount);
     let (best_cost, best) = extractor.find_best(root);
     let mut egraphout = EGraph::new(ConstantFold {});
     egraphout.add_expr(&best);
-    println!("output node{}", egraphout.total_size());
-    println!("output class{}", egraphout.number_of_classes());
+    println!("output node:{}", egraphout.total_size());
+    println!("output class:{}", egraphout.number_of_classes());
     //egraphout.dot().to_png("./image/fooout.png").unwrap();
     best.to_string()
 }
