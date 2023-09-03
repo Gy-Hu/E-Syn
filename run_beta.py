@@ -82,19 +82,28 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
     # use `sympy_to_rust_sexpr()` to convert to s-expression
     # parse the string to sympy
     
-    parser = to_sympy_parser.PropParser()
-    parser.build()
-    result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
+    # parser = to_sympy_parser.PropParser()
+    # parser.build()
+    # result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
     
-    print("success convert to s-expression")
-    with open (output_file_path, "w") as myfile: 
-        myfile.write(result)
+   
+    
+    # print("success convert to s-expression")
+    # with open (output_file_path, "w") as myfile: 
+    #     myfile.write(result)
         
+    # if multiple_output: 
+    #     FORMULA_LIST = [parser.parse(eqn) for eqn in FORMULA_LIST]
+    #     return FORMULA_LIST
+    
+    # use s-converter to convert to s-expression
+    # dump eqn to test_data/input_for_s-converter.txt
+    with open ("test_data/input_for_s-converter.txt", "w") as myfile:
+        myfile.write(eqn)
+    
+    os.system("s-converter/target/release/s-converter test_data/input_for_s-converter.txt test_data/sexpr_for_egg.txt lisp")
     if multiple_output: 
-        FORMULA_LIST = [parser.parse(eqn) for eqn in FORMULA_LIST]
-        return FORMULA_LIST
-    
-        
+        return None
 
         
 def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
@@ -103,8 +112,11 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         # read line by line
         sexpr=myfile.readlines()
 
-    parser = to_sympy_parser_sexpr.PropParser()
-    parser.build()
+    # parser = to_sympy_parser_sexpr.PropParser()
+    # parser.build()
+    
+    # using the s-converter to convert to abc eqn
+    os.system("s-converter/target/release/s-converter test_data/output_from_egg.txt test_data/output_from_s-converter.txt test_data/split_concat.txt")
     
     if not multiple_output:
         result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
@@ -116,31 +128,12 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             # write the new eqn
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
-        components =  list(parser.parse(sexpr[0]).args)
-        
-        '''
-        global order
-        # get the key component, if str(component) start with `~(po`, then it is the key component
-        # find the key component
-        for component in components:
-            if str(component).startswith("~(po"):
-                order = component
-                break
-        components.remove(order)
-        
-        
-        def pre(expr,lst):
-            if isinstance(expr, Symbol):
-                if str(expr).startswith("po"): lst.append(str(expr).replace("po",""))
-            for arg in expr.args:
-                pre(arg,lst)
-        
-        symbol_order = []; pre(order, symbol_order)
-        '''
-        
-        # Use OrderedDict to keep the order of components
-        # components = OrderedDict((str(component), component) for component in components)
-        result = [str(sympy_to_abc_eqn_normal_bool(component)) for component in components]
+        # read s-converter/split_concat.txt
+        # with open ("test_data/output_from_s-converter.txt", "r") as myfile:
+        #     # read line by line
+        #     lines=myfile.readlines()
+        with open ("test_data/split_concat.txt", "r") as myfile:
+            lines=myfile.readlines()
         
         # Use the function
         #equ_check_result = check_equal(FORMULA_LIST, components); print(len(equ_check_result)); print(equ_check_result)
@@ -152,9 +145,12 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             for i in range(3):
                 myfile.write(data[i])
             # write the new eqn
-            for i in range(len(result)):
+            for i in range(len(lines)):
                 #myfile.write(data[3+i].split(" = ")[0] + " = " + result[int(symbol_order[i])] + ";" + "\n")
-                myfile.write(data[3+i].split(" = ")[0] + " = " + result[i] + ";" + "\n")
+                #myfile.write(data[3+i].split(" = ")[0] + " = " + result[i] + ";" + "\n")
+                
+                # split the lines in first space, for example, 1 xxx abc -> 1, xxx abc
+                myfile.write(data[3+i].split(" = ")[0] + " = " + (lines[i].split(' ',1)[1]).rstrip().strip(";") + ";" + "\n")
         
         
         
@@ -170,7 +166,7 @@ def concatenate_equations(lines):
     num_concat = 0
     
     while len(equations) > 1:  # while there are more than one equation left
-        equations[0] = f'({equations[0]}) & ({equations[1]})'  # concatenate the first two equations
+        equations[0] = f'({equations[0]} & {equations[1]})'  # concatenate the first two equations
         num_concat += 1
         del equations[1]  # remove the second equation
     return equations[0], FORMULA_LIST  # return the single remaining equation
@@ -225,9 +221,8 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    # run egg
-    command = "e-rewriter/target/debug/e-rewriter test_data/sexpr_for_egg.txt test_data/output_from_egg.txt"
-    os.system(command)
+    # run egg 
+    os.system("e-rewriter/target/release/e-rewriter test_data/sexpr_for_egg.txt test_data/output_from_egg.txt")
     
     '''
     #############################################################################
@@ -251,7 +246,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/original_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; orpos; write_aiger test_data/original_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -260,7 +255,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/optimized_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; ordpos; write_aiger test_data/optimized_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     '''
@@ -277,3 +272,21 @@ if __name__ == "__main__":
     os.system(verify_command)
     print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
     
+
+    '''
+    #############################################################################
+    #
+    #               Additional quivalence checking between original and optimized circuit
+    #
+    #############################################################################
+    '''
+    # additional test
+    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit.aig\""
+    os.system(command)
+    
+    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
+    os.system(command)
+    
+    print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
+    os.system(verify_command)
+    print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
