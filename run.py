@@ -260,7 +260,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/optimized_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; ordpos; write_aiger test_data/optimized_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     '''
