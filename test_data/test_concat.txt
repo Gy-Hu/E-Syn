@@ -1,6 +1,0 @@
-# Equations for "/data/guangyuh/coding_env/py-aiger/test_abc" written by ABC on Mon Aug 21 00:52:21 2023
-INORDER = pi0 pi1 pi2 pi3;
-OUTORDER = po0 po1 po3;
-po0 = !(pi0 * pi1) * (pi2 * pi3) + (pi0 * pi1) * !(pi2 * pi3);
-po1 = !(pi0 * pi1) + (pi2 * pi3) + (pi0 * pi1) + !(pi2 * pi3);
-po2 = !(pi0 * pi1) * !(pi2 * pi3) + (pi0 * pi1) * (pi2 * pi3);

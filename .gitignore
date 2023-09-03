@@ -7,7 +7,7 @@ parsetab.py
 *.out
 hadi.txt
 out.txt
-!test_data/
+test_data/
 optimized_circuit.aig
 optimized_circuit.txt
 original_circuit.aig
