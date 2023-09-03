@@ -97,3 +97,7 @@ benchmark/AIO_bak
 !ParseResult.ipynb
 result_bak/
 run/target
+
+result/
+
+circuitparser/target
