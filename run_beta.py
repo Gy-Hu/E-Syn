@@ -141,7 +141,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         #equ_check_result = check_equal(FORMULA_LIST, components); print(len(equ_check_result)); print(equ_check_result)
         
         components =  list(parser.parse(sexpr[0]).args)
-        result = [str(component) for component in components]
+        # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
+        result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
         
         print("multiple output circuit parse success")
         # write a new eqn file
