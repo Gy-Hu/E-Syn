@@ -4,7 +4,8 @@
 #include <string>
 #include <regex>
 #include <set>
-
+#include <future> 
+#include <thread>
 
 using namespace std;
 
@@ -100,7 +101,10 @@ int main(int argc, char* argv[]) {
     // }
     //map<string, string> newExpressions; // Map to hold modified output expressions
     vector<pair<string, string>> newExpressions;
-    for (const auto& pair : out_Expressions) {
+    
+    vector<future<pair<string, string>>> futures;
+    // Create a lambda function that does the work of each iteration
+    auto processPair = [&variableExpressions](const pair<string, string>& pair) {
         string newExpression = pair.second;
         bool replaced = true;
         while (replaced) {
@@ -121,11 +125,7 @@ int main(int argc, char* argv[]) {
                 }
                 string variable = newExpression.substr(startPos, secondEndPos - startPos + 1) + (" ");
                 if (variableExpressions.find(variable) != variableExpressions.end()) {
-                    string tmp_var = variableExpressions[variable];
-                    //remove the first space in tmp_var
-                    //tmp_var.erase(tmp_var.find_last_not_of(" \n\r\t")+1);
                     newExpression.replace(startPos, secondEndPos - startPos + 1, "(" + variableExpressions[variable] + ")");
-                    //newExpression.replace(startPos, secondEndPos - startPos + 1, "(" + tmp_var + ")");
                 } else {
                     pos = secondEndPos + 1;  // Move to the next character
                 }
@@ -134,8 +134,11 @@ int main(int argc, char* argv[]) {
                 replaced = false;
             }
         }
-        newExpressions.push_back(make_pair(pair.first, newExpression));
-        //newExpressions[pair.first] = newExpression; // Store the modified expression
+        return make_pair(pair.first, newExpression);
+    };
+    for (const auto& pair : out_Expressions) {
+        // Launch a new thread for each pair
+        futures.push_back(async(launch::async, processPair, pair));
     }
     ofstream outputFile(outputFileName);
     ifstream inputFile1(inputFileName);
