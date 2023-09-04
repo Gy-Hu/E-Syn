@@ -21,8 +21,9 @@
 
 ## TODO
 
-- [ ] Shell script to run all benchmarks
-- [ ] Fine-tune the parameters of egg and symREG
+- [x] Shell script to run all benchmarks
+- [x] Fine-tune the parameters of egg and symREG
 - [ ] Add more rewrite rules in egg
-- [ ] Add BDD to do equivalence checking
-- [ ] Using monotonic cost function in symREG
+- [x] Add BDD to do equivalence checking
+- [x] Using monotonic cost function in symREG
+- [ ] Optimize parser 2, avoid duplicated parsing

@@ -128,3 +128,4 @@ aigbdd/*.blif
 aigbdd/aiglec
 aigbdd/aigviz
 tmp.txt
+test4circuitparser/max_processed.eqn

@@ -108,7 +108,7 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
         
 def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
     # using the s-converter to convert to abc eqn
-    os.system("s-converter/target/release/s-converter test_data_beta_runner/output_from_egg.txt test_data_beta_runner/output_from_s-converter.txt test_data_beta_runner/split_concat.txt")
+    # os.system("s-converter/target/release/s-converter test_data_beta_runner/output_from_egg.txt test_data_beta_runner/output_from_s-converter.txt test_data_beta_runner/split_concat.txt")
     
     if not multiple_output:
         parser = to_sympy_parser_sexpr.PropParser(); parser.build()
@@ -116,8 +116,9 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
             # read line by line
             sexpr=myfile.readlines()
-            
-        result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
+        
+        parse_res, _ = parser.parse(sexpr[0])
+        result = str( sympy_to_abc_eqn_normal_bool(parse_res) )
         # write a new eqn file
         with open ("test_data_beta_runner/optimized_circuit.eqn", "w") as myfile: 
             # write the first 3 lines of the original file - from data[0] to data[2]
@@ -126,9 +127,14 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             # write the new eqn
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
-        parser = to_sympy_parser.PropParser(); parser.build()
-        with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
+        # parser = to_sympy_parser.PropParser(); parser.build()
+        # with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
+        #     sexpr=myfile.readlines()
+        
+        parser = to_sympy_parser_sexpr.PropParser(); parser.build()
+        with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
             sexpr=myfile.readlines()
+        
         # read s-converter/split_concat.txt
         # with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
         #     # read line by line
@@ -146,7 +152,10 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             for id in _:
                 myfile.write(str(_[id])+'\n------------------------\n')
                 
-        components =  list(parser_res.args)
+        #components =  list(parser_res.args)
+        
+        # convert dict _ to list
+        components = list(_.values())
         # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
         result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
         
@@ -311,6 +320,7 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
+    os.system("./abc/abc -c \"cec test_data_beta_runner/original_circuit.eqn test_data_beta_runner/optimized_circuit.eqn\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; strash; write_aiger test_data_beta_runner/raw_circuit.aig\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; strash; write_aiger test_data_beta_runner/optimized_circuit.aig\"")
     # os.system("./abc/abc -c \"read_aiger test_data_beta_runner/raw_circuit.aig; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")

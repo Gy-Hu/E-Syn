@@ -26,6 +26,8 @@ class PropParser(object):
         self.lexer = PropLexer()
         self.lexer.build()
         self.atoms = {}
+        self.concat_spliter = {}
+        self.concat_spliter_id = 0
 
     # for parsing the proposition
     def p_prop_term(self, p):
@@ -43,14 +45,25 @@ class PropParser(object):
     def p_prop_concat(self, p):
         "prop : LPAREN CONCAT prop prop RPAREN"
         # if p[3], p[4] both not start with `po`
-        if not str(p[3]).startswith("po") and not str(p[4]).startswith("po"):
-            p[0] = Xor(p[3], p[4])
-        elif str(p[3]).startswith("po") and not str(p[4]).startswith("po"):
-            p[0] = Nand(p[3], p[4])
-        elif not str(p[3]).startswith("po") and str(p[4]).startswith("po"):
-            p[0] = Nand(p[4], p[3])
+        # if not str(p[3]).startswith("po") and not str(p[4]).startswith("po"):
+        #     p[0] = Xor(p[3], p[4])
+        # elif str(p[3]).startswith("po") and not str(p[4]).startswith("po"):
+        #     p[0] = Nand(p[3], p[4])
+        # elif not str(p[3]).startswith("po") and str(p[4]).startswith("po"):
+        #     p[0] = Nand(p[4], p[3])
+        # else:
+        #     p[0] = Nand(p[3], p[4])
+        
+        "prop : prop CONCAT prop"
+        p[0] = Xor(p[3], p[4])
+        # if self.concat_spliter_id is 0, add p[1] and p[3] to concat_spliter
+        if self.concat_spliter_id == 0:
+            self.concat_spliter[self.concat_spliter_id] = p[1]
+            self.concat_spliter[self.concat_spliter_id + 1] = p[3]
+            self.concat_spliter_id += 2
         else:
-            p[0] = Nand(p[3], p[4])
+            self.concat_spliter[self.concat_spliter_id] = p[3]
+            self.concat_spliter_id += 1
             
 
     def p_prop_not(self, p):
@@ -75,7 +88,7 @@ class PropParser(object):
 
     def parse(self, data):
         self.lexer.input(data)
-        return self.parser.parse(data, lexer=self.lexer.lexer)
+        return self.parser.parse(data, lexer=self.lexer.lexer), self.concat_spliter
 
 
 # test string

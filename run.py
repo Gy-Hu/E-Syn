@@ -108,7 +108,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
     parser.build()
     
     if not multiple_output:
-        result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
+        parse_res, _ = parser.parse(sexpr[0])
+        result = str( sympy_to_abc_eqn_normal_bool(parse_res) )
         # write a new eqn file
         with open ("test_data/optimized_circuit.eqn", "w") as myfile: 
             # write the first 3 lines of the original file - from data[0] to data[2]
@@ -117,7 +118,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             # write the new eqn
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
-        components =  list(parser.parse(sexpr[0]).args)
+        parse_res, _ = parser.parse(sexpr[0])
+        components =  list(parse_res.args)
         
         '''
         global order
