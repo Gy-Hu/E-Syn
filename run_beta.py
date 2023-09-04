@@ -189,7 +189,7 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.txt"
     output_file_path = "test_data_beta_runner/original_circuit.txt"
 
-    os.system("./circuitparser.out test_data/raw_circuit.txt test_data_beta_runner/original_circuit.txt")
+    os.system("./circuitparser.out test_data_beta_runner/raw_circuit.txt test_data_beta_runner/original_circuit.txt")
 
     # parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
     # parser.process()
@@ -300,3 +300,15 @@ if __name__ == "__main__":
     print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
     os.system(verify_command)
     print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
+    
+    '''
+    #############################################################################
+    #
+    #               Using BDD to check the equivalence between original and optimized circuit
+    #
+    #############################################################################
+    '''
+    
+    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.txt; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")
+    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\"")
+    os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.blif test_data_beta_runner/optimized_circuit.blif\"")

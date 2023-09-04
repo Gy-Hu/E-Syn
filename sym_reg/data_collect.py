@@ -30,9 +30,9 @@ def process_circuits(file_count):
     for i in tqdm(range(file_count), desc='Processing circuits for analyzer'):
         print(f"processing No.{i} circuit")
         parser = CircuitParser(
-            f"aigfuzz/simple_circuit_{i}.eqn", f"aigfuzz/simple_circuit_{i}.eqn")
+            f"aigfuzz/simple_circuit_{i}.eqn", f"aigfuzz/simple_circuit_{i}_processed.eqn")
         parser.process()
-        with open(f"aigfuzz/simple_circuit_{i}.eqn", "r") as myfile:
+        with open(f"aigfuzz/simple_circuit_{i}_processed.eqn", "r") as myfile:
             data = myfile.readlines()
         _ = run.conver_to_sexpr(
             data, multiple_output=True, output_file_path=f"aigfuzz/simple_circuit_{i}.sexpr")
@@ -43,7 +43,7 @@ def process_circuits(file_count):
 def run_abc(file_count):
     for i in tqdm(range(file_count), desc='Running abc to extract stats'):
         os.system(
-            f"abc -c \"read_eqn aigfuzz/simple_circuit_{i}.eqn; balance; refactor; print_stats -p; read_lib ../asap7_clean.lib ; map ; stime; \" > aigfuzz/simple_circuit_{i}.stats")
+            f"abc -c \"read_eqn aigfuzz/simple_circuit_{i}_processed.eqn; balance; refactor; print_stats -p; read_lib ../asap7_clean.lib ; map ; stime; \" > aigfuzz/simple_circuit_{i}.stats")
 
 
 def parse_data(file_count):
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     import run 
     from CircuitParser import CircuitParser
     print(run.__file__)
-    file_count = 500
+    file_count = 100
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)
