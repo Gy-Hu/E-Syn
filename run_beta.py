@@ -108,7 +108,7 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
         
 def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
     # using the s-converter to convert to abc eqn
-    # os.system("s-converter/target/release/s-converter test_data_beta_runner/output_from_egg.txt test_data_beta_runner/output_from_s-converter.txt test_data_beta_runner/split_concat.txt")
+    os.system("s-converter/target/release/s-converter test_data_beta_runner/output_from_egg.txt test_data_beta_runner/output_from_s-converter.txt test_data_beta_runner/split_concat.txt")
     
     if not multiple_output:
         parser = to_sympy_parser_sexpr.PropParser(); parser.build()
@@ -127,13 +127,13 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             # write the new eqn
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
-        # parser = to_sympy_parser.PropParser(); parser.build()
-        # with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
-        #     sexpr=myfile.readlines()
-        
-        parser = to_sympy_parser_sexpr.PropParser(); parser.build()
-        with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
+        parser = to_sympy_parser.PropParser(); parser.build()
+        with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
             sexpr=myfile.readlines()
+        
+        # parser = to_sympy_parser_sexpr.PropParser(); parser.build()
+        # with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
+        #     sexpr=myfile.readlines()
         
         # read s-converter/split_concat.txt
         # with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
