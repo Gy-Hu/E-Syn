@@ -82,7 +82,7 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
     # use `sympy_to_rust_sexpr()` to convert to s-expression
     # parse the string to sympy
     
-    parser = to_sympy_parser.PropParser()
+    parser, _ = to_sympy_parser.PropParser()
     parser.build()
     result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
     
@@ -109,7 +109,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
     if not multiple_output:
         result = str( sympy_to_abc_eqn_normal_bool(parser.parse(sexpr[0])) )
         # write a new eqn file
-        with open ("test_data/optimized_circuit.txt", "w") as myfile: 
+        with open ("test_data/optimized_circuit.eqn", "w") as myfile: 
             # write the first 3 lines of the original file - from data[0] to data[2]
             for i in range(3):
                 myfile.write(data[i])
@@ -147,7 +147,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         print("multiple output circuit parse success")
         # write a new eqn file
-        with open("test_data/optimized_circuit.txt", "w") as myfile:
+        with open("test_data/optimized_circuit.eqn", "w") as myfile:
             # write the first 3 lines of the original file - from data[0] to data[2]
             for i in range(3):
                 myfile.write(data[i])
@@ -182,14 +182,14 @@ if __name__ == "__main__":
     multiple_output_flag = False
     
     # process the raw circuit file
-    input_file_path = "test_data/raw_circuit.txt"
-    output_file_path = "test_data/original_circuit.txt"
+    input_file_path = "test_data/raw_circuit.eqn"
+    output_file_path = "test_data/original_circuit.eqn"
 
     parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
     parser.process()
     
     # load file to convert to s-expression (test)
-    with open ("test_data/original_circuit.txt", "r") as myfile:
+    with open ("test_data/original_circuit.eqn", "r") as myfile:
         # read line by line
         data=myfile.readlines()
         
@@ -248,23 +248,23 @@ if __name__ == "__main__":
     
     # for original circuit
     print("\n\n------------------------------------Original circuit------------------------------------")
-    #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
-    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
-    #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/original_circuit.blif\""
-    #command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; orpos; write_aiger test_data/original_circuit.aig\""
+    #command = "./abc/abc -c \"read_eqn test_data/original_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/original_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit_and_all.aig\""
+    #command = "./abc/abc -c \"read_eqn test_data/original_circuit.eqn;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/original_circuit.blif\""
+    #command = "./abc/abc -c \"read_eqn test_data/original_circuit.eqn; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; orpos; write_aiger test_data/original_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
     # for optized circuit
     print("\n\n------------------------------------Optimized circuit------------------------------------")
-    #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
-    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
-    #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/optimized_circuit.blif\""
-    #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
+    #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/optimized_circuit_and_all.aig\""
+    #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data/optimized_circuit.blif\""
+    #command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.eqn; resyn2 ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
-    '''
     
+    '''
     #############################################################################
     #
     #               Equivalence checking between original and optimized circuit
@@ -273,10 +273,10 @@ if __name__ == "__main__":
     '''
     # for original circuit
     print("\n\n------------------------------------Equivalence checking------------------------------------")
-    verify_command = "./abc/abc -c \"cec test_data/original_circuit.aig test_data/optimized_circuit.aig\""
-    os.system(verify_command)
+    os.system("./abc/abc -c \"cec test_data/original_circuit_and_all.aig test_data/optimized_circuit_and_all.aig\"")
     print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
     
+
     '''
     #############################################################################
     #
@@ -285,12 +285,25 @@ if __name__ == "__main__":
     #############################################################################
     '''
     # additional test
-    command = "./abc/abc -c \"read_eqn test_data/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit.aig\""
-    os.system(command)
+    os.system("./abc/abc -c \"read_eqn test_data/original_circuit.eqn; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit_or_all.aig\"")
     
-    command = "./abc/abc -c \"read_eqn test_data/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit.aig\""
-    os.system(command)
+    os.system("./abc/abc -c \"read_eqn test_data/optimized_circuit.eqn; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit_or_all.aig\"")
+    
     
     print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
-    os.system(verify_command)
+    os.system("./abc/abc -c \"cec test_data/original_circuit_or_all.aig test_data/optimized_circuit_or_all.aig\"")
     print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
+    
+    '''
+    #############################################################################
+    #
+    #               Using BDD to check the equivalence between original and optimized circuit
+    #
+    #############################################################################
+    '''
+    # os.system("./abc/abc -c \"read_eqn test_data/raw_circuit.eqn; strash; write_aiger test_data/raw_circuit.aig\"")
+    # os.system("./abc/abc -c \"read_eqn test_data/optimized_circuit.eqn; strash; write_aiger test_data/optimized_circuit.aig\"")
+    # os.system("./abc/abc -c \"read_aiger test_data/raw_circuit.aig; collapse; write_blif test_data/raw_circuit.blif\"")
+    # os.system("./abc/abc -c \"read_aiger test_data/optimized_circuit.aig; collapse; write_blif test_data/optimized_circuit.blif\"")
+    # os.system("./abc/abc -c \"cec test_data/raw_circuit.blif test_data/optimized_circuit.blif\"")
+    # os.system("./aigbdd/aiglec test_data/raw_circuit.aig test_data/optimized_circuit.aig")
