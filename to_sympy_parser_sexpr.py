@@ -58,11 +58,11 @@ class PropParser(object):
         p[0] = Xor(p[3], p[4])
         # if self.concat_spliter_id is 0, add p[1] and p[3] to concat_spliter
         if self.concat_spliter_id == 0:
-            self.concat_spliter[self.concat_spliter_id] = p[1]
-            self.concat_spliter[self.concat_spliter_id + 1] = p[3]
+            self.concat_spliter[self.concat_spliter_id] = p[3]
+            self.concat_spliter[self.concat_spliter_id + 1] = p[4]
             self.concat_spliter_id += 2
         else:
-            self.concat_spliter[self.concat_spliter_id] = p[3]
+            self.concat_spliter[self.concat_spliter_id] = p[4]
             self.concat_spliter_id += 1
             
 
