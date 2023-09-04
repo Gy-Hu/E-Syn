@@ -116,3 +116,14 @@ s-converter/.vscode/launch.json
 s-converter/split_concat.txt
 
 test_data_beta_runner
+
+aigbdd/graphs
+aigbdd/test1_aig.png
+aigbdd/test1_bdd_0.png
+aigbdd/test2_aig.png
+aigbdd/test2_bdd_0.png
+aigbdd/*.aig
+aigbdd/*.blif
+
+aigbdd/aiglec
+aigbdd/aigviz

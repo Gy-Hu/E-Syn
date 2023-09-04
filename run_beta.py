@@ -256,7 +256,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/original_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -265,7 +265,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit.aig\""
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit_and_all.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     '''
@@ -291,11 +291,9 @@ if __name__ == "__main__":
     #############################################################################
     '''
     # additional test
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data_beta_runner/original_circuit.aig\""
-    os.system(command)
+    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data_beta_runner/original_circuit_or_all.aig\"")
     
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data_beta_runner/optimized_circuit.aig\""
-    os.system(command)
+    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data_beta_runner/optimized_circuit_or_all.aig\"")
     
     print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
     os.system(verify_command)
@@ -308,7 +306,9 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    
-    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.txt; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")
-    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\"")
+    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.txt; strash; write_aiger test_data_beta_runner/raw_circuit.aig\"")
+    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.txt; strash; write_aiger test_data_beta_runner/optimized_circuit.aig\"")
+    os.system("./abc/abc -c \"read_aiger test_data_beta_runner/raw_circuit.aig; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")
+    os.system("./abc/abc -c \"read_aiger test_data_beta_runner/optimized_circuit.aig; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\"")
     os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.blif test_data_beta_runner/optimized_circuit.blif\"")
+    os.system("./aigbdd/aiglec test_data_beta_runner/raw_circuit.aig test_data_beta_runner/optimized_circuit.aig")
