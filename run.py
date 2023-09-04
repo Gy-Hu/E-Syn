@@ -82,9 +82,10 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
     # use `sympy_to_rust_sexpr()` to convert to s-expression
     # parse the string to sympy
     
-    parser, _ = to_sympy_parser.PropParser()
+    parser = to_sympy_parser.PropParser()
     parser.build()
-    result = str(sympy_to_rust_sexpr(parser.parse(eqn)))
+    parser_res, _ = parser.parse(eqn)
+    result = str(sympy_to_rust_sexpr(parser_res))
     
     print("success convert to s-expression")
     with open (output_file_path, "w") as myfile: 

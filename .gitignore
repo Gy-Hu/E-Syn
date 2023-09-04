@@ -127,3 +127,4 @@ aigbdd/*.blif
 
 aigbdd/aiglec
 aigbdd/aigviz
+tmp.txt

@@ -51,7 +51,7 @@ class PropParser(object):
             self.concat_spliter[self.concat_spliter_id + 1] = p[3]
             self.concat_spliter_id += 2
         else:
-            self.concat_spliter_id[self.concat_spliter_id] = p[3]
+            self.concat_spliter[self.concat_spliter_id] = p[3]
             self.concat_spliter_id += 1
         
 

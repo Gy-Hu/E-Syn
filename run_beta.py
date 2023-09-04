@@ -126,7 +126,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
             # write the new eqn
             myfile.write(data[3].split(" = ")[0] + " = " + result + "\n")
     else:
-        parser, _ = to_sympy_parser.PropParser(); parser.build()
+        parser = to_sympy_parser.PropParser(); parser.build()
         with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
             sexpr=myfile.readlines()
         # read s-converter/split_concat.txt
@@ -140,7 +140,13 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         # Use the function
         #equ_check_result = check_equal(FORMULA_LIST, components); print(len(equ_check_result)); print(equ_check_result)
         
-        components =  list(parser.parse(sexpr[0]).args)
+        parser_res, _ = parser.parse(sexpr[0])
+        
+        with open("test_data_beta_runner/tmp.txt", "w") as myfile:
+            for id in _:
+                myfile.write(str(_[id])+'\n------------------------\n')
+                
+        components =  list(parser_res.args)
         # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
         result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
         
