@@ -189,8 +189,10 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.txt"
     output_file_path = "test_data_beta_runner/original_circuit.txt"
 
-    parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
-    parser.process()
+    os.system("./circuitparser.out test_data/raw_circuit.txt test_data_beta_runner/original_circuit.txt")
+
+    # parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
+    # parser.process()
     
     # load file to convert to s-expression (test)
     with open ("test_data_beta_runner/original_circuit.txt", "r") as myfile:

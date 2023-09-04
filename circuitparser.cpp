@@ -5,6 +5,7 @@
 #include <regex>
 #include <set>
 
+
 using namespace std;
 
 int main(int argc, char* argv[]) {
@@ -60,9 +61,8 @@ int main(int argc, char* argv[]) {
     //     cout << variable << endl;
     // }
     //print how many variables are in the set
-    cout << "Number of variables in the set: " << outOrderVariables.size() << endl;
+    //cout << "Number of variables in the set: " << outOrderVariables.size() << endl;
 
-    // Then, use this set to parse the rest of the file
     // Then, use this set to parse the rest of the file
     while (getline(inputFile, line)) {
         size_t equalPos = line.find('=');
@@ -72,29 +72,34 @@ int main(int argc, char* argv[]) {
             expression.pop_back();
             
             // Trim trailing spaces from variable
-            variable.erase(variable.find_last_not_of(" \n\r\t")+1);
-            cout<< "variable: " << variable << endl;
+            string tmp_var = variable;
+            tmp_var.erase(variable.find_last_not_of(" \n\r\t")+1);
+            //cout<< "variable: " << variable << endl;
             if (variable.find("new_n") == 0) {
                 variableExpressions[variable] = expression;
             }
-            if (outOrderVariables.find(variable) != outOrderVariables.end()) {  // Check if variable is in the OUTORDER set
+            if (outOrderVariables.find(tmp_var) != outOrderVariables.end()) {  // Check if variable is in the OUTORDER set
                 out_Expressions[variable] = expression;
             }
         }
     }
 
     //print all in out_Expressions
-    // for (const auto& pair : out_Expressions) {
-    //     cout <<pair.first << "=" << pair.second << endl;
-    // }
+    
 
     // for (const auto& pair : variableExpressions) {
     //     cout << pair.first << "=" << pair.second << endl;
     // }
+
     // for (const auto& pair : out_Expressions) {
     //     cout <<pair.first << "=" << pair.second << endl;
     // }
-    map<string, string> newExpressions; // Map to hold modified output expressions
+
+    // for (const auto& pair : out_Expressions) {
+    //     cout <<pair.first << "=" << pair.second << endl;
+    // }
+    //map<string, string> newExpressions; // Map to hold modified output expressions
+    vector<pair<string, string>> newExpressions;
     for (const auto& pair : out_Expressions) {
         string newExpression = pair.second;
         bool replaced = true;
@@ -116,7 +121,11 @@ int main(int argc, char* argv[]) {
                 }
                 string variable = newExpression.substr(startPos, secondEndPos - startPos + 1) + (" ");
                 if (variableExpressions.find(variable) != variableExpressions.end()) {
+                    string tmp_var = variableExpressions[variable];
+                    //remove the first space in tmp_var
+                    //tmp_var.erase(tmp_var.find_last_not_of(" \n\r\t")+1);
                     newExpression.replace(startPos, secondEndPos - startPos + 1, "(" + variableExpressions[variable] + ")");
+                    //newExpression.replace(startPos, secondEndPos - startPos + 1, "(" + tmp_var + ")");
                 } else {
                     pos = secondEndPos + 1;  // Move to the next character
                 }
@@ -125,7 +134,8 @@ int main(int argc, char* argv[]) {
                 replaced = false;
             }
         }
-        newExpressions[pair.first] = newExpression; // Store the modified expression
+        newExpressions.push_back(make_pair(pair.first, newExpression));
+        //newExpressions[pair.first] = newExpression; // Store the modified expression
     }
     ofstream outputFile(outputFileName);
     ifstream inputFile1(inputFileName);
@@ -134,16 +144,77 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     
-    for (int i = 0; i < length_of_no_changed_line; ++i) {
+    getline(inputFile1, line);
+    outputFile << line << endl;
+
+    for (int i = 1; i < length_of_no_changed_line; ++i) {
         string line;
         getline(inputFile1, line);
-        outputFile << line << endl;
+        //cout endl if meet `;`
+        if (line.back() == ';') {
+            outputFile << line << endl;
+        } else {
+            outputFile << line ;
+        }
+    }
+
+    // for all the pairs in newExpressions, if pair.second contains `!`, replace it as `! `
+    // for (auto& pair : newExpressions) {
+    //     string tmp = pair.second;
+    //     size_t pos = 0;
+    //     while (pos < tmp.length()) {
+    //         size_t startPos = tmp.find("!", pos);
+    //         if (startPos == string::npos) {
+    //             break;  // No more "!" found, exit loop
+    //         }
+    //         tmp.replace(startPos, 1, "! ");
+    //         pos = startPos + 2;
+    //     }
+    //     pos = 0;
+    //     while (pos < tmp.length()) {
+    //         size_t startPos = tmp.find("( ", pos);
+    //         if (startPos == string::npos) {
+    //             break;  // No more "( " found, exit loop
+    //         }
+    //         tmp.replace(startPos, 2, "(");
+    //         pos = startPos + 1;
+    //     }
+    //     newExpressions[pair.first] = tmp;
+    // }
+
+    for (auto& pair : newExpressions) {
+        string tmp = pair.second;
+        size_t pos = 0;
+        while (pos < tmp.length()) {
+            size_t startPos = tmp.find("!", pos);
+            if (startPos == string::npos) {
+                break;  // No more "!" found, exit loop
+            }
+            tmp.replace(startPos, 1, "! ");
+            pos = startPos + 2;
+        }
+        pos = 0;
+        while (pos < tmp.length()) {
+            size_t startPos = tmp.find("( ", pos);
+            if (startPos == string::npos) {
+                break;  // No more "( " found, exit loop
+            }
+            tmp.replace(startPos, 2, "(");
+            pos = startPos + 1;
+        }
+        pair.second = tmp;
     }
 
    // Write output expressions for each po
     for (const auto& pair : newExpressions) {
-        outputFile << pair.first << " =" << pair.second << ";" << endl;
+        outputFile << pair.first << " = (" << pair.second << ");" << endl;
     }
+
+    // Write output expressions for each po
+    // for (const auto& pair : newExpressions) {
+    //     outputFile << pair.first << " = (" << pair.second << ");" << endl;
+    // }
+
     outputFile.close();
     inputFile1.close();
     return 0;
