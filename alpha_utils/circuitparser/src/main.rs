@@ -8,14 +8,16 @@ struct CircuitParser {
     input_file_path: String,
     output_file_path: String,
     new_n_dict: HashMap<String, String>,
+    max_iterations: usize,
 }
 
 impl CircuitParser {
-    fn new(input_file_path: String, output_file_path: String) -> Self {
+    fn new(input_file_path: String, output_file_path: String, max_iterations: usize) -> Self {
         CircuitParser {
             input_file_path,
             output_file_path,
             new_n_dict: HashMap::new(),
+            max_iterations,
         }
     }
 
@@ -100,11 +102,28 @@ impl CircuitParser {
     fn process(&mut self) {
         let mut parsed_content = self.parse_circuit();
         let mut last_parsed_content = String::new();
-        while parsed_content != last_parsed_content {
+        let mut iterations = 0;
+        while parsed_content != last_parsed_content && iterations < self.max_iterations {
             last_parsed_content = parsed_content.clone();
             parsed_content = self.replace_new_n(&parsed_content);
+            iterations += 1;
         }
+
+        if last_parsed_content != parsed_content {
+        // write self.new_n_dict to file
+        let new_n_dict_str = self.new_n_dict.iter()
+            .map(|(k, v)| format!("{} = ({});", k, v))
+            .collect::<Vec<String>>()
+            .join("\n");
+
+        // append new_n_dict_str to parsed_content
+        parsed_content = format!("{}\n{}", parsed_content, new_n_dict_str);
+        }
+        
         self.write_to_file(&parsed_content);
+
+
+
     }
 }
 
@@ -130,17 +149,21 @@ fn read_original_circuit(file_path: &str) -> (String, Vec<String>) {
 
 fn main() {
     let args: Vec<String> = std::env::args().collect();
-    if args.len() < 3 {
-        eprintln!("Usage: {} <input_file_path> <output_file_path> <concat_expr>", args[0]);
+    // Add a new argument for max_iterations
+    if args.len() < 4 {
+        eprintln!("Usage: {} <input_file_path> <output_file_path> <concat_expr> <max_iterations>", args[0]);
         std::process::exit(1);
     }
 
     let input_file_path = args[1].clone();
     let output_file_path = args[2].clone();
     let input_for_s_converter = args[3].clone();
+    let max_iterations = args[4].parse::<usize>().unwrap_or_else(|_| {
+        eprintln!("Error: max_iterations must be a positive integer");
+        process::exit(1);
+    });
 
-
-    let mut parser = CircuitParser::new(input_file_path, output_file_path);
+    let mut parser = CircuitParser::new(input_file_path, output_file_path, max_iterations);
     parser.process();
 
     let (single_equation, formula_list) = read_original_circuit(args[2].as_str());

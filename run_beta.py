@@ -204,7 +204,7 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 50")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
