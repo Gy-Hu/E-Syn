@@ -29,3 +29,4 @@
 - [x] Add BDD to do equivalence checking
 - [x] Using monotonic cost function in symREG
 - [x] Optimize parser 2, avoid duplicated parsing
+- [ ] BUG: EPFL max, 10 times of unfolding, not pass cec in eqn check
