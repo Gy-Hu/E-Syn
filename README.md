@@ -4,13 +4,21 @@
 
 1. Enter `abc` directory and run `make`
 2. Install necessary dependencies in `package.txt`
-3. Build all the rust project (s-converter, analyzer, circuitparser, e-rewriter, infix2lisp, lisp2infix) by enter dir and run `cargo build --release`
+3. Build all the rust project ( `s-converter` , `analyzer` , `circuitparser` , `e-rewriter` , `infix2lisp` , `lisp2infix` ) by enter dir and run `cargo build --release`
 
 ## Usage
 
+### For alpha version
+
 1. Convert the circuit to eqn format by using `write_eqn` in `abc`
-2. Copy and paste the eqn to `test_data/raw_circuit.txt`
-2. Run `python run.py`
+2. Copy and paste the eqn to `test_data/raw_circuit.txt` 
+3. Run `python run.py`
+
+### For beta version (much faster!)
+
+1. Convert the circuit to eqn format by using `write_eqn` in `abc`
+2. Copy and paste the eqn to `test_data_beta_runner/raw_circuit.txt`
+3. Run `python run_beta.py`
 
 ## Benchamrk Description
 
