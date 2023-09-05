@@ -4,6 +4,7 @@
 
 1. Enter `abc` directory and run `make`
 2. Install necessary dependencies in `package.txt`
+3. Build all the rust project (s-converter, analyzer, circuitparser, e-rewriter) by enter dir and run `cargo build --release`
 
 ## Usage
 
@@ -27,4 +28,4 @@
 - [ ] Add more rewrite rules in egg
 - [x] Add BDD to do equivalence checking
 - [x] Using monotonic cost function in symREG
-- [ ] Optimize parser 2, avoid duplicated parsing
+- [x] Optimize parser 2, avoid duplicated parsing

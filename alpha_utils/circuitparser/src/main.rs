@@ -63,7 +63,9 @@ impl CircuitParser {
         }
         self.new_n_dict = new_dict;
 
-        output = output.par_iter().map(|line| self.replace_new_n(line).trim_start().to_string()).collect();
+        //output = output.par_iter().map(|line| self.replace_new_n(line).trim_start().to_string()).collect();
+        
+        output = output.iter().map(|line| self.replace_new_n(line).trim_start().to_string()).collect();
 
         output.par_iter_mut().skip(2).for_each(|expr| {
             let parts = expr.split('=').collect::<Vec<&str>>();
@@ -84,7 +86,7 @@ impl CircuitParser {
     fn replace_new_n(&self, expr: &str) -> String {
         let mut replaced_expr = expr.to_string();
         for (new_n_name, new_n_expr) in &self.new_n_dict {
-            replaced_expr = replaced_expr.replace(new_n_name, &format!(" ({})", new_n_expr));
+            replaced_expr = replaced_expr.replace(new_n_name, &format!("({})", new_n_expr));
         }
         replaced_expr
     }
@@ -106,8 +108,14 @@ impl CircuitParser {
 }
 
 fn main() {
-    let input_file_path = String::from("/data/guangyuh/coding_env/E-Brush/test4circuitparser/max.eqn");
-    let output_file_path = String::from("/data/guangyuh/coding_env/E-Brush/test4circuitparser/max_processed.eqn");
+    let args: Vec<String> = std::env::args().collect();
+    if args.len() < 3 {
+        eprintln!("Usage: {} <input_file_path> <output_file_path>", args[0]);
+        std::process::exit(1);
+    }
+
+    let input_file_path = args[1].clone();
+    let output_file_path = args[2].clone();
 
     let mut parser = CircuitParser::new(input_file_path, output_file_path);
     parser.process();
