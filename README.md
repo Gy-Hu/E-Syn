@@ -4,7 +4,7 @@
 
 1. Enter `abc` directory and run `make`
 2. Install necessary dependencies in `package.txt`
-3. Build all the rust project (s-converter, analyzer, circuitparser, e-rewriter) by enter dir and run `cargo build --release`
+3. Build all the rust project (s-converter, analyzer, circuitparser, e-rewriter, infix2lisp, lisp2infix) by enter dir and run `cargo build --release`
 
 ## Usage
 

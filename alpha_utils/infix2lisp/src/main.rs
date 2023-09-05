@@ -90,6 +90,7 @@ impl Expr {
 }
 
 
+
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() < 3 {
@@ -109,8 +110,9 @@ fn main() {
         Ok(expr) => {
             let output = if args.len() > 3 && args[3] == "lisp" {
             expr.to_lisp()
+            
             } else {
-                expr.to_infix()
+                expr.to_lisp()
             };
 
             let mut file = File::create(output_file).unwrap_or_else(|err| {
@@ -123,28 +125,28 @@ fn main() {
             });
 
             // if args.len() == 3 and args[3] is not "lisp"
-            if args.len() > 3 && args[3] != "lisp" {
-            let split_concat = &args[3];
-            let mut map = HashMap::new();
-            let mut id = 0;
-            expr.gather_and_expressions(&mut map, &mut id, false);
-            //expr.gather_and_expressions(&mut id, &mut map);
-            let mut file = File::create(split_concat).unwrap_or_else(|err| {
-                eprintln!("Error creating file: {:?}", err);
-                process::exit(1);
-            });
-            // write line by line (for every key-value pair, one line)
-            // sort the map by id, 1, 2, 3, ...
-            let mut map: Vec<_> = map.into_iter().collect();
-            map.sort_by_key(|k| k.0);
-            for (key, value) in &map {
-                file.write_all(format!("{} {}\n", key, value).as_bytes()).unwrap_or_else(|err| {
-                    eprintln!("Error writing to file: {:?}", err);
-                    process::exit(1);
-                });
-            }
+        //     if args.len() > 3 && args[3] != "lisp" {
+        //     let split_concat = &args[3];
+        //     let mut map = HashMap::new();
+        //     let mut id = 0;
+        //     expr.gather_and_expressions(&mut map, &mut id, false);
+        //     //expr.gather_and_expressions(&mut id, &mut map);
+        //     let mut file = File::create(split_concat).unwrap_or_else(|err| {
+        //         eprintln!("Error creating file: {:?}", err);
+        //         process::exit(1);
+        //     });
+        //     // write line by line (for every key-value pair, one line)
+        //     // sort the map by id, 1, 2, 3, ...
+        //     let mut map: Vec<_> = map.into_iter().collect();
+        //     map.sort_by_key(|k| k.0);
+        //     for (key, value) in &map {
+        //         file.write_all(format!("{} {}\n", key, value).as_bytes()).unwrap_or_else(|err| {
+        //             eprintln!("Error writing to file: {:?}", err);
+        //             process::exit(1);
+        //         });
+        //     }
 
-        }
+        // }
         },
         Err(err) => {eprintln!("Error: {:?}", err);
         //print the error expression

@@ -204,9 +204,9 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    #os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt")
 
-    os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
+    #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
     # parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
     # parser.process()
@@ -238,7 +238,9 @@ if __name__ == "__main__":
         
         # load all the content to `convert_to_sexpr()`
         # file to input string
-        FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)    
+        #FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)  
+        os.system("alpha_utils/infix2lisp/target/release/s-converter test_data_beta_runner/input_for_s-converter.txt test_data_beta_runner/sexpr_for_egg.txt lisp")
+          
         
 
     '''
@@ -258,7 +260,7 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    convert_to_abc_eqn(data, FORMULA_LIST, multiple_output= multiple_output_flag)
+    convert_to_abc_eqn(data, None, multiple_output= multiple_output_flag)
     
     '''
     #############################################################################

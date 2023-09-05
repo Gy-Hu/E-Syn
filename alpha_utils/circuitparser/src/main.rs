@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::prelude::*;
 use rayon::prelude::*;
+use std::process;
 
 struct CircuitParser {
     input_file_path: String,
@@ -74,9 +75,9 @@ impl CircuitParser {
             *expr = format!("{} = ({});", expr_name, expr_value);
         });
 
-        output.par_iter_mut().skip(2).for_each(|expr| {
-            *expr = expr.replace("!", "! ");
-        });
+        // output.par_iter_mut().skip(2).for_each(|expr| {
+        //     *expr = expr.replace("!", "! ");
+        // });
 
         output.insert(0, comments.to_string());
 
@@ -107,16 +108,49 @@ impl CircuitParser {
     }
 }
 
+fn read_original_circuit(file_path: &str) -> (String, Vec<String>) {
+    let data = std::fs::read_to_string(file_path).expect("Unable to read file");
+    let lines: Vec<&str> = data.lines().collect();
+    let formula_list: Vec<String> = lines[3..]
+        .iter()
+        .map(|line| line.split("= ").collect::<Vec<&str>>()[1].trim_end_matches(';').to_string())
+        .collect();
+    let mut equations = formula_list.clone();
+
+    let mut num_concat = 0;
+
+    while equations.len() > 1 {
+        equations[0] = format!("({} & {})", equations[0], equations[1]);
+        num_concat += 1;
+        equations.remove(1);
+    }
+
+    (equations[0].clone(), formula_list)
+}
+
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     if args.len() < 3 {
-        eprintln!("Usage: {} <input_file_path> <output_file_path>", args[0]);
+        eprintln!("Usage: {} <input_file_path> <output_file_path> <concat_expr>", args[0]);
         std::process::exit(1);
     }
 
     let input_file_path = args[1].clone();
     let output_file_path = args[2].clone();
+    let input_for_s_converter = args[3].clone();
+
 
     let mut parser = CircuitParser::new(input_file_path, output_file_path);
     parser.process();
+
+    let (single_equation, formula_list) = read_original_circuit(args[2].as_str());
+    let mut file = File::create(&args[3]).unwrap_or_else(|err| {
+        eprintln!("Error creating file: {:?}", err);
+        process::exit(1);
+    });
+
+    file.write_all(single_equation.as_bytes()).unwrap_or_else(|err| {
+        eprintln!("Error writing to file: {:?}", err);
+        process::exit(1);
+    });
 }
