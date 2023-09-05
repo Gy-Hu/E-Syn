@@ -129,3 +129,5 @@ aigbdd/aiglec
 aigbdd/aigviz
 tmp.txt
 test4circuitparser/max_processed.eqn
+alpha_utils/circuitparser/target
+test4circuitparser/

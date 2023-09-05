@@ -16,8 +16,9 @@
 1. ISCAS benchmark: https://github.com/santoshsmalagi/Benchmarks/tree/main
 2. Ripple Carry Adder: Using ABC to generate the circuit ( `gen` command)
 3. EPFL benchmark: https://github.com/lsils/benchmarks
-4. Addtional benchmark1: https://pld.ttu.ee/~maksim/benchmarks/
-5. Addtional benchmark2: https://github.com/jpsety/verilog_benchmark_circuits
+4. IWLS 2005: http://iwls.org/iwls2005/benchmarks.html
+5. Addtional benchmark1: https://pld.ttu.ee/~maksim/benchmarks/
+6. Addtional benchmark2: https://github.com/jpsety/verilog_benchmark_circuits
 
 ## TODO
 

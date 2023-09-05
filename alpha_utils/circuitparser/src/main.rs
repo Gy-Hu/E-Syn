@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::prelude::*;
+use rayon::prelude::*;
 
 struct CircuitParser {
     input_file_path: String,
@@ -62,20 +63,16 @@ impl CircuitParser {
         }
         self.new_n_dict = new_dict;
 
-        // for (_, new_n_expr) in &mut self.new_n_dict {
-        //     *new_n_expr = self.replace_new_n(new_n_expr);
-        // }
+        output = output.par_iter().map(|line| self.replace_new_n(line).trim_start().to_string()).collect();
 
-        output = output.iter().map(|line| self.replace_new_n(line).trim_start().to_string()).collect();
-
-        output[2..].iter_mut().for_each(|expr| {
+        output.par_iter_mut().skip(2).for_each(|expr| {
             let parts = expr.split('=').collect::<Vec<&str>>();
             let expr_name = parts[0].trim().to_string();
             let expr_value = parts[1].trim().trim_end_matches(';').to_string();
             *expr = format!("{} = ({});", expr_name, expr_value);
         });
 
-        output[2..].iter_mut().for_each(|expr| {
+        output.par_iter_mut().skip(2).for_each(|expr| {
             *expr = expr.replace("!", "! ");
         });
 
@@ -109,8 +106,8 @@ impl CircuitParser {
 }
 
 fn main() {
-    let input_file_path = String::from("/data/guangyuh/coding_env/E-Brush/test_data/raw_circuit.txt");
-    let output_file_path = String::from("/data/guangyuh/coding_env/E-Brush/test_data/original_circuit.txt");
+    let input_file_path = String::from("/data/guangyuh/coding_env/E-Brush/test4circuitparser/max.eqn");
+    let output_file_path = String::from("/data/guangyuh/coding_env/E-Brush/test4circuitparser/max_processed.eqn");
 
     let mut parser = CircuitParser::new(input_file_path, output_file_path);
     parser.process();
