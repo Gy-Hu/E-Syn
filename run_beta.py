@@ -204,7 +204,7 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 3")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 0")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
@@ -275,7 +275,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/original_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -284,7 +284,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit_and_all.aig\""
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit_and_all.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     

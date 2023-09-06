@@ -37,7 +37,7 @@ def process_circuits(file_count):
         _ = run.conver_to_sexpr(
             data, multiple_output=True, output_file_path=f"aigfuzz/simple_circuit_{i}.sexpr")
         os.system(
-            f"analyzer/target/debug/analyzer aigfuzz/simple_circuit_{i}.sexpr > aigfuzz/simple_circuit_{i}.data")
+            f"analyzer/target/release/analyzer aigfuzz/simple_circuit_{i}.sexpr > aigfuzz/simple_circuit_{i}.data")
 
 
 def run_abc(file_count):

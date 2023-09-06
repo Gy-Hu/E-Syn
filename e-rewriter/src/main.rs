@@ -164,8 +164,8 @@ fn simplify(s: &str) -> String {
     println!("input class:{}", egraphin.number_of_classes());
 
     // ruuner configure
-    let runner_iteration_limit = 10000000;
-    let egraph_node_limit = 25000000000;
+    let runner_iteration_limit = 10000;
+    let egraph_node_limit = 250000;
     let start = Instant::now();
 
 
@@ -173,7 +173,7 @@ fn simplify(s: &str) -> String {
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
-        .with_time_limit(std::time::Duration::from_secs(100))
+        .with_time_limit(std::time::Duration::from_secs(1000))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());

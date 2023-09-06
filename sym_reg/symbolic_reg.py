@@ -15,14 +15,21 @@ def parse_table(path):
     return df
     
 def validate_model(X, y, model_file):
+    
     model = (PySRRegressor.from_file(model_file)).set_params(
         extra_sympy_mappings={"cos2": lambda x: sympy.cos(x)**2})
     model.refresh()
+    # export to latex
+    print(model.latex())
+    #print(model)
+    print(str(model.sympy()))
+    #print(model.equations_)
+    print(X)
     pred_y = model.predict(X)
     np.set_printoptions(suppress=True)
     pred_y = np.array([np.format_float_positional(i, trim='-') for i in pred_y])
-    for t in list(zip(y, pred_y)):
-        print(t)
+    # for t in list(zip(y, pred_y)):
+    #     print(t)
     exit()
 
 if __name__ == '__main__':
@@ -37,9 +44,11 @@ if __name__ == '__main__':
     #X = df.iloc[:, :6].to_numpy()
     # X -> 1,2,3,5,6
     #X = df.iloc[:, [0, 1, 2, 4, 5]].to_numpy()
-    X = df.iloc[:,:6].to_numpy()
+    X = df.iloc[:,[0, 1, 2, 4, 5]].to_numpy()
+    print(X)
     scaler = StandardScaler()
     X = scaler.fit_transform(X)
+    print(X)
     # y = [&]
     y = df.iloc[:, -1].to_numpy()
 

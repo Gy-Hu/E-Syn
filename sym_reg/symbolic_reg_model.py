@@ -49,7 +49,7 @@ model1 = PySRRegressor(
     # ^ Custom complexity of particular operators.
     complexity_of_constants=2,
     # ^ Punish constants more than variables
-    select_k_features=4,
+    select_k_features=5,
     # ^ Train on only the 4 most important features
     progress=True,
     # ^ Can set to false if printing to a file.
