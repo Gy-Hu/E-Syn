@@ -14,7 +14,7 @@
 
   Date        [Ver. 1.0. Started - June 20, 2005.]
 
-  Revision    [$Id: cmdApi.c,v 1.00 2005/06/20 00:00:00 alanmi Exp $]
+  Revision    [$Id: cmdApi.c,v 1.00 2005/06/20 00:00:00 alapynmi Exp $]
 
 ***********************************************************************/
 

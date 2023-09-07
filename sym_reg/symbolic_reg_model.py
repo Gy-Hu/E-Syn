@@ -6,14 +6,14 @@ import sympy
 '''
 model1 = PySRRegressor(
     procs=64,
-    populations=8,
+    populations=15,
     # ^ 2 populations per core, so one is always running.
     population_size=50,
     # ^ Slightly larger populations, for greater diversity.
     ncyclesperiteration=500,
     # ^ Generations between migrations.
     # niterations=10000000,  # Run forever
-    niterations=1000,
+    niterations=10000,
     early_stop_condition=(
         #"stop_if(loss, complexity) = loss < 1e-6 && complexity < 10"
         "stop_if(loss, complexity) = loss < 1e-8 && complexity < 15"
@@ -49,7 +49,7 @@ model1 = PySRRegressor(
     # ^ Custom complexity of particular operators.
     complexity_of_constants=2,
     # ^ Punish constants more than variables
-    select_k_features=4,
+    select_k_features=6,
     # ^ Train on only the 4 most important features
     progress=True,
     # ^ Can set to false if printing to a file.

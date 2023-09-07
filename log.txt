@@ -1,0 +1,2075 @@
+Make: Symbol("pi0") -> None
+Make: Symbol("pi3") -> None
+Make: Symbol("pi4") -> None
+Make: Symbol("pi1") -> None
+Make: Symbol("pi2") -> None
+Make: Symbol("pi5") -> None
+input node120
+input class120
+Make: Symbol("pi0") -> None
+Make: Symbol("pi3") -> None
+Make: Symbol("pi4") -> None
+Make: Symbol("pi1") -> None
+Make: Symbol("pi2") -> None
+Make: Symbol("pi5") -> None
+Runner stopped: Some(TimeLimit(101.527125335)). Time take for runner: 101.532522492s, Classes: 588, Nodes: 3010, Size: 6399
+
+
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+best_cost30
+Inserted key: 354, value: 30
+Inserted key: 462, value: 30
+Inserted key: 174, value: 30
+Inserted key: 7, value: 30
+Inserted key: 367, value: 30
+Inserted key: 197, value: 30
+Inserted key: 161, value: 30
+Inserted key: 272, value: 30
+Inserted key: 314, value: 30
+Inserted key: 142, value: 30
+Inserted key: 180, value: 30
+Inserted key: 191, value: 30
+Inserted key: 262, value: 30
+Inserted key: 115, value: 30
+Inserted key: 253, value: 30
+Inserted key: 238, value: 30
+Inserted key: 89, value: 30
+Inserted key: 226, value: 30
+Inserted key: 131, value: 30
+Inserted key: 384, value: 30
+Inserted key: 409, value: 30
+Inserted key: 255, value: 30
+Inserted key: 104, value: 30
+Inserted key: 266, value: 30
+Inserted key: 12, value: 30
+Inserted key: 300, value: 30
+Inserted key: 157, value: 30
+Inserted key: 387, value: 30
+Inserted key: 62, value: 30
+Inserted key: 25, value: 30
+Inserted key: 304, value: 30
+Inserted key: 398, value: 30
+Inserted key: 240, value: 30
+Inserted key: 90, value: 30
+Inserted key: 286, value: 30
+Inserted key: 171, value: 30
+Inserted key: 184, value: 30
+Inserted key: 434, value: 30
+Inserted key: 250, value: 30
+Inserted key: 66, value: 30
+Inserted key: 162, value: 30
+Inserted key: 426, value: 30
+Inserted key: 73, value: 30
+Inserted key: 334, value: 30
+Inserted key: 86, value: 30
+Inserted key: 230, value: 30
+Inserted key: 245, value: 30
+Inserted key: 430, value: 30
+Inserted key: 458, value: 30
+Inserted key: 154, value: 30
+Inserted key: 123, value: 30
+Inserted key: 273, value: 30
+Inserted key: 181, value: 30
+Inserted key: 277, value: 30
+Inserted key: 225, value: 30
+Inserted key: 111, value: 30
+Inserted key: 23, value: 30
+Inserted key: 298, value: 30
+Inserted key: 44, value: 30
+Inserted key: 20, value: 30
+Inserted key: 241, value: 30
+Inserted key: 99, value: 30
+Inserted key: 352, value: 30
+Inserted key: 383, value: 30
+Inserted key: 338, value: 30
+Inserted key: 482, value: 30
+Inserted key: 403, value: 30
+Inserted key: 278, value: 30
+Inserted key: 112, value: 30
+Inserted key: 151, value: 30
+Inserted key: 217, value: 30
+Inserted key: 345, value: 30
+Inserted key: 313, value: 30
+Inserted key: 386, value: 30
+Inserted key: 448, value: 30
+Inserted key: 117, value: 30
+Inserted key: 492, value: 30
+Inserted key: 87, value: 30
+Inserted key: 24, value: 30
+Inserted key: 294, value: 30
+Inserted key: 37, value: 30
+Inserted key: 365, value: 30
+Inserted key: 459, value: 30
+Inserted key: 362, value: 30
+Inserted key: 270, value: 30
+Inserted key: 289, value: 30
+Inserted key: 52, value: 30
+Inserted key: 407, value: 30
+Inserted key: 120, value: 30
+Inserted key: 282, value: 30
+Inserted key: 453, value: 30
+Inserted key: 329, value: 30
+Inserted key: 68, value: 30
+Inserted key: 465, value: 30
+Inserted key: 219, value: 30
+Inserted key: 416, value: 30
+Inserted key: 76, value: 30
+Inserted key: 358, value: 30
+Inserted key: 279, value: 30
+Inserted key: 144, value: 30
+Inserted key: 81, value: 30
+Inserted key: 326, value: 30
+Inserted key: 480, value: 30
+Inserted key: 205, value: 30
+Inserted key: 213, value: 30
+Inserted key: 109, value: 30
+Inserted key: 427, value: 30
+Inserted key: 185, value: 30
+Inserted key: 374, value: 30
+Inserted key: 55, value: 30
+Inserted key: 449, value: 30
+Inserted key: 451, value: 30
+Inserted key: 45, value: 30
+Inserted key: 323, value: 30
+Inserted key: 59, value: 30
+Inserted key: 178, value: 30
+Inserted key: 214, value: 30
+Inserted key: 183, value: 30
+Inserted key: 361, value: 30
+Inserted key: 389, value: 30
+Inserted key: 435, value: 30
+Inserted key: 498, value: 30
+Inserted key: 258, value: 30
+Inserted key: 236, value: 30
+Inserted key: 265, value: 30
+Inserted key: 291, value: 30
+Inserted key: 308, value: 30
+Inserted key: 64, value: 30
+Inserted key: 406, value: 30
+Inserted key: 187, value: 30
+Inserted key: 443, value: 30
+Inserted key: 119, value: 30
+Inserted key: 210, value: 30
+Inserted key: 195, value: 30
+Inserted key: 60, value: 30
+Inserted key: 215, value: 30
+Inserted key: 275, value: 30
+Inserted key: 306, value: 30
+Inserted key: 411, value: 30
+Inserted key: 484, value: 30
+Inserted key: 94, value: 30
+Inserted key: 121, value: 30
+Inserted key: 173, value: 30
+Inserted key: 208, value: 30
+Inserted key: 85, value: 30
+Inserted key: 67, value: 30
+Inserted key: 28, value: 30
+Inserted key: 194, value: 30
+Inserted key: 248, value: 30
+Inserted key: 393, value: 30
+Inserted key: 419, value: 30
+Inserted key: 399, value: 30
+Inserted key: 489, value: 30
+Inserted key: 397, value: 30
+Inserted key: 30, value: 30
+Inserted key: 132, value: 30
+Inserted key: 360, value: 30
+Inserted key: 169, value: 30
+Inserted key: 395, value: 30
+Inserted key: 413, value: 30
+Inserted key: 324, value: 30
+Inserted key: 251, value: 30
+Inserted key: 110, value: 30
+Inserted key: 339, value: 30
+Inserted key: 475, value: 30
+Inserted key: 21, value: 30
+Inserted key: 63, value: 30
+Inserted key: 16, value: 30
+Inserted key: 212, value: 30
+Inserted key: 98, value: 30
+Inserted key: 82, value: 30
+Inserted key: 257, value: 30
+Inserted key: 295, value: 30
+Inserted key: 40, value: 30
+Inserted key: 330, value: 30
+Inserted key: 203, value: 30
+Inserted key: 260, value: 30
+Inserted key: 379, value: 30
+Inserted key: 402, value: 30
+Inserted key: 303, value: 30
+Inserted key: 290, value: 30
+Inserted key: 97, value: 30
+Inserted key: 202, value: 30
+Inserted key: 464, value: 30
+Inserted key: 391, value: 30
+Inserted key: 433, value: 30
+Inserted key: 156, value: 30
+Inserted key: 252, value: 30
+Inserted key: 134, value: 30
+Inserted key: 415, value: 30
+Inserted key: 471, value: 30
+Inserted key: 5, value: 30
+Inserted key: 357, value: 30
+Inserted key: 363, value: 30
+Inserted key: 472, value: 30
+Inserted key: 439, value: 30
+Inserted key: 463, value: 30
+Inserted key: 473, value: 30
+Inserted key: 102, value: 30
+Inserted key: 116, value: 30
+Inserted key: 170, value: 30
+Inserted key: 11, value: 30
+Inserted key: 84, value: 30
+Inserted key: 42, value: 30
+Inserted key: 234, value: 30
+Inserted key: 118, value: 30
+Inserted key: 155, value: 30
+Inserted key: 224, value: 30
+Inserted key: 378, value: 30
+Inserted key: 312, value: 30
+Inserted key: 410, value: 30
+Inserted key: 405, value: 30
+Inserted key: 72, value: 30
+Inserted key: 88, value: 30
+Inserted key: 57, value: 30
+Inserted key: 293, value: 30
+Inserted key: 100, value: 30
+Inserted key: 29, value: 30
+Inserted key: 373, value: 30
+Inserted key: 206, value: 30
+Inserted key: 333, value: 30
+Inserted key: 375, value: 30
+Inserted key: 108, value: 30
+Inserted key: 423, value: 30
+Inserted key: 425, value: 30
+Inserted key: 447, value: 30
+Inserted key: 147, value: 30
+Inserted key: 461, value: 30
+Inserted key: 36, value: 30
+Inserted key: 193, value: 30
+Inserted key: 79, value: 30
+Inserted key: 467, value: 30
+Inserted key: 124, value: 30
+Inserted key: 281, value: 30
+Inserted key: 452, value: 30
+Inserted key: 495, value: 30
+Inserted key: 356, value: 30
+Inserted key: 351, value: 30
+Inserted key: 457, value: 30
+Inserted key: 126, value: 30
+Inserted key: 95, value: 30
+Inserted key: 254, value: 30
+Inserted key: 285, value: 30
+Inserted key: 381, value: 30
+Inserted key: 232, value: 30
+Inserted key: 341, value: 30
+Inserted key: 441, value: 30
+Inserted key: 370, value: 30
+Inserted key: 26, value: 30
+Inserted key: 135, value: 30
+Inserted key: 476, value: 30
+Inserted key: 401, value: 30
+Inserted key: 46, value: 30
+Inserted key: 145, value: 30
+Inserted key: 344, value: 30
+Inserted key: 310, value: 30
+Inserted key: 51, value: 30
+Inserted key: 311, value: 30
+Inserted key: 70, value: 30
+Inserted key: 309, value: 30
+Inserted key: 394, value: 30
+Inserted key: 276, value: 30
+Inserted key: 420, value: 30
+Inserted key: 242, value: 30
+Inserted key: 404, value: 30
+Inserted key: 41, value: 30
+Inserted key: 460, value: 30
+Inserted key: 74, value: 30
+Inserted key: 133, value: 30
+Inserted key: 438, value: 30
+Inserted key: 172, value: 30
+Inserted key: 436, value: 30
+Inserted key: 233, value: 30
+Inserted key: 485, value: 30
+Inserted key: 421, value: 30
+Inserted key: 140, value: 30
+Inserted key: 78, value: 30
+Inserted key: 346, value: 30
+Inserted key: 223, value: 30
+Inserted key: 105, value: 30
+Inserted key: 163, value: 30
+Inserted key: 305, value: 30
+Inserted key: 107, value: 30
+Inserted key: 199, value: 30
+Inserted key: 317, value: 30
+Inserted key: 146, value: 30
+Inserted key: 54, value: 30
+Inserted key: 80, value: 30
+Inserted key: 283, value: 30
+Inserted key: 18, value: 30
+Inserted key: 221, value: 30
+Inserted key: 320, value: 30
+Inserted key: 138, value: 30
+Inserted key: 222, value: 30
+Inserted key: 487, value: 30
+Inserted key: 349, value: 30
+Inserted key: 392, value: 30
+Inserted key: 143, value: 30
+Inserted key: 204, value: 30
+Inserted key: 167, value: 30
+Inserted key: 322, value: 30
+Inserted key: 103, value: 30
+Inserted key: 274, value: 30
+Inserted key: 315, value: 30
+Inserted key: 83, value: 30
+Inserted key: 422, value: 30
+Inserted key: 336, value: 30
+Inserted key: 302, value: 30
+Inserted key: 454, value: 30
+Inserted key: 400, value: 30
+Inserted key: 200, value: 30
+Inserted key: 450, value: 30
+Inserted key: 366, value: 30
+Inserted key: 35, value: 30
+Inserted key: 331, value: 30
+Inserted key: 263, value: 30
+Inserted key: 432, value: 30
+Inserted key: 228, value: 30
+Inserted key: 490, value: 30
+Inserted key: 268, value: 30
+Inserted key: 8, value: 30
+Inserted key: 75, value: 30
+Inserted key: 229, value: 30
+Inserted key: 288, value: 30
+Inserted key: 47, value: 30
+Inserted key: 249, value: 30
+Inserted key: 297, value: 30
+Inserted key: 166, value: 30
+Inserted key: 418, value: 30
+Inserted key: 325, value: 30
+Inserted key: 209, value: 30
+Inserted key: 327, value: 30
+Inserted key: 466, value: 30
+Inserted key: 93, value: 30
+Inserted key: 348, value: 30
+Inserted key: 371, value: 30
+Inserted key: 19, value: 30
+Inserted key: 444, value: 30
+Inserted key: 321, value: 30
+Inserted key: 165, value: 30
+Inserted key: 244, value: 30
+Inserted key: 141, value: 30
+Inserted key: 271, value: 30
+Inserted key: 343, value: 30
+Inserted key: 385, value: 30
+Inserted key: 50, value: 30
+Inserted key: 22, value: 30
+Inserted key: 168, value: 30
+Inserted key: 493, value: 30
+Inserted key: 488, value: 30
+Inserted key: 6, value: 30
+Inserted key: 261, value: 30
+Inserted key: 494, value: 30
+Inserted key: 337, value: 30
+Inserted key: 15, value: 30
+Inserted key: 160, value: 30
+Inserted key: 412, value: 30
+Inserted key: 440, value: 30
+Inserted key: 218, value: 30
+Inserted key: 500, value: 30
+Inserted key: 127, value: 30
+Inserted key: 129, value: 30
+Inserted key: 316, value: 30
+Inserted key: 58, value: 30
+Inserted key: 77, value: 30
+Inserted key: 211, value: 30
+Inserted key: 445, value: 30
+Inserted key: 220, value: 30
+Inserted key: 92, value: 30
+Inserted key: 477, value: 30
+Inserted key: 122, value: 30
+Inserted key: 256, value: 30
+Inserted key: 496, value: 30
+Inserted key: 332, value: 30
+Inserted key: 376, value: 30
+Inserted key: 368, value: 30
+Inserted key: 470, value: 30
+Inserted key: 56, value: 30
+Inserted key: 227, value: 30
+Inserted key: 431, value: 30
+Inserted key: 9, value: 30
+Inserted key: 39, value: 30
+Inserted key: 239, value: 30
+Inserted key: 299, value: 30
+Inserted key: 364, value: 30
+Inserted key: 176, value: 30
+Inserted key: 150, value: 30
+Inserted key: 53, value: 30
+Inserted key: 269, value: 30
+Inserted key: 369, value: 30
+Inserted key: 192, value: 30
+Inserted key: 196, value: 30
+Inserted key: 2, value: 30
+Inserted key: 96, value: 30
+Inserted key: 468, value: 30
+Inserted key: 113, value: 30
+Inserted key: 179, value: 30
+Inserted key: 259, value: 30
+Inserted key: 267, value: 30
+Inserted key: 207, value: 30
+Inserted key: 32, value: 30
+Inserted key: 125, value: 30
+Inserted key: 69, value: 30
+Inserted key: 153, value: 30
+Inserted key: 437, value: 30
+Inserted key: 106, value: 30
+Inserted key: 13, value: 30
+Inserted key: 347, value: 30
+Inserted key: 319, value: 30
+Inserted key: 264, value: 30
+Inserted key: 182, value: 30
+Inserted key: 280, value: 30
+Inserted key: 201, value: 30
+Inserted key: 31, value: 30
+Inserted key: 159, value: 30
+Inserted key: 428, value: 30
+Inserted key: 27, value: 30
+Inserted key: 237, value: 30
+Inserted key: 149, value: 30
+Inserted key: 359, value: 30
+Inserted key: 152, value: 30
+Inserted key: 101, value: 30
+Inserted key: 446, value: 30
+Inserted key: 164, value: 30
+Inserted key: 478, value: 30
+Inserted key: 455, value: 30
+Inserted key: 48, value: 30
+Inserted key: 186, value: 30
+Inserted key: 177, value: 30
+Inserted key: 0, value: 30
+Inserted key: 414, value: 30
+Inserted key: 342, value: 30
+Inserted key: 292, value: 30
+Inserted key: 1, value: 30
+Inserted key: 43, value: 30
+Inserted key: 114, value: 30
+Inserted key: 137, value: 30
+Inserted key: 340, value: 30
+Inserted key: 469, value: 30
+Inserted key: 247, value: 30
+Inserted key: 235, value: 30
+Inserted key: 481, value: 30
+Inserted key: 491, value: 30
+Inserted key: 17, value: 30
+Inserted key: 128, value: 30
+Inserted key: 353, value: 30
+Inserted key: 388, value: 30
+Inserted key: 33, value: 30
+Inserted key: 307, value: 30
+Inserted key: 61, value: 30
+Inserted key: 328, value: 30
+Inserted key: 148, value: 30
+Inserted key: 355, value: 30
+Inserted key: 198, value: 30
+Inserted key: 91, value: 30
+Inserted key: 301, value: 30
+Inserted key: 284, value: 30
+Inserted key: 429, value: 30
+Inserted key: 497, value: 30
+Inserted key: 188, value: 30
+Inserted key: 71, value: 30
+Inserted key: 287, value: 30
+Inserted key: 350, value: 30
+Inserted key: 38, value: 30
+Inserted key: 231, value: 30
+Inserted key: 175, value: 30
+Inserted key: 130, value: 30
+Inserted key: 4, value: 30
+Inserted key: 34, value: 30
+Inserted key: 139, value: 30
+Inserted key: 417, value: 30
+Inserted key: 3, value: 30
+Inserted key: 216, value: 30
+Inserted key: 10, value: 30
+Inserted key: 189, value: 30
+Inserted key: 396, value: 30
+Inserted key: 49, value: 30
+Inserted key: 486, value: 30
+Inserted key: 335, value: 30
+Inserted key: 456, value: 30
+Inserted key: 442, value: 30
+Inserted key: 14, value: 30
+Inserted key: 246, value: 30
+Inserted key: 65, value: 30
+Inserted key: 382, value: 30
+Inserted key: 372, value: 30
+Inserted key: 190, value: 30
+Inserted key: 390, value: 30
+Inserted key: 474, value: 30
+Inserted key: 296, value: 30
+Inserted key: 377, value: 30
+Inserted key: 499, value: 30
+Inserted key: 136, value: 30
+Inserted key: 483, value: 30
+Inserted key: 424, value: 30
+Inserted key: 158, value: 30
+Inserted key: 408, value: 30
+Inserted key: 479, value: 30
+Inserted key: 318, value: 30
+Inserted key: 380, value: 30
+Inserted key: 243, value: 30
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:10,!:974,*:2253,&:5,astsize:5511,astdepth:30
++:-0.7339849861221397,!:-0.24729816281244624,*:0.39842014321773844,&:-0.7365092953716713,astsize:2.0432600502125324,astdepth:-0.7238877491240133
++:13,!:1052,*:2432,&:5,astsize:5953,astdepth:30
++:-0.7327813986880761,!:-0.2471686380394669,*:0.39782232413096685,&:-0.7365204767296438,astsize:2.0434840471759648,astdepth:-0.7248358578497447
++:9,!:896,*:2070,&:5,astsize:5065,astdepth:30
++:-0.7345063873904975,!:-0.24715530975775493,*:0.3978843352713766,&:-0.7367041374587397,astsize:2.043449698867841,astdepth:-0.722968199532225
++:6,!:727,*:1677,&:5,astsize:4104,astdepth:30
++:-0.7364217201882799,!:-0.2472830188932547,*:0.3972131894705093,&:-0.7371001372497153,astsize:2.0437313975745677,astdepth:-0.7201397107138269
++:11,!:1039,*:2402,&:5,astsize:5876,astdepth:30
++:-0.7336192506126608,!:-0.24690702755372868,*:0.3984127779222678,&:-0.7364599834320709,astsize:2.0431970803607213,astdepth:-0.7246235966845287
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:6,!:739,*:1707,&:5,astsize:4176,astdepth:30
++:-0.7363157301436131,!:-0.247660745811093,*:0.3976571598285787,&:-0.7369823808725796,astsize:2.0436178096471216,astdepth:-0.7203161126484146
++:9,!:970,*:2244,&:5,astsize:5487,astdepth:30
++:-0.7344379506702797,!:-0.2471788063180955,*:0.3987818075265274,&:-0.7364660844657102,astsize:2.0430912821718272,astdepth:-0.7237902482442694
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:10,!:974,*:2253,&:5,astsize:5511,astdepth:30
++:-0.7339849861221397,!:-0.24729816281244624,*:0.39842014321773844,&:-0.7365092953716713,astsize:2.0432600502125324,astdepth:-0.7238877491240133
++:11,!:1050,*:2428,&:5,astsize:5939,astdepth:30
++:-0.733616174358178,!:-0.24693284659943787,*:0.3985432127379481,&:-0.7364266651825789,astsize:2.043148760149822,astdepth:-0.7247162867475755
++:9,!:1037,*:2400,&:5,astsize:5866,astdepth:30
++:-0.734420125794725,!:-0.24696684527155016,*:0.39933551013028584,&:-0.7363168311664106,astsize:2.0428307146957763,astdepth:-0.7244624225933761
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:11,!:1050,*:2430,&:5,astsize:5943,astdepth:30
++:-0.7335708943306257,!:-0.24722813614099257,*:0.39873240890394845,&:-0.7363794184395167,astsize:2.043123274659657,astdepth:-0.7246772346524707
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:11,!:973,*:2248,&:5,astsize:5502,astdepth:30
++:-0.733590196213983,!:-0.24705881478837002,*:0.3977722780574269,&:-0.7366246954744339,astsize:2.043482376975249,astdepth:-0.7239809485558888
++:7,!:803,*:1856,&:5,astsize:4540,astdepth:30
++:-0.7355857749908221,!:-0.24757943225486342,*:0.3979867472689613,&:-0.7368119215806109,astsize:2.043475470765586,astdepth:-0.7214850892082505
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:13,!:1053,*:2432,&:5,astsize:5954,astdepth:30
++:-0.7328346386119352,!:-0.24682250714860485,*:0.3976108863974842,&:-0.7365731934693455,astsize:2.0435096623723394,astdepth:-0.7248902095399384
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:7,!:803,*:1856,&:5,astsize:4540,astdepth:30
++:-0.7355857749908221,!:-0.24757943225486342,*:0.3979867472689613,&:-0.7368119215806109,astsize:2.043475470765586,astdepth:-0.7214850892082505
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:9,!:805,*:1858,&:5,astsize:4550,astdepth:30
++:-0.7345484228858544,!:-0.2475009055038135,*:0.3967968781686602,&:-0.7369958978475732,astsize:2.0439475274054115,astdepth:-0.7216991793368307
++:6,!:882,*:2039,&:5,astsize:4983,astdepth:30
++:-0.7359927842868462,!:-0.24688188857162768,*:0.39912416889698865,&:-0.7365511300582107,astsize:2.042894119793796,astdepth:-0.7225924857741005
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:8,!:1037,*:2399,&:5,astsize:5862,astdepth:30
++:-0.734875204636253,!:-0.24664540657058787,*:0.3995829558836745,&:-0.7362986151262404,astsize:2.0426731314924194,astdepth:-0.7244368610430123
++:7,!:961,*:2222,&:5,astsize:5430,astdepth:30
++:-0.735399308701584,!:-0.24666998755821154,*:0.3993338635547786,&:-0.736423898473373,astsize:2.0427758575043997,astdepth:-0.72361652632601
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:13,!:1053,*:2432,&:5,astsize:5954,astdepth:30
++:-0.7328346386119352,!:-0.24682250714860485,*:0.3976108863974842,&:-0.7365731934693455,astsize:2.0435096623723394,astdepth:-0.7248902095399384
++:10,!:960,*:2219,&:5,astsize:5429,astdepth:30
++:-0.7340173356569014,!:-0.24712116281338484,*:0.3981443967760755,&:-0.7365799470929199,astsize:2.0433409386999575,astdepth:-0.7237668899128273
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:5,!:727,*:1678,&:5,astsize:4104,astdepth:30
++:-0.7370056177322245,!:-0.2472513094002723,*:0.39784058426134344,&:-0.7370056177322245,astsize:2.0434693266620583,astdepth:-0.7200473660586805
++:10,!:974,*:2253,&:5,astsize:5511,astdepth:30
++:-0.7339849861221397,!:-0.24729816281244624,*:0.39842014321773844,&:-0.7365092953716713,astsize:2.0432600502125324,astdepth:-0.7238877491240133
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:6,!:727,*:1677,&:5,astsize:4104,astdepth:30
++:-0.7364217201882799,!:-0.2472830188932547,*:0.3972131894705093,&:-0.7371001372497153,astsize:2.0437313975745677,astdepth:-0.7201397107138269
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:9,!:817,*:1886,&:5,astsize:4618,astdepth:30
++:-0.7345410663102283,!:-0.2474592595160843,*:0.3969596160568612,&:-0.7369523623834666,astsize:2.043874834078645,astdepth:-0.7218817619257271
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:8,!:958,*:2215,&:5,astsize:5415,astdepth:30
++:-0.7349357087209775,!:-0.2468623614403563,*:0.39893574122463404,&:-0.7364769929755479,astsize:2.0429722794330423,astdepth:-0.7236329575207947
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:11,!:975,*:2254,&:5,astsize:5516,astdepth:30
++:-0.733558627237049,!:-0.24726600833285517,*:0.39792928168629826,&:-0.7365853447820958,astsize:2.0434547203434352,astdepth:-0.723974021677734
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:10,!:1050,*:2429,&:5,astsize:5939,astdepth:30
++:-0.7340196878963927,!:-0.2469110148693279,*:0.39897635061559744,&:-0.7363615565167151,astsize:2.042968122081941,astdepth:-0.724652213415103
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:14,!:1053,*:2431,&:5,astsize:5954,astdepth:30
++:-0.7324317834969717,!:-0.24684423289395974,*:0.39717852430618505,&:-0.7366380279199044,astsize:2.0436895356386304,astdepth:-0.7249540156339801
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:5,!:727,*:1678,&:5,astsize:4104,astdepth:30
++:-0.7370056177322245,!:-0.2472513094002723,*:0.39784058426134344,&:-0.7370056177322245,astsize:2.0434693266620583,astdepth:-0.7200473660586805
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:9,!:970,*:2244,&:5,astsize:5487,astdepth:30
++:-0.7344379506702797,!:-0.2471788063180955,*:0.3987818075265274,&:-0.7364660844657102,astsize:2.0430912821718272,astdepth:-0.7237902482442694
++:8,!:958,*:2215,&:5,astsize:5415,astdepth:30
++:-0.7349357087209775,!:-0.2468623614403563,*:0.39893574122463404,&:-0.7364769929755479,astsize:2.0429722794330423,astdepth:-0.7236329575207947
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:8,!:815,*:1885,&:5,astsize:4612,astdepth:30
++:-0.734983199523641,!:-0.2479449277166792,*:0.3978183322999864,&:-0.7367937507199495,astsize:2.04360936974433,astdepth:-0.721705824084046
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:12,!:974,*:2249,&:5,astsize:5507,astdepth:30
++:-0.7331633405343781,!:-0.24702677516224367,*:0.39728104276859993,&:-0.7367007167896847,astsize:2.043677019881297,astdepth:-0.7240672301635899
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:13,!:974,*:2248,&:5,astsize:5507,astdepth:30
++:-0.7327277359848922,!:-0.24705028734839504,*:0.3968134687004055,&:-0.7367708364938328,astsize:2.043871538530108,astdepth:-0.7241361474033933
++:9,!:816,*:1886,&:5,astsize:4617,astdepth:30
++:-0.734472670098955,!:-0.2479058800292957,*:0.3972322431113926,&:-0.7368844014004156,astsize:2.0438417891835607,astdepth:-0.7218110807662873
++:8,!:1037,*:2399,&:5,astsize:5862,astdepth:30
++:-0.734875204636253,!:-0.24664540657058787,*:0.3995829558836745,&:-0.7362986151262404,astsize:2.0426731314924194,astdepth:-0.7244368610430123
++:11,!:1050,*:2428,&:5,astsize:5939,astdepth:30
++:-0.733616174358178,!:-0.24693284659943787,*:0.3985432127379481,&:-0.7364266651825789,astsize:2.043148760149822,astdepth:-0.7247162867475755
++:9,!:741,*:1708,&:5,astsize:4186,astdepth:30
++:-0.734613296865006,!:-0.24760626292823526,*:0.3957486575865971,&:-0.7372745374876113,astsize:2.044387223290583,astdepth:-0.7206417835963281
++:13,!:1053,*:2432,&:5,astsize:5954,astdepth:30
++:-0.7328346386119352,!:-0.24682250714860485,*:0.3976108863974842,&:-0.7365731934693455,astsize:2.0435096623723394,astdepth:-0.7248902095399384
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:6,!:739,*:1707,&:5,astsize:4176,astdepth:30
++:-0.7363157301436131,!:-0.247660745811093,*:0.3976571598285787,&:-0.7369823808725796,astsize:2.0436178096471216,astdepth:-0.7203161126484146
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:11,!:1039,*:2402,&:5,astsize:5876,astdepth:30
++:-0.7336192506126608,!:-0.24690702755372868,*:0.3984127779222678,&:-0.7364599834320709,astsize:2.0431970803607213,astdepth:-0.7246235966845287
++:10,!:972,*:2247,&:5,astsize:5497,astdepth:30
++:-0.7340176874675369,!:-0.24709088686270725,*:0.3982642802590784,&:-0.736548492044485,astsize:2.0432872552753945,astdepth:-0.7238944691597442
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:11,!:975,*:2252,&:5,astsize:5512,astdepth:30
++:-0.7336074004655403,!:-0.2469477830446566,*:0.39772475994960527,&:-0.7366364022337201,astsize:2.0434823873272823,astdepth:-0.724015561532971
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:9,!:817,*:1886,&:5,astsize:4618,astdepth:30
++:-0.7345410663102283,!:-0.2474592595160843,*:0.3969596160568612,&:-0.7369523623834666,astsize:2.043874834078645,astdepth:-0.7218817619257271
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:6,!:739,*:1707,&:5,astsize:4176,astdepth:30
++:-0.7363157301436131,!:-0.247660745811093,*:0.3976571598285787,&:-0.7369823808725796,astsize:2.0436178096471216,astdepth:-0.7203161126484146
++:13,!:974,*:2248,&:5,astsize:5507,astdepth:30
++:-0.7327277359848922,!:-0.24705028734839504,*:0.3968134687004055,&:-0.7367708364938328,astsize:2.043871538530108,astdepth:-0.7241361474033933
++:12,!:973,*:2249,&:5,astsize:5506,astdepth:30
++:-0.7331058149970282,!:-0.24740110061430218,*:0.3975096335712945,&:-0.7366437265482031,astsize:2.0436493367393886,astdepth:-0.7240083281511499
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:8,!:740,*:1709,&:5,astsize:4185,astdepth:30
++:-0.7351110702696951,!:-0.24806810441896332,*:0.39666500201458743,&:-0.7371071479985916,astsize:2.0440944875971176,astdepth:-0.7204731669244545
++:8,!:894,*:2069,&:5,astsize:5059,astdepth:30
++:-0.734909227711102,!:-0.24759758314178454,*:0.3986678597125586,&:-0.7365592671396662,astsize:2.043207156848291,astdepth:-0.7228089385682973
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:9,!:816,*:1884,&:5,astsize:4613,astdepth:30
++:-0.7345318073386322,!:-0.24752605475289252,*:0.3969871345427332,&:-0.7369457144146457,astsize:2.0438752371529976,astdepth:-0.7218587951895609
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:9,!:1049,*:2428,&:5,astsize:5934,astdepth:30
++:-0.734415793295411,!:-0.24694057255683374,*:0.3994328210955682,&:-0.7362906979905594,astsize:2.042786786393118,astdepth:-0.7245725436458821
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:10,!:972,*:2247,&:5,astsize:5497,astdepth:30
++:-0.7340176874675369,!:-0.24709088686270725,*:0.3982642802590784,&:-0.736548492044485,astsize:2.0432872552753945,astdepth:-0.7238944691597442
++:12,!:973,*:2247,&:5,astsize:5502,astdepth:30
++:-0.7331543352408261,!:-0.2470823682408717,*:0.39730440174658077,&:-0.7366949218891088,astsize:2.043677193198039,astdepth:-0.7240499695738134
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:8,!:958,*:2217,&:5,astsize:5419,astdepth:30
++:-0.73488503007976,!:-0.24718626753992626,*:0.3991429346049692,&:-0.736425131435149,astsize:2.0429444479234404,astdepth:-0.7235909534735744
++:11,!:1050,*:2430,&:5,astsize:5943,astdepth:30
++:-0.7335708943306257,!:-0.24722813614099257,*:0.39873240890394845,&:-0.7363794184395167,astsize:2.043123274659657,astdepth:-0.7246772346524707
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:6,!:727,*:1677,&:5,astsize:4104,astdepth:30
++:-0.7364217201882799,!:-0.2472830188932547,*:0.3972131894705093,&:-0.7371001372497153,astsize:2.0437313975745677,astdepth:-0.7201397107138269
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:9,!:895,*:2070,&:5,astsize:5064,astdepth:30
++:-0.73444403696107,!:-0.2475623184818272,*:0.3981329627970783,&:-0.736642148556913,astsize:2.0434194922856257,astdepth:-0.7229039510828938
++:11,!:975,*:2252,&:5,astsize:5512,astdepth:30
++:-0.7336074004655403,!:-0.2469477830446566,*:0.39772475994960527,&:-0.7366364022337201,astsize:2.0434823873272823,astdepth:-0.724015561532971
++:7,!:815,*:1884,&:5,astsize:4608,astdepth:30
++:-0.7355630201266613,!:-0.24753653571800466,*:0.39813216704542853,&:-0.7367710064742076,astsize:2.0434095724033257,astdepth:-0.7216711771298803
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:10,!:896,*:2069,&:5,astsize:5065,astdepth:30
++:-0.7340330334123029,!:-0.2471809304029701,*:0.3973760863351195,&:-0.7367805057769153,astsize:2.043661527210922,astdepth:-0.7230431439538529
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:10,!:972,*:2247,&:5,astsize:5497,astdepth:30
++:-0.7340176874675369,!:-0.24709088686270725,*:0.3982642802590784,&:-0.736548492044485,astsize:2.0432872552753945,astdepth:-0.7238944691597442
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:6,!:739,*:1707,&:5,astsize:4176,astdepth:30
++:-0.7363157301436131,!:-0.247660745811093,*:0.3976571598285787,&:-0.7369823808725796,astsize:2.0436178096471216,astdepth:-0.7203161126484146
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:8,!:740,*:1707,&:5,astsize:4181,astdepth:30
++:-0.7351769605747587,!:-0.24764907127318228,*:0.39639391910198757,&:-0.737175025694847,astsize:2.0441316214682446,astdepth:-0.7205244830274435
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:9,!:1049,*:2428,&:5,astsize:5934,astdepth:30
++:-0.734415793295411,!:-0.24694057255683374,*:0.3994328210955682,&:-0.7362906979905594,astsize:2.042786786393118,astdepth:-0.7245725436458821
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:9,!:741,*:1708,&:5,astsize:4186,astdepth:30
++:-0.734613296865006,!:-0.24760626292823526,*:0.3957486575865971,&:-0.7372745374876113,astsize:2.044387223290583,astdepth:-0.7206417835963281
++:8,!:1037,*:2399,&:5,astsize:5862,astdepth:30
++:-0.734875204636253,!:-0.24664540657058787,*:0.3995829558836745,&:-0.7362986151262404,astsize:2.0426731314924194,astdepth:-0.7244368610430123
++:7,!:803,*:1856,&:5,astsize:4540,astdepth:30
++:-0.7355857749908221,!:-0.24757943225486342,*:0.3979867472689613,&:-0.7368119215806109,astsize:2.043475470765586,astdepth:-0.7214850892082505
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:11,!:1039,*:2402,&:5,astsize:5876,astdepth:30
++:-0.7336192506126608,!:-0.24690702755372868,*:0.3984127779222678,&:-0.7364599834320709,astsize:2.0431970803607213,astdepth:-0.7246235966845287
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:9,!:816,*:1884,&:5,astsize:4613,astdepth:30
++:-0.7345318073386322,!:-0.24752605475289252,*:0.3969871345427332,&:-0.7369457144146457,astsize:2.0438752371529976,astdepth:-0.7218587951895609
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:6,!:803,*:1855,&:5,astsize:4536,astdepth:30
++:-0.7361751931655229,!:-0.24716425085165558,*:0.3983056504208518,&:-0.7367887577104587,astsize:2.0432721953938486,astdepth:-0.7214496440870627
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:11,!:973,*:2248,&:5,astsize:5502,astdepth:30
++:-0.733590196213983,!:-0.24705881478837002,*:0.3977722780574269,&:-0.7366246954744339,astsize:2.043482376975249,astdepth:-0.7239809485558888
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:11,!:1050,*:2428,&:5,astsize:5939,astdepth:30
++:-0.733616174358178,!:-0.24693284659943787,*:0.3985432127379481,&:-0.7364266651825789,astsize:2.043148760149822,astdepth:-0.7247162867475755
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:10,!:896,*:2071,&:5,astsize:5069,astdepth:30
++:-0.7339795974053099,!:-0.24752709275419066,*:0.3975989715404653,&:-0.7367248147001808,astsize:2.043631261545043,astdepth:-0.7229987282258264
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:13,!:974,*:2248,&:5,astsize:5507,astdepth:30
++:-0.7327277359848922,!:-0.24705028734839504,*:0.3968134687004055,&:-0.7367708364938328,astsize:2.043871538530108,astdepth:-0.7241361474033933
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:11,!:1039,*:2402,&:5,astsize:5876,astdepth:30
++:-0.7336192506126608,!:-0.24690702755372868,*:0.3984127779222678,&:-0.7364599834320709,astsize:2.0431970803607213,astdepth:-0.7246235966845287
++:9,!:895,*:2068,&:5,astsize:5060,astdepth:30
++:-0.7344979168832649,!:-0.2472158844170929,*:0.3979103278659994,&:-0.7366978357657308,astsize:2.0434496519504086,astdepth:-0.7229483427503196
++:8,!:1037,*:2399,&:5,astsize:5862,astdepth:30
++:-0.734875204636253,!:-0.24664540657058787,*:0.3995829558836745,&:-0.7362986151262404,astsize:2.0426731314924194,astdepth:-0.7244368610430123
++:6,!:739,*:1707,&:5,astsize:4176,astdepth:30
++:-0.7363157301436131,!:-0.247660745811093,*:0.3976571598285787,&:-0.7369823808725796,astsize:2.0436178096471216,astdepth:-0.7203161126484146
++:9,!:1037,*:2400,&:5,astsize:5866,astdepth:30
++:-0.734420125794725,!:-0.24696684527155016,*:0.39933551013028584,&:-0.7363168311664106,astsize:2.0428307146957763,astdepth:-0.7244624225933761
++:10,!:972,*:2247,&:5,astsize:5497,astdepth:30
++:-0.7340176874675369,!:-0.24709088686270725,*:0.3982642802590784,&:-0.736548492044485,astsize:2.0432872552753945,astdepth:-0.7238944691597442
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:10,!:971,*:2245,&:5,astsize:5492,astdepth:30
++:-0.7340094412752172,!:-0.24714662770189352,*:0.39828856948063956,&:-0.7365425464446934,astsize:2.0432870665384772,astdepth:-0.7238770205973124
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:9,!:817,*:1886,&:5,astsize:4618,astdepth:30
++:-0.7345410663102283,!:-0.2474592595160843,*:0.3969596160568612,&:-0.7369523623834666,astsize:2.043874834078645,astdepth:-0.7218817619257271
++:11,!:975,*:2254,&:5,astsize:5516,astdepth:30
++:-0.733558627237049,!:-0.24726600833285517,*:0.39792928168629826,&:-0.7365853447820958,astsize:2.0434547203434352,astdepth:-0.723974021677734
++:11,!:975,*:2252,&:5,astsize:5512,astdepth:30
++:-0.7336074004655403,!:-0.2469477830446566,*:0.39772475994960527,&:-0.7366364022337201,astsize:2.0434823873272823,astdepth:-0.724015561532971
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:10,!:818,*:1887,&:5,astsize:4623,astdepth:30
++:-0.7340314473672199,!:-0.24742069161222438,*:0.39637497410818434,&:-0.7370426525389712,astsize:2.044106444090447,astdepth:-0.7219866266802151
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:9,!:895,*:2068,&:5,astsize:5060,astdepth:30
++:-0.7344979168832649,!:-0.2472158844170929,*:0.3979103278659994,&:-0.7366978357657308,astsize:2.0434496519504086,astdepth:-0.7229483427503196
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:9,!:970,*:2246,&:5,astsize:5491,astdepth:30
++:-0.7343883019116209,!:-0.24749823075807298,*:0.3989864006591248,&:-0.7364148995022703,astsize:2.04306369607355,astdepth:-0.7237486645607109
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:9,!:970,*:2244,&:5,astsize:5487,astdepth:30
++:-0.7344379506702797,!:-0.2471788063180955,*:0.3987818075265274,&:-0.7364660844657102,astsize:2.0430912821718272,astdepth:-0.7237902482442694
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:10,!:817,*:1885,&:5,astsize:4618,astdepth:30
++:-0.7340216480861226,!:-0.24748738114115262,*:0.39640183459271094,&:-0.7370361107065995,astsize:2.044107102945379,astdepth:-0.721963797604215
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:8,!:741,*:1709,&:5,astsize:4186,astdepth:30
++:-0.7351864101423755,!:-0.24757521548000674,*:0.39636426123646384,&:-0.7371820903388108,astsize:2.044130876759912,astdepth:-0.720551422035183
++:8,!:894,*:2069,&:5,astsize:5059,astdepth:30
++:-0.734909227711102,!:-0.24759758314178454,*:0.3986678597125586,&:-0.7365592671396662,astsize:2.043207156848291,astdepth:-0.7228089385682973
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:7,!:961,*:2222,&:5,astsize:5430,astdepth:30
++:-0.735399308701584,!:-0.24666998755821154,*:0.3993338635547786,&:-0.736423898473373,astsize:2.0427758575043997,astdepth:-0.72361652632601
++:8,!:958,*:2217,&:5,astsize:5419,astdepth:30
++:-0.73488503007976,!:-0.24718626753992626,*:0.3991429346049692,&:-0.736425131435149,astsize:2.0429444479234404,astdepth:-0.7235909534735744
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:9,!:741,*:1710,&:5,astsize:4190,astdepth:30
++:-0.7345480587505897,!:-0.24802489873964267,*:0.39602010406173394,&:-0.7372066552533818,astsize:2.044349935792811,astdepth:-0.7205904271109314
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:13,!:974,*:2250,&:5,astsize:5511,astdepth:30
++:-0.7326795897572239,!:-0.24736878969517298,*:0.3970189115318582,&:-0.736719638040779,astsize:2.0438435931159873,astdepth:-0.7240944871546694
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:14,!:1053,*:2433,&:5,astsize:5958,astdepth:30
++:-0.7323874645688482,!:-0.2471389308115733,*:0.39736826513167917,&:-0.736590772368478,astsize:2.043663819986726,astdepth:-0.7249149173695061
++:9,!:805,*:1858,&:5,astsize:4550,astdepth:30
++:-0.7345484228858544,!:-0.2475009055038135,*:0.3967968781686602,&:-0.7369958978475732,astsize:2.0439475274054115,astdepth:-0.7216991793368307
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:14,!:1053,*:2431,&:5,astsize:5954,astdepth:30
++:-0.7324317834969717,!:-0.24684423289395974,*:0.39717852430618505,&:-0.7366380279199044,astsize:2.0436895356386304,astdepth:-0.7249540156339801
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:11,!:818,*:1888,&:5,astsize:4627,astdepth:30
++:-0.7334543230556113,!:-0.24782792728981473,*:0.39606332855826737,&:-0.7370649282285912,astsize:2.0443045900235917,astdepth:-0.7220207400078416
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:8,!:741,*:1709,&:5,astsize:4186,astdepth:30
++:-0.7351864101423755,!:-0.24757521548000674,*:0.39636426123646384,&:-0.7371820903388108,astsize:2.044130876759912,astdepth:-0.720551422035183
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:8,!:1037,*:2399,&:5,astsize:5862,astdepth:30
++:-0.734875204636253,!:-0.24664540657058787,*:0.3995829558836745,&:-0.7362986151262404,astsize:2.0426731314924194,astdepth:-0.7244368610430123
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:5,!:727,*:1678,&:5,astsize:4104,astdepth:30
++:-0.7370056177322245,!:-0.2472513094002723,*:0.39784058426134344,&:-0.7370056177322245,astsize:2.0434693266620583,astdepth:-0.7200473660586805
++:13,!:1053,*:2432,&:5,astsize:5954,astdepth:30
++:-0.7328346386119352,!:-0.24682250714860485,*:0.3976108863974842,&:-0.7365731934693455,astsize:2.0435096623723394,astdepth:-0.7248902095399384
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:14,!:1053,*:2431,&:5,astsize:5954,astdepth:30
++:-0.7324317834969717,!:-0.24684423289395974,*:0.39717852430618505,&:-0.7366380279199044,astsize:2.0436895356386304,astdepth:-0.7249540156339801
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:12,!:1052,*:2431,&:5,astsize:5949,astdepth:30
++:-0.7332291115880083,!:-0.24685198218339768,*:0.39806538459444657,&:-0.7365028038051548,astsize:2.043329558868889,astdepth:-0.7248110458867747
++:8,!:815,*:1885,&:5,astsize:4612,astdepth:30
++:-0.734983199523641,!:-0.2479449277166792,*:0.3978183322999864,&:-0.7367937507199495,astsize:2.04360936974433,astdepth:-0.721705824084046
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:6,!:882,*:2039,&:5,astsize:4983,astdepth:30
++:-0.7359927842868462,!:-0.24688188857162768,*:0.39912416889698865,&:-0.7365511300582107,astsize:2.042894119793796,astdepth:-0.7225924857741005
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:11,!:975,*:2252,&:5,astsize:5512,astdepth:30
++:-0.7336074004655403,!:-0.2469477830446566,*:0.39772475994960527,&:-0.7366364022337201,astsize:2.0434823873272823,astdepth:-0.724015561532971
++:11,!:975,*:2252,&:5,astsize:5512,astdepth:30
++:-0.7336074004655403,!:-0.2469477830446566,*:0.39772475994960527,&:-0.7366364022337201,astsize:2.0434823873272823,astdepth:-0.724015561532971
++:11,!:975,*:2254,&:5,astsize:5516,astdepth:30
++:-0.733558627237049,!:-0.24726600833285517,*:0.39792928168629826,&:-0.7365853447820958,astsize:2.0434547203434352,astdepth:-0.723974021677734
++:7,!:882,*:2038,&:5,astsize:4983,astdepth:30
++:-0.7355120974923014,!:-0.24690795832558218,*:0.3986079101049635,&:-0.7366289069532539,astsize:2.0431098413575213,astdepth:-0.7226687886913477
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:7,!:961,*:2222,&:5,astsize:5430,astdepth:30
++:-0.735399308701584,!:-0.24666998755821154,*:0.3993338635547786,&:-0.736423898473373,astsize:2.0427758575043997,astdepth:-0.72361652632601
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:12,!:973,*:2247,&:5,astsize:5502,astdepth:30
++:-0.7331543352408261,!:-0.2470823682408717,*:0.39730440174658077,&:-0.7366949218891088,astsize:2.043677193198039,astdepth:-0.7240499695738134
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:9,!:741,*:1708,&:5,astsize:4186,astdepth:30
++:-0.734613296865006,!:-0.24760626292823526,*:0.3957486575865971,&:-0.7372745374876113,astsize:2.044387223290583,astdepth:-0.7206417835963281
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:9,!:817,*:1886,&:5,astsize:4618,astdepth:30
++:-0.7345410663102283,!:-0.2474592595160843,*:0.3969596160568612,&:-0.7369523623834666,astsize:2.043874834078645,astdepth:-0.7218817619257271
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:8,!:815,*:1885,&:5,astsize:4612,astdepth:30
++:-0.734983199523641,!:-0.2479449277166792,*:0.3978183322999864,&:-0.7367937507199495,astsize:2.04360936974433,astdepth:-0.721705824084046
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:5,!:727,*:1678,&:5,astsize:4104,astdepth:30
++:-0.7370056177322245,!:-0.2472513094002723,*:0.39784058426134344,&:-0.7370056177322245,astsize:2.0434693266620583,astdepth:-0.7200473660586805
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:8,!:970,*:2245,&:5,astsize:5487,astdepth:30
++:-0.734874581925153,!:-0.24715512845016357,*:0.3992505921118027,&:-0.7363955365617695,astsize:2.0428955694152493,astdepth:-0.7237209145899661
++:12,!:973,*:2247,&:5,astsize:5502,astdepth:30
++:-0.7331543352408261,!:-0.2470823682408717,*:0.39730440174658077,&:-0.7366949218891088,astsize:2.043677193198039,astdepth:-0.7240499695738134
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:11,!:1050,*:2428,&:5,astsize:5939,astdepth:30
++:-0.733616174358178,!:-0.24693284659943787,*:0.3985432127379481,&:-0.7364266651825789,astsize:2.043148760149822,astdepth:-0.7247162867475755
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:10,!:960,*:2219,&:5,astsize:5429,astdepth:30
++:-0.7340173356569014,!:-0.24712116281338484,*:0.3981443967760755,&:-0.7365799470929199,astsize:2.0433409386999575,astdepth:-0.7237668899128273
++:8,!:740,*:1709,&:5,astsize:4185,astdepth:30
++:-0.7351110702696951,!:-0.24806810441896332,*:0.39666500201458743,&:-0.7371071479985916,astsize:2.0440944875971176,astdepth:-0.7204731669244545
++:12,!:819,*:1889,&:5,astsize:4632,astdepth:30
++:-0.7329465010222578,!:-0.2477890221501085,*:0.3954804975440671,&:-0.737154806291285,astsize:2.0445349765357714,astdepth:-0.7221251446161875
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:9,!:970,*:2244,&:5,astsize:5487,astdepth:30
++:-0.7344379506702797,!:-0.2471788063180955,*:0.3987818075265274,&:-0.7364660844657102,astsize:2.0430912821718272,astdepth:-0.7237902482442694
++:8,!:740,*:1709,&:5,astsize:4185,astdepth:30
++:-0.7351110702696951,!:-0.24806810441896332,*:0.39666500201458743,&:-0.7371071479985916,astsize:2.0440944875971176,astdepth:-0.7204731669244545
++:7,!:882,*:2038,&:5,astsize:4983,astdepth:30
++:-0.7355120974923014,!:-0.24690795832558218,*:0.3986079101049635,&:-0.7366289069532539,astsize:2.0431098413575213,astdepth:-0.7226687886913477
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:9,!:974,*:2252,&:5,astsize:5507,astdepth:30
++:-0.7344693218252285,!:-0.2469561528044704,*:0.3986830492769068,&:-0.7364901018004442,astsize:2.0430927541085833,astdepth:-0.7238602269553468
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:8,!:961,*:2223,&:5,astsize:5434,astdepth:30
++:-0.7349076454639762,!:-0.24701702468573217,*:0.39906688236793414,&:-0.7364435026122813,astsize:2.0429459834371277,astdepth:-0.7236446930430723
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:11,!:819,*:1888,&:5,astsize:4628,astdepth:30
++:-0.733522730785293,!:-0.2473821704507612,*:0.3957914174175736,&:-0.7371326854412424,astsize:2.0443373769678423,astdepth:-0.7220912077081196
++:9,!:805,*:1858,&:5,astsize:4550,astdepth:30
++:-0.7345484228858544,!:-0.2475009055038135,*:0.3967968781686602,&:-0.7369958978475732,astsize:2.0439475274054115,astdepth:-0.7216991793368307
++:8,!:740,*:1707,&:5,astsize:4181,astdepth:30
++:-0.7351769605747587,!:-0.24764907127318228,*:0.39639391910198757,&:-0.737175025694847,astsize:2.0441316214682446,astdepth:-0.7205244830274435
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:11,!:1039,*:2402,&:5,astsize:5876,astdepth:30
++:-0.7336192506126608,!:-0.24690702755372868,*:0.3984127779222678,&:-0.7364599834320709,astsize:2.0431970803607213,astdepth:-0.7246235966845287
++:10,!:960,*:2219,&:5,astsize:5429,astdepth:30
++:-0.7340173356569014,!:-0.24712116281338484,*:0.3981443967760755,&:-0.7365799470929199,astsize:2.0433409386999575,astdepth:-0.7237668899128273
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:7,!:894,*:2068,&:5,astsize:5055,astdepth:30
++:-0.7354375119503023,!:-0.2472251583767076,*:0.39895443925057555,&:-0.7365383289820353,astsize:2.0430246761438418,astdepth:-0.7227781160853726
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:10,!:1050,*:2429,&:5,astsize:5939,astdepth:30
++:-0.7340196878963927,!:-0.2469110148693279,*:0.39897635061559744,&:-0.7363615565167151,astsize:2.042968122081941,astdepth:-0.724652213415103
++:11,!:1039,*:2402,&:5,astsize:5876,astdepth:30
++:-0.7336192506126608,!:-0.24690702755372868,*:0.3984127779222678,&:-0.7364599834320709,astsize:2.0431970803607213,astdepth:-0.7246235966845287
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:7,!:958,*:2216,&:5,astsize:5415,astdepth:30
++:-0.7353780434761565,!:-0.24683838623143084,*:0.3994107082100676,&:-0.7364054665197838,astsize:2.0427738664917476,astdepth:-0.723562678474444
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:14,!:1053,*:2433,&:5,astsize:5958,astdepth:30
++:-0.7323874645688482,!:-0.2471389308115733,*:0.39736826513167917,&:-0.736590772368478,astsize:2.043663819986726,astdepth:-0.7249149173695061
++:9,!:1037,*:2400,&:5,astsize:5866,astdepth:30
++:-0.734420125794725,!:-0.24696684527155016,*:0.39933551013028584,&:-0.7363168311664106,astsize:2.0428307146957763,astdepth:-0.7244624225933761
++:7,!:803,*:1856,&:5,astsize:4540,astdepth:30
++:-0.7355857749908221,!:-0.24757943225486342,*:0.3979867472689613,&:-0.7368119215806109,astsize:2.043475470765586,astdepth:-0.7214850892082505
++:13,!:1053,*:2432,&:5,astsize:5954,astdepth:30
++:-0.7328346386119352,!:-0.24682250714860485,*:0.3976108863974842,&:-0.7365731934693455,astsize:2.0435096623723394,astdepth:-0.7248902095399384
++:7,!:961,*:2222,&:5,astsize:5430,astdepth:30
++:-0.735399308701584,!:-0.24666998755821154,*:0.3993338635547786,&:-0.736423898473373,astsize:2.0427758575043997,astdepth:-0.72361652632601
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:7,!:882,*:2040,&:5,astsize:4987,astdepth:30
++:-0.7354565443335921,!:-0.2472599508639552,*:0.3988333694078614,&:-0.7365724222615226,astsize:2.0430794962135983,astdepth:-0.7226239481623902
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:7,!:740,*:1708,&:5,astsize:4181,astdepth:30
++:-0.7357505172066108,!:-0.2476179520120604,*:0.39701004677146584,&:-0.7370823932371553,astsize:2.0438747585397103,astdepth:-0.7204339428553493
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:6,!:727,*:1679,&:5,astsize:4108,astdepth:30
++:-0.736353340277144,!:-0.24771021249083863,*:0.397488480508555,&:-0.7370310699966812,astsize:2.043693969264361,astdepth:-0.7200878270082518
++:11,!:975,*:2254,&:5,astsize:5516,astdepth:30
++:-0.733558627237049,!:-0.24726600833285517,*:0.39792928168629826,&:-0.7365853447820958,astsize:2.0434547203434352,astdepth:-0.723974021677734
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:10,!:818,*:1887,&:5,astsize:4623,astdepth:30
++:-0.7340314473672199,!:-0.24742069161222438,*:0.39637497410818434,&:-0.7370426525389712,astsize:2.044106444090447,astdepth:-0.7219866266802151
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:8,!:894,*:2069,&:5,astsize:5059,astdepth:30
++:-0.734909227711102,!:-0.24759758314178454,*:0.3986678597125586,&:-0.7365592671396662,astsize:2.043207156848291,astdepth:-0.7228089385682973
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:9,!:895,*:2068,&:5,astsize:5060,astdepth:30
++:-0.7344979168832649,!:-0.2472158844170929,*:0.3979103278659994,&:-0.7366978357657308,astsize:2.0434496519504086,astdepth:-0.7229483427503196
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:14,!:1053,*:2433,&:5,astsize:5958,astdepth:30
++:-0.7323874645688482,!:-0.2471389308115733,*:0.39736826513167917,&:-0.736590772368478,astsize:2.043663819986726,astdepth:-0.7249149173695061
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:8,!:958,*:2217,&:5,astsize:5419,astdepth:30
++:-0.73488503007976,!:-0.24718626753992626,*:0.3991429346049692,&:-0.736425131435149,astsize:2.0429444479234404,astdepth:-0.7235909534735744
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:13,!:1052,*:2432,&:5,astsize:5953,astdepth:30
++:-0.7327813986880761,!:-0.2471686380394669,*:0.39782232413096685,&:-0.7365204767296438,astsize:2.0434840471759648,astdepth:-0.7248358578497447
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:9,!:970,*:2244,&:5,astsize:5487,astdepth:30
++:-0.7344379506702797,!:-0.2471788063180955,*:0.3987818075265274,&:-0.7364660844657102,astsize:2.0430912821718272,astdepth:-0.7237902482442694
++:11,!:1050,*:2430,&:5,astsize:5943,astdepth:30
++:-0.7335708943306257,!:-0.24722813614099257,*:0.39873240890394845,&:-0.7363794184395167,astsize:2.043123274659657,astdepth:-0.7246772346524707
++:8,!:970,*:2245,&:5,astsize:5487,astdepth:30
++:-0.734874581925153,!:-0.24715512845016357,*:0.3992505921118027,&:-0.7363955365617695,astsize:2.0428955694152493,astdepth:-0.7237209145899661
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:10,!:974,*:2251,&:5,astsize:5507,astdepth:30
++:-0.7340341334982562,!:-0.24697970787546003,*:0.39821583312071285,&:-0.7365603493987893,astsize:2.0432876275479166,astdepth:-0.7239292698961235
++:11,!:819,*:1888,&:5,astsize:4628,astdepth:30
++:-0.733522730785293,!:-0.2473821704507612,*:0.3957914174175736,&:-0.7371326854412424,astsize:2.0443373769678423,astdepth:-0.7220912077081196
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:11,!:975,*:2254,&:5,astsize:5516,astdepth:30
++:-0.733558627237049,!:-0.24726600833285517,*:0.39792928168629826,&:-0.7365853447820958,astsize:2.0434547203434352,astdepth:-0.723974021677734
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:9,!:1049,*:2428,&:5,astsize:5934,astdepth:30
++:-0.734415793295411,!:-0.24694057255683374,*:0.3994328210955682,&:-0.7362906979905594,astsize:2.042786786393118,astdepth:-0.7245725436458821
++:9,!:960,*:2218,&:5,astsize:5425,astdepth:30
++:-0.73450904748768,!:-0.2467738415101748,*:0.39841111024555753,&:-0.7365605099733897,astsize:2.04317115816339,astdepth:-0.7237388694377035
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:6,!:882,*:2039,&:5,astsize:4983,astdepth:30
++:-0.7359927842868462,!:-0.24688188857162768,*:0.39912416889698865,&:-0.7365511300582107,astsize:2.042894119793796,astdepth:-0.7225924857741005
++:9,!:817,*:1886,&:5,astsize:4618,astdepth:30
++:-0.7345410663102283,!:-0.2474592595160843,*:0.3969596160568612,&:-0.7369523623834666,astsize:2.043874834078645,astdepth:-0.7218817619257271
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:11,!:975,*:2254,&:5,astsize:5516,astdepth:30
++:-0.733558627237049,!:-0.24726600833285517,*:0.39792928168629826,&:-0.7365853447820958,astsize:2.0434547203434352,astdepth:-0.723974021677734
++:7,!:882,*:2038,&:5,astsize:4983,astdepth:30
++:-0.7355120974923014,!:-0.24690795832558218,*:0.3986079101049635,&:-0.7366289069532539,astsize:2.0431098413575213,astdepth:-0.7226687886913477
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:10,!:972,*:2247,&:5,astsize:5497,astdepth:30
++:-0.7340176874675369,!:-0.24709088686270725,*:0.3982642802590784,&:-0.736548492044485,astsize:2.0432872552753945,astdepth:-0.7238944691597442
++:14,!:1053,*:2433,&:5,astsize:5958,astdepth:30
++:-0.7323874645688482,!:-0.2471389308115733,*:0.39736826513167917,&:-0.736590772368478,astsize:2.043663819986726,astdepth:-0.7249149173695061
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:7,!:739,*:1708,&:5,astsize:4180,astdepth:30
++:-0.735675184815179,!:-0.24811136835097708,*:0.39731122475532304,&:-0.7370073263902178,astsize:2.043838211503284,astdepth:-0.7203555567022328
++:12,!:973,*:2247,&:5,astsize:5502,astdepth:30
++:-0.7331543352408261,!:-0.2470823682408717,*:0.39730440174658077,&:-0.7366949218891088,astsize:2.043677193198039,astdepth:-0.7240499695738134
++:9,!:817,*:1886,&:5,astsize:4618,astdepth:30
++:-0.7345410663102283,!:-0.2474592595160843,*:0.3969596160568612,&:-0.7369523623834666,astsize:2.043874834078645,astdepth:-0.7218817619257271
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:13,!:974,*:2248,&:5,astsize:5507,astdepth:30
++:-0.7327277359848922,!:-0.24705028734839504,*:0.3968134687004055,&:-0.7367708364938328,astsize:2.043871538530108,astdepth:-0.7241361474033933
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:7,!:740,*:1708,&:5,astsize:4181,astdepth:30
++:-0.7357505172066108,!:-0.2476179520120604,*:0.39701004677146584,&:-0.7370823932371553,astsize:2.0438747585397103,astdepth:-0.7204339428553493
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:10,!:1049,*:2429,&:5,astsize:5938,astdepth:30
++:-0.7339664579162742,!:-0.24725792705253063,*:0.39918843732857257,&:-0.7363086548886696,astsize:2.0429422725555955,astdepth:-0.7245976700266931
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:7,!:894,*:2068,&:5,astsize:5055,astdepth:30
++:-0.7354375119503023,!:-0.2472251583767076,*:0.39895443925057555,&:-0.7365383289820353,astsize:2.0430246761438418,astdepth:-0.7227781160853726
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:7,!:961,*:2222,&:5,astsize:5430,astdepth:30
++:-0.735399308701584,!:-0.24666998755821154,*:0.3993338635547786,&:-0.736423898473373,astsize:2.0427758575043997,astdepth:-0.72361652632601
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:8,!:894,*:2069,&:5,astsize:5059,astdepth:30
++:-0.734909227711102,!:-0.24759758314178454,*:0.3986678597125586,&:-0.7365592671396662,astsize:2.043207156848291,astdepth:-0.7228089385682973
++:8,!:970,*:2245,&:5,astsize:5487,astdepth:30
++:-0.734874581925153,!:-0.24715512845016357,*:0.3992505921118027,&:-0.7363955365617695,astsize:2.0428955694152493,astdepth:-0.7237209145899661
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:9,!:974,*:2252,&:5,astsize:5507,astdepth:30
++:-0.7344693218252285,!:-0.2469561528044704,*:0.3986830492769068,&:-0.7364901018004442,astsize:2.0430927541085833,astdepth:-0.7238602269553468
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:12,!:1052,*:2431,&:5,astsize:5949,astdepth:30
++:-0.7332291115880083,!:-0.24685198218339768,*:0.39806538459444657,&:-0.7365028038051548,astsize:2.043329558868889,astdepth:-0.7248110458867747
++:6,!:727,*:1677,&:5,astsize:4104,astdepth:30
++:-0.7364217201882799,!:-0.2472830188932547,*:0.3972131894705093,&:-0.7371001372497153,astsize:2.0437313975745677,astdepth:-0.7201397107138269
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:13,!:1053,*:2432,&:5,astsize:5954,astdepth:30
++:-0.7328346386119352,!:-0.24682250714860485,*:0.3976108863974842,&:-0.7365731934693455,astsize:2.0435096623723394,astdepth:-0.7248902095399384
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:9,!:895,*:2068,&:5,astsize:5060,astdepth:30
++:-0.7344979168832649,!:-0.2472158844170929,*:0.3979103278659994,&:-0.7366978357657308,astsize:2.0434496519504086,astdepth:-0.7229483427503196
++:11,!:819,*:1888,&:5,astsize:4628,astdepth:30
++:-0.733522730785293,!:-0.2473821704507612,*:0.3957914174175736,&:-0.7371326854412424,astsize:2.0443373769678423,astdepth:-0.7220912077081196
++:11,!:975,*:2252,&:5,astsize:5512,astdepth:30
++:-0.7336074004655403,!:-0.2469477830446566,*:0.39772475994960527,&:-0.7366364022337201,astsize:2.0434823873272823,astdepth:-0.724015561532971
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:8,!:815,*:1885,&:5,astsize:4612,astdepth:30
++:-0.734983199523641,!:-0.2479449277166792,*:0.3978183322999864,&:-0.7367937507199495,astsize:2.04360936974433,astdepth:-0.721705824084046
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:8,!:1037,*:2399,&:5,astsize:5862,astdepth:30
++:-0.734875204636253,!:-0.24664540657058787,*:0.3995829558836745,&:-0.7362986151262404,astsize:2.0426731314924194,astdepth:-0.7244368610430123
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:10,!:1049,*:2427,&:5,astsize:5934,astdepth:30
++:-0.7340120600162735,!:-0.24696243977769453,*:0.3989994242153389,&:-0.7363558984197315,astsize:2.0429676804008023,astdepth:-0.7246367064024414
++:9,!:973,*:2252,&:5,astsize:5506,astdepth:30
++:-0.7344119785401517,!:-0.2473303498420394,*:0.3989117695613689,&:-0.7364330641364094,astsize:2.04306490211703,astdepth:-0.7238012791597986
++:9,!:960,*:2218,&:5,astsize:5425,astdepth:30
++:-0.73450904748768,!:-0.2467738415101748,*:0.39841111024555753,&:-0.7365605099733897,astsize:2.04317115816339,astdepth:-0.7237388694377035
++:8,!:740,*:1709,&:5,astsize:4185,astdepth:30
++:-0.7351110702696951,!:-0.24806810441896332,*:0.39666500201458743,&:-0.7371071479985916,astsize:2.0440944875971176,astdepth:-0.7204731669244545
++:8,!:958,*:2215,&:5,astsize:5415,astdepth:30
++:-0.7349357087209775,!:-0.2468623614403563,*:0.39893574122463404,&:-0.7364769929755479,astsize:2.0429722794330423,astdepth:-0.7236329575207947
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:11,!:818,*:1886,&:5,astsize:4623,astdepth:30
++:-0.7335123931204128,!:-0.2474487544877265,*:0.3958176222901038,&:-0.7371262491697266,astsize:2.044338290118682,astdepth:-0.7220685156309197
++:11,!:973,*:2248,&:5,astsize:5502,astdepth:30
++:-0.733590196213983,!:-0.24705881478837002,*:0.3977722780574269,&:-0.7366246954744339,astsize:2.043482376975249,astdepth:-0.7239809485558888
++:9,!:895,*:2068,&:5,astsize:5060,astdepth:30
++:-0.7344979168832649,!:-0.2472158844170929,*:0.3979103278659994,&:-0.7366978357657308,astsize:2.0434496519504086,astdepth:-0.7229483427503196
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:8,!:815,*:1885,&:5,astsize:4612,astdepth:30
++:-0.734983199523641,!:-0.2479449277166792,*:0.3978183322999864,&:-0.7367937507199495,astsize:2.04360936974433,astdepth:-0.721705824084046
++:7,!:739,*:1706,&:5,astsize:4176,astdepth:30
++:-0.7357417297770598,!:-0.24769193712023355,*:0.3970405075507378,&:-0.7370751991559036,astsize:2.0438751904228156,astdepth:-0.7204068319203563
++:9,!:805,*:1856,&:5,astsize:4546,astdepth:30
++:-0.7346084729368559,!:-0.24711506363486568,*:0.3965477167374858,&:-0.7370581885614891,astsize:2.043981474303257,astdepth:-0.7217474659075321
++:7,!:803,*:1854,&:5,astsize:4536,astdepth:30
++:-0.735646931921409,!:-0.24719291456333176,*:0.3977382063453858,&:-0.7368742033218062,astsize:2.043509154278003,astdepth:-0.7215333108168414
++:11,!:972,*:2248,&:5,astsize:5501,astdepth:30
++:-0.7335326745665821,!:-0.24743344441477058,*:0.39800112132270243,&:-0.7365676333396424,astsize:2.043454602783517,astdepth:-0.7239219717852248
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:8,!:894,*:2069,&:5,astsize:5059,astdepth:30
++:-0.734909227711102,!:-0.24759758314178454,*:0.3986678597125586,&:-0.7365592671396662,astsize:2.043207156848291,astdepth:-0.7228089385682973
++:10,!:972,*:2247,&:5,astsize:5497,astdepth:30
++:-0.7340176874675369,!:-0.24709088686270725,*:0.3982642802590784,&:-0.736548492044485,astsize:2.0432872552753945,astdepth:-0.7238944691597442
++:11,!:1051,*:2430,&:5,astsize:5944,astdepth:30
++:-0.7336241276720951,!:-0.24688148475089644,*:0.3985205388917314,&:-0.7364322583043328,astsize:2.0431490458389354,astdepth:-0.7247317140033425
++:11,!:1050,*:2428,&:5,astsize:5939,astdepth:30
++:-0.733616174358178,!:-0.24693284659943787,*:0.3985432127379481,&:-0.7364266651825789,astsize:2.043148760149822,astdepth:-0.7247162867475755
++:12,!:1052,*:2431,&:5,astsize:5949,astdepth:30
++:-0.7332291115880083,!:-0.24685198218339768,*:0.39806538459444657,&:-0.7365028038051548,astsize:2.043329558868889,astdepth:-0.7248110458867747
++:9,!:895,*:2070,&:5,astsize:5064,astdepth:30
++:-0.73444403696107,!:-0.2475623184818272,*:0.3981329627970783,&:-0.736642148556913,astsize:2.0434194922856257,astdepth:-0.7229039510828938
++:8,!:805,*:1857,&:5,astsize:4546,astdepth:30
++:-0.735135982881191,!:-0.24708652152649777,*:0.3971142731349041,&:-0.7369730573906816,astsize:2.0437453918083923,astdepth:-0.7216641031449259
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:8,!:895,*:2069,&:5,astsize:5060,astdepth:30
++:-0.7349715732730739,!:-0.24719021487934661,*:0.3984189336598145,&:-0.7366213411143154,astsize:2.0432374713775583,astdepth:-0.7228732757706365
++:12,!:819,*:1887,&:5,astsize:4628,astdepth:30
++:-0.7330040402306154,!:-0.2474101747501612,*:0.3952344948076145,&:-0.7372161307614247,astsize:2.0445688012288348,astdepth:-0.7221729502942483
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:10,!:1049,*:2429,&:5,astsize:5938,astdepth:30
++:-0.7339664579162742,!:-0.24725792705253063,*:0.39918843732857257,&:-0.7363086548886696,astsize:2.0429422725555955,astdepth:-0.7245976700266931
++:10,!:1039,*:2401,&:5,astsize:5872,astdepth:30
++:-0.7340732196458152,!:-0.24658606700590305,*:0.39865931870406807,&:-0.7364419618841043,astsize:2.0430401805244127,astdepth:-0.7245982506926584
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:13,!:1052,*:2430,&:5,astsize:5949,astdepth:30
++:-0.7328260371321323,!:-0.24687374317598798,*:0.39763276411137194,&:-0.7365677294821316,astsize:2.043509686567264,astdepth:-0.7248749408883841
++:8,!:961,*:2221,&:5,astsize:5430,astdepth:30
++:-0.7349581925191582,!:-0.24669387918994398,*:0.3988601971949562,&:-0.7364952260343602,astsize:2.042973713956182,astdepth:-0.7236866134076758
++:8,!:894,*:2067,&:5,astsize:5055,astdepth:30
++:-0.7349635529345346,!:-0.24725087693903022,*:0.3984454762694649,&:-0.7366149502573185,astsize:2.0432372097622045,astdepth:-0.7228533059007862
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:10,!:1049,*:2429,&:5,astsize:5938,astdepth:30
++:-0.7339664579162742,!:-0.24725792705253063,*:0.39918843732857257,&:-0.7363086548886696,astsize:2.0429422725555955,astdepth:-0.7245976700266931
++:12,!:1051,*:2431,&:5,astsize:5948,astdepth:30
++:-0.7331758749319985,!:-0.2471983731429418,*:0.39827703828044453,&:-0.7364500255696534,astsize:2.043303865799321,astdepth:-0.7247566304351718
++:9,!:973,*:2250,&:5,astsize:5502,astdepth:30
++:-0.7344615011373546,!:-0.2470116649264012,*:0.3987076720459925,&:-0.7364841145656158,astsize:2.0430923892223625,astdepth:-0.7238427806389832
++:13,!:974,*:2248,&:5,astsize:5507,astdepth:30
++:-0.7327277359848922,!:-0.24705028734839504,*:0.3968134687004055,&:-0.7367708364938328,astsize:2.043871538530108,astdepth:-0.7241361474033933
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
++:8,!:815,*:1883,&:5,astsize:4608,astdepth:30
++:-0.7350428730952236,!:-0.24756477536517665,*:0.3975735249764469,&:-0.7368550593321382,astsize:2.0436426901739413,astdepth:-0.7217535073578494
++:9,!:805,*:1858,&:5,astsize:4550,astdepth:30
++:-0.7345484228858544,!:-0.2475009055038135,*:0.3967968781686602,&:-0.7369958978475732,astsize:2.0439475274054115,astdepth:-0.7216991793368307
++:12,!:973,*:2247,&:5,astsize:5502,astdepth:30
++:-0.7331543352408261,!:-0.2470823682408717,*:0.39730440174658077,&:-0.7366949218891088,astsize:2.043677193198039,astdepth:-0.7240499695738134
++:10,!:817,*:1887,&:5,astsize:4622,astdepth:30
++:-0.7339630453464556,!:-0.24786687990157283,*:0.39664724280725566,&:-0.7369747935834128,astsize:2.0440735284228126,astdepth:-0.7219160523986271
++:14,!:1053,*:2431,&:5,astsize:5954,astdepth:30
++:-0.7324317834969717,!:-0.24684423289395974,*:0.39717852430618505,&:-0.7366380279199044,astsize:2.0436895356386304,astdepth:-0.7249540156339801
++:11,!:1039,*:2400,&:5,astsize:5872,astdepth:30
++:-0.733665064501705,!:-0.24660811499718271,*:0.39822117320870715,&:-0.7365078093431711,astsize:2.0432228548037474,astdepth:-0.7246630391703957
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:6,!:727,*:1677,&:5,astsize:4104,astdepth:30
++:-0.7364217201882799,!:-0.2472830188932547,*:0.3972131894705093,&:-0.7371001372497153,astsize:2.0437313975745677,astdepth:-0.7201397107138269
++:10,!:960,*:2217,&:5,astsize:5425,astdepth:30
++:-0.7340672396827639,!:-0.24679773156680326,*:0.3979367649613678,&:-0.7366318160412689,astsize:2.043368956578212,astdepth:-0.7238089342487437
++:11,!:972,*:2246,&:5,astsize:5497,astdepth:30
++:-0.7335815699020286,!:-0.24711448168407613,*:0.397796101447736,&:-0.736618825395585,astsize:2.043482369706387,astdepth:-0.7239635941724333
++:12,!:1051,*:2429,&:5,astsize:5944,astdepth:30
++:-0.7332208337417188,!:-0.2469032810716608,*:0.3980876598131706,&:-0.7364972753862715,astsize:2.0433294284707775,astdepth:-0.7247956980842971
++:9,!:960,*:2218,&:5,astsize:5425,astdepth:30
++:-0.73450904748768,!:-0.2467738415101748,*:0.39841111024555753,&:-0.7365605099733897,astsize:2.04317115816339,astdepth:-0.7237388694377035
++:9,!:1037,*:2398,&:5,astsize:5862,astdepth:30
++:-0.7344665996691077,!:-0.24666752712048526,*:0.3991442800183037,&:-0.7363646505350556,astsize:2.042856329929226,astdepth:-0.7245018326228809
++:8,!:973,*:2251,&:5,astsize:5502,astdepth:30
++:-0.7348969450001633,!:-0.24698806854666652,*:0.399175189595892,&:-0.7364137601601224,astsize:2.0428972179381906,astdepth:-0.7237736338271302
+ABC command line: "read_eqn test_data/original_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data/original_circuit.aig".
+
+[1;37mtest_data/original_circuit    :[0m i/o =    6/    6  lat =    0  and =     44  lev = 15  power =  29.53
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.85 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+WireLoad = "none"  [1;33mGates =     49[0m ( 20.4 %)   [1;32mCap =  0.7 ff[0m (  3.7 %)   [1;36mArea =       54.82[0m ( 79.6 %)   [1;35mDelay =   216.64 ps[0m  ( 51.0 %)               
+ABC command line: "read_eqn test_data/optimized_circuit.txt; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data/optimized_circuit.aig".
+
+[1;37mtest_data/optimized_circuit   :[0m i/o =    6/    6  lat =    0  and =     68  lev = 14  power =  46.21
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.84 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+WireLoad = "none"  [1;33mGates =     70[0m ( 17.1 %)   [1;32mCap =  0.7 ff[0m (  3.1 %)   [1;36mArea =       77.45[0m ( 82.9 %)   [1;35mDelay =   212.52 ps[0m  ( 22.9 %)               
+ABC command line: "cec test_data/original_circuit.aig test_data/optimized_circuit.aig".
+
+Networks are equivalent.  Time =     0.01 sec
+ABC command line: "read_eqn test_data/original_circuit.txt; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data/original_circuit.aig".
+
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.84 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+ABC command line: "read_eqn test_data/optimized_circuit.txt; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data/optimized_circuit.aig".
+
+File "asap7_clean.lib". Line 960249. Failed to parse entry "*/".
+Parsing failed.  Parsing time =     0.85 sec
+Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.99 sec
+Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
+ABC command line: "cec test_data/original_circuit.aig test_data/optimized_circuit.aig".
+
+Networks are equivalent.  Time =     0.01 sec
+multiple output circuit
+success load file
+success convert to s-expression
+multiple output circuit parse success
+
+
+------------------------------------Original circuit------------------------------------
+----------------------------------------------------------------------------------------
+
+
+------------------------------------Optimized circuit------------------------------------
+----------------------------------------------------------------------------------------
+
+
+------------------------------------Equivalence checking------------------------------------
+-----------------------------------------Finish Equivalence checking-----------------------------------------
+
+
+------------------------------------Additional Equivalence checking------------------------------------
+-----------------------------------------Finish Equivalence checking-----------------------------------------
