@@ -4,9 +4,9 @@ source_dir="/data/guangyuh/coding_env/E-Brush/benchmark/AIO"
 # Path to the output directory
 output_dir="/data/guangyuh/coding_env/E-Brush/result"
 # Path to the raw_circuit.txt
-raw_circuit_file="/data/guangyuh/coding_env/E-Brush/test_data/raw_circuit.txt"
+raw_circuit_file="/data/guangyuh/coding_env/E-Brush/test_data_beta_runner/raw_circuit.txt"
 # Path to the run.py script
-run_script="/data/guangyuh/coding_env/E-Brush/run.py"
+run_script="/data/guangyuh/coding_env/E-Brush/run_beta.py"
 # Iterate over each file in the source directory
 for file in "$source_dir"/*
 do

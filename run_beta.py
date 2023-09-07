@@ -6,7 +6,7 @@ from sympy.logic import simplify_logic
 from sympy.logic.boolalg import And, Not, Or, Xor
 from sympy import sqrt, simplify, count_ops, oo, S
 import os
-import to_sympy_parser, to_sympy_parser_sexpr
+import to_sympy_parser, to_sympy_parser_sexpr, lisp2infix
 from collections import OrderedDict
 from sympy.parsing.sympy_parser import parse_expr
 from tqdm import tqdm
@@ -131,7 +131,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         # with open ("test_data_beta_runner/output_from_s-converter.txt", "r") as myfile:
         #     sexpr=myfile.readlines()
         
-        parser = to_sympy_parser_sexpr.PropParser(); parser.build()
+        #parser = to_sympy_parser_sexpr.PropParser(); parser.build()
+        parser = lisp2infix.PropParser(); parser.build()
         with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
             sexpr=myfile.readlines()
         
@@ -157,7 +158,9 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         # convert dict _ to list
         components = list(_.values())
         # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
-        result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
+        #result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
+        
+        result = components
         
         print("multiple output circuit parse success")
         # write a new eqn file
@@ -204,7 +207,7 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 0")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 3")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
@@ -275,7 +278,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/original_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; balance; refactor ; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -296,9 +299,9 @@ if __name__ == "__main__":
     #############################################################################
     '''
     # for original circuit
-    print("\n\n------------------------------------Equivalence checking------------------------------------")
-    os.system("./abc/abc -c \"cec test_data_beta_runner/original_circuit_and_all.aig test_data_beta_runner/optimized_circuit_and_all.aig\"")
-    print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
+    # print("\n\n------------------------------------Equivalence checking------------------------------------")
+    # os.system("./abc/abc -c \"cec test_data_beta_runner/original_circuit_and_all.aig test_data_beta_runner/optimized_circuit_and_all.aig\"")
+    # print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
     
 
     '''
@@ -309,22 +312,22 @@ if __name__ == "__main__":
     #############################################################################
     '''
     # additional test
-    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data_beta_runner/original_circuit_or_all.aig\"")
+    # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor;  read_lib asap7_clean.lib ; map ; strash ; orpos; write_aiger test_data_beta_runner/original_circuit_or_all.aig\"")
     
-    os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data_beta_runner/optimized_circuit_or_all.aig\"")
+    # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; read_lib asap7_clean.lib ; map ;  strash ; orpos; write_aiger test_data_beta_runner/optimized_circuit_or_all.aig\"")
     
-    print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
-    os.system("./abc/abc -c \"cec test_data_beta_runner/original_circuit_or_all.aig test_data_beta_runner/optimized_circuit_or_all.aig\"")
-    print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
+    # print("\n\n------------------------------------Additional Equivalence checking------------------------------------")
+    # os.system("./abc/abc -c \"cec test_data_beta_runner/original_circuit_or_all.aig test_data_beta_runner/optimized_circuit_or_all.aig\"")
+    # print("-----------------------------------------Finish Equivalence checking-----------------------------------------")
     
     '''
     #############################################################################
     #
-    #               Using BDD to check the equivalence between original and optimized circuit
+    #               Using cec to check the equivalence between original and optimized circuit
     #
     #############################################################################
     '''
-    os.system("./abc/abc -c \"cec test_data_beta_runner/original_circuit.eqn test_data_beta_runner/optimized_circuit.eqn\"")
+    os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/optimized_circuit.eqn\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; strash; write_aiger test_data_beta_runner/raw_circuit.aig\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; strash; write_aiger test_data_beta_runner/optimized_circuit.aig\"")
     # os.system("./abc/abc -c \"read_aiger test_data_beta_runner/raw_circuit.aig; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")
