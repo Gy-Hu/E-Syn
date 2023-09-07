@@ -34,6 +34,7 @@
 - [ ] Support constant value (0, 1) for parsing and rewriting
 - [ ] Support parallel running for multiple egraph rewriting output
 - [ ] Do code review for e-rewriter (any bugs? verify rules? make more efficient?)
+- [x] If eqn fully unfold, then do not concat tmp variable ( `new_nxx_` )
 - [x] Add more rewrite rules in egg
 - [x] Shell script to run all benchmarks
 - [x] Fine-tune the parameters of egg and symREG

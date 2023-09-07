@@ -75,13 +75,21 @@ impl Analysis<Prop> for ConstantFold {
 fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     vec![
         rewrite!("th1"; "(-> ?x ?y)"      =>       "(+ (! ?x) ?y)"          ),
+
         rewrite!("th2"; "(! (! ?x))"      =>       "?x"                     ),
+
         rewrite!("th3"; "(+ ?x (+ ?y ?z))"=> "(+ (+ ?x ?y) ?z)"       ),
+
         rewrite!("th4"; "(* ?x (+ ?y ?z))"=> "(+ (* ?x ?y) (* ?x ?z))"),
+
         rewrite!("th5"; "(+ ?x (* ?y ?z))"=> "(* (+ ?x ?y) (+ ?x ?z))"),
+
         rewrite!("th6"; "(+ ?x ?y)"       =>        "(+ ?y ?x)"              ),
+
         rewrite!("th7"; "(* ?x ?y)"       =>        "(* ?y ?x)"              ),
+
         rewrite!("th9"; "(-> ?x ?y)"      =>    "(-> (! ?y) (! ?x))"     ),
+
         rewrite!("th10"; "(+ ?x (* ?x ?y))" => "?x"),
         // Theorem 11: X + !X · Y = X + Y
         rewrite!("th11"; "(+ ?x (* (! ?x) ?y))" => "(+ ?x ?y)"),
@@ -111,18 +119,18 @@ fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
         rewrite!("th23"; "(* ?x (+ ?x ?y))" => "?x"),
         // Theorem 24: X · Y + X · !Y = X
         rewrite!("th24"; "(+ (* ?x ?y) (* ?x (! ?y)))" => "?x"),
-        // Theorem 25: (X + Y) · (X + Z) = X + Y · Z
-        //rewrite!("th25"; "(* (+ ?x ?y) (+ ?x ?z))" => "(+ ?x (* ?y ?z))"),
-        // Theorem 26: X + Y · (!Y + Z) = X + Z
+        //Theorem 25: (X + Y) · (X + Z) = X + Y · Z
+        rewrite!("th25"; "(* (+ ?x ?y) (+ ?x ?z))" => "(+ ?x (* ?y ?z))"),
+        //Theorem 26: X + Y · (!Y + Z) = X + Z
         //rewrite!("th26"; "(+ ?x (* ?y (+ (! ?y) ?z)))" => "(+ ?x ?z)"),
-        // Theorem 27: X · Y + X · Y · Z = X · Y
+        //Theorem 27: X · Y + X · Y · Z = X · Y
         //rewrite!("th27"; "(+ (* ?x ?y) (* ?x (* ?y ?z)))" => "(* ?x ?y)"),
 
         //-----------------------------------rewrite to constant-----------------------------------
         //rewrite!("th"; "(+ ?x (! ?x))"   =>    "true"                   ) ,
         //rewrite!("th"; "(+ ?x true)"     =>         "true"                ) ,
         //rewrite!("th"; "(* ?x (! ?x))" => "false"),
-        //rewrite!("th8"; "(* ?x true)"     =>         "?x"                  ),
+        //rewrite!("th"; "(* ?x true)"     =>         "?x"                  ),
     ]
 }
 
@@ -196,7 +204,7 @@ fn simplify(s: &str) -> String {
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
-        .with_time_limit(std::time::Duration::from_secs(1000))
+        .with_time_limit(std::time::Duration::from_secs(100))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());
@@ -209,8 +217,8 @@ fn simplify(s: &str) -> String {
 
     let root = runner.roots[0];
     //runner.print_report();
-    let extractor = Extractor::new(&runner.egraph, AstDepth);
-    //let extractor = Extractor::new(&runner.egraph, AstSize);
+    //let extractor = Extractor::new(&runner.egraph, AstDepth);
+    let extractor = Extractor::new(&runner.egraph, AstSize);
     //let extractor = Extractor::new(&runner.egraph, OperatorCount);
     let (best_cost, best) = extractor.find_best(root);
     let mut egraphout = EGraph::new(ConstantFold {});

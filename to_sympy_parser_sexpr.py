@@ -94,5 +94,5 @@ class PropParser(object):
 # test string
 # parser = PropParser()
 # parser.build()
-# result = parser.parse("(* pi2 pi3)")
+# result = parser.parse("(& (* pi2 pi3) pi4)")
 # print(result)

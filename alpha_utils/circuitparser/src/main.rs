@@ -110,6 +110,8 @@ impl CircuitParser {
         }
 
         if last_parsed_content != parsed_content {
+        // print we will need to add new_n_dict to file
+        println!("Not fully unfold, we will need to add tmp variable to file");
         // write self.new_n_dict to file
         let new_n_dict_str = self.new_n_dict.iter()
             .map(|(k, v)| format!("{} = ({});", k, v))
@@ -118,6 +120,9 @@ impl CircuitParser {
 
         // append new_n_dict_str to parsed_content
         parsed_content = format!("{}\n{}", parsed_content, new_n_dict_str);
+        }
+        else {
+            println!("EQN fully unfold");
         }
         
         self.write_to_file(&parsed_content);
