@@ -26,6 +26,15 @@ def check_equal(FORMULA_LIST, components):
     pbar.close()
     return result
 
+def my_measure(expr):
+    OR = Symbol('OR') # 9 - !, 22 - AND, 26 - OR
+    AND = Symbol('AND')
+    # Discourage powers by giving POW a weight of 10
+    count = count_ops(expr, visual=True).subs(OR, 26)
+    count = count_ops(expr, visual=True).subs(AND, 22)
+    # Every other operation gets a weight of 1 (the default)
+    count = count.replace(Symbol, type(S.One))
+    return count
 
 def sympy_to_rust_sexpr(expr_str): # sympy to rust s-expression
     def recurse(expr):
@@ -157,6 +166,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         # convert dict _ to list
         components = list(_.values())
+        # for every component, simplify it
+        components = [simplify(component, measure=my_measure) for component in components]
         # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
         result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
         
@@ -207,7 +218,7 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 0")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 2")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
@@ -254,7 +265,7 @@ if __name__ == "__main__":
     #############################################################################
     '''
     # run egg 
-    os.system("e-rewriter/target/release/e-rewriter test_data_beta_runner/sexpr_for_egg.txt test_data_beta_runner/output_from_egg.txt")
+    os.system("e-rewriter/target/release/e-rewriter test_data_beta_runner/sexpr_for_egg.txt test_data_beta_runner/output_from_egg.txt test_data_beta_runner")
     
     '''
     #############################################################################
@@ -278,7 +289,12 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/original_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; balance; refactor ;dc2; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
+    
+    ################## gate sizing ###################
+    #command = "./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; st; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
+    
+    ################## st + dch ######################
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -287,7 +303,13 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor ;dc2; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit_and_all.aig\""
+    
+   
+    ################## gate sizing ###################
+    #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; st; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
+    
+    ################## st + dch ######################
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     

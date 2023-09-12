@@ -43,7 +43,7 @@ def process_circuits(file_count):
 def run_abc(file_count):
     for i in tqdm(range(file_count), desc='Running abc to extract stats'):
         os.system(
-            f"abc -c \"read_eqn aigfuzz/simple_circuit_{i}_processed.eqn; balance; refactor; print_stats -p; read_lib ../asap7_clean.lib ; map ; stime; \" > aigfuzz/simple_circuit_{i}.stats")
+            f"abc -c \"read_eqn aigfuzz/simple_circuit_{i}_processed.eqn; balance; refactor; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; stime; \" > aigfuzz/simple_circuit_{i}.stats")
 
 
 def parse_data(file_count):

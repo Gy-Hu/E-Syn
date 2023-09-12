@@ -45,7 +45,7 @@ impl CircuitParser {
                     in_order.push_str(&current_line);
                 } else if current_line.starts_with(" OUTORDER") {
                     out_order.push_str(&current_line);
-                } else if current_line.starts_with(" new_n") {
+                } else if current_line.starts_with(" new_") {
                     let parts = current_line.split(" = ").collect::<Vec<&str>>();
                     let new_n_name = parts[0].trim().to_string();
                     let new_n_expr = parts[1].trim().trim_end_matches(";").to_string();

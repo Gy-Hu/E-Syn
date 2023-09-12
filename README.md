@@ -32,8 +32,12 @@
 ## TODO
 
 - [ ] Support constant value (0, 1) for parsing and rewriting
-- [ ] Support parallel running for multiple egraph rewriting output
-- [ ] Do code review for e-rewriter (any bugs? verify rules? make more efficient?)
+- [ ] Do code review for e-rewriter (any bugs? verify rules? make more efficient? support constant rewrite?)
+- [ ] Add bidirectional rewrite rules
+- [ ] Review rewrite rules/cost function/egraph selection/egraph merging (analyzer)
+- [ ] Add strong regressor for egraph selection
+- [ ] Add multiple-cost function
+- [x] Support parallel running for multiple egraph rewriting output
 - [x] If eqn fully unfold, then do not concat tmp variable ( `new_nxx_` )
 - [x] Add more rewrite rules in egg
 - [x] Shell script to run all benchmarks
@@ -43,5 +47,5 @@
 - [x] Add BDD to do equivalence checking
 - [x] Using monotonic cost function in symREG
 - [x] Optimize parser 2, avoid duplicated parsing
-- [x] ~~BUG: EPFL max, 10 times of unfolding, not pass cec in eqn check~~ Fixed: eqn unfold too many times
-- [x] ~~BUG: C6288 unfold 1 time, will meet the bug to parse~~ Fixed: eqn unfold too many times
+- [x] BUG: EPFL max, 10 times of unfolding, not pass cec in eqn check -> Fixed: eqn unfold too many times
+- [x] BUG: C6288 unfold 1 time, will meet the bug to parse -> Fixed: eqn unfold too many times

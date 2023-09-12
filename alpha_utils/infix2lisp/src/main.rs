@@ -150,6 +150,7 @@ fn main() {
         },
         Err(err) => {eprintln!("Error: {:?}", err);
         //print the error expression
+       // println!("{:?}", err.0);
     },
     }
 }

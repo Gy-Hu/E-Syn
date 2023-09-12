@@ -8,8 +8,13 @@ VariableStr: String = {
     //match in1[number]
     <s:r"[a-z]+[0-9]+\[[0-9]+\]"> => s.to_string(),
     // match new_ADD64|c_
-    <s:r"[a-zA-Z_][a-zA-Z0-9_]*\|[a-zA-Z0-9_]_"> => s.to_string(),
-}
+    <s:r"[a-z_]+[A-Z0-9_]+\|[a-zA-Z0-9_]+"> => s.to_string(),
+    //<s:r"[a-zA-Z_][a-zA-Z0-9_]*\|[a-zA-Z0-9_]+"> => s.to_string(),
+    // match 0 or 1
+    <s:r"[0-1]"> => s.to_string(),
+    // support a00, a01, b00, b01 ...
+    // <s:r"[a-z]+[0-9]"> => s.to_string(),
+    }
 
 Op: String = {
     "*" => "*".to_string(),
@@ -24,6 +29,7 @@ NotOp: String = {
 pub Expr: Expr = {
     <n:VariableStr> => Expr::VariableStr(n),
     <not:NotOp> <e:Expr> => Expr::Not(Box::new(e)), 
+    "(" <n:VariableStr> ")" => Expr::VariableStr(n),
     //"(" <not:NotOp> <e:Expr> ")" => Expr::Not(Box::new(e)),
     //"(" "! " <e:Expr> ")" => Expr::Not(Box::new(e)),
     //"! " <e:Expr> => Expr::Not(Box::new(e)), 
