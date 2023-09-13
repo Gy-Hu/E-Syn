@@ -1,0 +1,13 @@
+# Equations for "2_2_U_SP_WT_RC_GenMul" written by ABC on Tue Sep 12 00:53:46 2023
+INORDER = pi0 pi1 pi2 pi3;
+OUTORDER = po0 po1 po2;
+po0 = pi0 * pi2;
+new_n10_ = pi0 * pi3;
+new_n11_ = pi1 * pi2;
+new_n12_ = new_n10_ * new_n11_;
+new_n13_ = !new_n10_ * !new_n11_;
+po1 = !new_n12_ * !new_n13_;
+new_n15_ = pi1 * pi3;
+new_n17_ = !new_n12_ * !new_n15_;
+po2 = !(new_n12_ * new_n15_) * !new_n17_;
+

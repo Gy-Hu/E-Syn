@@ -13,6 +13,9 @@ from tqdm import tqdm
 import copy
 import CircuitParser
 import sys   
+import concurrent.futures
+import subprocess
+import threading
 sys.setrecursionlimit(100000)
 
 def check_equal(FORMULA_LIST, components):
@@ -106,21 +109,22 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
         return None
 
         
-def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
+def convert_to_abc_eqn(data,i, FORMULA_LIST=None, multiple_output = False):
     # using the s-converter to convert to abc eqn
     #os.system("s-converter/target/release/s-converter test_data_beta_runner/output_from_egg.txt test_data_beta_runner/output_from_s-converter.txt test_data_beta_runner/split_concat.txt")
-    
+    t=i
     if not multiple_output:
         parser = to_sympy_parser_sexpr.PropParser(); parser.build()
         # read the s-expression file and convert to aag
-        with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
+        with open ("test_data_beta_runner/output_from_egg{}.txt".format(t))as myfile:
             # read line by line
+            
             sexpr=myfile.readlines()
         
         parse_res, _ = parser.parse(sexpr[0])
         result = str( sympy_to_abc_eqn_normal_bool(parse_res) )
         # write a new eqn file
-        with open ("test_data_beta_runner/optimized_circuit.eqn", "w") as myfile: 
+        with open ("test_data_beta_runner/optimized_circuit{}.eqn".format(t), "w") as myfile: 
             # write the first 3 lines of the original file - from data[0] to data[2]
             for i in range(3):
                 myfile.write(data[i])
@@ -133,7 +137,8 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         parser = to_sympy_parser_sexpr.PropParser(); parser.build()
         #parser = lisp2infix.PropParser(); parser.build()
-        with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
+        with open ("test_data_beta_runner/output_from_egg{}.txt".format(t), "r") as myfile:
+            print("open{}".format(t))
             sexpr=myfile.readlines()
         
         # read s-converter/split_concat.txt
@@ -149,9 +154,9 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         parser_res, _ = parser.parse(sexpr[0])
         
-        with open("test_data_beta_runner/tmp.txt", "w") as myfile:
-            for id in _:
-                myfile.write(str(_[id])+'\n------------------------\n')
+        # with open("test_data_beta_runner/tmp.txt", "w") as myfile:
+            # for id in _:
+                # myfile.write(str(_[id])+'\n------------------------\n')
                 
         #components =  list(parser_res.args)
         
@@ -164,13 +169,15 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         print("multiple output circuit parse success")
         # write a new eqn file
-        with open("test_data_beta_runner/optimized_circuit.eqn", "w") as myfile:
+        with open("test_data_beta_runner/optimized_circuit{}.eqn".format(t), "w") as myfile:
             # write the first 3 lines of the original file - from data[0] to data[2]
             for i in range(3):
                 myfile.write(data[i])
             # write the new eqn
             for i in range(len(result)):
                 myfile.write(data[3+i].split(" = ")[0] + " = " + result[i] + ";" + "\n")
+            
+            print("write{}".format(t))
                 
                 #myfile.write(data[3+i].split(" = ")[0] + " = " + result[int(symbol_order[i])] + ";" + "\n")
                 #myfile.write(data[3+i].split(" = ")[0] + " = " + result[i] + ";" + "\n")
@@ -207,53 +214,53 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 0")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 100")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
     # parser =  CircuitParser.CircuitParser(input_file_path, output_file_path)
     # parser.process()
     
-    # load file to convert to s-expression (test)
+    #load file to convert to s-expression (test)
     with open ("test_data_beta_runner/original_circuit.eqn", "r") as myfile:
         # read line by line
         data=myfile.readlines()
         
-    '''
-    #############################################################################
-    #
-    #                    Pre-processing the circuit for egg ....
-    #
-    #############################################################################
-    '''
+    # '''
+    # #############################################################################
+    # #
+    # #                    Pre-processing the circuit for egg ....
+    # #
+    # #############################################################################
+    # '''
         
-    # if data[2] is 'OUTORDER = po0;\n':
+    # # if data[2] is 'OUTORDER = po0;\n':
     if len(data[2].split(" = ")[1].rstrip().strip(";").split()) == 1:
-        # one output circuit
+    #     # one output circuit
         
-        conver_to_sexpr(data[3]) # put the only one equation to the function
-        FORMULA_LIST = None
+         conver_to_sexpr(data[3]) # put the only one equation to the function
+         FORMULA_LIST = None
    
     else:
-        # multiple output circuit
-        print("multiple output circuit")
-        multiple_output_flag = True
+    #     # multiple output circuit
+         print("multiple output circuit")
+         multiple_output_flag = True
         
-        # load all the content to `convert_to_sexpr()`
-        # file to input string
-        #FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)  
-        os.system("alpha_utils/infix2lisp/target/release/s-converter test_data_beta_runner/input_for_s-converter.txt test_data_beta_runner/sexpr_for_egg.txt")
+    #     # load all the content to `convert_to_sexpr()`
+    #     # file to input string
+    #     #FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)  
+         os.system("alpha_utils/infix2lisp/target/release/s-converter test_data_beta_runner/input_for_s-converter.txt test_data_beta_runner/sexpr_for_egg.txt")
           
         
 
-    '''
-    #############################################################################
-    #
-    #                 Using egg to optimize the circuit ....
-    #
-    #############################################################################
-    '''
-    # run egg 
+    # '''
+    # #############################################################################
+    # #
+    # #                 Using egg to optimize the circuit ....
+    # #
+    # #############################################################################
+    # '''
+    # # run egg 
     os.system("e-rewriter/target/release/e-rewriter test_data_beta_runner/sexpr_for_egg.txt test_data_beta_runner/output_from_egg.txt")
     
     '''
@@ -263,8 +270,39 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    convert_to_abc_eqn(data, None, multiple_output= multiple_output_flag)
+    # import threading
+    # threads = []
+    # results = []
+    # def process_result(i, result):
+    # # 在这里处理线程的结果
+    #    pass
+    # for i in range(10):
+    #     thread = threading.Thread(target=convert_to_abc_eqn, args=(data, i, None, multiple_output_flag))
+    #     threads.append(thread)
+    #     thread.start()
+
     
+    max_processes = 64  # 设置最大进程数
+    data = data  # 按需设置 data 的值
+    multiple_output_flag = True  # 按需设置 multiple_output_flag 的值
+
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_processes) as executor:
+        futures = []
+        for i in range(10):
+            future = executor.submit(convert_to_abc_eqn, data, i, None, multiple_output_flag)
+            futures.append(future)
+    
+    #python - future - parallel
+    # def process_iteration(i):
+    #     convert_to_abc_eqn(data, None, multiple_output=multiple_output_flag, i=i)
+    
+    # # 创建线程池
+    # with concurrent.futures.ProcessPoolExecutor() as executor:
+    #     # 提交任务并获取Future对象
+    #     futures = [executor.submit(process_iteration, i) for i in range(0, 10)]
+    
+    #     # 等待所有任务完成
+    #     concurrent.futures.wait(futures)
     '''
     #############################################################################
     #
@@ -278,7 +316,7 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/original_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/original_circuit.eqn;balance; refactor; balance; rewrite; rewrite -z; balance; rewrite -z; balance; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/original_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; balance; refactor ;dc2; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/original_circuit_and_all.aig\""
+    command = "./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
     os.system(command)
     print("----------------------------------------------------------------------------------------")
     
@@ -287,11 +325,34 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime;  strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats; read_lib asap7_clean.lib ; map ; stime; strash ; write_aiger test_data_beta_runner/optimized_circuit.aig\""
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor; print_stats -p; read_lib asap7_clean.lib ; map ; stime; collapse; write_blif test_data_beta_runner/optimized_circuit.blif\""
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; balance; refactor ;dc2; print_stats -p; read_lib asap7_clean.lib ; map ; topo; stime; strash ; andpos; write_aiger test_data_beta_runner/optimized_circuit_and_all.aig\""
-    os.system(command)
-    print("----------------------------------------------------------------------------------------")
+    #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
+    #os.system(command)
+    #print("----------------------------------------------------------------------------------------")
+    
+    def run_command(i):
+        command = f"./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit{i}.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
+        subprocess.run(command, shell=True)
+        print("----------------------------------------------------------------------------------------")
+
+    threads = []
+    for i in range(1, 11):
+        thread = threading.Thread(target=run_command, args=(i,))
+        threads.append(thread)
+        thread.start()
+
+    for thread in threads:
+        thread.join()    
+
+
+
+
+
+
+
+
     
     '''
+    
     #############################################################################
     #
     #               Equivalence checking between original and optimized circuit
@@ -327,7 +388,7 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/optimized_circuit.eqn\"")
+    os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/optimized_circuit0.eqn\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; strash; write_aiger test_data_beta_runner/raw_circuit.aig\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; strash; write_aiger test_data_beta_runner/optimized_circuit.aig\"")
     # os.system("./abc/abc -c \"read_aiger test_data_beta_runner/raw_circuit.aig; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")
