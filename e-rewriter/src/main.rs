@@ -82,34 +82,98 @@ impl Analysis<Prop> for ConstantFold {
     }
 }
 
+fn make_rules_enhance() -> Vec<Rewrite<Prop, ConstantFold>> {
+    let mut rws: Vec<Rewrite<Prop, ConstantFold>> = vec![
+        // Boolean theorems of one variable (Table 2.2 pg 62)
+        rewrite!("null-element1"; "(* ?b 0)" => "0"),
+        rewrite!("null-element2"; "(+ ?b 1)" => "1"),
+        rewrite!("complements1"; "(* ?b (! ?b))" => "0"),
+        rewrite!("complements2"; "(+ ?b (! ?b))" => "1"),
+        rewrite!("covering1"; "(* ?b (+ ?b ?c))" => "?b"),
+        rewrite!("covering2"; "(+ ?b (* ?b ?c))" => "?b"),
+        rewrite!("combining1"; "(+ (* ?b ?c) (* ?b (! ?c)))" => "?b"),
+        rewrite!("combining2"; "(* (+ ?b ?c) (+ ?b (! ?c)))" => "?b")
+        // Boolean theorems of several variables (Table 2.3 pg 63)
+    ];
+
+    rws.extend(rewrite!("identity1"; "(* ?b 1)" <=> "?b"));
+    rws.extend(rewrite!("identity2'"; "(+ ?b 0)" <=> "?b"));
+    rws.extend(rewrite!("idempotency1"; "(* ?b ?b)" <=> "?b"));
+    rws.extend(rewrite!("idempotency2"; "(+ ?b ?b)" <=> "?b"));
+    rws.extend(rewrite!("involution1"; "(! (! ?b))" <=> "?b"));
+    rws.extend(rewrite!("commutativity1"; "(* ?b ?c)" <=> "(* ?c ?b)"));
+    rws.extend(rewrite!("commutativity2"; "(+ ?b ?c)" <=> "(+ ?c ?b)"));
+    rws.extend(rewrite!("associativity1"; "(*(* ?b ?c) ?d)" <=> "(* ?b (* ?c ?d))"));
+    rws.extend(rewrite!("associativity2"; "(+(+ ?b ?c) ?d)" <=> "(+ ?b (+ ?c ?d))"));
+    rws.extend(rewrite!("distributivity1"; "(+ (* ?b ?c) (* ?b ?d))" <=> "(* ?b (+ ?c ?d))"));
+    rws.extend(rewrite!("distributivity2"; "(* (+ ?b ?c) (+ ?b ?d))" <=> "(+ ?b (* ?c ?d))"));
+    rws.extend(rewrite!("consensus1"; "(+ (+ (* ?b ?c) (* (! ?b) ?d)) (* ?c ?d))" <=> "(+ (* ?b ?c) (* (! ?b) ?d))"));
+    rws.extend(rewrite!("consensus2"; "(* (* (+ ?b ?c) (+ (! ?b) ?d)) (+ ?c ?d))" <=> "(* (+ ?b ?c) (+ (! ?b) ?d))"));
+    rws.extend(rewrite!("de-morgan1"; "(! (* ?b ?c))" <=> "(+ (! ?b) (! ?c))"));
+    rws.extend(rewrite!("de-morgan2"; "(! (+ ?b ?c))" <=> "(* (! ?b) (! ?c))"));
+
+    rws
+}
+
 fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     vec![
-        rewrite!("a"; "(-> ?a ?b)"      =>       "(+ (! ?a) ?b)"          ),
-        rewrite!("b"; "(! (! ?a))"      =>       "?a"                     ),
-        rewrite!("c"; "(+ ?a (+ ?b ?c))"=> "(+ (+ ?a ?b) ?c)"       ),
-        rewrite!("d"; "(* ?a (+ ?b ?c))"=> "(+ (* ?a ?b) (* ?a ?c))"),
-        rewrite!("e"; "(+ ?a (* ?b ?c))"=> "(* (+ ?a ?b) (+ ?a ?c))"),
-        rewrite!("f"; "(+ ?a ?b)"       =>        "(+ ?b ?a)"              ),
-        rewrite!("r"; "(* ?a ?b)"       =>        "(* ?b ?a)"              ),
-        //rewrite!("q"; "(+ ?a (! ?a))"   =>    "true"                   ) ,
-        //rewrite!("s"; "(+ ?a true)"     =>         "true"                ) ,
-        rewrite!("g"; "(* ?a true)"     =>         "?a"                  ),
-        rewrite!("y"; "(-> ?a ?b)"      =>    "(-> (! ?b) (! ?a))"     ),
-        rewrite!("th1"; "(+ ?x (* ?x ?y))" => "?x"),
-        // Theorem 2: X + !X · Y = X + Y
-        rewrite!("th2"; "(+ ?x (* (! ?x) ?y))" => "(+ ?x ?y)"),
-        // Theorem 3: X · Y + !X · Z + Y · Z = X · Y + !X · Z
-        rewrite!("th3"; "(+ (* ?x ?y) (+ (* (! ?x) ?z) (* ?y ?z)))" => "(+ (* ?x ?y) (* (! ?x) ?z))"),
-        // Theorem 4: X(X + Y) = X
-        rewrite!("th4"; "(* ?x (+ ?x ?y))" => "?x"),
-        // Theorem 5: X(!X + Y) = X · Y
-        rewrite!("th5"; "(* ?x (+ (! ?x) ?y))" => "(* ?x ?y)"),
-        // Theorem 6: (X + Y)(X + !Y) = X
-        rewrite!("th6"; "(* (+ ?x ?y) (+ ?x (! ?y)))" => "?x"),
-        // Theorem 7: (X + Y)(!X + Z) = X · Z + !X · Y
-        rewrite!("th7"; "(* (+ ?x ?y) (+ (! ?x) ?z))" => "(+ (* ?x ?z) (* (! ?x) ?y))"),
-        // Theorem 8: (X + Y)(!X + Z)(Y + Z) = (X + Y)(!X + Z)
-        rewrite!("th8"; "(* (+ ?x ?y) (* (+ (! ?x) ?z) (+ ?y ?z)))" => "(* (+ ?x ?y) (+ (! ?x) ?z))"),
+        rewrite!("th1"; "(-> ?x ?y)"      =>       "(+ (! ?x) ?y)"          ),
+
+        rewrite!("th2"; "(! (! ?x))"      =>       "?x"                     ),
+
+        rewrite!("th3"; "(+ ?x (+ ?y ?z))"=> "(+ (+ ?x ?y) ?z)"       ),
+
+        rewrite!("th4"; "(* ?x (+ ?y ?z))"=> "(+ (* ?x ?y) (* ?x ?z))"),
+
+        rewrite!("th5"; "(+ ?x (* ?y ?z))"=> "(* (+ ?x ?y) (+ ?x ?z))"),
+
+        rewrite!("th6"; "(+ ?x ?y)"       =>        "(+ ?y ?x)"              ),
+
+        rewrite!("th7"; "(* ?x ?y)"       =>        "(* ?y ?x)"              ),
+
+        rewrite!("th9"; "(-> ?x ?y)"      =>    "(-> (! ?y) (! ?x))"     ),
+
+        rewrite!("th10"; "(+ ?x (* ?x ?y))" => "?x"),
+        // Theorem 11: X + !X · Y = X + Y
+        rewrite!("th11"; "(+ ?x (* (! ?x) ?y))" => "(+ ?x ?y)"),
+        // Theorem 12: X · Y + !X · Z + Y · Z = X · Y + !X · Z
+        rewrite!("th12"; "(+ (* ?x ?y) (+ (* (! ?x) ?z) (* ?y ?z)))" => "(+ (* ?x ?y) (* (! ?x) ?z))"),
+        // Theorem 13: X(X + Y) = X
+        rewrite!("th13"; "(* ?x (+ ?x ?y))" => "?x"),
+        // Theorem 14: X(!X + Y) = X · Y
+        rewrite!("th14"; "(* ?x (+ (! ?x) ?y))" => "(* ?x ?y)"),
+        // Theorem 15: (X + Y)(X + !Y) = X
+        rewrite!("th15"; "(* (+ ?x ?y) (+ ?x (! ?y)))" => "?x"),
+        // Theorem 16: (X + Y)(!X + Z) = X · Z + !X · Y
+        rewrite!("th16"; "(* (+ ?x ?y) (+ (! ?x) ?z))" => "(+ (* ?x ?z) (* (! ?x) ?y))"),
+        // Theorem 17: (X + Y)(!X + Z)(Y + Z) = (X + Y)(!X + Z)
+        rewrite!("th17"; "(* (+ ?x ?y) (* (+ (! ?x) ?z) (+ ?y ?z)))" => "(* (+ ?x ?y) (+ (! ?x) ?z))"),
+        
+        //-----------------------------------Not verified-----------------------------------    
+        // // Theorem 18: X · X = X
+        // rewrite!("th18"; "(* ?x ?x)" => "?x"),
+        // // Theorem 19: X + X = X
+        // rewrite!("th19"; "(+ ?x ?x)" => "?x"),
+        // // Theorem 20: X · (Y · Z) = (X · Y) · Z
+        // rewrite!("th20"; "(* ?x (* ?y ?z))" => "(* (* ?x ?y) ?z)"),
+        // // Theorem 21: X + (Y + Z) = (X + Y) + Z
+        // rewrite!("th21"; "(+ ?x (+ ?y ?z))" => "(+ (+ ?x ?y) ?z)"),
+        // // Theorem 22: X · (X + Y) = X
+        // rewrite!("th22"; "(* ?x (+ ?x ?y))" => "?x"),
+        // // Theorem 23: X · Y + X · !Y = X
+        // rewrite!("th23"; "(+ (* ?x ?y) (* ?x (! ?y)))" => "?x"),
+        // //Theorem 24: (X + Y) · (X + Z) = X + Y · Z
+        // rewrite!("th24"; "(* (+ ?x ?y) (+ ?x ?z))" => "(+ ?x (* ?y ?z))"),
+        //Theorem 25: X + Y · (!Y + Z) = X + Z
+        //rewrite!("th25"; "(+ ?x (* ?y (+ (! ?y) ?z)))" => "(+ ?x ?z)"),
+        //Theorem 26: X · Y + X · Y · Z = X · Y
+        //rewrite!("th26"; "(+ (* ?x ?y) (* ?x (* ?y ?z)))" => "(* ?x ?y)"),
+
+        //-----------------------------------rewrite to constant-----------------------------------
+        //rewrite!("th"; "(+ ?x (! ?x))"   =>    "true"                   ) ,
+        //rewrite!("th"; "(+ ?x true)"     =>         "true"                ) ,
+        //rewrite!("th"; "(* ?x (! ?x))" => "false"),
+        //rewrite!("th"; "(* ?x true)"     =>         "?x"                  ),
     ]
 }
 
@@ -309,11 +373,11 @@ pub fn count_ast_size_and_depth(s: &str) -> (f64, f64) {
     (size, depth)
 }
 
-pub struct Extractor1<'a, CF: CostFunction<L>, L: Language, N: Analysis<L>> {
-    cost_function: CF,
-    costs: HashMap<Id, (CF::Cost, L)>,
-    egraph: &'a EGraph<L, N>,
-}
+// pub struct Extractor1<'a, CF: CostFunction<L>, L: Language, N: Analysis<L>> {
+//     cost_function: CF,
+//     costs: HashMap<Id, (CF::Cost, L)>,
+//     egraph: &'a EGraph<L, N>,
+// }
 
 // pub trait CostFunction<L: Language> {
 //     /// The `Cost` type. It only requires `PartialOrd` so you can use
@@ -347,131 +411,131 @@ pub struct Extractor1<'a, CF: CostFunction<L>, L: Language, N: Analysis<L>> {
 // }
 
 
-impl<'a, CF, L, N> Extractor1<'a, CF, L, N>
-where
-    CF: CostFunction<L>,
-    L: Language,
-    N: Analysis<L>,
-{
-    /// Create a new `Extractor` given an `EGraph` and a
-    /// `CostFunction`.
-    ///
-    /// The extraction does all the work on creation, so this function
-    /// performs the greedy search for cheapest representative of each
-    /// eclass.
-    pub fn new(egraph: &'a EGraph<L, N>, cost_function: CF) ->  Self where <CF as CostFunction<L>>::Cost: Ord {
-        let costs = HashMap::default();
-        let mut extractor = Extractor1 {
-            costs,
-            egraph,
-            cost_function,
-        };
-        extractor.find_costs();
+// impl<'a, CF, L, N> Extractor1<'a, CF, L, N>
+// where
+//     CF: CostFunction<L>,
+//     L: Language,
+//     N: Analysis<L>,
+// {
+//     /// Create a new `Extractor` given an `EGraph` and a
+//     /// `CostFunction`.
+//     ///
+//     /// The extraction does all the work on creation, so this function
+//     /// performs the greedy search for cheapest representative of each
+//     /// eclass.
+//     pub fn new(egraph: &'a EGraph<L, N>, cost_function: CF) ->  Self where <CF as CostFunction<L>>::Cost: Ord {
+//         let costs = HashMap::default();
+//         let mut extractor = Extractor1 {
+//             costs,
+//             egraph,
+//             cost_function,
+//         };
+//         extractor.find_costs();
 
-        extractor
-    }
+//         extractor
+//     }
 
-    /// Find the cheapest (lowest cost) represented `RecExpr` in the
-    /// given eclass.
-    pub fn find_best(&self, eclass: Id) -> (CF::Cost, RecExpr<L>) {
-        let (cost, root) = self.costs[&self.egraph.find(eclass)].clone();
-        let expr = root.build_recexpr(|id| self.find_best_node(id).clone());
-        (cost, expr)
-    }
-    // pub fn find_best(&self, eclass: Id) -> Vec<(CF::Cost, RecExpr<L>)> {
-    //     let mut costs_and_exprs: Vec<(CF::Cost, RecExpr<L>)> = self
-    //         .egraph[eclass]
-    //         .nodes
-    //         .iter()
-    //         .map(|id| {
-    //             let (cost, root) = self.costs[&self.egraph.find(*id)].clone();
-    //             let expr = root.build_recexpr(|id| self.find_best_node(id).clone());
-    //             (cost, expr)
-    //         })
-    //         .collect();
+//     /// Find the cheapest (lowest cost) represented `RecExpr` in the
+//     /// given eclass.
+//     pub fn find_best(&self, eclass: Id) -> (CF::Cost, RecExpr<L>) {
+//         let (cost, root) = self.costs[&self.egraph.find(eclass)].clone();
+//         let expr = root.build_recexpr(|id| self.find_best_node(id).clone());
+//         (cost, expr)
+//     }
+//     // pub fn find_best(&self, eclass: Id) -> Vec<(CF::Cost, RecExpr<L>)> {
+//     //     let mut costs_and_exprs: Vec<(CF::Cost, RecExpr<L>)> = self
+//     //         .egraph[eclass]
+//     //         .nodes
+//     //         .iter()
+//     //         .map(|id| {
+//     //             let (cost, root) = self.costs[&self.egraph.find(*id)].clone();
+//     //             let expr = root.build_recexpr(|id| self.find_best_node(id).clone());
+//     //             (cost, expr)
+//     //         })
+//     //         .collect();
     
-    //     costs_and_exprs.sort_unstable_by(|a, b| a.0.partial_cmp(&b.0).unwrap_or(Ordering::Equal));
-    //     costs_and_exprs.truncate(5);
-    //     costs_and_exprs
-    // }
+//     //     costs_and_exprs.sort_unstable_by(|a, b| a.0.partial_cmp(&b.0).unwrap_or(Ordering::Equal));
+//     //     costs_and_exprs.truncate(5);
+//     //     costs_and_exprs
+//     // }
 
-    /// Find the cheapest e-node in the given e-class.
-    pub fn find_best_node(&self, eclass: Id) -> &L {
-        &self.costs[&self.egraph.find(eclass)].1
-    }
+//     /// Find the cheapest e-node in the given e-class.
+//     pub fn find_best_node(&self, eclass: Id) -> &L {
+//         &self.costs[&self.egraph.find(eclass)].1
+//     }
 
-    /// Find the cost of the term that would be extracted from this e-class.
-    pub fn find_best_cost(&self, eclass: Id) -> CF::Cost {
-        let (cost, _) = &self.costs[&self.egraph.find(eclass)];
-        cost.clone()
-    }
+//     /// Find the cost of the term that would be extracted from this e-class.
+//     pub fn find_best_cost(&self, eclass: Id) -> CF::Cost {
+//         let (cost, _) = &self.costs[&self.egraph.find(eclass)];
+//         cost.clone()
+//     }
 
-    fn node_total_cost(&mut self, node: &L) -> Option<CF::Cost> {
-        let eg = &self.egraph;
-        let has_cost = |id| self.costs.contains_key(&eg.find(id));
-        if node.all(has_cost) {
-            let costs = &self.costs;
-            let cost_f = |id| costs[&eg.find(id)].0.clone();
-            Some(self.cost_function.cost(node, cost_f))
-        } else {
-            None
-        }
-    }
+//     fn node_total_cost(&mut self, node: &L) -> Option<CF::Cost> {
+//         let eg = &self.egraph;
+//         let has_cost = |id| self.costs.contains_key(&eg.find(id));
+//         if node.all(has_cost) {
+//             let costs = &self.costs;
+//             let cost_f = |id| costs[&eg.find(id)].0.clone();
+//             Some(self.cost_function.cost(node, cost_f))
+//         } else {
+//             None
+//         }
+//     }
 
-    fn find_costs(&mut self) where <CF as CostFunction<L>>::Cost: Ord {
-        let mut did_something = true;
-        while did_something {
-            did_something = false;
+//     fn find_costs(&mut self) where <CF as CostFunction<L>>::Cost: Ord {
+//         let mut did_something = true;
+//         while did_something {
+//             did_something = false;
 
-            for class in self.egraph.classes() {
-                let pass = self.make_pass(class);
-                match (self.costs.get(&class.id), pass) {
-                    (None, Some(new)) => {
-                        self.costs.insert(class.id, new);
-                        did_something = true;
-                    }
-                    (Some(old), Some(new)) if new.0 < old.0 => {
-                        self.costs.insert(class.id, new);
-                        did_something = true;
-                    }
-                    _ => (),
-                }
-            }
-        }
-    }
+//             for class in self.egraph.classes() {
+//                 let pass = self.make_pass(class);
+//                 match (self.costs.get(&class.id), pass) {
+//                     (None, Some(new)) => {
+//                         self.costs.insert(class.id, new);
+//                         did_something = true;
+//                     }
+//                     (Some(old), Some(new)) if new.0 < old.0 => {
+//                         self.costs.insert(class.id, new);
+//                         did_something = true;
+//                     }
+//                     _ => (),
+//                 }
+//             }
+//         }
+//     }
 
 
 
-   fn make_pass(&mut self, eclass: &EClass<L, N::Data>) -> Option<(CF::Cost, L)>  where <CF as CostFunction<L>>::Cost: Ord {
-    let result: Vec<(CF::Cost, L)> = eclass
-        .iter()
-        .filter_map(|n| {
-            match self.node_total_cost(n) {
-                Some(cost) => Some((cost, n.clone())),
-                None => None,
-            }
-        })
-        .collect();
+//    fn make_pass(&mut self, eclass: &EClass<L, N::Data>) -> Option<(CF::Cost, L)>  where <CF as CostFunction<L>>::Cost: Ord {
+//     let result: Vec<(CF::Cost, L)> = eclass
+//         .iter()
+//         .filter_map(|n| {
+//             match self.node_total_cost(n) {
+//                 Some(cost) => Some((cost, n.clone())),
+//                 None => None,
+//             }
+//         })
+//         .collect();
       
-    let min_cost = result.iter().map(|(cost, _)| cost).cloned().min();
+//     let min_cost = result.iter().map(|(cost, _)| cost).cloned().min();
 
-    if let Some(min_cost) = min_cost {
-        let min_cost_tuples: Vec<(CF::Cost, L)> = result
-            .iter()
-            .filter(|(cost, _)| cost == &min_cost)
-            .cloned()
-            .collect();
-        use rand::seq::SliceRandom;
-        let mut rng = rand::thread_rng();
-        if let Some(selected_tuple) = min_cost_tuples.choose(&mut rng) {
-            return Some(selected_tuple.clone());
-        }
-    }
+//     if let Some(min_cost) = min_cost {
+//         let min_cost_tuples: Vec<(CF::Cost, L)> = result
+//             .iter()
+//             .filter(|(cost, _)| cost == &min_cost)
+//             .cloned()
+//             .collect();
+//         use rand::seq::SliceRandom;
+//         let mut rng = rand::thread_rng();
+//         if let Some(selected_tuple) = min_cost_tuples.choose(&mut rng) {
+//             return Some(selected_tuple.clone());
+//         }
+//     }
     
-    None
-}
+//     None
+// }
 
-}
+// }
 
 
 
@@ -490,9 +554,13 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     println!("input node: {}", egraphin.total_size());
     println!("input class: {}", egraphin.number_of_classes());
 
+    //let mut rules = make_rules_enhance();
+
     // ruuner configure
     let runner_iteration_limit = 10000000;
-    let egraph_node_limit = 25000000000;
+
+    //let egraph_node_limit = 25000000000;
+    let egraph_node_limit = 25000000;
     let start = Instant::now();
     let iterations = 500 as i32;
     let runner = Runner::default()
@@ -501,14 +569,28 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
         .with_time_limit(std::time::Duration::from_secs(100))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
-        .run(&make_rules());
+        .run(&make_rules_enhance());
     let duration = start.elapsed();
     println!("Runner stopped: {:?}. Time take for runner: {:?}, Classes: {}, Nodes: {}, Size: {}\n\n",
             runner.stop_reason, duration, runner.egraph.number_of_classes(),
             runner.egraph.total_number_of_nodes(), runner.egraph.total_size());
+
+    let root = runner.roots[0];
+    let extractor = Extractor::new(&runner.egraph, AstDepth);
+    let (best_cost, best) = extractor.find_best(root);
+    let mut egraphout = EGraph::new(ConstantFold {});
+    egraphout.add_expr(&best);
+    println!("output node:{}", egraphout.total_size());
+    println!("output class:{}", egraphout.number_of_classes());
+    //egraphout.dot().to_png("./image/fooout.png").unwrap();
+    //let result = best.to_string();
+    
+    
     //let mut unique_solutions = HashSet::new();
     let mut results: HashMap<i32, RecExpr<Prop>> = HashMap::new();
     let mut res_cost: HashMap<i32, usize> = HashMap::new();
+
+    
     for i in 0..iterations+1 {
         
        // let extractor = Extractor1::new(&runner.egraph, Mixcost);
@@ -518,22 +600,21 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
         //println!("best_cost{}", best_cost);
         results.insert(i, best);
         res_cost.insert(i,best_cost);
-
     }
-    for(key,value)in &res_cost{
-        println!("Inserted key: {}, value: {}", key, value);
-    }
+    // for(key,value)in &res_cost{
+    //     println!("Inserted key: {}, value: {}", key, value);
+    // }
 
     let mut sym_cost_dict: HashMap<i32, f64> = HashMap::new();
     for (key, best) in &results {
-        let result_string =best.to_string();
+        let result_string = best.to_string();
         let (size, depth) = count_ast_size_and_depth(&result_string);
         let operator_counts = count_operators(&result_string);
         let x1 = operator_counts.get("+").copied().unwrap_or(0.0);
         let x2 = operator_counts.get("!").copied().unwrap_or(0.0);
         let x3 = operator_counts.get("*").copied().unwrap_or(0.0);
         let x4 = operator_counts.get("&").copied().unwrap_or(0.0);
-        println!("+:{},!:{},*:{},&:{},astsize:{},astdepth:{}",x1,x2,x3,x4,size,depth);
+       // println!("+:{},!:{},*:{},&:{},astsize:{},astdepth:{}",x1,x2,x3,x4,size,depth);
 
         fn mean(data: &Vec<f64>) -> f64 {
             data.iter().sum::<f64>() / data.len() as f64
@@ -599,5 +680,9 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
         }
         count +=1;
     }
+
+
+    // let mut output_file = File::create(output_path)?;
+    // output_file.write(result.as_bytes())?;
     Ok(())
 }

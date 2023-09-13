@@ -13,6 +13,8 @@ from tqdm import tqdm
 import copy
 import CircuitParser
 import sys   
+import concurrent.futures
+import multiprocessing
 sys.setrecursionlimit(100000)
 
 def check_equal(FORMULA_LIST, components):
@@ -115,7 +117,7 @@ def conver_to_sexpr(data, multiple_output = False, output_file_path = "test_data
         return None
 
         
-def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
+def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False, index=None):
     # using the s-converter to convert to abc eqn
     #os.system("s-converter/target/release/s-converter test_data_beta_runner/output_from_egg.txt test_data_beta_runner/output_from_s-converter.txt test_data_beta_runner/split_concat.txt")
     
@@ -142,7 +144,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         parser = to_sympy_parser_sexpr.PropParser(); parser.build()
         #parser = lisp2infix.PropParser(); parser.build()
-        with open ("test_data_beta_runner/output_from_egg.txt", "r") as myfile:
+        with open (f"test_data_beta_runner/output_from_egg_{index}.txt", "r") as myfile:
             sexpr=myfile.readlines()
         
         # read s-converter/split_concat.txt
@@ -158,16 +160,16 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         parser_res, _ = parser.parse(sexpr[0])
         
-        with open("test_data_beta_runner/tmp.txt", "w") as myfile:
-            for id in _:
-                myfile.write(str(_[id])+'\n------------------------\n')
+        # with open("test_data_beta_runner/tmp.txt", "w") as myfile:
+        #     for id in _:
+        #         myfile.write(str(_[id])+'\n------------------------\n')
                 
         #components =  list(parser_res.args)
         
         # convert dict _ to list
         components = list(_.values())
         # for every component, simplify it
-        components = [simplify(component, measure=my_measure) for component in components]
+        #components = [simplify(component, measure=my_measure) for component in components]
         # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
         result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
         
@@ -175,7 +177,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False):
         
         print("multiple output circuit parse success")
         # write a new eqn file
-        with open("test_data_beta_runner/optimized_circuit.eqn", "w") as myfile:
+        with open(f"test_data_beta_runner/optimized_circuit_{index}.eqn", "w") as myfile:
             # write the first 3 lines of the original file - from data[0] to data[2]
             for i in range(3):
                 myfile.write(data[i])
@@ -208,6 +210,7 @@ def concatenate_equations(lines):
         del equations[1]  # remove the second equation
     return equations[0], FORMULA_LIST  # return the single remaining equation
 
+
 # python main function
 if __name__ == "__main__":
     global FORMULA_LIST
@@ -218,7 +221,7 @@ if __name__ == "__main__":
     input_file_path = "test_data_beta_runner/raw_circuit.eqn"
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
-    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 2")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 100")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
@@ -274,7 +277,12 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    convert_to_abc_eqn(data, None, multiple_output= multiple_output_flag)
+    
+    # use concurrent futures to convert the s-expression to abc eqn
+    tasks_args = [(data, None, multiple_output_flag, i) for i in range(10)]
+    #convert_to_abc_eqn(data, None, multiple_output= multiple_output_flag, index = 0)
+    with concurrent.futures.ProcessPoolExecutor(multiprocessing.cpu_count()) as executor:
+        executor.map(lambda args: convert_to_abc_eqn(*args), tasks_args)
     
     '''
     #############################################################################
@@ -309,8 +317,8 @@ if __name__ == "__main__":
     #command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; st; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
     
     ################## st + dch ######################
-    command = "./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\""
-    os.system(command)
+    for i in range(10):
+        os.system(f"./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit_{i}.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime\"")
     print("----------------------------------------------------------------------------------------")
     
     '''
@@ -349,7 +357,7 @@ if __name__ == "__main__":
     #
     #############################################################################
     '''
-    os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/optimized_circuit.eqn\"")
+    os.system("./abc/abc -c \"cec test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/optimized_circuit_0.eqn\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/raw_circuit.eqn; strash; write_aiger test_data_beta_runner/raw_circuit.aig\"")
     # os.system("./abc/abc -c \"read_eqn test_data_beta_runner/optimized_circuit.eqn; strash; write_aiger test_data_beta_runner/optimized_circuit.aig\"")
     # os.system("./abc/abc -c \"read_aiger test_data_beta_runner/raw_circuit.aig; collapse; write_blif test_data_beta_runner/raw_circuit.blif\"")

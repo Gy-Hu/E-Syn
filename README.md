@@ -33,10 +33,18 @@
 
 - [ ] Support constant value (0, 1) for parsing and rewriting
 - [ ] Do code review for e-rewriter (any bugs? verify rules? make more efficient? support constant rewrite?)
-- [ ] Add bidirectional rewrite rules
+- [ ] Add bidirectional rewrite rules + constant rewrite rules
 - [ ] Review rewrite rules/cost function/egraph selection/egraph merging (analyzer)
-- [ ] Add strong regressor for egraph selection
-- [ ] Add multiple-cost function
+- [ ] Add strong regressor for egraph selection (using linfa?)
+- [ ] Richer feature for regression (propagation depth, number of nodes, number of edges, number of gates, number of inputs, number of outputs, number of operations, number of constants, etc)
+- [ ] Add multiple-cost function (Astsize, Astdepth, cell library info, etc)
+- [ ] Concurrent parsing egg output and using metric (0.6 * delay + 0.4 * area) to select the best optimization result
+- [ ] Add more variants for the e-graph generation -> enlarge the fluctuation range (e.g. using different cost function, different e-graph merging strategy, etc) -> check how the extractor extract same least cost result?
+- [ ] Add experiment to check result without abc optimization
+- [ ] SymReg in large circuit (mixed large and small circuit)
+- [ ] Add node cost to cost function
+- [ ] More customized for unfolding formula in parsing circuit
+- [ ] Modify Analyzer in egg
 - [x] Support parallel running for multiple egraph rewriting output
 - [x] If eqn fully unfold, then do not concat tmp variable ( `new_nxx_` )
 - [x] Add more rewrite rules in egg
