@@ -2,6 +2,7 @@ use egg::*;
 use num::Num;
 
 use std::borrow::BorrowMut;
+use std::cell::Cell;
 use std::env;
 use std::f32::INFINITY;
 use std::fs::File;
@@ -85,6 +86,40 @@ impl Analysis<Prop> for ConstantFold {
     }
 }
 
+
+fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
+    let mut rws: Vec<Rewrite<Prop, ConstantFold>> = vec![
+        // Boolean theorems of one variable (Table 2.2 pg 62)
+        rewrite!("null-element1"; "(* ?b 0)" => "0"),
+        rewrite!("null-element2"; "(+ ?b 1)" => "1"),
+        rewrite!("complements1"; "(* ?b (! ?b))" => "0"),
+        rewrite!("complements2"; "(+ ?b (! ?b))" => "1"),
+        rewrite!("covering1"; "(* ?b (+ ?b ?c))" => "?b"),
+        rewrite!("covering2"; "(+ ?b (* ?b ?c))" => "?b"),
+        rewrite!("combining1"; "(+ (* ?b ?c) (* ?b (! ?c)))" => "?b"),
+        rewrite!("combining2"; "(* (+ ?b ?c) (+ ?b (! ?c)))" => "?b")
+        // Boolean theorems of several variables (Table 2.3 pg 63)
+    ];
+
+    rws.extend(rewrite!("identity1"; "(* ?b 1)" <=> "?b"));
+    rws.extend(rewrite!("identity2'"; "(+ ?b 0)" <=> "?b"));
+    rws.extend(rewrite!("idempotency1"; "(* ?b ?b)" <=> "?b"));
+    rws.extend(rewrite!("idempotency2"; "(+ ?b ?b)" <=> "?b"));
+    rws.extend(rewrite!("involution1"; "(! (! ?b))" <=> "?b"));
+    rws.extend(rewrite!("commutativity1"; "(* ?b ?c)" <=> "(* ?c ?b)"));
+    rws.extend(rewrite!("commutativity2"; "(+ ?b ?c)" <=> "(+ ?c ?b)"));
+    rws.extend(rewrite!("associativity1"; "(*(* ?b ?c) ?d)" <=> "(* ?b (* ?c ?d))"));
+    rws.extend(rewrite!("associativity2"; "(+(+ ?b ?c) ?d)" <=> "(+ ?b (+ ?c ?d))"));
+    rws.extend(rewrite!("distributivity1"; "(+ (* ?b ?c) (* ?b ?d))" <=> "(* ?b (+ ?c ?d))"));
+    rws.extend(rewrite!("distributivity2"; "(* (+ ?b ?c) (+ ?b ?d))" <=> "(+ ?b (* ?c ?d))"));
+    rws.extend(rewrite!("consensus1"; "(+ (+ (* ?b ?c) (* (! ?b) ?d)) (* ?c ?d))" <=> "(+ (* ?b ?c) (* (! ?b) ?d))"));
+    rws.extend(rewrite!("consensus2"; "(* (* (+ ?b ?c) (+ (! ?b) ?d)) (+ ?c ?d))" <=> "(* (+ ?b ?c) (+ (! ?b) ?d))"));
+    rws.extend(rewrite!("de-morgan1"; "(! (* ?b ?c))" <=> "(+ (! ?b) (! ?c))"));
+    rws.extend(rewrite!("de-morgan2"; "(! (+ ?b ?c))" <=> "(* (! ?b) (! ?c))"));
+
+    rws
+}
+/* 
 fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     vec![
         //version 1
@@ -173,7 +208,7 @@ fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     ]
     
 }
-
+*/
 pub struct AstSize;
 impl<L: Language> CostFunction<L> for AstSize {
     type Cost = usize;
@@ -669,6 +704,31 @@ where
    // }
 
 }
+impl<L: Language, N: Analysis<L>> LpCostFunction<L, N> for AstSize {
+    fn node_cost(&mut self, _egraph: &EGraph<L, N>, _eclass: Id, _enode: &L) -> f64 {
+        1.0
+    }
+}
+
+
+
+
+pub struct Cellcost;
+impl LpCostFunction<Prop, ConstantFold> for Cellcost {
+    fn node_cost(&mut self, _egraph: &EGraph<Prop, ConstantFold>, _eclass: Id, _enode: &Prop) -> f64 {
+        let op = (*_enode).to_string();
+        let op_cost   = match op.as_str() {
+            "!" => 9.00 ,
+            "+" => 26.0 ,
+            "*"=> 22.0 ,
+            //"&" => 0.0 as  f32,
+            _=> 1.0
+        };
+        op_cost
+    }
+   
+}
+
 
 
 fn main() ->Result<(), Box<dyn std::error::Error>> {
@@ -691,11 +751,11 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     let runner_iteration_limit = 10000000;
     let egraph_node_limit = 25000000;
     let start = Instant::now();
-    let iterations = 100 as i32;
+    let iterations = 10 as i32;
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
-        .with_time_limit(std::time::Duration::from_secs(400))
+        .with_time_limit(std::time::Duration::from_secs(100))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());
@@ -710,8 +770,10 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
 
     for i in 0..iterations+1 {
         let mut extractor = Extractor1::new(&runner.egraph, AstDepth);
+        // let mut lp_extractor = LpExtractor::new(&runner.egraph,AstSize);
+        // lp_extractor.timeout(500.0); 
         let root = runner.roots[0];
-        //let (best_cost, best) = extractor.find_best(root);
+        //let best = lp_extractor.solve(root);
         //let root_node = extractor.get_node(root);
         let (best_cost,best )=extractor.find_best_random(root);
         //let best = root.build_recexpr(|child| extractor.get_node(child));
@@ -721,9 +783,9 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
         res_cost.insert(i,best_cost);
 
     }
-    for(key,value)in &res_cost{
-        println!("Inserted key: {}, value: {}", key, value);
-    }
+    // for(key,value)in &res_cost{
+    //     println!("Inserted key: {}, value: {}", key, value);
+    // }
     // for(key,value)in &results{
     //     println!("Inserted key: {}, value: {}", key, value);
     // }
@@ -805,7 +867,7 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     
     // if let Some(min_key) = min_keys.iter().min_by_key(|&&key| sym_cost_dict[key] as i64) {
     let output = results.get(&min_key).map(|result| result.to_string()).unwrap_or_default();
-    let Some(out_rec) = results.get(&min_key)else { todo!() };
+    //let Some(out_rec) = results.get(&min_key)else { todo!() };
     let egraphout = EGraph::new(ConstantFold {});
    // egraphout.add_expr(&out_rec);
   //  egraphin.dot().to_png("/data/cchen/E-Brush/image/fooout.png").unwrap();

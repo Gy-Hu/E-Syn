@@ -1,1634 +1,11 @@
-EQN fully unfold
-Runner stopped: Some(TimeLimit(100.33971024)). Time take for runner: 100.344665342s, Classes: 2173, Nodes: 9160, Size: 23988
-
-
-Inserted key: 42, value: 77562
-Inserted key: 340, value: 77562
-Inserted key: 412, value: 77562
-Inserted key: 425, value: 77562
-Inserted key: 448, value: 77562
-Inserted key: 345, value: 77562
-Inserted key: 200, value: 77562
-Inserted key: 453, value: 77562
-Inserted key: 372, value: 77562
-Inserted key: 41, value: 77562
-Inserted key: 429, value: 77562
-Inserted key: 185, value: 77562
-Inserted key: 142, value: 77562
-Inserted key: 19, value: 77562
-Inserted key: 419, value: 77562
-Inserted key: 45, value: 77562
-Inserted key: 248, value: 77562
-Inserted key: 479, value: 77562
-Inserted key: 134, value: 77562
-Inserted key: 228, value: 77562
-Inserted key: 492, value: 77562
-Inserted key: 76, value: 77562
-Inserted key: 488, value: 77562
-Inserted key: 197, value: 77562
-Inserted key: 77, value: 77562
-Inserted key: 110, value: 77562
-Inserted key: 122, value: 77562
-Inserted key: 53, value: 77562
-Inserted key: 224, value: 77562
-Inserted key: 319, value: 77562
-Inserted key: 113, value: 77562
-Inserted key: 30, value: 77562
-Inserted key: 133, value: 77562
-Inserted key: 202, value: 77562
-Inserted key: 271, value: 77562
-Inserted key: 276, value: 77562
-Inserted key: 175, value: 77562
-Inserted key: 211, value: 77562
-Inserted key: 357, value: 77562
-Inserted key: 459, value: 77562
-Inserted key: 351, value: 77562
-Inserted key: 24, value: 77562
-Inserted key: 318, value: 77562
-Inserted key: 178, value: 77562
-Inserted key: 206, value: 77562
-Inserted key: 55, value: 77562
-Inserted key: 222, value: 77562
-Inserted key: 281, value: 77562
-Inserted key: 109, value: 77562
-Inserted key: 231, value: 77562
-Inserted key: 60, value: 77562
-Inserted key: 150, value: 77562
-Inserted key: 327, value: 77562
-Inserted key: 238, value: 77562
-Inserted key: 114, value: 77562
-Inserted key: 80, value: 77562
-Inserted key: 393, value: 77562
-Inserted key: 469, value: 77562
-Inserted key: 305, value: 77562
-Inserted key: 361, value: 77562
-Inserted key: 339, value: 77562
-Inserted key: 438, value: 77562
-Inserted key: 12, value: 77562
-Inserted key: 295, value: 77562
-Inserted key: 450, value: 77562
-Inserted key: 8, value: 77562
-Inserted key: 441, value: 77562
-Inserted key: 346, value: 77562
-Inserted key: 481, value: 77562
-Inserted key: 275, value: 77562
-Inserted key: 367, value: 77562
-Inserted key: 486, value: 77562
-Inserted key: 2, value: 77562
-Inserted key: 57, value: 77562
-Inserted key: 186, value: 77562
-Inserted key: 71, value: 77562
-Inserted key: 311, value: 77562
-Inserted key: 166, value: 77562
-Inserted key: 131, value: 77562
-Inserted key: 181, value: 77562
-Inserted key: 199, value: 77562
-Inserted key: 387, value: 77562
-Inserted key: 302, value: 77562
-Inserted key: 444, value: 77562
-Inserted key: 226, value: 77562
-Inserted key: 68, value: 77562
-Inserted key: 143, value: 77562
-Inserted key: 360, value: 77562
-Inserted key: 167, value: 77562
-Inserted key: 267, value: 77562
-Inserted key: 27, value: 77562
-Inserted key: 116, value: 77562
-Inserted key: 467, value: 77562
-Inserted key: 66, value: 77562
-Inserted key: 349, value: 77562
-Inserted key: 483, value: 77562
-Inserted key: 408, value: 77562
-Inserted key: 236, value: 77562
-Inserted key: 423, value: 77562
-Inserted key: 307, value: 77562
-Inserted key: 43, value: 77562
-Inserted key: 170, value: 77562
-Inserted key: 462, value: 77562
-Inserted key: 219, value: 77562
-Inserted key: 163, value: 77562
-Inserted key: 107, value: 77562
-Inserted key: 278, value: 77562
-Inserted key: 36, value: 77562
-Inserted key: 90, value: 77562
-Inserted key: 258, value: 77562
-Inserted key: 31, value: 77562
-Inserted key: 188, value: 77562
-Inserted key: 383, value: 77562
-Inserted key: 299, value: 77562
-Inserted key: 394, value: 77562
-Inserted key: 189, value: 77562
-Inserted key: 216, value: 77562
-Inserted key: 130, value: 77562
-Inserted key: 141, value: 77562
-Inserted key: 75, value: 77562
-Inserted key: 164, value: 77562
-Inserted key: 201, value: 77562
-Inserted key: 255, value: 77562
-Inserted key: 280, value: 77562
-Inserted key: 287, value: 77562
-Inserted key: 277, value: 77562
-Inserted key: 391, value: 77562
-Inserted key: 303, value: 77562
-Inserted key: 162, value: 77562
-Inserted key: 180, value: 77562
-Inserted key: 449, value: 77562
-Inserted key: 292, value: 77562
-Inserted key: 54, value: 77562
-Inserted key: 172, value: 77562
-Inserted key: 35, value: 77562
-Inserted key: 78, value: 77562
-Inserted key: 119, value: 77562
-Inserted key: 111, value: 77562
-Inserted key: 266, value: 77562
-Inserted key: 296, value: 77562
-Inserted key: 343, value: 77562
-Inserted key: 373, value: 77562
-Inserted key: 471, value: 77562
-Inserted key: 81, value: 77562
-Inserted key: 338, value: 77562
-Inserted key: 192, value: 77562
-Inserted key: 273, value: 77562
-Inserted key: 293, value: 77562
-Inserted key: 397, value: 77562
-Inserted key: 173, value: 77562
-Inserted key: 325, value: 77562
-Inserted key: 386, value: 77562
-Inserted key: 23, value: 77562
-Inserted key: 404, value: 77562
-Inserted key: 96, value: 77562
-Inserted key: 363, value: 77562
-Inserted key: 494, value: 77562
-Inserted key: 157, value: 77562
-Inserted key: 223, value: 77562
-Inserted key: 140, value: 77562
-Inserted key: 416, value: 77562
-Inserted key: 196, value: 77562
-Inserted key: 28, value: 77562
-Inserted key: 472, value: 77562
-Inserted key: 84, value: 77562
-Inserted key: 344, value: 77562
-Inserted key: 336, value: 77562
-Inserted key: 464, value: 77562
-Inserted key: 212, value: 77562
-Inserted key: 475, value: 77562
-Inserted key: 342, value: 77562
-Inserted key: 443, value: 77562
-Inserted key: 3, value: 77562
-Inserted key: 203, value: 77562
-Inserted key: 274, value: 77562
-Inserted key: 341, value: 77562
-Inserted key: 431, value: 77562
-Inserted key: 497, value: 77562
-Inserted key: 328, value: 77562
-Inserted key: 401, value: 77562
-Inserted key: 316, value: 77562
-Inserted key: 21, value: 77562
-Inserted key: 139, value: 77562
-Inserted key: 263, value: 77562
-Inserted key: 430, value: 77562
-Inserted key: 456, value: 77562
-Inserted key: 34, value: 77562
-Inserted key: 468, value: 77562
-Inserted key: 395, value: 77562
-Inserted key: 39, value: 77562
-Inserted key: 348, value: 77562
-Inserted key: 85, value: 77562
-Inserted key: 123, value: 77562
-Inserted key: 498, value: 77562
-Inserted key: 284, value: 77562
-Inserted key: 51, value: 77562
-Inserted key: 239, value: 77562
-Inserted key: 152, value: 77562
-Inserted key: 301, value: 77562
-Inserted key: 300, value: 77562
-Inserted key: 378, value: 77562
-Inserted key: 58, value: 77562
-Inserted key: 314, value: 77562
-Inserted key: 461, value: 77562
-Inserted key: 350, value: 77562
-Inserted key: 247, value: 77562
-Inserted key: 62, value: 77562
-Inserted key: 424, value: 77562
-Inserted key: 69, value: 77562
-Inserted key: 205, value: 77562
-Inserted key: 294, value: 77562
-Inserted key: 198, value: 77562
-Inserted key: 176, value: 77562
-Inserted key: 355, value: 77562
-Inserted key: 93, value: 77562
-Inserted key: 127, value: 77562
-Inserted key: 500, value: 77562
-Inserted key: 32, value: 77562
-Inserted key: 259, value: 77562
-Inserted key: 25, value: 77562
-Inserted key: 347, value: 77562
-Inserted key: 209, value: 77562
-Inserted key: 118, value: 77562
-Inserted key: 184, value: 77562
-Inserted key: 323, value: 77562
-Inserted key: 455, value: 77562
-Inserted key: 435, value: 77562
-Inserted key: 161, value: 77562
-Inserted key: 213, value: 77562
-Inserted key: 233, value: 77562
-Inserted key: 146, value: 77562
-Inserted key: 136, value: 77562
-Inserted key: 89, value: 77562
-Inserted key: 437, value: 77562
-Inserted key: 380, value: 77562
-Inserted key: 452, value: 77562
-Inserted key: 220, value: 77562
-Inserted key: 407, value: 77562
-Inserted key: 135, value: 77562
-Inserted key: 428, value: 77562
-Inserted key: 436, value: 77562
-Inserted key: 451, value: 77562
-Inserted key: 458, value: 77562
-Inserted key: 117, value: 77562
-Inserted key: 392, value: 77562
-Inserted key: 417, value: 77562
-Inserted key: 29, value: 77562
-Inserted key: 427, value: 77562
-Inserted key: 240, value: 77562
-Inserted key: 480, value: 77562
-Inserted key: 26, value: 77562
-Inserted key: 476, value: 77562
-Inserted key: 115, value: 77562
-Inserted key: 261, value: 77562
-Inserted key: 312, value: 77562
-Inserted key: 375, value: 77562
-Inserted key: 17, value: 77562
-Inserted key: 315, value: 77562
-Inserted key: 286, value: 77562
-Inserted key: 183, value: 77562
-Inserted key: 160, value: 77562
-Inserted key: 272, value: 77562
-Inserted key: 279, value: 77562
-Inserted key: 432, value: 77562
-Inserted key: 47, value: 77562
-Inserted key: 390, value: 77562
-Inserted key: 190, value: 77562
-Inserted key: 33, value: 77562
-Inserted key: 100, value: 77562
-Inserted key: 182, value: 77562
-Inserted key: 485, value: 77562
-Inserted key: 48, value: 77562
-Inserted key: 229, value: 77562
-Inserted key: 217, value: 77562
-Inserted key: 260, value: 77562
-Inserted key: 382, value: 77562
-Inserted key: 232, value: 77562
-Inserted key: 446, value: 77562
-Inserted key: 250, value: 77562
-Inserted key: 92, value: 77562
-Inserted key: 477, value: 77562
-Inserted key: 413, value: 77562
-Inserted key: 61, value: 77562
-Inserted key: 478, value: 77562
-Inserted key: 112, value: 77562
-Inserted key: 154, value: 77562
-Inserted key: 369, value: 77562
-Inserted key: 156, value: 77562
-Inserted key: 466, value: 77562
-Inserted key: 474, value: 77562
-Inserted key: 215, value: 77562
-Inserted key: 153, value: 77562
-Inserted key: 298, value: 77562
-Inserted key: 241, value: 77562
-Inserted key: 104, value: 77562
-Inserted key: 251, value: 77562
-Inserted key: 227, value: 77562
-Inserted key: 151, value: 77562
-Inserted key: 218, value: 77562
-Inserted key: 493, value: 77562
-Inserted key: 496, value: 77562
-Inserted key: 174, value: 77562
-Inserted key: 4, value: 77562
-Inserted key: 91, value: 77562
-Inserted key: 235, value: 77562
-Inserted key: 291, value: 77562
-Inserted key: 447, value: 77562
-Inserted key: 426, value: 77562
-Inserted key: 72, value: 77562
-Inserted key: 282, value: 77562
-Inserted key: 289, value: 77562
-Inserted key: 421, value: 77562
-Inserted key: 442, value: 77562
-Inserted key: 270, value: 77562
-Inserted key: 11, value: 77562
-Inserted key: 249, value: 77562
-Inserted key: 225, value: 77562
-Inserted key: 445, value: 77562
-Inserted key: 320, value: 77562
-Inserted key: 396, value: 77562
-Inserted key: 59, value: 77562
-Inserted key: 422, value: 77562
-Inserted key: 147, value: 77562
-Inserted key: 40, value: 77562
-Inserted key: 290, value: 77562
-Inserted key: 499, value: 77562
-Inserted key: 354, value: 77562
-Inserted key: 67, value: 77562
-Inserted key: 155, value: 77562
-Inserted key: 374, value: 77562
-Inserted key: 46, value: 77562
-Inserted key: 465, value: 77562
-Inserted key: 126, value: 77562
-Inserted key: 257, value: 77562
-Inserted key: 18, value: 77562
-Inserted key: 352, value: 77562
-Inserted key: 262, value: 77562
-Inserted key: 308, value: 77562
-Inserted key: 9, value: 77562
-Inserted key: 410, value: 77562
-Inserted key: 322, value: 77562
-Inserted key: 297, value: 77562
-Inserted key: 491, value: 77562
-Inserted key: 99, value: 77562
-Inserted key: 177, value: 77562
-Inserted key: 482, value: 77562
-Inserted key: 98, value: 77562
-Inserted key: 334, value: 77562
-Inserted key: 74, value: 77562
-Inserted key: 14, value: 77562
-Inserted key: 103, value: 77562
-Inserted key: 132, value: 77562
-Inserted key: 13, value: 77562
-Inserted key: 82, value: 77562
-Inserted key: 234, value: 77562
-Inserted key: 207, value: 77562
-Inserted key: 94, value: 77562
-Inserted key: 368, value: 77562
-Inserted key: 331, value: 77562
-Inserted key: 420, value: 77562
-Inserted key: 214, value: 77562
-Inserted key: 330, value: 77562
-Inserted key: 256, value: 77562
-Inserted key: 288, value: 77562
-Inserted key: 65, value: 77562
-Inserted key: 310, value: 77562
-Inserted key: 402, value: 77562
-Inserted key: 148, value: 77562
-Inserted key: 159, value: 77562
-Inserted key: 129, value: 77562
-Inserted key: 145, value: 77562
-Inserted key: 332, value: 77562
-Inserted key: 265, value: 77562
-Inserted key: 64, value: 77562
-Inserted key: 317, value: 77562
-Inserted key: 0, value: 77562
-Inserted key: 356, value: 77562
-Inserted key: 473, value: 77562
-Inserted key: 79, value: 77562
-Inserted key: 144, value: 77562
-Inserted key: 389, value: 77562
-Inserted key: 333, value: 77562
-Inserted key: 95, value: 77562
-Inserted key: 169, value: 77562
-Inserted key: 15, value: 77562
-Inserted key: 335, value: 77562
-Inserted key: 321, value: 77562
-Inserted key: 149, value: 77562
-Inserted key: 16, value: 77562
-Inserted key: 329, value: 77562
-Inserted key: 377, value: 77562
-Inserted key: 418, value: 77562
-Inserted key: 463, value: 77562
-Inserted key: 7, value: 77562
-Inserted key: 86, value: 77562
-Inserted key: 439, value: 77562
-Inserted key: 171, value: 77562
-Inserted key: 187, value: 77562
-Inserted key: 124, value: 77562
-Inserted key: 268, value: 77562
-Inserted key: 168, value: 77562
-Inserted key: 6, value: 77562
-Inserted key: 366, value: 77562
-Inserted key: 304, value: 77562
-Inserted key: 400, value: 77562
-Inserted key: 165, value: 77562
-Inserted key: 470, value: 77562
-Inserted key: 484, value: 77562
-Inserted key: 415, value: 77562
-Inserted key: 88, value: 77562
-Inserted key: 365, value: 77562
-Inserted key: 128, value: 77562
-Inserted key: 313, value: 77562
-Inserted key: 63, value: 77562
-Inserted key: 1, value: 77562
-Inserted key: 22, value: 77562
-Inserted key: 285, value: 77562
-Inserted key: 49, value: 77562
-Inserted key: 50, value: 77562
-Inserted key: 106, value: 77562
-Inserted key: 56, value: 77562
-Inserted key: 244, value: 77562
-Inserted key: 254, value: 77562
-Inserted key: 38, value: 77562
-Inserted key: 195, value: 77562
-Inserted key: 87, value: 77562
-Inserted key: 37, value: 77562
-Inserted key: 381, value: 77562
-Inserted key: 5, value: 77562
-Inserted key: 440, value: 77562
-Inserted key: 138, value: 77562
-Inserted key: 326, value: 77562
-Inserted key: 237, value: 77562
-Inserted key: 385, value: 77562
-Inserted key: 414, value: 77562
-Inserted key: 245, value: 77562
-Inserted key: 208, value: 77562
-Inserted key: 253, value: 77562
-Inserted key: 490, value: 77562
-Inserted key: 121, value: 77562
-Inserted key: 210, value: 77562
-Inserted key: 457, value: 77562
-Inserted key: 371, value: 77562
-Inserted key: 246, value: 77562
-Inserted key: 309, value: 77562
-Inserted key: 411, value: 77562
-Inserted key: 105, value: 77562
-Inserted key: 495, value: 77562
-Inserted key: 194, value: 77562
-Inserted key: 283, value: 77562
-Inserted key: 460, value: 77562
-Inserted key: 264, value: 77562
-Inserted key: 120, value: 77562
-Inserted key: 83, value: 77562
-Inserted key: 52, value: 77562
-Inserted key: 108, value: 77562
-Inserted key: 137, value: 77562
-Inserted key: 221, value: 77562
-Inserted key: 384, value: 77562
-Inserted key: 204, value: 77562
-Inserted key: 230, value: 77562
-Inserted key: 44, value: 77562
-Inserted key: 158, value: 77562
-Inserted key: 359, value: 77562
-Inserted key: 179, value: 77562
-Inserted key: 125, value: 77562
-Inserted key: 191, value: 77562
-Inserted key: 269, value: 77562
-Inserted key: 398, value: 77562
-Inserted key: 406, value: 77562
-Inserted key: 370, value: 77562
-Inserted key: 353, value: 77562
-Inserted key: 489, value: 77562
-Inserted key: 193, value: 77562
-Inserted key: 405, value: 77562
-Inserted key: 252, value: 77562
-Inserted key: 379, value: 77562
-Inserted key: 454, value: 77562
-Inserted key: 10, value: 77562
-Inserted key: 101, value: 77562
-Inserted key: 399, value: 77562
-Inserted key: 324, value: 77562
-Inserted key: 487, value: 77562
-Inserted key: 102, value: 77562
-Inserted key: 433, value: 77562
-Inserted key: 337, value: 77562
-Inserted key: 362, value: 77562
-Inserted key: 358, value: 77562
-Inserted key: 434, value: 77562
-Inserted key: 388, value: 77562
-Inserted key: 20, value: 77562
-Inserted key: 70, value: 77562
-Inserted key: 97, value: 77562
-Inserted key: 73, value: 77562
-Inserted key: 376, value: 77562
-Inserted key: 364, value: 77562
-Inserted key: 403, value: 77562
-Inserted key: 306, value: 77562
-Inserted key: 409, value: 77562
-Inserted key: 243, value: 77562
-Inserted key: 242, value: 77562
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:279
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:300
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:296
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:296
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:298
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:295
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:298
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:278
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:297
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:296
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:296
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:296
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:298
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:297
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:279
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:297
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:292
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:297
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:276
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:278
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:283
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:296
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:294
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:286
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:281
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:282
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:280
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:284
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:295
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:289
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:290
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:288
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:291
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:285
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:293
-+:1,!:28415,*:24508,&:64,astsize:77562,astdepth:287
-key266,value218.40057024696847
-key415,value218.39895752030264
-key331,value218.39976388325866
-key477,value218.4009734291055
-key155,value218.40218297664285
-key172,value218.39976388325866
-key444,value218.4009734291055
-key333,value218.40057024696847
-key252,value218.4013766114304
-key348,value218.40218297664285
-key326,value218.4013766114304
-key19,value218.4009734291055
-key51,value218.4013766114304
-key416,value218.40177979394292
-key406,value218.39976388325866
-key63,value218.39855433910782
-key314,value218.39976388325866
-key82,value218.39895752030264
-key164,value218.39936070168633
-key364,value218.40016706501945
-key394,value218.40057024696847
-key358,value218.4009734291055
-key77,value218.40258615953
-key455,value218.40016706501945
-key259,value218.4037957093126
-key356,value218.40218297664285
-key227,value218.40258615953
-key384,value218.4009734291055
-key35,value218.39976388325866
-key261,value218.40057024696847
-key344,value218.39895752030264
-key13,value218.40016706501945
-key73,value218.4013766114304
-key68,value218.39976388325866
-key221,value218.39694161622137
-key298,value218.40016706501945
-key103,value218.39855433910782
-key487,value218.40177979394292
-key467,value218.40177979394292
-key431,value218.40339252586506
-key76,value218.39855433910782
-key142,value218.39976388325866
-key74,value218.40177979394292
-key216,value218.39976388325866
-key418,value218.39976388325866
-key446,value218.3981511581021
-key105,value218.39976388325866
-key340,value218.40298934260412
-key377,value218.39855433910782
-key53,value218.39976388325866
-key250,value218.4013766114304
-key457,value218.39895752030264
-key407,value218.40419889294648
-key140,value218.40218297664285
-key65,value218.39653843597398
-key233,value218.39976388325866
-key179,value218.40218297664285
-key257,value218.4013766114304
-key395,value218.40016706501945
-key112,value218.40218297664285
-key277,value218.4009734291055
-key305,value218.40016706501945
-key270,value218.40339252586506
-key87,value218.40339252586506
-key149,value218.40258615953
-key57,value218.40016706501945
-key0,value218.40258615953
-key48,value218.4013766114304
-key240,value218.40298934260412
-key336,value218.4013766114304
-key246,value218.39976388325866
-key212,value218.40057024696847
-key411,value218.4009734291055
-key106,value218.40057024696847
-key45,value218.39976388325866
-key361,value218.4009734291055
-key310,value218.40016706501945
-key10,value218.40057024696847
-key3,value218.40057024696847
-key187,value218.3981511581021
-key483,value218.4009734291055
-key320,value218.40057024696847
-key290,value218.39895752030264
-key367,value218.39936070168633
-key389,value218.40258615953
-key254,value218.4009734291055
-key218,value218.40218297664285
-key124,value218.39855433910782
-key420,value218.40218297664285
-key84,value218.39855433910782
-key429,value218.40177979394292
-key38,value218.4013766114304
-key50,value218.40057024696847
-key368,value218.4009734291055
-key210,value218.40218297664285
-key346,value218.39855433910782
-key267,value218.39976388325866
-key222,value218.4009734291055
-key89,value218.40218297664285
-key342,value218.39895752030264
-key316,value218.39774797728563
-key275,value218.39855433910782
-key183,value218.4009734291055
-key401,value218.4013766114304
-key223,value218.4009734291055
-key398,value218.4013766114304
-key328,value218.40177979394292
-key36,value218.40057024696847
-key417,value218.40218297664285
-key220,value218.39855433910782
-key253,value218.40016706501945
-key177,value218.4009734291055
-key391,value218.4009734291055
-key410,value218.40218297664285
-key110,value218.39976388325866
-key93,value218.4013766114304
-key322,value218.4009734291055
-key125,value218.40218297664285
-key292,value218.40298934260412
-key61,value218.40177979394292
-key236,value218.40218297664285
-key170,value218.3981511581021
-key409,value218.39895752030264
-key353,value218.40298934260412
-key121,value218.4013766114304
-key165,value218.39895752030264
-key255,value218.3981511581021
-key293,value218.39895752030264
-key174,value218.39936070168633
-key283,value218.4009734291055
-key341,value218.4013766114304
-key479,value218.40298934260412
-key272,value218.4013766114304
-key83,value218.40218297664285
-key460,value218.40177979394292
-key208,value218.40258615953
-key32,value218.40057024696847
-key244,value218.39694161622137
-key286,value218.40057024696847
-key350,value218.40057024696847
-key392,value218.40258615953
-key194,value218.39976388325866
-key413,value218.40258615953
-key309,value218.40339252586506
-key160,value218.39936070168633
-key432,value218.39936070168633
-key162,value218.40016706501945
-key70,value218.40177979394292
-key372,value218.4013766114304
-key8,value218.40218297664285
-key422,value218.4013766114304
-key295,value218.40177979394292
-key39,value218.40177979394292
-key228,value218.4013766114304
-key387,value218.4013766114304
-key56,value218.39976388325866
-key185,value218.39976388325866
-key54,value218.40218297664285
-key62,value218.39976388325866
-key449,value218.4013766114304
-key196,value218.40016706501945
-key90,value218.39936070168633
-key280,value218.40177979394292
-key166,value218.40057024696847
-key182,value218.40177979394292
-key239,value218.39976388325866
-key101,value218.40218297664285
-key163,value218.39976388325866
-key189,value218.39976388325866
-key338,value218.40177979394292
-key355,value218.4009734291055
-key465,value218.4009734291055
-key287,value218.4013766114304
-key437,value218.40057024696847
-key354,value218.39976388325866
-key144,value218.4013766114304
-key9,value218.40177979394292
-key421,value218.39855433910782
-key435,value218.40057024696847
-key55,value218.4013766114304
-key404,value218.39855433910782
-key129,value218.4013766114304
-key88,value218.4013766114304
-key122,value218.4013766114304
-key117,value218.40057024696847
-key186,value218.40339252586506
-key231,value218.4013766114304
-key373,value218.39855433910782
-key31,value218.39976388325866
-key276,value218.3981511581021
-key215,value218.40218297664285
-key264,value218.40177979394292
-key376,value218.40177979394292
-key202,value218.39895752030264
-key133,value218.40016706501945
-key485,value218.4013766114304
-key209,value218.39774797728563
-key7,value218.40057024696847
-key371,value218.40218297664285
-key120,value218.40016706501945
-key291,value218.40016706501945
-key251,value218.4013766114304
-key480,value218.39936070168633
-key324,value218.4009734291055
-key159,value218.40218297664285
-key441,value218.4013766114304
-key71,value218.40057024696847
-key193,value218.40298934260412
-key486,value218.40057024696847
-key274,value218.4013766114304
-key357,value218.39936070168633
-key370,value218.40218297664285
-key478,value218.40218297664285
-key141,value218.39976388325866
-key408,value218.40177979394292
-key393,value218.40016706501945
-key230,value218.4009734291055
-key453,value218.40177979394292
-key265,value218.4013766114304
-key382,value218.40057024696847
-key369,value218.4009734291055
-key23,value218.40419889294648
-key405,value218.39936070168633
-key426,value218.40016706501945
-key145,value218.40057024696847
-key198,value218.40258615953
-key203,value218.39976388325866
-key21,value218.40218297664285
-key366,value218.40057024696847
-key271,value218.40057024696847
-key273,value218.4013766114304
-key390,value218.39976388325866
-key4,value218.39895752030264
-key134,value218.39895752030264
-key72,value218.40057024696847
-key130,value218.4013766114304
-key388,value218.40057024696847
-key419,value218.39936070168633
-key100,value218.39855433910782
-key496,value218.40016706501945
-key268,value218.4013766114304
-key245,value218.39936070168633
-key473,value218.4009734291055
-key147,value218.4013766114304
-key374,value218.4013766114304
-key335,value218.4037957093126
-key151,value218.4037957093126
-key493,value218.40177979394292
-key397,value218.39936070168633
-key365,value218.40177979394292
-key52,value218.40057024696847
-key116,value218.4013766114304
-key17,value218.40016706501945
-key454,value218.40177979394292
-key330,value218.40016706501945
-key436,value218.40218297664285
-key385,value218.40298934260412
-key25,value218.39734479665867
-key339,value218.39936070168633
-key464,value218.40177979394292
-key104,value218.40016706501945
-key234,value218.40057024696847
-key44,value218.40177979394292
-key498,value218.40016706501945
-key20,value218.3981511581021
-key381,value218.39936070168633
-key123,value218.40016706501945
-key226,value218.39936070168633
-key321,value218.4013766114304
-key199,value218.40016706501945
-key235,value218.39976388325866
-key352,value218.39976388325866
-key138,value218.39936070168633
-key206,value218.40016706501945
-key91,value218.40016706501945
-key311,value218.40016706501945
-key201,value218.4009734291055
-key47,value218.39936070168633
-key94,value218.39573207604974
-key334,value218.40218297664285
-key450,value218.3981511581021
-key312,value218.39976388325866
-key304,value218.4013766114304
-key137,value218.40177979394292
-key41,value218.4009734291055
-key211,value218.4037957093126
-key256,value218.3981511581021
-key143,value218.40177979394292
-key40,value218.4009734291055
-key476,value218.4009734291055
-key442,value218.39855433910782
-key213,value218.40057024696847
-key462,value218.40057024696847
-key176,value218.40016706501945
-key297,value218.4009734291055
-key452,value218.39976388325866
-key22,value218.39976388325866
-key24,value218.4009734291055
-key412,value218.40177979394292
-key217,value218.4009734291055
-key269,value218.40177979394292
-key461,value218.39976388325866
-key472,value218.4013766114304
-key490,value218.4009734291055
-key299,value218.39694161622137
-key319,value218.40339252586506
-key12,value218.39936070168633
-key5,value218.39895752030264
-key260,value218.40016706501945
-key332,value218.39895752030264
-key249,value218.40339252586506
-key281,value218.39895752030264
-key232,value218.40016706501945
-key42,value218.39936070168633
-key214,value218.39895752030264
-key169,value218.39895752030264
-key66,value218.4013766114304
-key119,value218.39936070168633
-key379,value218.40016706501945
-key456,value218.40016706501945
-key29,value218.39895752030264
-key161,value218.40177979394292
-key178,value218.39734479665867
-key148,value218.3981511581021
-key80,value218.40057024696847
-key46,value218.39895752030264
-key118,value218.39936070168633
-key443,value218.39895752030264
-key337,value218.4013766114304
-key294,value218.4009734291055
-key434,value218.40016706501945
-key229,value218.4013766114304
-key414,value218.40218297664285
-key158,value218.4009734291055
-key468,value218.4013766114304
-key243,value218.39976388325866
-key289,value218.40016706501945
-key114,value218.39653843597398
-key466,value218.40177979394292
-key34,value218.4037957093126
-key424,value218.39976388325866
-key451,value218.40016706501945
-key126,value218.4009734291055
-key204,value218.40258615953
-key492,value218.39855433910782
-key113,value218.40177979394292
-key484,value218.40057024696847
-key362,value218.39895752030264
-key150,value218.4037957093126
-key173,value218.40218297664285
-key37,value218.4009734291055
-key438,value218.40016706501945
-key329,value218.39976388325866
-key131,value218.4013766114304
-key475,value218.39976388325866
-key16,value218.4009734291055
-key154,value218.39936070168633
-key127,value218.39895752030264
-key313,value218.4013766114304
-key430,value218.4009734291055
-key296,value218.4013766114304
-key207,value218.40057024696847
-key284,value218.39895752030264
-key481,value218.40016706501945
-key224,value218.4013766114304
-key383,value218.39936070168633
-key469,value218.39734479665867
-key75,value218.40218297664285
-key360,value218.40177979394292
-key78,value218.40177979394292
-key439,value218.4009734291055
-key156,value218.40016706501945
-key30,value218.40016706501945
-key108,value218.40258615953
-key59,value218.39895752030264
-key109,value218.40298934260412
-key99,value218.40339252586506
-key92,value218.39936070168633
-key307,value218.40540844496445
-key136,value218.40258615953
-key171,value218.4009734291055
-key263,value218.4009734291055
-key248,value218.39976388325866
-key132,value218.39936070168633
-key64,value218.4013766114304
-key425,value218.40016706501945
-key28,value218.40057024696847
-key278,value218.39976388325866
-key95,value218.39976388325866
-key262,value218.39936070168633
-key427,value218.40016706501945
-key495,value218.4009734291055
-key489,value218.40016706501945
-key128,value218.39895752030264
-key285,value218.40218297664285
-key219,value218.40258615953
-key107,value218.40218297664285
-key279,value218.4013766114304
-key79,value218.40298934260412
-key237,value218.4013766114304
-key1,value218.40177979394292
-key306,value218.39976388325866
-key351,value218.4013766114304
-key6,value218.3981511581021
-key181,value218.4009734291055
-key157,value218.39895752030264
-key197,value218.39976388325866
-key497,value218.40016706501945
-key347,value218.40298934260412
-key200,value218.39976388325866
-key27,value218.40177979394292
-key378,value218.39976388325866
-key205,value218.40177979394292
-key433,value218.39936070168633
-key318,value218.40016706501945
-key375,value218.40258615953
-key349,value218.40057024696847
-key396,value218.39976388325866
-key152,value218.4013766114304
-key225,value218.39936070168633
-key238,value218.40177979394292
-key482,value218.40057024696847
-key49,value218.40057024696847
-key14,value218.40016706501945
-key445,value218.4009734291055
-key192,value218.39734479665867
-key303,value218.4013766114304
-key81,value218.39855433910782
-key167,value218.4013766114304
-key317,value218.4009734291055
-key499,value218.40057024696847
-key11,value218.39936070168633
-key139,value218.40218297664285
-key146,value218.40016706501945
-key242,value218.4009734291055
-key440,value218.40016706501945
-key67,value218.40258615953
-key380,value218.40057024696847
-key288,value218.4013766114304
-key282,value218.39653843597398
-key190,value218.40177979394292
-key111,value218.40016706501945
-key175,value218.40177979394292
-key180,value218.4009734291055
-key302,value218.39976388325866
-key168,value218.40460207676657
-key500,value218.4013766114304
-key97,value218.40218297664285
-key315,value218.39734479665867
-key247,value218.4009734291055
-key188,value218.39936070168633
-key300,value218.39855433910782
-key474,value218.3981511581021
-key399,value218.40016706501945
-key184,value218.3981511581021
-key400,value218.40298934260412
-key458,value218.3981511581021
-key195,value218.40057024696847
-key488,value218.40258615953
-key102,value218.40057024696847
-key323,value218.40016706501945
-key491,value218.40057024696847
-key470,value218.40016706501945
-key96,value218.39976388325866
-key308,value218.40460207676657
-key325,value218.40057024696847
-key2,value218.40057024696847
-key403,value218.4009734291055
-key18,value218.40258615953
-key402,value218.40298934260412
-key135,value218.4013766114304
-key343,value218.4009734291055
-key15,value218.40218297664285
-key345,value218.40057024696847
-key86,value218.4009734291055
-key85,value218.40298934260412
-key448,value218.40218297664285
-key115,value218.40016706501945
-key26,value218.39855433910782
-key98,value218.39976388325866
-key447,value218.39734479665867
-key459,value218.39936070168633
-key327,value218.39976388325866
-key428,value218.4009734291055
-key471,value218.39855433910782
-key423,value218.4037957093126
-key60,value218.40016706501945
-key386,value218.4009734291055
-key153,value218.40258615953
-key301,value218.4013766114304
-key258,value218.4013766114304
-key359,value218.39936070168633
-key43,value218.4009734291055
-key33,value218.39976388325866
-key69,value218.39895752030264
-key494,value218.39694161622137
-key241,value218.40016706501945
-key463,value218.39936070168633
-key363,value218.40218297664285
-key58,value218.40016706501945
-key191,value218.39936070168633
-best_cost218.39573207604974
-output node0
-output class0
-done
 multiple output circuit
-open5
-multiple output circuit parse success
-write5
-open4
-multiple output circuit parse success
-write4
-open3
-multiple output circuit parse success
-write3
-open2
-multiple output circuit parse success
-write2
-open7
-multiple output circuit parse success
-write7
-open1
-multiple output circuit parse success
-write1
 open6
-multiple output circuit parse success
-write6
+open1
+open3
+open2
 open0
-multiple output circuit parse success
-write0
-open8
-multiple output circuit parse success
-write8
 open9
-multiple output circuit parse success
-write9
-ABC command line: "read_eqn test_data_beta_runner/raw_circuit.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-[1;37mtest_data_beta_runner/raw_circuit:[0m i/o =  128/   65  lat =    0  and =    444  lev =128  power = 429.18
-Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.84 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    411. A: 455.36 ( +1.0 %)  D: 1741.17 ps ( -5.6 %)  B: 1741.17 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    350. A: 460.26 ( +2.1 %)  D: 1646.83 ps (-10.7 %)  B: 1646.83 ps (-10.7 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    356. A: 465.16 ( +3.2 %)  D: 1606.71 ps (-12.9 %)  B: 1606.71 ps (-12.9 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    362. A: 470.06 ( +4.3 %)  D: 1571.02 ps (-14.8 %)  B: 1571.02 ps (-14.8 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    6. TFO:    401. A: 471.69 ( +4.7 %)  D: 1546.40 ps (-16.2 %)  B: 1546.40 ps (-16.2 %)    0.00 sec       5 Win:  1. PO:     3. Path:     71. Gate:    3. TFO:    398. A: 472.16 ( +4.8 %)  D: 1537.51 ps (-16.6 %)  B: 1537.51 ps (-16.6 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    384. A: 472.62 ( +4.9 %)  D: 1532.11 ps (-16.9 %)  B: 1532.11 ps (-16.9 %)    0.00 sec       7 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:    204. A: 472.62 ( +4.9 %)  D: 1530.93 ps (-17.0 %)  B: 1530.93 ps (-17.0 %)    0.00 sec       8 Win:  4. PO:     5. Path:     75. Gate:    2. TFO:    374. A: 472.62 ( +4.9 %)  D: 1531.70 ps (-17.0 %)  B: 1530.93 ps (-17.0 %)    0.00 sec       9 Win:  1. PO:     3. Path:     71. Gate:    1. TFO:    206. A: 473.32 ( +5.0 %)  D: 1531.70 ps (-17.0 %)  B: 1530.93 ps (-17.0 %)    0.00 sec      10 Win:  1. PO:     3. Path:     71. Gate:    2. TFO:    202. A: 474.72 ( +5.3 %)  D: 1523.36 ps (-17.4 %)  B: 1523.36 ps (-17.4 %)    0.00 sec      11 Win:  8. PO:     8. Path:     81. Gate:    6. TFO:    372. A: 473.79 ( +5.1 %)  D: 1520.77 ps (-17.6 %)  B: 1520.77 ps (-17.6 %)    0.00 sec      12 Win: 16. PO:    12. Path:     90. Gate:    9. TFO:    363. A: 473.32 ( +5.0 %)  D: 1518.96 ps (-17.7 %)  B: 1518.96 ps (-17.7 %)    0.00 sec      13 Win: 32. PO:    22. Path:    110. Gate:   11. TFO:    344. A: 468.66 ( +4.0 %)  D: 1519.24 ps (-17.6 %)  B: 1518.96 ps (-17.7 %)    0.00 sec      14 Win: 32. PO:    22. Path:    110. Gate:    9. TFO:    245. A: 470.99 ( +4.5 %)  D: 1514.42 ps (-17.9 %)  B: 1514.42 ps (-17.9 %)    0.00 sec      15 Win:  1. PO:     3. Path:     71. Gate:    1. TFO:     10. A: 471.46 ( +4.6 %)  D: 1514.42 ps (-17.9 %)  B: 1514.42 ps (-17.9 %)    0.00 sec      16 Win:  4. PO:     4. Path:     74. Gate:    2. TFO:      8. A: 471.93 ( +4.7 %)  D: 1514.42 ps (-17.9 %)  B: 1514.42 ps (-17.9 %)    0.00 sec      17 Win: 64. PO:    42. Path:    150. Gate:   15. TFO:    299. A: 464.93 ( +3.2 %)  D: 1513.56 ps (-17.9 %)  B: 1513.56 ps (-17.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    150. Gate:   15. TFO:    302. A: 462.59 ( +2.6 %)  D: 1504.67 ps (-18.4 %)  B: 1504.67 ps (-18.4 %)    0.00 sec      19 Win: 64. PO:    42. Path:    150. Gate:   10. TFO:    295. A: 467.26 ( +3.7 %)  D: 1504.67 ps (-18.4 %)  B: 1504.67 ps (-18.4 %)    0.01 sec                                                                                                                                                          0 : Try =   299  Over =   171  Fail =    88  Win =    40  A: 443.93 ( -4.0 %)  D: 1499.64 ps ( -0.3 %)      0.00 sec        1 : Try =   171  Over =   112  Fail =    39  Win =    20  A: 432.50 ( -6.5 %)  D: 1516.31 ps ( +0.8 %)      0.00 sec        2 : Try =   112  Over =     0  Fail =   112  Win =     0  A: 432.50 ( -6.5 %)  D: 1516.31 ps ( +0.8 %)      0.00 sec        0 : Try =   299  Over =     0  Fail =   299  Win =     0  A: 432.50 ( -6.5 %)  D: 1516.31 ps ( +0.8 %)      0.00 sec        0 : Try =   299  Over =     0  Fail =   299  Win =     0  A: 432.50 ( -6.5 %)  D: 1516.31 ps ( +0.8 %)      0.00 sec        0 : Try =   299  Over =     0  Fail =   299  Win =     0  A: 432.50 ( -6.5 %)  D: 1516.31 ps ( +0.8 %)      0.00 sec        0 : Try =   299  Over =     0  Fail =   299  Win =     0  A: 432.50 ( -6.5 %)  D: 1516.31 ps ( +0.8 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    299[0m ( 12.7 %)   [1;32mCap =  0.8 ff[0m ( 21.2 %)   [1;36mArea =      432.50[0m ( 34.8 %)   [1;35mDelay =  1516.31 ps[0m  ( 24.4 %)               
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit2.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit1.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit3.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit4.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit5.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit6.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit8.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit7.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit9.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-[1;37mtest_data_beta_runner/optimized_circuit2:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit1:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-ABC command line: "read_eqn test_data_beta_runner/optimized_circuit10.eqn; st; dch -f; print_stats -p; read_lib asap7_clean.lib ; map ; topo; upsize; dnsize; stime".
-
-Cannot open input file "test_data_beta_runner/optimized_circuit10.eqn". 
-[1;37mtest_data_beta_runner/optimized_circuit3:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit4:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit5:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit6:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit8:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit7:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-[1;37mtest_data_beta_runner/optimized_circuit9:[0m i/o =  128/   65  lat =    0  and =    576 (choice = 65)  lev =128Warning: The choice nodes in the original AIG are removed by strashing.
-  power = 511.61
-Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.85 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
-Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.00 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.00 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
- ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
-Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.99 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
-Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.02 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.01 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
- ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
-Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.01 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.01 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99Library "asap7sc7p5t_22b_AO_RVT_SS_170906" from "asap7_clean.lib" has 155 cells (0 skipped: 0 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     1.01 sec
-Warning: Detected 2 multi-output gates (for example, "FAx1_ASAP7_75t_R").
-   0 Win:  1. PO:     3. Path:     70. Gate:    7. TFO:    388. A: 452.80 ( +1.0 %)  D: 1781.91 ps ( -5.6 %)  B: 1781.91 ps ( -5.6 %)    0.00 sec       1 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    310. A: 457.70 ( +2.1 %)  D: 1682.93 ps (-10.9 %)  B: 1682.93 ps (-10.9 %)    0.00 sec       2 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    320. A: 462.59 ( +3.2 %)  D: 1615.40 ps (-14.4 %)  B: 1615.40 ps (-14.4 %)    0.00 sec       3 Win:  1. PO:     3. Path:     71. Gate:    7. TFO:    354. A: 467.49 ( +4.3 %)  D: 1574.17 ps (-16.6 %)  B: 1574.17 ps (-16.6 %)    0.00 sec       4 Win:  1. PO:     3. Path:     71. Gate:    5. TFO:    399. A: 469.13 ( +4.7 %)  D: 1552.04 ps (-17.8 %)  B: 1552.04 ps (-17.8 %)    0.00 sec       5 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 469.59 ( +4.8 %)  D: 1543.68 ps (-18.2 %)  B: 1543.68 ps (-18.2 %)    0.00 sec       6 Win:  2. PO:     4. Path:     72. Gate:    2. TFO:    383. A: 470.06 ( +4.9 %)  D: 1538.80 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       7 Win:  4. PO:     5. Path:     79. Gate:    3. TFO:    373. A: 470.06 ( +4.9 %)  D: 1539.85 ps (-18.4 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       8 Win:  8. PO:     8. Path:     82. Gate:    4. TFO:    367. A: 468.66 ( +4.6 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec       9 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:    206. A: 469.36 ( +4.7 %)  D: 1539.33 ps (-18.5 %)  B: 1538.80 ps (-18.5 %)    0.00 sec      10 Win:  1. PO:     2. Path:     70. Gate:    2. TFO:    202. A: 470.76 ( +5.0 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      11 Win:  8. PO:     7. Path:     81. Gate:    1. TFO:      7. A: 471.23 ( +5.2 %)  D: 1530.99 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      12 Win: 16. PO:    12. Path:     92. Gate:    7. TFO:    354. A: 469.36 ( +4.7 %)  D: 1531.84 ps (-18.9 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      13 Win: 32. PO:    22. Path:    112. Gate:   11. TFO:    333. A: 464.69 ( +3.7 %)  D: 1535.48 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      14 Win: 32. PO:    22. Path:    112. Gate:    4. TFO:    232. A: 464.69 ( +3.7 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      15 Win:  1. PO:     2. Path:     70. Gate:    1. TFO:     10. A: 465.16 ( +3.8 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      16 Win:  2. PO:     3. Path:     72. Gate:    1. TFO:      5. A: 465.39 ( +3.9 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      17 Win:  4. PO:     4. Path:     74. Gate:    1. TFO:      4. A: 465.86 ( +4.0 %)  D: 1534.53 ps (-18.7 %)  B: 1530.99 ps (-18.9 %)    0.00 sec      18 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    288. A: 458.86 ( +2.4 %)  D: 1542.16 ps (-18.3 %)  B: 1530.99 ps (-18.9 %)    0.01 sec      19 Win: 64. PO:    42. Path:    152. Gate:   15. TFO:    278. A: 456.53 ( +1.9 %)  D: 1539.92 ps (-18.4 %)  B: 1530.99 ps (-18.9 %)    0.01 sec                                                                                                                                                          0 : Try =   238  Over =   190  Fail =    17  Win =    31  A: 456.30 ( -3.1 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        1 : Try =   190  Over =    98  Fail =    67  Win =    25  A: 444.63 ( -5.5 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        2 : Try =    98  Over =     0  Fail =    98  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
- ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
- ps ( +0.0 %)      0.00 sec        0 : Try =   238  Over =     0  Fail =   238  Win =     0  A: 444.63 ( -5.6 %)  D: 1530.99 ps ( +0.0 %)      0.00 sec                                                                                                                                                      WireLoad = "none"  [1;33mGates =    238[0m (  2.5 %)   [1;32mCap =  0.9 ff[0m ( 18.8 %)   [1;36mArea =      444.63[0m ( 56.3 %)   [1;35mDelay =  1530.99 ps[0m  ( 30.7 %)               
-ABC command line: "cec test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/optimized_circuit0.eqn".
-
-Networks are equivalent.  Time =     0.01 sec
-
-
-------------------------------------Original circuit------------------------------------
-----------------------------------------------------------------------------------------
-
-
-------------------------------------Optimized circuit------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------
+open5
+open4
+open8
+open7

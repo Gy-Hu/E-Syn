@@ -1,4 +1,3 @@
-
 from sympy import symbols, sympify, simplify, Symbol, Eq, simplify_logic
 from sympy.logic.boolalg import Equivalent
 from sympy.logic.inference import satisfiable
