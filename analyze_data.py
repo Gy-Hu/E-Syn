@@ -30,16 +30,16 @@ with open('log_rc64b.txt', 'r') as f:
             if gates_match:
                 gates = gates_match.group(1)
                 row.append(gates)
-            else:
-                row.append('')
+            # else:
+                # row.append('')
 
             # 提取Cap和后面的数值
             cap_match = re.search(r'Cap\s*=\s*([\d.]+)\s+ff', line)
             if cap_match:
                 cap = cap_match.group(1)
                 row.append(cap)
-            else:
-                row.append('')
+            # else:
+                # row.append('')
 
             # 提取Area和后面的数值
             #area_match = re.search(r'Area\s*=\s*([\d.]+)\s+', line)
@@ -47,8 +47,8 @@ with open('log_rc64b.txt', 'r') as f:
             if area_match:
                 area = area_match.group(1)
                 row.append(area)
-            else:
-                row.append('')
+            # else:
+                # row.append('')
 
             # 提取Delay和后面的数值
             delay_match = re.search(r'Delay\s*=\s*([\d.]+)\s+ps', line)
@@ -56,15 +56,16 @@ with open('log_rc64b.txt', 'r') as f:
                 delay = delay_match.group(1)
                 
                 row.append(delay)
-            else:
-                row.append('')
+            # else:
+                # row.append('')
 
-            # 如果该行缺少元素，可以将缺少的元素补充为默认值
-            while len(row) < len(headers):
-                row.append('')
-
-            # 将该行数据添加到表格中
-            table.append(row)
+            #如果该行缺少元素，可以将缺少的元素补充为默认值
+            # while len(row) < len(headers):
+                # row.append('')
+            
+            # 如果行中元素数量等于表头的数量，则将该行数据添加到表格中
+            if len(row) == len(headers):
+                table.append(row)
 
 
 # 打印表头

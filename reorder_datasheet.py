@@ -10,8 +10,17 @@ for line in lines[1:]:
 # 按照delay大小排序
 data_sorted = sorted(data, key=lambda x: x[4])
 
+# 按照area大小排序
+data_sorted1 = sorted(data, key=lambda x: x[3])
+
+
 # 将排序后的数据写入新的文本文件
-with open('sorted_re.txt', 'w') as f:
+with open('sorted_delay.txt', 'w') as f:
     f.write('{:<10} {:<10} {:<10} {:<10} {:<10}\n'.format('WireLoad', 'Gates', 'Cap', 'Area', 'Delay'))
     for d in data_sorted:
+        f.write('{:<10} {:<10} {:<10} {:<10} {:<10}\n'.format(d[0], d[1], d[2], d[3], d[4]))
+        
+with open('sorted_area.txt', 'w') as f:
+    f.write('{:<10} {:<10} {:<10} {:<10} {:<10}\n'.format('WireLoad', 'Gates', 'Cap', 'Area', 'Delay'))
+    for d in data_sorted1:
         f.write('{:<10} {:<10} {:<10} {:<10} {:<10}\n'.format(d[0], d[1], d[2], d[3], d[4]))

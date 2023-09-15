@@ -209,27 +209,7 @@ fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     
 }
 */
-pub struct AstSize;
-impl<L: Language> CostFunction<L> for AstSize {
-    type Cost = usize;
-    fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
-    where
-        C: FnMut(Id) -> Self::Cost,
-    {
-        enode.fold(1, |sum, id: Id| sum.saturating_add(costs(id)))
-    }
-}
 
-pub struct AstDepth;
-impl<L: Language> CostFunction<L> for AstDepth {
-    type Cost = usize;
-    fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
-    where
-        C: FnMut(Id) -> Self::Cost,
-    {
-        1 + enode.fold(0, |max, id| max.max(costs(id)))
-    }
-}
 
 // pub struct OperatorCount;
 // impl CostFunction<Prop> for OperatorCount {
@@ -449,7 +429,7 @@ pub struct Mixcost;
                     "+" => 26 ,
                     "*"=> 22 ,
                     //"&" => 0.0 as  f32,
-                    _=> 1 
+                    _=> 0 
                 };
                 //let alpha = generate_random_float();
                 //let costsize = (enode.fold(1, |sum, id: Id| sum + f64::from(costs(id))));
@@ -531,6 +511,28 @@ pub trait CostFunction<L: Language> {
     }
 }
 
+
+pub struct AstSize;
+impl<L: Language> CostFunction<L> for AstSize {
+    type Cost = usize;
+    fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
+    where
+        C: FnMut(Id) -> Self::Cost,
+    {
+        enode.fold(1, |sum, id: Id| sum.saturating_add(costs(id)))
+    }
+}
+
+pub struct AstDepth;
+impl<L: Language> CostFunction<L> for AstDepth {
+    type Cost = usize;
+    fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
+    where
+        C: FnMut(Id) -> Self::Cost,
+    {
+        1 + enode.fold(0, |max, id| max.max(costs(id)))
+    }
+}
 
 impl<'a, CF, L, N> Extractor1<'a, CF, L, N>
 where
@@ -751,7 +753,7 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     let runner_iteration_limit = 10000000;
     let egraph_node_limit = 25000000;
     let start = Instant::now();
-    let iterations = 10 as i32;
+    let iterations = 50 as i32;
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
@@ -767,21 +769,39 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
    // runner.egraph.dot().to_png("/data/cchen/E-Brush/image/process.png").unwrap();
     let mut results: HashMap<i32, RecExpr<Prop>> = HashMap::new();
     let mut res_cost: HashMap<i32, usize> = HashMap::new();
+    
 
-    for i in 0..iterations+1 {
+    let root = runner.roots[0];
+    let extractor_base_0  = Extractor::new(&runner.egraph, egg::AstDepth);
+    let extractor_base_1  = Extractor::new(&runner.egraph, egg::AstSize);
+    let (best_cost_base_0,best_base_0 )=extractor_base_0.find_best(root);
+    let (best_cost_base_1,best_base_1 )=extractor_base_1.find_best(root);
+    results.insert(0, best_base_0);
+    res_cost.insert(0,best_cost_base_0);    
+    results.insert(1, best_base_1);
+    res_cost.insert(1,best_cost_base_1);    
+    
+    
+    for i in 2..iterations+2 {
         let mut extractor = Extractor1::new(&runner.egraph, AstDepth);
-        // let mut lp_extractor = LpExtractor::new(&runner.egraph,AstSize);
-        // lp_extractor.timeout(500.0); 
         let root = runner.roots[0];
-        //let best = lp_extractor.solve(root);
-        //let root_node = extractor.get_node(root);
         let (best_cost,best )=extractor.find_best_random(root);
-        //let best = root.build_recexpr(|child| extractor.get_node(child));
-        
-        //println!("best_cost{}", best_cost);
         results.insert(i, best);
         res_cost.insert(i,best_cost);
-
+    }
+    for i in iterations+2..2*iterations+2 {
+        let mut extractor1 = Extractor1::new(&runner.egraph, AstSize);
+        let root = runner.roots[0];
+        let (best_cost,best )=extractor1.find_best_random(root);
+        results.insert(i, best);
+        res_cost.insert(i,best_cost);
+    }
+    for i in 2*iterations+2..3*iterations+2 {
+        let mut extractor2 = Extractor1::new(&runner.egraph, Mixcost);
+        let root = runner.roots[0];
+        let (best_cost,best )=extractor2.find_best_random(root);
+        results.insert(i, best);
+        res_cost.insert(i,best_cost);
     }
     // for(key,value)in &res_cost{
     //     println!("Inserted key: {}, value: {}", key, value);
@@ -863,7 +883,7 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     //key_value_pairs.shuffle(&mut rng);
 
     //let Some((min_key, min_value)) = key_value_pairs.first() else { todo!() };
-    let min_keys: Vec<&i32> = key_value_pairs.iter().take(10).map(|&(key, _)| key).collect();
+    let min_keys: Vec<&i32> = key_value_pairs.iter().take(30).map(|&(key, _)| key).collect();
     
     // if let Some(min_key) = min_keys.iter().min_by_key(|&&key| sym_cost_dict[key] as i64) {
     let output = results.get(&min_key).map(|result| result.to_string()).unwrap_or_default();
