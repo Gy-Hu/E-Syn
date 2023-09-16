@@ -114,5 +114,15 @@ fn main() -> Result<(), Box<dyn Error>> {
         best_model.save("xgb.model")?;
     }
 
+    // load model and predict
+    let bst = Booster::load("xgb.model")?;
+    let x_test = &[0.0,73.0,79.0,232.0,14.0,2395.0,152.0,15.756578947368421];
+    let num_rows = 1;
+    let y_test = &[53.05];
+    let mut dtest = DMatrix::from_dense(x_test, num_rows).unwrap();
+    dtest.set_labels(y_test).unwrap();
+    println!("Prediction: {:?}", bst.predict(&dtest).unwrap());
+    println!("Ground truth: {:?}", y_test);
+
     Ok(())
 }
