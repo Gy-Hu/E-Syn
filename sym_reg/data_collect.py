@@ -59,8 +59,9 @@ def parse_data(file_count):
     def parser(i):
         with open(f"aigfuzz/simple_circuit_{i}.data", "r") as f:
             data = f.read().split('\n')
-            op_dict = {line.split(':')[0]: int(line.split(
-                ':')[1].strip()) for line in data if line}
+            #print(data)
+            op_dict = {line.split(':')[0]: (line.split(':')[1].strip()) for line in data[:] if line}
+            #op_dict['AVE_LIB'] = float(line.split(':')[1].strip()) for line in data[-2:] if line
         with open(f"aigfuzz/simple_circuit_{i}.stats", "r") as f:
             stats = f.read()
             power_match = re.search(r"power =\s+(\d+\.\d+)", stats)
@@ -76,7 +77,7 @@ def parse_data(file_count):
     df = pd.DataFrame([parser(i) for i in range(file_count)])
     # fill na with 0
     df = df.fillna(0)
-    print("Date count before removing 0s: ", len(df))
+    #print("Date count before removing 0s: ", len(df))
     # remove rows that `power` or `delay` or `lev` or `area` is 0
     df = df[(df.power != 0) & (df.delay != 0) & (df.lev != 0) & (df.area != 0)]
     # sort the columns as +,!,*,&,lev, ASTSize,ASTDepth, power, area , delay
