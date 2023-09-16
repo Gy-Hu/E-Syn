@@ -281,8 +281,10 @@ if __name__ == "__main__":
     # use concurrent futures to convert the s-expression to abc eqn
     tasks_args = [(data, None, multiple_output_flag, i) for i in range(10)]
     #convert_to_abc_eqn(data, None, multiple_output= multiple_output_flag, index = 0)
-    with concurrent.futures.ProcessPoolExecutor(multiprocessing.cpu_count()) as executor:
-        executor.map(lambda args: convert_to_abc_eqn(*args), tasks_args)
+    with concurrent.futures.ProcessPoolExecutor(64) as executor:
+        for task in tasks_args:
+            executor.submit(convert_to_abc_eqn, *task)
+        
     
     '''
     #############################################################################

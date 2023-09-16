@@ -14,9 +14,17 @@ def run_aigfuzz(file_count):
         os.system(f"aigfuzz -c -s > aigfuzz/simple_circuit_{i}.aig")
         os.system(
             f"abc -c \"read_aiger aigfuzz/simple_circuit_{i}.aig; trim ; write_aiger aigfuzz/simple_circuit_{i}.aig\"")
-        # os.system(
-        #     f"abc -c \"read_aiger aigfuzz/simple_circuit_{i}.aig; topo; trim ; write_aiger aigfuzz/simple_circuit_{i}.aig\"")
-
+        
+        '''
+        if i%50 == 0:
+            os.system(f"aigfuzz -c -l > aigfuzz/simple_circuit_{i}.aig")
+            os.system(
+                f"abc -c \"read_aiger aigfuzz/simple_circuit_{i}.aig; trim ; write_aiger aigfuzz/simple_circuit_{i}.aig\"")
+        else:
+            os.system(f"aigfuzz -c -s > aigfuzz/simple_circuit_{i}.aig")
+            os.system(
+                f"abc -c \"read_aiger aigfuzz/simple_circuit_{i}.aig; trim ; write_aiger aigfuzz/simple_circuit_{i}.aig\"")
+        '''
 
 def load_circuits(file_count):
     for i in tqdm(range(file_count), desc='Loding circuits and convert to eqn'):
@@ -43,7 +51,7 @@ def process_circuits(file_count):
 def run_abc(file_count):
     for i in tqdm(range(file_count), desc='Running abc to extract stats'):
         os.system(
-            f"abc -c \"read_eqn aigfuzz/simple_circuit_{i}_processed.eqn; balance; refactor; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; stime; \" > aigfuzz/simple_circuit_{i}.stats")
+            f"abc -c \"read_eqn aigfuzz/simple_circuit_{i}_processed.eqn; strash; dch -f; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; upsize; dnsize; stime; \" > aigfuzz/simple_circuit_{i}.stats")
 
 
 def parse_data(file_count):
@@ -68,11 +76,18 @@ def parse_data(file_count):
     df = pd.DataFrame([parser(i) for i in range(file_count)])
     # fill na with 0
     df = df.fillna(0)
+    print("Date count before removing 0s: ", len(df))
     # remove rows that `power` or `delay` or `lev` or `area` is 0
     df = df[(df.power != 0) & (df.delay != 0) & (df.lev != 0) & (df.area != 0)]
     # sort the columns as +,!,*,&,lev, ASTSize,ASTDepth, power, area , delay
-    df = df.reindex(columns=['+', '!', '*', '&', 'ASTSize',
-                             'ASTDepth', 'lev', 'power', 'area', 'delay'])
+    df = df.reindex(columns=['+', '!', '*', '&', 
+                             'ASTSize',
+                             'ASTDepth',
+                             'SUM_LIB',
+                             'SUM_NODE',
+                             'AVE_LIB',
+                             'lev', 
+                             'power', 'area', 'delay'])
     
     
     df.to_csv("simple_circuit_analysis_large.csv", index=False)
@@ -83,9 +98,10 @@ if __name__ == "__main__":
     sys.path.append("..")
     #print(sys.path)
     import run 
+    import run_beta
     from CircuitParser import CircuitParser
     print(run.__file__)
-    file_count = 5000
+    file_count = 100
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)

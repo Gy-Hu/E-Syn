@@ -5,8 +5,6 @@ use std::io::prelude::*;
 use std::io::Write;
 use std::env;
 
-
-
 define_language! {
     enum Prop {
         Bool(bool),
@@ -32,6 +30,82 @@ fn count_operators(s: &str) -> HashMap<String, i32> {
     }
     operator_counts
 }
+
+/*
+
+- Sum of liberty * node number
+- Average path length
+- Average AST size
+- Average liberty * node number
+- Sum of fan-out number multiples delay info on each node
+- Total number of nodes
+*/
+
+// get hashmap from count_operators and use it to calculate sum_of_liberty_mutiplied_node_number
+// input: hashmap from count_operators
+fn sum_of_liberty_mutiplied_node_number(operator_counts: &HashMap<String, i32>) -> i32 {
+    let mut sum = 0;
+    for (operator, count) in operator_counts {
+        match operator.as_str() {
+            // "!" => 9 ,
+            // "+" => 26 ,
+            // "*"=> 22 ,
+            "!" => sum += 9 * count,
+            "+" => sum += 26 * count,
+            "*" => sum += 22 * count,
+            _ => {},
+        }
+    }
+    sum
+}
+
+fn sum_of_nodes(operator_counts: &HashMap<String, i32>) -> i32 {
+    // sum up all the counts
+    let mut sum = 0;
+    for (operator, count) in operator_counts {
+        sum += count;
+    }
+    sum
+}
+
+fn average_liberty_mutiplied_node_number(operator_counts: &HashMap<String, i32>) -> f64 {
+    let mut sum = 0;
+    let mut count = 0;
+    for (operator, c) in operator_counts {
+        match operator.as_str() {
+            "!" => {
+                sum += 9 * c;
+                count += c;
+            },
+            "+" => {
+                sum += 26 * c;
+                count += c;
+            },
+            "*" => {
+                sum += 22 * c;
+                count += c;
+            },
+            _ => {},
+        }
+    }
+    sum as f64 / count as f64
+}
+
+
+//fn sum_of_fan_out_number_multiples_delay_info_on_each_node(s: &str) -> i32 {
+    // regex to the node that without (, ), +, !, *, &
+    // count the number of the node
+    
+// pub struct Five_AstDepth;
+// impl<L: Language> CostFunction<L> for Five_AstDepth {
+//     type Cost = usize;
+//     fn cost<C>(&mut self, enode: &L, mut costs: C) -> Self::Cost
+//     where
+//         C: FnMut(Id) -> Self::Cost,
+//     {
+//         1 + enode.fold(0, |max, id| max.max(costs(id)))
+//     }
+// }
 
 pub struct AstSize;
 impl<L: Language> CostFunction<L> for AstSize {
@@ -71,9 +145,9 @@ fn main() -> std::io::Result<()> {
     let mut contents = String::new();
     input_file.read_to_string(&mut contents)?;
     let operator_counts = count_operators(&contents);
-    for (operator, count) in operator_counts {
+    for (operator, count) in &operator_counts {
         //println!("{}: {}", operator, count);
-        if count > 0 {
+        if count > &0 {
             println!("{}: {}", operator, count);
         }
         else {
@@ -84,5 +158,11 @@ fn main() -> std::io::Result<()> {
     //println!("AST size: {}, AST depth: {}", size, depth);
     println!("ASTSize: {}", size);
     println!("ASTDepth: {}", depth);
+    let sum_of_liberty_mutiplied_node_number = sum_of_liberty_mutiplied_node_number(&operator_counts);
+    println!("SUM_LIB: {}", sum_of_liberty_mutiplied_node_number);
+    let sum_of_nodes = sum_of_nodes(&operator_counts);
+    println!("SUM_NODE: {}", sum_of_nodes);
+    let average_liberty_mutiplied_node_number = average_liberty_mutiplied_node_number(&operator_counts);
+    println!("AVE_LIB: {}", average_liberty_mutiplied_node_number);
     Ok(())
 }
