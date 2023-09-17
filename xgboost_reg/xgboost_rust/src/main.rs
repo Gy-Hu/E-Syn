@@ -11,7 +11,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut best_rmse = f32::INFINITY;
     let mut best_model: Option<Booster> = None;
 
-    let file = File::open("/data/guangyuh/coding_env/E-Brush/xgboost_reg/data.csv")?;
+    let file = File::open("/data/guangyuh/coding_env/E-Brush/xgboost_reg/data_5000.csv")?;
     let mut reader = csv::Reader::from_reader(BufReader::new(file));
 
     let mut data = Vec::new();
@@ -62,7 +62,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         // configure objectives, metrics, etc.
         let learning_params = parameters::learning::LearningTaskParametersBuilder::default()
-            .objective(parameters::learning::Objective::RegLinear)
+            .objective(parameters::learning::Objective::GpuRegLinear)
             .build().unwrap();
 
         // configure the tree-based learning model's parameters
@@ -81,7 +81,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         let training_params = parameters::TrainingParametersBuilder::default()
             .dtrain(&dtrain)
-            .boost_rounds(10)
+            .boost_rounds(50)
             .booster_params(booster_params)          // model parameters
             .evaluation_sets(Some(evaluation_sets))
             .build()
