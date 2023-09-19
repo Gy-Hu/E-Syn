@@ -74,7 +74,10 @@ impl CircuitParser {
             let parts = expr.split('=').collect::<Vec<&str>>();
             let expr_name = parts[0].trim().to_string();
             let expr_value = parts[1].trim().trim_end_matches(';').to_string();
-            *expr = format!("{} = ({});", expr_name, expr_value);
+            let tokens = expr_value.split_whitespace().count();
+            if tokens != 1 {
+                *expr = format!("{} = ({});", expr_name, expr_value);
+            }
         });
 
         // output.par_iter_mut().skip(2).for_each(|expr| {

@@ -5,6 +5,7 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::env;
 use std::process;
+use lalrpop_util::ParseError;
 
 #[derive(Debug)]
 pub enum Expr {
@@ -148,9 +149,17 @@ fn main() {
 
         // }
         },
-        Err(err) => {eprintln!("Error: {:?}", err);
-        //print the error expression
-       // println!("{:?}", err.0);
-    },
+        Err(err) => {
+            eprintln!("Error: {:?}", err);
+            if let ParseError::UnrecognizedToken { token, expected } = err {
+                eprintln!("Unrecognized token: {:?}", token);
+                eprintln!("Expected one of: {:?}", expected);
+        
+                // Assuming you have a list of tokens in the parser module
+                //let tokens = parser::get_all_tokens(&input);
+                //let nearby_tokens = find_nearby_tokens(&tokens, &token, 2); // Adjust the range as needed
+                //eprintln!("Nearby tokens: {:?}", nearby_tokens);
+            }
+        },
     }
 }

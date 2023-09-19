@@ -26,16 +26,34 @@ NotOp: String = {
     "!" => "!".to_string(),
 }
 
+
 pub Expr: Expr = {
     <n:VariableStr> => Expr::VariableStr(n),
     <not:NotOp> <e:Expr> => Expr::Not(Box::new(e)), 
     "(" <n:VariableStr> ")" => Expr::VariableStr(n),
+    //"(" <not:NotOp> "(" <n:Expr> ")" ")"=> Expr::Not(Box::new(e)), 
     //"(" <not:NotOp> <e:Expr> ")" => Expr::Not(Box::new(e)),
     //"(" "! " <e:Expr> ")" => Expr::Not(Box::new(e)),
     //"! " <e:Expr> => Expr::Not(Box::new(e)), 
     //"(" <e:Expr> ")" => e,
+    //"(" <not:NotOp> "(" <e:Expr>  ")" ")" => Expr::Not(Box::new(Expr::Lisp(not, Box::new(e)))),
     "(" <not:NotOp> "(" <e1:Expr> <s:Op> <e2:Expr> ")" ")" => Expr::Not(Box::new(Expr::Lisp(s, Box::new(e1), Box::new(e2)))),
     //"(" <not:NotOp> "(" <s:Op> <e1:Expr> <e2:Expr> ")" ")" => Expr::Not(Box::new(Expr::Infix(s, Box::new(e1), Box::new(e2)))),
     "(" <e1:Expr> <s:Op> <e2:Expr> ")" => Expr::Lisp(s, Box::new(e1), Box::new(e2)), 
     //"(" <s:Op> <e1:Expr> <e2:Expr> ")" => Expr::Infix(s, Box::new(e1), Box::new(e2)), 
 }
+
+
+// pub Expr: Expr = {
+//     <n:VariableStr> => Expr::VariableStr(n),
+//     <not:NotOp> <n:VariableStr> =>  Expr::Not(Box::new(Expr::VariableStr(n))),
+//     //<not:NotOp> <e:Expr> => Expr::Not(Box::new(e)),
+//     //"(" <n:VariableStr> ")" => Expr::VariableStr(n),
+//     //"(" <not:NotOp> "("  <e1:Expr> <s:Op> <e2:Expr>  ")" ")" => Expr::Not(Box::new(Expr::Lisp(s, Box::new(e1), Box::new(e2)))),
+//     //"(" <not:NotOp> "(" <n:VariableStr> ")" ")" => Expr::Not(Box::new(Expr::VariableStr(n))),
+//     <not:NotOp> "(" <e:Expr> ")" => Expr::Not(Box::new(e)),
+    
+//     //"(" <not:NotOp> "(" <e:Expr> ")" ")" => Expr::Not(Box::new(e)),
+//     "(" <e1:Expr> <s:Op> <e2:Expr> ")" => Expr::Lisp(s, Box::new(e1), Box::new(e2)), 
+// }
+

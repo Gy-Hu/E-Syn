@@ -12,6 +12,7 @@ def run_aigfuzz(file_count):
     if not os.path.exists("aigfuzz"): os.mkdir("aigfuzz")
     for i in tqdm(range(file_count), desc='Run circuit generator'):
         os.system(f"aigfuzz -c > aigfuzz/fuzz_circuit_{i}.aig")
+        #os.system(f"aigfuzz -c -s > aigfuzz/fuzz_circuit_{i}.aig")
         os.system(
             f"abc -c \"read_aiger aigfuzz/fuzz_circuit_{i}.aig; trim ; write_aiger aigfuzz/fuzz_circuit_{i}.aig\"")
         
@@ -52,7 +53,7 @@ def process_circuits(file_count):
             data, multiple_output=True, output_file_path=f"aigfuzz/fuzz_circuit_{i}.sexpr")
         '''
         
-        os.system("../alpha_utils/infix2lisp/target/release/s-converter \
+        os.system(f"../alpha_utils/infix2lisp/target/release/s-converter \
                   aigfuzz/fuzz_circuit_{i}_input_for_s-converter.txt \
                   aigfuzz/fuzz_circuit_{i}.sexpr")
         
@@ -103,7 +104,7 @@ def parse_data(file_count):
                              'power', 'area', 'delay'])
     
     
-    df.to_csv("fuzz_circuit__analysis_random_size.csv", index=False)
+    df.to_csv("fuzz_circuit_analysis_random_size.csv", index=False)
 
 
 if __name__ == "__main__":
@@ -114,7 +115,7 @@ if __name__ == "__main__":
     import run_beta
     from CircuitParser import CircuitParser
     print(run.__file__)
-    file_count = 10
+    file_count = 100
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)
