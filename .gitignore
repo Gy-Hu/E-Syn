@@ -141,3 +141,4 @@ benchmark/data2converted/
 xgboost_reg/aigfuzz_parallel/
 *.model
 *.csv
+benchmark/converted_circuit/*/*.eqn

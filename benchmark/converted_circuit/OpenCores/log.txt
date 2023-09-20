@@ -1,0 +1,7 @@
+ABC command line: "read_aiger ./qdiv.aig ; write_eqn qdiv.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_aiger ./qtwosComp.aig ; write_eqn qtwosComp.eqn".
+
+ABC command line: "read_aiger ./qadd.aig ; write_eqn qadd.eqn".
+

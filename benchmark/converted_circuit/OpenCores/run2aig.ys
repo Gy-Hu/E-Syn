@@ -1,0 +1,9 @@
+read_verilog qtwosComp.v
+prep -top qtwosComp
+flatten
+memory -nordff
+setundef -undriven -init -expose
+sim -n 1 -w qtwosComp
+techmap
+abc -fast -g AND
+write_aiger -zinit qtwosComp.aig

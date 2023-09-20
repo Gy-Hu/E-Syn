@@ -1,0 +1,80 @@
+ABC command line: "read_blif ./wb_conmax.blif ; write_eqn wb_conmax.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./ethernet.blif ; write_eqn ethernet.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./leon3.blif ; write_eqn leon3.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./steppermotordrive.blif ; write_eqn steppermotordrive.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./leon2.blif ; write_eqn leon2.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./ac97_ctrl.blif ; write_eqn ac97_ctrl.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./systemcdes.blif ; write_eqn systemcdes.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./ss_pcm.blif ; write_eqn ss_pcm.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./systemcaes.blif ; write_eqn systemcaes.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./wb_dma.blif ; write_eqn wb_dma.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./sasc.blif ; write_eqn sasc.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./usb_funct.blif ; write_eqn usb_funct.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./leon3mp.blif ; write_eqn leon3mp.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./pci_bridge32.blif ; write_eqn pci_bridge32.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./netcard.blif ; write_eqn netcard.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./pci_spoci_ctrl.blif ; write_eqn pci_spoci_ctrl.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./tv80.blif ; write_eqn tv80.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./usb_phy.blif ; write_eqn usb_phy.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./pci_conf_cyc_addr_dec.blif ; write_eqn pci_conf_cyc_addr_dec.eqn".
+
+ABC command line: "read_blif ./vga_lcd.blif ; write_eqn vga_lcd.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./mem_ctrl.blif ; write_eqn mem_ctrl.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./des_perf.blif ; write_eqn des_perf.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./simple_spi.blif ; write_eqn simple_spi.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./spi.blif ; write_eqn spi.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./aes_core.blif ; write_eqn aes_core.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./des_area.blif ; write_eqn des_area.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./i2c.blif ; write_eqn i2c.eqn".
+
+Warning: only combinational portion is being written.
