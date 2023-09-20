@@ -137,3 +137,7 @@ sym_reg/simple_circuit_analysis_large.csv
 demos/multi_output_case.eqn
 sym_reg/simple_circuit_analysis_large.csv
 xgboost_reg/aigfuzz/
+benchmark/data2converted/
+xgboost_reg/aigfuzz_parallel/
+*.model
+*.csv
