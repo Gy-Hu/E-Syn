@@ -48,7 +48,7 @@ ABC_NAMESPACE_IMPL_START
 #define PARSE_EQN_FLAG_OPER    3    // after operation symbol is received
 #define PARSE_EQN_FLAG_ERROR   4    // when error is detected
 
-#define PARSE_EQN_STACKSIZE 1000
+#define PARSE_EQN_STACKSIZE 10000
 
 static Hop_Obj_t * Parse_ParserPerformTopOp( Hop_Man_t * pMan, Parse_StackFn_t * pStackFn, int Oper );
 

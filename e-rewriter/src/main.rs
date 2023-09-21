@@ -8,7 +8,7 @@ use std::time::{Instant};
 use std::collections::HashMap;
 use std::path::Path;
 mod utils;
-use utils::{language::*,cost::*,sym_eval::*,extractor::*};
+use utils::{language::*,cost::*,sym_eval::*,extractor::*,xgboost::*};
 fn main() ->Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = env::args().collect();
     let input_path = &args[1];
@@ -29,11 +29,11 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     let runner_iteration_limit = 10000000;
     let egraph_node_limit = 25000000;
     let start = Instant::now();
-    let iterations = 50 as i32;
+    let iterations = 30 as i32;
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
-        .with_time_limit(std::time::Duration::from_secs(100))
+        .with_time_limit(std::time::Duration::from_secs(300))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());
@@ -93,49 +93,65 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     }
 
     let mut sym_cost_dict: HashMap<i32, f64> = HashMap::new();
-    for (key, best) in &results {
-        let result_string =best.to_string();
-        let (size, depth) = count_ast_size_and_depth(&result_string);
-        let operator_counts = count_operators(&result_string);
-        let x1 = operator_counts.get("+").copied().unwrap_or(0.0);
-        let x2 = operator_counts.get("!").copied().unwrap_or(0.0);
-        let x3 = operator_counts.get("*").copied().unwrap_or(0.0);
-        let x4 = operator_counts.get("&").copied().unwrap_or(0.0);
-        println!("+:{},!:{},*:{},&:{},astsize:{},astdepth:{}",x1,x2,x3,x4,size,depth);
+    //version of symbolic_regression
 
-        fn mean(data: &Vec<f64>) -> f64 {
-            data.iter().sum::<f64>() / data.len() as f64
-        }
-        
-        fn std_dev(data: &Vec<f64>, mean: f64) -> f64 {
-            let variance = data.iter().map(|&x| (x - mean).powi(2)).sum::<f64>() / data.len() as f64;
-            variance.sqrt()
-        }
-        
-        fn standardize(data: &Vec<f64>, mean: f64, std_dev: f64) -> Vec<f64> {
-            data.iter().map(|&x| (x - mean) / std_dev).collect()
-        }
-        let x = vec![x1, x2, x3, x4, size, depth];
 
-        let mean = mean(&x);
-        let std_dev = std_dev(&x, mean);
-        let scaled_data_vec = standardize(&x, mean, std_dev);
+    // for (key, best) in &results {
+    //     let result_string =best.to_string();
+    //     let (size, depth) = count_ast_size_and_depth(&result_string);
+    //     let operator_counts = count_operators(&result_string);
+    //     let x1 = operator_counts.get("+").copied().unwrap_or(0.0);
+    //     let x2 = operator_counts.get("!").copied().unwrap_or(0.0);
+    //     let x3 = operator_counts.get("*").copied().unwrap_or(0.0);
+    //     let x4 = operator_counts.get("&").copied().unwrap_or(0.0);
+    //     println!("+:{},!:{},*:{},&:{},astsize:{},astdepth:{}",x1,x2,x3,x4,size,depth);
+
+    //     fn mean(data: &Vec<f64>) -> f64 {
+    //         data.iter().sum::<f64>() / data.len() as f64
+    //     }
+        
+    //     fn std_dev(data: &Vec<f64>, mean: f64) -> f64 {
+    //         let variance = data.iter().map(|&x| (x - mean).powi(2)).sum::<f64>() / data.len() as f64;
+    //         variance.sqrt()
+    //     }
+        
+    //     fn standardize(data: &Vec<f64>, mean: f64, std_dev: f64) -> Vec<f64> {
+    //         data.iter().map(|&x| (x - mean) / std_dev).collect()
+    //     }
+    //     let x = vec![x1, x2, x3, x4, size, depth];
+
+    //     let mean = mean(&x);
+    //     let std_dev = std_dev(&x, mean);
+    //     let scaled_data_vec = standardize(&x, mean, std_dev);
 
      
-        let x1_new =scaled_data_vec[0];
-        let x2_new =scaled_data_vec[1];
-        let x3_new =scaled_data_vec[2];
-        let x4_new =scaled_data_vec[3];
-        let size_new =scaled_data_vec[4];
-        let depth_new =scaled_data_vec[5];
-        //println!("+:{},!:{},*:{},&:{},astsize:{},astdepth:{}",x1_new,x2_new,x3_new,x4_new,size_new,depth_new);
+    //     let x1_new =scaled_data_vec[0];
+    //     let x2_new =scaled_data_vec[1];
+    //     let x3_new =scaled_data_vec[2];
+    //     let x4_new =scaled_data_vec[3];
+    //     let size_new =scaled_data_vec[4];
+    //     let depth_new =scaled_data_vec[5];
+    //     //println!("+:{},!:{},*:{},&:{},astsize:{},astdepth:{}",x1_new,x2_new,x3_new,x4_new,size_new,depth_new);
         
-        let sym_cost = calculate_cost(x1_new,x2_new,x3_new,x4_new,size_new,depth_new);
+    //     let sym_cost = calculate_cost(x1_new,x2_new,x3_new,x4_new,size_new,depth_new);
 
 
 
+    //     sym_cost_dict.insert(*key, sym_cost);
+    // }
+ for (key, best) in &results {
+        let result_string =best.to_string();
+        
+       // let sym_cost = calculate_cost(x1_new,x2_new,x3_new,x4_new,size_new,depth_new);
+        let sym_cost =xgboost(&result_string);
+         
+        
         sym_cost_dict.insert(*key, sym_cost);
     }
+
+
+
+
     let mut min_key = 0; 
     let mut min_value = INFINITY as f64;
     for (key, &value) in &sym_cost_dict {

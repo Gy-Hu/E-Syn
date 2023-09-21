@@ -4,3 +4,4 @@ pub mod random_gen;
 pub mod order_trait;
 pub mod extractor;
 pub mod sym_eval;
+pub mod xgboost;

@@ -66,53 +66,58 @@ impl Analysis<Prop> for ConstantFold {
 }
 
 
+// pub fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
+//     let mut rws: Vec<Rewrite<Prop, ConstantFold>> = vec![
+//         // Boolean theorems of one variable (Table 2.2 pg 62)
+//         rewrite!("null-element1"; "(* ?b 0)" => "0"),
+//         rewrite!("null-element2"; "(+ ?b 1)" => "1"),
+//         rewrite!("complements1"; "(* ?b (! ?b))" => "0"),
+//         rewrite!("complements2"; "(+ ?b (! ?b))" => "1"),
+//         rewrite!("covering1"; "(* ?b (+ ?b ?c))" => "?b"),
+//         rewrite!("covering2"; "(+ ?b (* ?b ?c))" => "?b"),
+//         rewrite!("combining1"; "(+ (* ?b ?c) (* ?b (! ?c)))" => "?b"),
+//         rewrite!("combining2"; "(* (+ ?b ?c) (+ ?b (! ?c)))" => "?b"),
+//     ];
+
+//     rws.extend(rewrite!("identity1"; "(* ?b 1)" <=> "?b"));
+//     rws.extend(rewrite!("identity2'"; "(+ ?b 0)" <=> "?b"));
+//     rws.extend(rewrite!("idempotency1"; "(* ?b ?b)" <=> "?b"));
+//     rws.extend(rewrite!("idempotency2"; "(+ ?b ?b)" <=> "?b"));
+//     rws.extend(rewrite!("involution1"; "(! (! ?b))" <=> "?b"));
+//     rws.extend(rewrite!("commutativity1"; "(* ?b ?c)" <=> "(* ?c ?b)"));
+//     rws.extend(rewrite!("commutativity2"; "(+ ?b ?c)" <=> "(+ ?c ?b)"));
+//     rws.extend(rewrite!("associativity1"; "(*(* ?b ?c) ?d)" <=> "(* ?b (* ?c ?d))"));
+//     rws.extend(rewrite!("associativity2"; "(+(+ ?b ?c) ?d)" <=> "(+ ?b (+ ?c ?d))"));
+//     rws.extend(rewrite!("distributivity1"; "(+ (* ?b ?c) (* ?b ?d))" <=> "(* ?b (+ ?c ?d))"));
+//     rws.extend(rewrite!("distributivity2"; "(* (+ ?b ?c) (+ ?b ?d))" <=> "(+ ?b (* ?c ?d))"));
+//     rws.extend(rewrite!("consensus1"; "(+ (+ (* ?b ?c) (* (! ?b) ?d)) (* ?c ?d))" <=> "(+ (* ?b ?c) (* (! ?b) ?d))"));
+//     rws.extend(rewrite!("consensus2"; "(* (* (+ ?b ?c) (+ (! ?b) ?d)) (+ ?c ?d))" <=> "(* (+ ?b ?c) (+ (! ?b) ?d))"));
+//     rws.extend(rewrite!("de-morgan1"; "(! (* ?b ?c))" <=> "(+ (! ?b) (! ?c))"));
+//     rws.extend(rewrite!("de-morgan2"; "(! (+ ?b ?c))" <=> "(* (! ?b) (! ?c))"));
+
+//     rws
+// }
+// 
 pub fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
-    let mut rws: Vec<Rewrite<Prop, ConstantFold>> = vec![
-        // Boolean theorems of one variable (Table 2.2 pg 62)
+    vec![
+        //version 1
+        //rewrite!("a"; "(-> ?a ?b)"      =>       "(+ (! ?a) ?b)"          ),
+        rewrite!("q"; "(+ ?a (! ?a))"   =>    "1"                   ) ,
         rewrite!("null-element1"; "(* ?b 0)" => "0"),
         rewrite!("null-element2"; "(+ ?b 1)" => "1"),
         rewrite!("complements1"; "(* ?b (! ?b))" => "0"),
-        rewrite!("complements2"; "(+ ?b (! ?b))" => "1"),
-        rewrite!("covering1"; "(* ?b (+ ?b ?c))" => "?b"),
-        rewrite!("covering2"; "(+ ?b (* ?b ?c))" => "?b"),
-        rewrite!("combining1"; "(+ (* ?b ?c) (* ?b (! ?c)))" => "?b"),
-        rewrite!("combining2"; "(* (+ ?b ?c) (+ ?b (! ?c)))" => "?b")
-        // Boolean theorems of several variables (Table 2.3 pg 63)
-    ];
+        rewrite!("identity1"; "(* ?b 1)" => "?b"),
+        rewrite!("identity2'"; "(+ ?b 0)" => "?b"),
 
-    rws.extend(rewrite!("identity1"; "(* ?b 1)" <=> "?b"));
-    rws.extend(rewrite!("identity2'"; "(+ ?b 0)" <=> "?b"));
-    rws.extend(rewrite!("idempotency1"; "(* ?b ?b)" <=> "?b"));
-    rws.extend(rewrite!("idempotency2"; "(+ ?b ?b)" <=> "?b"));
-    rws.extend(rewrite!("involution1"; "(! (! ?b))" <=> "?b"));
-    rws.extend(rewrite!("commutativity1"; "(* ?b ?c)" <=> "(* ?c ?b)"));
-    rws.extend(rewrite!("commutativity2"; "(+ ?b ?c)" <=> "(+ ?c ?b)"));
-    rws.extend(rewrite!("associativity1"; "(*(* ?b ?c) ?d)" <=> "(* ?b (* ?c ?d))"));
-    rws.extend(rewrite!("associativity2"; "(+(+ ?b ?c) ?d)" <=> "(+ ?b (+ ?c ?d))"));
-    rws.extend(rewrite!("distributivity1"; "(+ (* ?b ?c) (* ?b ?d))" <=> "(* ?b (+ ?c ?d))"));
-    rws.extend(rewrite!("distributivity2"; "(* (+ ?b ?c) (+ ?b ?d))" <=> "(+ ?b (* ?c ?d))"));
-    rws.extend(rewrite!("consensus1"; "(+ (+ (* ?b ?c) (* (! ?b) ?d)) (* ?c ?d))" <=> "(+ (* ?b ?c) (* (! ?b) ?d))"));
-    rws.extend(rewrite!("consensus2"; "(* (* (+ ?b ?c) (+ (! ?b) ?d)) (+ ?c ?d))" <=> "(* (+ ?b ?c) (+ (! ?b) ?d))"));
-    rws.extend(rewrite!("de-morgan1"; "(! (* ?b ?c))" <=> "(+ (! ?b) (! ?c))"));
-    rws.extend(rewrite!("de-morgan2"; "(! (+ ?b ?c))" <=> "(* (! ?b) (! ?c))"));
 
-    rws
-}
-/* 
-fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
-    vec![
-        //version 1
-        rewrite!("a"; "(-> ?a ?b)"      =>       "(+ (! ?a) ?b)"          ),
-        rewrite!("b"; "(! (! ?a))"      =>       "?a"                     ),
-        rewrite!("c"; "(+ ?a (+ ?b ?c))"=> "(+ (+ ?a ?b) ?c)"       ),
+        rewrite!("involution1"; "(! (! ?a))"      =>       "?a"                     ),
+        rewrite!("associativity2"; "(+ ?a (+ ?b ?c))"=> "(+ (+ ?a ?b) ?c)"       ),
         rewrite!("d"; "(* ?a (+ ?b ?c))"=> "(+ (* ?a ?b) (* ?a ?c))"),
         rewrite!("e"; "(+ ?a (* ?b ?c))"=> "(* (+ ?a ?b) (+ ?a ?c))"),
         rewrite!("f"; "(+ ?a ?b)"       =>        "(+ ?b ?a)"              ),
         rewrite!("r"; "(* ?a ?b)"       =>        "(* ?b ?a)"              ),
-        //rewrite!("q"; "(+ ?a (! ?a))"   =>    "true"                   ) ,
-        //rewrite!("s"; "(+ ?a true)"     =>         "true"                ) ,
-        rewrite!("g"; "(* ?a true)"     =>         "?a"                  ),
-        rewrite!("y"; "(-> ?a ?b)"      =>    "(-> (! ?b) (! ?a))"     ),
+
+
         rewrite!("th1"; "(+ ?x (* ?x ?y))" => "?x"),
         // Theorem 2: X + !X · Y = X + Y
         rewrite!("th2"; "(+ ?x (* (! ?x) ?y))" => "(+ ?x ?y)"),
@@ -187,4 +192,3 @@ fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     ]
     
 }
-*/

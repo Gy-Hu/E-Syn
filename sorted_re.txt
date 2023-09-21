@@ -1,1 +1,0 @@
-WireLoad   Gates      Cap        Area       Delay     

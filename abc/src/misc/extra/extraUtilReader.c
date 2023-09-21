@@ -32,7 +32,7 @@ ABC_NAMESPACE_IMPL_START
 ///                        DECLARATIONS                              ///
 ////////////////////////////////////////////////////////////////////////
 
-#define EXTRA_BUFFER_SIZE        4*1048576    // 1M   - size of the data chunk stored in memory
+#define EXTRA_BUFFER_SIZE        40*1048576    // 1M   - size of the data chunk stored in memory
 #define EXTRA_OFFSET_SIZE           4096    // 4K   - load new data when less than this is left
 
 #define EXTRA_MINIMUM(a,b)       (((a) < (b))? (a) : (b))

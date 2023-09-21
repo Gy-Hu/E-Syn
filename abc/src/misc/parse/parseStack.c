@@ -101,7 +101,7 @@ void Parse_StackFnPush( Parse_StackFn_t * p, void * bFunc )
     // p->pData[ p->Top++ ] = bFunc;
     if ( p->Top >= p->Size )
     {
-        p->Size *= 10; // double the size
+        p->Size *= 100; // double the size
         p->pData = (void**)realloc(p->pData, p->Size * sizeof(void*));
         if (!p->pData) {
             printf( "Parse_StackFnPush(): Failed to allocate memory!\n" );
@@ -210,7 +210,7 @@ void Parse_StackOpPush( Parse_StackOp_t * p, int Oper )
     // p->pData[ p->Top++ ] = Oper;
     if ( p->Top >= p->Size )
     {
-        p->Size *= 10; // double the size
+        p->Size *= 100; // double the size
         p->pData = (int*)realloc(p->pData, p->Size * sizeof(int));
         if (!p->pData) {
             printf( "Parse_StackOpPush(): Failed to allocate memory!\n" );
