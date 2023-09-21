@@ -8,6 +8,10 @@ use std::time::{Instant};
 use std::collections::HashMap;
 use std::path::Path;
 mod utils;
+use std::error::Error;
+use std::fs::OpenOptions;
+use csv::Writer;
+use csv::WriterBuilder;
 use utils::{language::*,cost::*,sym_eval::*,extractor::*,xgboost::*};
 fn main() ->Result<(), Box<dyn std::error::Error>> {
     let args: Vec<String> = env::args().collect();
@@ -143,13 +147,13 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
         let result_string =best.to_string();
         
        // let sym_cost = calculate_cost(x1_new,x2_new,x3_new,x4_new,size_new,depth_new);
-        let sym_cost =xgboost(&result_string);
-         
+        let (sym_cost,input_para) =xgboost(&result_string);
         
+    
         sym_cost_dict.insert(*key, sym_cost);
     }
 
-
+   
 
 
     let mut min_key = 0; 
@@ -175,8 +179,8 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     println!("done");
 
    let mut count = 0;
+   
    let output_directory = "test_data_beta_runner/";
-
    for min_key in min_keys.iter() {
        let output = results
            .get(min_key)
@@ -187,6 +191,24 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
        if let Ok(mut output_file) = File::create(output_file_path) {
            output_file.write_all(output.as_bytes()).ok();
        }
+       
+       let (sym_cost,input_para) =xgboost(&output);
+       let file = File::create("test_data_beta_runner/data.csv")?;
+        // let file = OpenOptions::new()
+        //     .create(true)
+        //     .append(true)
+        //     .open("test_data_beta_runner/data.csv")?;
+       let mut writer = WriterBuilder::new().from_writer(file);
+        
+       let mut row_data: Vec<String> = input_para
+            .iter()
+            .map(|&value| value.to_string())
+            .collect();
+       let str_key=format!("op{}",count);
+       row_data.push(str_key); 
+       writer.write_record(&row_data)?;
+        
+       writer.flush()?;
        count += 1;
    }
     Ok(())

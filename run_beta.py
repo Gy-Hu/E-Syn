@@ -214,7 +214,7 @@ if __name__ == "__main__":
     output_file_path = "test_data_beta_runner/original_circuit.eqn"
     
     ##
-    #os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 100")
+    os.system("alpha_utils/circuitparser/target/release/circuitparser test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn test_data_beta_runner/input_for_s-converter.txt 100")
 
     #os.system("./circuitparser.out test_data_beta_runner/raw_circuit.eqn test_data_beta_runner/original_circuit.eqn")
 
@@ -222,9 +222,9 @@ if __name__ == "__main__":
     # parser.process()
     
     #load file to convert to s-expression (test)
-    # with open ("test_data_beta_runner/original_circuit.eqn", "r") as myfile:
-    #     # read line by line
-    #     data=myfile.readlines()
+    with open ("test_data_beta_runner/original_circuit.eqn", "r") as myfile:
+        # read line by line
+        data=myfile.readlines()
         
     # # '''
     # # #############################################################################
@@ -235,21 +235,21 @@ if __name__ == "__main__":
     # # '''
         
     # # # if data[2] is 'OUTORDER = po0;\n':
-    # if len(data[2].split(" = ")[1].rstrip().strip(";").split()) == 1:
-    # #     # one output circuit
+    if len(data[2].split(" = ")[1].rstrip().strip(";").split()) == 1:
+    #     # one output circuit
         
-    #      conver_to_sexpr(data[3]) # put the only one equation to the function
-    #      FORMULA_LIST = None
+         conver_to_sexpr(data[3]) # put the only one equation to the function
+         FORMULA_LIST = None
    
-    # else:
-    # #     # multiple output circuit
-    #      print("multiple output circuit")
-    #      multiple_output_flag = True
+    else:
+    #     # multiple output circuit
+         print("multiple output circuit")
+         multiple_output_flag = True
         
-    # #     # load all the content to `convert_to_sexpr()`
-    # #     # file to input string
-    # #     #FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)  
-    #      os.system("alpha_utils/infix2lisp/target/release/s-converter test_data_beta_runner/input_for_s-converter.txt test_data_beta_runner/sexpr_for_egg.txt")
+    #     # load all the content to `convert_to_sexpr()`
+    #     # file to input string
+    #     #FORMULA_LIST = conver_to_sexpr(data, multiple_output = multiple_output_flag)  
+         os.system("alpha_utils/infix2lisp/target/release/s-converter test_data_beta_runner/input_for_s-converter.txt test_data_beta_runner/sexpr_for_egg.txt")
           
         
 
@@ -261,7 +261,7 @@ if __name__ == "__main__":
     # # #############################################################################
     # # '''
     # # # run egg 
-    # os.system("e-rewriter/target/release/e-rewriter test_data_beta_runner/sexpr_for_egg.txt test_data_beta_runner/output_from_egg.txt")
+    os.system("e-rewriter/target/release/e-rewriter test_data_beta_runner/sexpr_for_egg.txt test_data_beta_runner/output_from_egg.txt")
     
     '''
     #############################################################################
@@ -282,15 +282,15 @@ if __name__ == "__main__":
     #     thread.start()
 
     
-    # max_processes = 64  # 设置最大进程数
-    # data = data  # 按需设置 data 的值
-    # multiple_output_flag = True  # 按需设置 multiple_output_flag 的值
+    max_processes = 64  # 设置最大进程数
+    data = data  # 按需设置 data 的值
+    multiple_output_flag = True  # 按需设置 multiple_output_flag 的值
 
-    # with concurrent.futures.ProcessPoolExecutor(max_workers=max_processes) as executor:
-    #     futures = []
-    #     for i in range(30):
-    #         future = executor.submit(convert_to_abc_eqn, data, i, None, multiple_output_flag)
-    #         futures.append(future)
+    with concurrent.futures.ProcessPoolExecutor(max_workers=max_processes) as executor:
+        futures = []
+        for i in range(30):
+            future = executor.submit(convert_to_abc_eqn, data, i, None, multiple_output_flag)
+            futures.append(future)
     
     #python - future - parallel
     # def process_iteration(i):
