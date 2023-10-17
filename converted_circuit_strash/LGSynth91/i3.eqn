@@ -1,0 +1,141 @@
+# Equations for "./LGSynth91/i3" written by ABC on Thu Sep 21 22:02:30 2023
+INORDER = pi000 pi001 pi002 pi003 pi004 pi005 pi006 pi007 pi008 pi009 pi010 
+ pi011 pi012 pi013 pi014 pi015 pi016 pi017 pi018 pi019 pi020 pi021 pi022 
+ pi023 pi024 pi025 pi026 pi027 pi028 pi029 pi030 pi031 pi032 pi033 pi034 
+ pi035 pi036 pi037 pi038 pi039 pi040 pi041 pi042 pi043 pi044 pi045 pi046 
+ pi047 pi048 pi049 pi050 pi051 pi052 pi053 pi054 pi055 pi056 pi057 pi058 
+ pi059 pi060 pi061 pi062 pi063 pi064 pi065 pi066 pi067 pi068 pi069 pi070 
+ pi071 pi072 pi073 pi074 pi075 pi076 pi077 pi078 pi079 pi080 pi081 pi082 
+ pi083 pi084 pi085 pi086 pi087 pi088 pi089 pi090 pi091 pi092 pi093 pi094 
+ pi095 pi096 pi097 pi098 pi099 pi100 pi101 pi102 pi103 pi104 pi105 pi106 
+ pi107 pi108 pi109 pi110 pi111 pi112 pi113 pi114 pi115 pi116 pi117 pi118 
+ pi119 pi120 pi121 pi122 pi123 pi124 pi125 pi126 pi127 pi128 pi129 pi130 
+ pi131;
+OUTORDER = po0 po1 po2 po3 po4 po5;
+po0 = pi000 + pi001;
+po1 = pi002 + pi003;
+new_n141_ = !pi026 * !pi027;
+new_n142_ = !pi024 * !pi025;
+new_n143_ = !pi020 * !pi021;
+new_n144_ = !pi022 * !pi023;
+new_n145_ = !pi018 * !pi019;
+new_n146_ = !pi014 * !pi015;
+new_n147_ = !pi012 * !pi013;
+new_n148_ = !pi016 * !pi017;
+new_n149_ = !pi006 * !pi007;
+new_n150_ = !pi004 * !pi005;
+new_n151_ = !pi008 * !pi009;
+new_n152_ = !pi010 * !pi011;
+new_n153_ = !pi030 * !pi031;
+new_n154_ = !pi028 * !pi029;
+new_n155_ = !pi034 * !pi035;
+new_n156_ = !pi032 * !pi033;
+new_n157_ = !new_n141_ * !new_n142_;
+new_n158_ = !new_n143_ * new_n157_;
+new_n159_ = !new_n144_ * new_n158_;
+new_n160_ = !new_n145_ * new_n159_;
+new_n161_ = !new_n146_ * new_n160_;
+new_n162_ = !new_n147_ * new_n161_;
+new_n163_ = !new_n148_ * new_n162_;
+new_n164_ = !new_n149_ * new_n163_;
+new_n165_ = !new_n150_ * new_n164_;
+new_n166_ = !new_n151_ * new_n165_;
+new_n167_ = !new_n152_ * new_n166_;
+new_n168_ = !new_n153_ * new_n167_;
+new_n169_ = !new_n154_ * new_n168_;
+new_n170_ = !new_n155_ * new_n169_;
+po2 = !new_n156_ * new_n170_;
+new_n172_ = !pi058 * !pi059;
+new_n173_ = !pi056 * !pi057;
+new_n174_ = !pi052 * !pi053;
+new_n175_ = !pi054 * !pi055;
+new_n176_ = !pi050 * !pi051;
+new_n177_ = !pi046 * !pi047;
+new_n178_ = !pi044 * !pi045;
+new_n179_ = !pi048 * !pi049;
+new_n180_ = !pi038 * !pi039;
+new_n181_ = !pi036 * !pi037;
+new_n182_ = !pi040 * !pi041;
+new_n183_ = !pi042 * !pi043;
+new_n184_ = !pi062 * !pi063;
+new_n185_ = !pi060 * !pi061;
+new_n186_ = !pi066 * !pi067;
+new_n187_ = !pi064 * !pi065;
+new_n188_ = !new_n172_ * !new_n173_;
+new_n189_ = !new_n174_ * new_n188_;
+new_n190_ = !new_n175_ * new_n189_;
+new_n191_ = !new_n176_ * new_n190_;
+new_n192_ = !new_n177_ * new_n191_;
+new_n193_ = !new_n178_ * new_n192_;
+new_n194_ = !new_n179_ * new_n193_;
+new_n195_ = !new_n180_ * new_n194_;
+new_n196_ = !new_n181_ * new_n195_;
+new_n197_ = !new_n182_ * new_n196_;
+new_n198_ = !new_n183_ * new_n197_;
+new_n199_ = !new_n184_ * new_n198_;
+new_n200_ = !new_n185_ * new_n199_;
+new_n201_ = !new_n186_ * new_n200_;
+po3 = !new_n187_ * new_n201_;
+new_n203_ = !pi090 * !pi091;
+new_n204_ = !pi088 * !pi089;
+new_n205_ = !pi084 * !pi085;
+new_n206_ = !pi086 * !pi087;
+new_n207_ = !pi082 * !pi083;
+new_n208_ = !pi078 * !pi079;
+new_n209_ = !pi076 * !pi077;
+new_n210_ = !pi080 * !pi081;
+new_n211_ = !pi070 * !pi071;
+new_n212_ = !pi068 * !pi069;
+new_n213_ = !pi072 * !pi073;
+new_n214_ = !pi074 * !pi075;
+new_n215_ = !pi094 * !pi095;
+new_n216_ = !pi092 * !pi093;
+new_n217_ = !pi098 * !pi099;
+new_n218_ = !pi096 * !pi097;
+new_n219_ = !new_n203_ * !new_n204_;
+new_n220_ = !new_n205_ * new_n219_;
+new_n221_ = !new_n206_ * new_n220_;
+new_n222_ = !new_n207_ * new_n221_;
+new_n223_ = !new_n208_ * new_n222_;
+new_n224_ = !new_n209_ * new_n223_;
+new_n225_ = !new_n210_ * new_n224_;
+new_n226_ = !new_n211_ * new_n225_;
+new_n227_ = !new_n212_ * new_n226_;
+new_n228_ = !new_n213_ * new_n227_;
+new_n229_ = !new_n214_ * new_n228_;
+new_n230_ = !new_n215_ * new_n229_;
+new_n231_ = !new_n216_ * new_n230_;
+new_n232_ = !new_n217_ * new_n231_;
+po4 = !new_n218_ * new_n232_;
+new_n234_ = !pi122 * !pi123;
+new_n235_ = !pi120 * !pi121;
+new_n236_ = !pi116 * !pi117;
+new_n237_ = !pi118 * !pi119;
+new_n238_ = !pi114 * !pi115;
+new_n239_ = !pi110 * !pi111;
+new_n240_ = !pi108 * !pi109;
+new_n241_ = !pi112 * !pi113;
+new_n242_ = !pi102 * !pi103;
+new_n243_ = !pi100 * !pi101;
+new_n244_ = !pi104 * !pi105;
+new_n245_ = !pi106 * !pi107;
+new_n246_ = !pi126 * !pi127;
+new_n247_ = !pi124 * !pi125;
+new_n248_ = !pi130 * !pi131;
+new_n249_ = !pi128 * !pi129;
+new_n250_ = !new_n234_ * !new_n235_;
+new_n251_ = !new_n236_ * new_n250_;
+new_n252_ = !new_n237_ * new_n251_;
+new_n253_ = !new_n238_ * new_n252_;
+new_n254_ = !new_n239_ * new_n253_;
+new_n255_ = !new_n240_ * new_n254_;
+new_n256_ = !new_n241_ * new_n255_;
+new_n257_ = !new_n242_ * new_n256_;
+new_n258_ = !new_n243_ * new_n257_;
+new_n259_ = !new_n244_ * new_n258_;
+new_n260_ = !new_n245_ * new_n259_;
+new_n261_ = !new_n246_ * new_n260_;
+new_n262_ = !new_n247_ * new_n261_;
+new_n263_ = !new_n248_ * new_n262_;
+po5 = !new_n249_ * new_n263_;
+

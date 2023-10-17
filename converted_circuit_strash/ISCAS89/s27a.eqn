@@ -1,0 +1,13 @@
+# Equations for "./ISCAS89/s27a" written by ABC on Thu Sep 21 22:02:26 2023
+INORDER = pi0 pi1 pi2 pi3 lo0 lo1 lo2;
+OUTORDER = po0 li0 li1 li2;
+new_n12_ = !pi0 * lo1;
+new_n13_ = !pi3 * !new_n12_;
+new_n14_ = !pi1 * !lo2;
+new_n15_ = !new_n12_ * !new_n14_;
+new_n16_ = !new_n13_ * !new_n15_;
+li1 = !lo0 * new_n16_;
+li0 = pi0 * !li1;
+li2 = !pi2 * !new_n14_;
+po0 = !li1;
+

@@ -1,0 +1,62 @@
+ABC command line: "read_blif ./15-adder.blif ; write_eqn 15-adder.eqn".
+
+ABC command line: "read_blif ./08-adder_col.blif ; write_eqn 08-adder_col.eqn".
+
+ABC command line: "read_blif ./05-adder.blif ; write_eqn 05-adder.eqn".
+
+ABC command line: "read_blif ./04-adder.blif ; write_eqn 04-adder.eqn".
+
+ABC command line: "read_blif ./06-adder.blif ; write_eqn 06-adder.eqn".
+
+ABC command line: "read_blif ./03-adder_col.blif ; write_eqn 03-adder_col.eqn".
+
+ABC command line: "read_blif ./12-adder_col.blif ; write_eqn 12-adder_col.eqn".
+
+ABC command line: "read_blif ./13-adder.blif ; write_eqn 13-adder.eqn".
+
+ABC command line: "read_blif ./04-adder_col.blif ; write_eqn 04-adder_col.eqn".
+
+ABC command line: "read_blif ./12-adder.blif ; write_eqn 12-adder.eqn".
+
+ABC command line: "read_blif ./16-adder_col.blif ; write_eqn 16-adder_col.eqn".
+
+ABC command line: "read_blif ./11-adder_col.blif ; write_eqn 11-adder_col.eqn".
+
+ABC command line: "read_blif ./15-adder_col.blif ; write_eqn 15-adder_col.eqn".
+
+ABC command line: "read_blif ./16-adder.blif ; write_eqn 16-adder.eqn".
+
+ABC command line: "read_blif ./02-adder.blif ; write_eqn 02-adder.eqn".
+
+ABC command line: "read_blif ./06-adder_col.blif ; write_eqn 06-adder_col.eqn".
+
+ABC command line: "read_blif ./03-adder.blif ; write_eqn 03-adder.eqn".
+
+ABC command line: "read_blif ./14-adder_col.blif ; write_eqn 14-adder_col.eqn".
+
+ABC command line: "read_blif ./02-adder_col.blif ; write_eqn 02-adder_col.eqn".
+
+ABC command line: "read_blif ./14-adder.blif ; write_eqn 14-adder.eqn".
+
+ABC command line: "read_blif ./13-adder_col.blif ; write_eqn 13-adder_col.eqn".
+
+ABC command line: "read_blif ./11-adder.blif ; write_eqn 11-adder.eqn".
+
+ABC command line: "read_blif ./10-adder.blif ; write_eqn 10-adder.eqn".
+
+ABC command line: "read_blif ./01-adder.blif ; write_eqn 01-adder.eqn".
+
+ABC command line: "read_blif ./07-adder.blif ; write_eqn 07-adder.eqn".
+
+ABC command line: "read_blif ./09-adder_col.blif ; write_eqn 09-adder_col.eqn".
+
+ABC command line: "read_blif ./08-adder.blif ; write_eqn 08-adder.eqn".
+
+ABC command line: "read_blif ./09-adder.blif ; write_eqn 09-adder.eqn".
+
+ABC command line: "read_blif ./05-adder_col.blif ; write_eqn 05-adder_col.eqn".
+
+ABC command line: "read_blif ./10-adder_col.blif ; write_eqn 10-adder_col.eqn".
+
+ABC command line: "read_blif ./07-adder_col.blif ; write_eqn 07-adder_col.eqn".
+

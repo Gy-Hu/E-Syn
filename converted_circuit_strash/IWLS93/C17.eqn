@@ -1,0 +1,10 @@
+# Equations for "./IWLS93/C17" written by ABC on Thu Sep 21 22:02:37 2023
+INORDER = p_1gat_0_ p_6gat_3_ p_7gat_4_ p_2gat_1_ p_3gat_2_;
+OUTORDER = p_22gat_10_ p_23gat_9_;
+new_n8_ = p_6gat_3_ * p_3gat_2_;
+new_n9_ = p_2gat_1_ * !new_n8_;
+new_n10_ = p_1gat_0_ * p_3gat_2_;
+p_22gat_10_ = new_n9_ + new_n10_;
+new_n12_ = p_7gat_4_ * !new_n8_;
+p_23gat_9_ = new_n9_ + new_n12_;
+

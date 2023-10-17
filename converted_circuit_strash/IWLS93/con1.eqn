@@ -1,0 +1,24 @@
+# Equations for "./IWLS93/con1" written by ABC on Thu Sep 21 22:02:35 2023
+INORDER = a b c d f g h;
+OUTORDER = f0 f1;
+new_n10_ = a * b;
+new_n11_ = b * !f;
+new_n12_ = h * new_n11_;
+new_n13_ = !b * !c;
+new_n14_ = d * new_n13_;
+new_n15_ = c * f;
+new_n16_ = d * new_n15_;
+new_n17_ = !new_n12_ * !new_n14_;
+new_n18_ = !new_n16_ * new_n17_;
+f0 = new_n10_ + !new_n18_;
+new_n20_ = !a * !b;
+new_n21_ = !a * f;
+new_n22_ = !new_n20_ * !new_n21_;
+new_n23_ = !b * f;
+new_n24_ = !d * new_n23_;
+new_n25_ = a * new_n11_;
+new_n26_ = !f * !g;
+new_n27_ = !new_n24_ * !new_n25_;
+new_n28_ = !new_n26_ * new_n27_;
+f1 = !new_n22_ + !new_n28_;
+

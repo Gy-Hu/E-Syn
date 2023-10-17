@@ -1,0 +1,10 @@
+# Equations for "./ISCAS85/c17" written by ABC on Thu Sep 21 22:02:40 2023
+INORDER = pi0 pi1 pi2 pi3 pi4;
+OUTORDER = po0 po1;
+new_n8_ = pi0 * pi2;
+new_n9_ = pi2 * pi3;
+new_n10_ = pi1 * !new_n9_;
+po0 = new_n8_ + new_n10_;
+new_n12_ = pi4 * !new_n9_;
+po1 = new_n10_ + new_n12_;
+

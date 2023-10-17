@@ -1,0 +1,34 @@
+# Equations for "./IWLS93/decod" written by ABC on Thu Sep 21 22:02:39 2023
+INORDER = pa pb pc pd pe;
+OUTORDER = pp pq pr ps pt pu pf pg ph pi pj pk pl pm pn po;
+new_n22_ = !pa * pe;
+new_n23_ = pb * pd;
+new_n24_ = new_n22_ * new_n23_;
+pp = !pc * new_n24_;
+new_n26_ = pb * !pd;
+new_n27_ = new_n22_ * new_n26_;
+pq = !pc * new_n27_;
+new_n29_ = !pb * pd;
+new_n30_ = new_n22_ * new_n29_;
+pr = pc * new_n30_;
+new_n32_ = !pb * !pd;
+new_n33_ = new_n22_ * new_n32_;
+ps = pc * new_n33_;
+pt = !pc * new_n30_;
+pu = !pc * new_n33_;
+new_n37_ = pa * pe;
+new_n38_ = new_n23_ * new_n37_;
+pf = pc * new_n38_;
+new_n40_ = new_n26_ * new_n37_;
+pg = pc * new_n40_;
+ph = !pc * new_n38_;
+pi = !pc * new_n40_;
+new_n44_ = new_n29_ * new_n37_;
+pj = pc * new_n44_;
+new_n46_ = new_n32_ * new_n37_;
+pk = pc * new_n46_;
+pl = !pc * new_n44_;
+pm = !pc * new_n46_;
+pn = pc * new_n24_;
+po = pc * new_n27_;
+

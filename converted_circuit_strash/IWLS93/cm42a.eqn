@@ -1,0 +1,22 @@
+# Equations for "./IWLS93/cm42a" written by ABC on Thu Sep 21 22:02:35 2023
+INORDER = pa pb pc pd;
+OUTORDER = pe pf pg ph pi pj pk pl pm pn;
+new_n15_ = !pc * !pd;
+new_n16_ = !pa * !pb;
+pe = !new_n15_ + !new_n16_;
+new_n18_ = pa * !pb;
+pf = !new_n15_ + !new_n18_;
+new_n20_ = !pa * pb;
+pg = !new_n15_ + !new_n20_;
+new_n22_ = pa * pb;
+ph = !new_n15_ + !new_n22_;
+new_n24_ = !pd * !new_n15_;
+pi = !new_n16_ + !new_n24_;
+pj = !new_n18_ + !new_n24_;
+pk = !new_n20_ + !new_n24_;
+pl = !new_n22_ + !new_n24_;
+new_n29_ = !pb * !pc;
+new_n30_ = pd * new_n29_;
+pm = pa + !new_n30_;
+pn = !pa + !new_n30_;
+

@@ -1,0 +1,18 @@
+# Equations for "./IWLS93/daio" written by ABC on Thu Sep 21 22:02:35 2023
+INORDER = in clk ny4 ny6 nx1 nx2;
+OUTORDER = viol sample n10 n15 n20 n24;
+new_n13_ = nx1 * nx2;
+new_n14_ = !nx1 * !nx2;
+new_n15_1_ = !new_n13_ * !new_n14_;
+new_n16_ = in * nx1;
+new_n17_ = !in * !nx1;
+new_n18_ = !new_n16_ * !new_n17_;
+viol = !new_n15_1_ * !new_n18_;
+n10 = !ny4 + viol;
+new_n21_ = !ny4 * new_n15_1_;
+new_n22_ = ny4 * ny6;
+n15 = new_n21_ + new_n22_;
+sample = ny6;
+n20 = in;
+n24 = nx1;
+

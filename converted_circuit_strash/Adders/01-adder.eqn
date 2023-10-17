@@ -1,0 +1,15 @@
+# Equations for "./Adders/01-adder" written by ABC on Thu Sep 21 22:02:41 2023
+INORDER = cin a0 b0;
+OUTORDER = cout s0;
+new_n6_ = a0 * b0;
+new_n7_ = !a0 * !b0;
+new_n8_ = cin * !new_n7_;
+cout = new_n6_ + new_n8_;
+new_n10_ = !new_n6_ * !new_n7_;
+new_n11_ = cin * !new_n10_;
+new_n12_ = !a0 * b0;
+new_n13_ = a0 * !b0;
+new_n14_ = !new_n12_ * !new_n13_;
+new_n15_ = !cin * !new_n14_;
+s0 = new_n11_ + new_n15_;
+

@@ -1,0 +1,13 @@
+# Equations for "./LGSynth89/majority" written by ABC on Thu Sep 21 22:02:24 2023
+INORDER = pi0 pi1 pi2 pi3 pi4;
+OUTORDER = po0;
+new_n7_ = pi1 * pi2;
+new_n8_ = pi4 * new_n7_;
+new_n9_ = !pi0 * !new_n8_;
+new_n10_ = pi2 * pi4;
+new_n11_ = !pi1 * !new_n10_;
+new_n12_ = !new_n9_ * !new_n11_;
+new_n13_ = !pi2 * !pi4;
+new_n14_ = new_n12_ * !new_n13_;
+po0 = pi3 + new_n14_;
+

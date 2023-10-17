@@ -1,0 +1,42 @@
+# Equations for "./LGSynth91/cm163a" written by ABC on Thu Sep 21 22:02:29 2023
+INORDER = pi00 pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08 pi09 pi10 pi11 pi12 
+ pi13 pi14 pi15;
+OUTORDER = po0 po1 po2 po3 po4;
+new_n22_ = pi02 * pi03;
+new_n23_ = pi09 * new_n22_;
+new_n24_ = !pi09 * !new_n22_;
+new_n25_ = !new_n23_ * !new_n24_;
+new_n26_ = pi04 * pi05;
+new_n27_ = !pi04 * pi05;
+new_n28_ = !new_n25_ * new_n26_;
+new_n29_ = pi00 * new_n27_;
+po0 = !new_n28_ * !new_n29_;
+new_n31_ = !pi09 * new_n22_;
+new_n32_ = pi11 * new_n31_;
+new_n33_ = !pi11 * !new_n31_;
+new_n34_ = !new_n32_ * !new_n33_;
+new_n35_ = new_n26_ * !new_n34_;
+new_n36_ = pi01 * new_n27_;
+po1 = !new_n35_ * !new_n36_;
+new_n38_ = !pi11 * new_n22_;
+new_n39_ = !pi09 * new_n38_;
+new_n40_ = pi12 * new_n39_;
+new_n41_ = !pi12 * !new_n39_;
+new_n42_ = !new_n40_ * !new_n41_;
+new_n43_ = new_n26_ * !new_n42_;
+new_n44_ = pi06 * new_n27_;
+po2 = !new_n43_ * !new_n44_;
+new_n46_ = !pi09 * !pi11;
+new_n47_ = !pi12 * new_n46_;
+new_n48_ = new_n22_ * new_n47_;
+new_n49_ = pi13 * new_n48_;
+new_n50_ = !pi13 * !new_n48_;
+new_n51_ = !new_n49_ * !new_n50_;
+new_n52_ = new_n26_ * !new_n51_;
+new_n53_ = pi07 * new_n27_;
+po3 = !new_n52_ * !new_n53_;
+new_n55_ = pi08 * pi15;
+new_n56_ = pi14 * new_n55_;
+new_n57_ = pi10 * new_n56_;
+po4 = pi03 * new_n57_;
+

@@ -1,0 +1,37 @@
+# Equations for "./Adders/03-adder" written by ABC on Thu Sep 21 22:02:41 2023
+INORDER = a2 a1 b2 b1 a0 b0 cin;
+OUTORDER = cout s2 s1 s0;
+new_n12_ = a0 * b0;
+new_n13_ = !a0 * !b0;
+new_n14_ = cin * !new_n13_;
+new_n15_ = !new_n12_ * !new_n14_;
+new_n16_ = a1 * b1;
+new_n17_ = !a1 * !b1;
+new_n18_ = !new_n15_ * !new_n17_;
+new_n19_ = !new_n16_ * !new_n18_;
+new_n20_ = a2 * b2;
+new_n21_ = !a2 * !b2;
+new_n22_ = !new_n19_ * !new_n21_;
+cout = new_n20_ + new_n22_;
+new_n24_ = !new_n20_ * !new_n21_;
+new_n25_ = !new_n19_ * !new_n24_;
+new_n26_ = !a2 * b2;
+new_n27_ = a2 * !b2;
+new_n28_ = !new_n26_ * !new_n27_;
+new_n29_ = new_n19_ * !new_n28_;
+s2 = new_n25_ + new_n29_;
+new_n31_ = !new_n16_ * !new_n17_;
+new_n32_ = !new_n15_ * !new_n31_;
+new_n33_ = !a1 * b1;
+new_n34_ = a1 * !b1;
+new_n35_ = !new_n33_ * !new_n34_;
+new_n36_ = new_n15_ * !new_n35_;
+s1 = new_n32_ + new_n36_;
+new_n38_ = !new_n12_ * !new_n13_;
+new_n39_ = cin * !new_n38_;
+new_n40_ = !a0 * b0;
+new_n41_ = a0 * !b0;
+new_n42_ = !new_n40_ * !new_n41_;
+new_n43_ = !cin * !new_n42_;
+s0 = new_n39_ + new_n43_;
+

@@ -1,0 +1,14 @@
+# Equations for "aigfuzz/simple_circuit_2" written by ABC on Mon Aug 28 23:27:08 2023
+INORDER = pi00 pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08 pi09 pi10 pi11 pi12;
+OUTORDER = po00 po01 po02 po03 po04 po05 po06 po07 po08 po09 po10;
+po08 = ((pi00 * pi02) * !(pi05 * pi08)) + (!(pi00 * pi02) * (!pi03 * pi05));
+po00 = !po08 + !(!(((!pi04 * !pi07) * (pi01 * !pi09)) * !((pi00 * pi02) * (pi01 * !pi09))) * (((pi00 * pi02) * !(pi06 * !pi09)) * !(!(!pi03 * pi05) * (pi03 * pi07))));
+po01 = !((pi00 * pi02) * !(pi05 * pi08)) + (!(!pi04 * !pi07) * !(!pi01 * !pi07));
+po02 = ((pi00 * pi02) * !(pi06 * !pi09)) + !(pi05 * (!pi03 * pi05));
+po03 = (pi01 * !pi09) + ((!pi04 * !pi07) * (pi01 * !pi09));
+po04 = (!(!(!pi04 * !pi07) * !(!pi01 * !pi07)) * ((pi03 * pi07) * (!pi05 * !pi07))) + !(!(!pi01 * !pi07) * (!(pi01 * !pi09) * (!pi01 * !pi07)));
+po05 = !(pi03 * pi07) + !(pi05 * (!pi03 * pi05));
+po06 = !pi11 + !(!(!pi03 * pi05) * (pi03 * pi07));
+po07 = pi11 * ((pi00 * pi02) * !(pi06 * !pi09));
+po09 = ((pi00 * pi02) * !(pi06 * !pi09)) + !(pi10 * (!pi04 * pi08));
+po10 = pi12;

@@ -1,0 +1,26 @@
+# Equations for "./Adders/02-adder" written by ABC on Thu Sep 21 22:02:41 2023
+INORDER = a1 b1 a0 b0 cin;
+OUTORDER = cout s1 s0;
+new_n9_ = a0 * b0;
+new_n10_ = !a0 * !b0;
+new_n11_ = cin * !new_n10_;
+new_n12_ = !new_n9_ * !new_n11_;
+new_n13_ = a1 * b1;
+new_n14_ = !a1 * !b1;
+new_n15_ = !new_n12_ * !new_n14_;
+cout = new_n13_ + new_n15_;
+new_n17_ = !new_n13_ * !new_n14_;
+new_n18_ = !new_n12_ * !new_n17_;
+new_n19_ = !a1 * b1;
+new_n20_ = a1 * !b1;
+new_n21_ = !new_n19_ * !new_n20_;
+new_n22_ = new_n12_ * !new_n21_;
+s1 = new_n18_ + new_n22_;
+new_n24_ = !new_n9_ * !new_n10_;
+new_n25_ = cin * !new_n24_;
+new_n26_ = !a0 * b0;
+new_n27_ = a0 * !b0;
+new_n28_ = !new_n26_ * !new_n27_;
+new_n29_ = !cin * !new_n28_;
+s0 = new_n25_ + new_n29_;
+

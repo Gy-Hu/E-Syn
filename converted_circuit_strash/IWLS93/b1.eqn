@@ -1,0 +1,20 @@
+# Equations for "./IWLS93/b1" written by ABC on Thu Sep 21 22:02:37 2023
+INORDER = pa pb pc;
+OUTORDER = pd pe pf pg;
+new_n8_ = !pa * !pb;
+new_n9_ = pa * pb;
+pe = !new_n8_ * !new_n9_;
+new_n11_ = !pb * !pc;
+new_n12_ = pa * pc;
+new_n13_ = !pa * pb;
+new_n14_ = pa * !pb;
+new_n15_ = pb * pc;
+new_n16_ = !pa * !pc;
+new_n17_ = !new_n11_ * !new_n12_;
+new_n18_ = !new_n13_ * new_n17_;
+new_n19_ = !new_n14_ * new_n18_;
+new_n20_ = !new_n15_ * new_n19_;
+pf = !new_n16_ * new_n20_;
+pg = !pc;
+pd = pc;
+

@@ -1,0 +1,46 @@
+# Equations for "./LGSynth89/tcon" written by ABC on Thu Sep 21 22:02:23 2023
+INORDER = pi00 pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08 pi09 pi10 pi11 pi12 
+ pi13 pi14 pi15 pi16;
+OUTORDER = po00 po01 po02 po03 po04 po05 po06 po07 po08 po09 po10 po11 po12 
+ po13 po14 po15;
+new_n34_ = !pi00 * pi08;
+new_n35_ = pi09 * !new_n34_;
+new_n36_ = pi00 * pi08;
+po08 = new_n35_ + new_n36_;
+new_n38_ = !pi01 * pi08;
+new_n39_ = pi10 * !new_n38_;
+new_n40_ = pi01 * pi08;
+po09 = new_n39_ + new_n40_;
+new_n42_ = !pi02 * pi08;
+new_n43_ = pi11 * !new_n42_;
+new_n44_ = pi02 * pi08;
+po10 = new_n43_ + new_n44_;
+new_n46_ = !pi03 * pi08;
+new_n47_ = pi12 * !new_n46_;
+new_n48_ = pi03 * pi08;
+po11 = new_n47_ + new_n48_;
+new_n50_ = !pi04 * pi08;
+new_n51_ = pi13 * !new_n50_;
+new_n52_ = pi04 * pi08;
+po12 = new_n51_ + new_n52_;
+new_n54_ = !pi05 * pi08;
+new_n55_ = pi14 * !new_n54_;
+new_n56_ = pi05 * pi08;
+po13 = new_n55_ + new_n56_;
+new_n58_ = !pi06 * pi08;
+new_n59_ = pi15 * !new_n58_;
+new_n60_ = pi06 * pi08;
+po14 = new_n59_ + new_n60_;
+new_n62_ = !pi07 * pi08;
+new_n63_ = pi16 * !new_n62_;
+new_n64_ = pi07 * pi08;
+po15 = new_n63_ + new_n64_;
+po00 = pi09;
+po01 = pi10;
+po02 = pi11;
+po03 = pi12;
+po04 = pi13;
+po05 = pi14;
+po06 = pi15;
+po07 = pi16;
+

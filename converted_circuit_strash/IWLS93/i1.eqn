@@ -1,0 +1,44 @@
+# Equations for "./IWLS93/i1" written by ABC on Thu Sep 21 22:02:36 2023
+INORDER = pv27_3 pv7_2 pv7_1 pv10_0 pv11_0 pv14_0 pv22_5 pv27_0 pv7_7 
+ pv15_0 pv22_4 pv12_0 pv29_0 pv13_0 pv7_4 pv18_0 pv7_3 pv8_0 pv7_6 pv9_0 
+ pv16_0 pv22_3 pv7_5 pv17_0 pv22_2;
+OUTORDER = pv27_4 pv32_0 pv33_0 pv34_0 pv35_0 pv36_0 pv37_0 pv38_0 pv27_2 
+ pv27_1 pv28_0 pv30_0 pv31_0;
+pv27_4 = pv27_3 + pv22_2;
+pv32_0 = pv11_0 * pv22_5;
+new_n41_ = pv14_0 * !pv22_5;
+pv33_0 = pv22_3 * new_n41_;
+new_n43_ = !pv22_5 * pv17_0;
+pv34_0 = pv22_3 * new_n43_;
+pv35_0 = pv22_4 * new_n41_;
+pv36_0 = pv22_4 * new_n43_;
+pv37_0 = !pv22_5 * pv16_0;
+new_n48_ = !pv15_0 * !pv12_0;
+new_n49_ = !pv14_0 * new_n48_;
+pv38_0 = pv13_0 + !new_n49_;
+new_n51_ = !pv7_4 * !pv7_6;
+new_n52_ = !pv7_7 * new_n51_;
+new_n53_ = !pv7_3 * new_n52_;
+new_n54_ = !pv7_5 * new_n53_;
+new_n55_ = !pv7_1 * new_n54_;
+new_n56_ = !pv7_2 * new_n55_;
+new_n57_ = pv29_0 * !new_n56_;
+new_n58_ = pv27_0 * new_n57_;
+new_n59_ = pv29_0 * !pv9_0;
+new_n60_ = pv8_0 * new_n59_;
+new_n61_ = new_n56_ * new_n60_;
+pv27_2 = new_n58_ + new_n61_;
+new_n63_ = pv29_0 * pv9_0;
+new_n64_ = pv8_0 * new_n63_;
+new_n65_ = new_n56_ * new_n64_;
+new_n66_ = !pv27_0 * pv29_0;
+new_n67_ = pv29_0 * !pv8_0;
+new_n68_ = new_n56_ * new_n67_;
+new_n69_ = !pv9_0 * new_n68_;
+new_n70_ = !new_n65_ * !new_n66_;
+pv27_1 = new_n69_ + !new_n70_;
+pv28_0 = pv10_0 + new_n68_;
+pv30_0 = pv22_5 * pv18_0;
+new_n74_ = pv11_0 * !pv22_5;
+pv31_0 = pv32_0 + new_n74_;
+

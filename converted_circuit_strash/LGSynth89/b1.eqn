@@ -1,0 +1,18 @@
+# Equations for "./LGSynth89/b1" written by ABC on Thu Sep 21 22:02:24 2023
+INORDER = pi0 pi1 pi2;
+OUTORDER = po0 po1 po2 po3;
+new_n8_ = pi0 * pi1;
+new_n9_ = !pi0 * !pi1;
+po1 = !new_n8_ * !new_n9_;
+new_n11_ = pi1 * !pi2;
+new_n12_ = pi0 * !new_n11_;
+new_n13_ = !pi1 * pi2;
+new_n14_ = !pi0 * !new_n13_;
+new_n15_ = !new_n12_ * !new_n14_;
+new_n16_ = !pi1 * !pi2;
+new_n17_ = new_n15_ * !new_n16_;
+new_n18_ = pi1 * pi2;
+po2 = new_n17_ * !new_n18_;
+po3 = !pi2;
+po0 = pi2;
+

@@ -1,0 +1,25 @@
+# Equations for "./LGSynth89/cm138a" written by ABC on Thu Sep 21 22:02:24 2023
+INORDER = pi0 pi1 pi2 pi3 pi4 pi5;
+OUTORDER = po0 po1 po2 po3 po4 po5 po6 po7;
+new_n15_ = pi3 * !pi5;
+new_n16_ = !pi4 * new_n15_;
+new_n17_ = !pi2 * new_n16_;
+new_n18_ = !pi0 * new_n17_;
+po0 = pi1 + !new_n18_;
+new_n20_ = pi0 * new_n17_;
+po1 = pi1 + !new_n20_;
+po2 = !pi1 + !new_n18_;
+po3 = !pi1 + !new_n20_;
+new_n24_ = !pi0 * !pi1;
+new_n25_ = pi2 * new_n24_;
+po4 = !new_n16_ + !new_n25_;
+new_n27_ = pi0 * !pi1;
+new_n28_ = pi2 * new_n27_;
+po5 = !new_n16_ + !new_n28_;
+new_n30_ = !pi0 * pi1;
+new_n31_ = pi2 * new_n30_;
+po6 = !new_n16_ + !new_n31_;
+new_n33_ = pi0 * pi1;
+new_n34_ = pi2 * new_n33_;
+po7 = !new_n16_ + !new_n34_;
+

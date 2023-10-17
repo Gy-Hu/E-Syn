@@ -1,0 +1,35 @@
+# Equations for "./LGSynth89/decod" written by ABC on Thu Sep 21 22:02:25 2023
+INORDER = pi0 pi1 pi2 pi3 pi4;
+OUTORDER = po00 po01 po02 po03 po04 po05 po06 po07 po08 po09 po10 po11 po12 
+ po13 po14 po15;
+new_n22_ = pi0 * pi4;
+new_n23_ = pi1 * new_n22_;
+new_n24_ = pi3 * new_n23_;
+po00 = pi2 * new_n24_;
+new_n26_ = !pi3 * new_n23_;
+po01 = pi2 * new_n26_;
+po02 = !pi2 * new_n24_;
+po03 = !pi2 * new_n26_;
+new_n30_ = !pi1 * new_n22_;
+new_n31_ = pi3 * new_n30_;
+po04 = pi2 * new_n31_;
+new_n33_ = !pi3 * new_n30_;
+po05 = pi2 * new_n33_;
+po06 = !pi2 * new_n31_;
+po07 = !pi2 * new_n33_;
+new_n37_ = !pi0 * pi4;
+new_n38_ = pi1 * new_n37_;
+new_n39_ = pi3 * new_n38_;
+po08 = pi2 * new_n39_;
+new_n41_ = !pi3 * new_n38_;
+po09 = pi2 * new_n41_;
+po10 = !pi2 * new_n39_;
+po11 = !pi2 * new_n41_;
+new_n45_ = !pi1 * new_n37_;
+new_n46_ = pi3 * new_n45_;
+po12 = pi2 * new_n46_;
+new_n48_ = !pi3 * new_n45_;
+po13 = pi2 * new_n48_;
+po14 = !pi2 * new_n46_;
+po15 = !pi2 * new_n48_;
+

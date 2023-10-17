@@ -1,0 +1,29 @@
+Make sure you have
+
+  abc
+  aigmove
+  aigreset
+  aigmove
+  aigmiter
+
+installed and in your PATH.
+
+Then add all or link all the AIGER benchmarks for which you want
+to generate miters with suffix '.aig' into 'original'.  You can
+use circuits with only outputs, with single or multiple bad state
+properties and also with environment constraints.  But liveness
+and fairness are not supported.
+
+Then run 'generate.sh' which will first move outputs and reset non-zero
+initialized latches.  The result of this first phase is stored in
+the 'move' directory.  Next the trivial combinational miters between
+two structural identical copies of the moved circuits are generated in
+'nonopt'.  Note, that next state functions are treated as outputs and
+are also checked for equivalence.  Then ABC is used to optimized
+the moved circuits.  The result is copied to the 'abc' directory.
+This finally allows to generate more realistic miters between
+the moved circuits and its optimized variant in 'opt'.
+
+Armin Biere
+Johannes Kepler University
+Fri Dec 21 10:17:07 CET 2012

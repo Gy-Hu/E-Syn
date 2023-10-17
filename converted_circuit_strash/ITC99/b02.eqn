@@ -1,0 +1,25 @@
+# Equations for "./ITC99/b02" written by ABC on Thu Sep 21 22:02:18 2023
+INORDER = pi0 lo0 lo1 lo2 lo3;
+OUTORDER = po0 li0 li1 li2 li3;
+new_n11_ = lo1 * !lo3;
+li0 = !lo2 * new_n11_;
+new_n13_ = !pi0 * lo1;
+new_n14_ = pi0 * !lo1;
+new_n15_ = !lo3 * !new_n13_;
+new_n16_ = !new_n14_ * new_n15_;
+new_n17_ = lo2 * !new_n16_;
+new_n18_ = !pi0 * !lo1;
+new_n19_ = lo3 * !new_n18_;
+li1 = new_n17_ + new_n19_;
+new_n21_ = lo2 * !lo3;
+new_n22_ = !lo1 * new_n21_;
+new_n23_ = !pi0 * !lo2;
+new_n24_ = !lo1 * !new_n23_;
+new_n25_ = lo3 * !new_n24_;
+li2 = new_n22_ + new_n25_;
+new_n27_ = lo3 * !new_n14_;
+new_n28_ = !lo2 * !new_n27_;
+new_n29_ = !lo3 * new_n18_;
+li3 = new_n28_ + new_n29_;
+po0 = lo0;
+
