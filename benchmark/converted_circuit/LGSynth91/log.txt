@@ -1,0 +1,310 @@
+ABC command line: "read_blif ./too_large.blif ; short_names; write_eqn too_large.eqn".
+
+ABC command line: "read_blif ./mux.blif ; short_names; write_eqn mux.eqn".
+
+ABC command line: "read_blif ./parity.blif ; short_names; write_eqn parity.eqn".
+
+ABC command line: "read_blif ./s838.1.blif ; short_names; write_eqn s838.1.eqn".
+
+Line 6: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./C880.blif ; short_names; write_eqn C880.eqn".
+
+ABC command line: "read_blif ./mult32b.blif ; short_names; write_eqn mult32b.eqn".
+
+Warning: Constant-0 drivers added to 1 non-driven nets in network "MultiplierB_32":
+96
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./cht.blif ; short_names; write_eqn cht.eqn".
+
+ABC command line: "read_blif ./pcler8.blif ; short_names; write_eqn pcler8.eqn".
+
+ABC command line: "read_blif ./ttt2.blif ; short_names; write_eqn ttt2.eqn".
+
+ABC command line: "read_blif ./frg2.blif ; short_names; write_eqn frg2.eqn".
+
+ABC command line: "read_blif ./sbc.blif ; short_names; write_eqn sbc.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./term1.blif ; short_names; write_eqn term1.eqn".
+
+ABC command line: "read_blif ./s5378.blif ; short_names; write_eqn s5378.eqn".
+
+Line 14: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./c8.blif ; short_names; write_eqn c8.eqn".
+
+ABC command line: "read_blif ./comp.blif ; short_names; write_eqn comp.eqn".
+
+ABC command line: "read_blif ./cu.blif ; short_names; write_eqn cu.eqn".
+
+ABC command line: "read_blif ./frg1.blif ; short_names; write_eqn frg1.eqn".
+
+ABC command line: "read_blif ./mm9b.blif ; short_names; write_eqn mm9b.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s444.blif ; short_names; write_eqn s444.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s13207.1.blif ; short_names; write_eqn s13207.1.eqn".
+
+Line 18: Skipping line ".wire_load_slope 0.00".
+Warning: Constant-0 drivers added to 5 non-driven nets in network "s13207.1.bench":
+g1205, g1193, g1197, g1201 ...
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./vda.blif ; short_names; write_eqn vda.eqn".
+
+ABC command line: "read_blif ./pcle.blif ; short_names; write_eqn pcle.eqn".
+
+ABC command line: "read_blif ./cm163a.blif ; short_names; write_eqn cm163a.eqn".
+
+ABC command line: "read_blif ./i4.blif ; short_names; write_eqn i4.eqn".
+
+ABC command line: "read_blif ./C1908.blif ; short_names; write_eqn C1908.eqn".
+
+ABC command line: "read_blif ./cm150a.blif ; short_names; write_eqn cm150a.eqn".
+
+ABC command line: "read_blif ./dsip.blif ; short_names; write_eqn dsip.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./my_adder.blif ; short_names; write_eqn my_adder.eqn".
+
+ABC command line: "read_blif ./sct.blif ; short_names; write_eqn sct.eqn".
+
+ABC command line: "read_blif ./cm85a.blif ; short_names; write_eqn cm85a.eqn".
+
+ABC command line: "read_blif ./alu4.blif ; short_names; write_eqn alu4.eqn".
+
+ABC command line: "read_blif ./s9234.1.blif ; short_names; write_eqn s9234.1.eqn".
+
+Line 9: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./x1.blif ; short_names; write_eqn x1.eqn".
+
+ABC command line: "read_blif ./pm1.blif ; short_names; write_eqn pm1.eqn".
+
+ABC command line: "read_blif ./count.blif ; short_names; write_eqn count.eqn".
+
+ABC command line: "read_blif ./mult16b.blif ; short_names; write_eqn mult16b.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./cm138a.blif ; short_names; write_eqn cm138a.eqn".
+
+ABC command line: "read_blif ./t481.blif ; short_names; write_eqn t481.eqn".
+
+ABC command line: "read_blif ./cm152a.blif ; short_names; write_eqn cm152a.eqn".
+
+ABC command line: "read_blif ./s208.1.blif ; short_names; write_eqn s208.1.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./cm151a.blif ; short_names; write_eqn cm151a.eqn".
+
+ABC command line: "read_blif ./example2.blif ; short_names; write_eqn example2.eqn".
+
+ABC command line: "read_blif ./s386.blif ; short_names; write_eqn s386.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s344.blif ; short_names; write_eqn s344.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./mm30a.blif ; short_names; write_eqn mm30a.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./i6.blif ; short_names; write_eqn i6.eqn".
+
+ABC command line: "read_blif ./C2670.blif ; short_names; write_eqn C2670.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+ABC command line: "read_blif ./mult32a.blif ; short_names; write_eqn mult32a.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s820.blif ; short_names; write_eqn s820.eqn".
+
+Line 5: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s713.blif ; short_names; write_eqn s713.eqn".
+
+Line 6: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./mm9a.blif ; short_names; write_eqn mm9a.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./clma.blif ; short_names; write_eqn clma.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./pair.blif ; short_names; write_eqn pair.eqn".
+
+ABC command line: "read_blif ./k2.blif ; short_names; write_eqn k2.eqn".
+
+ABC command line: "read_blif ./i9.blif ; short_names; write_eqn i9.eqn".
+
+ABC command line: "read_blif ./lal.blif ; short_names; write_eqn lal.eqn".
+
+ABC command line: "read_blif ./s27.blif ; short_names; write_eqn s27.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./9symml.blif ; short_names; write_eqn 9symml.eqn".
+
+ABC command line: "read_blif ./cm42a.blif ; short_names; write_eqn cm42a.eqn".
+
+ABC command line: "read_blif ./C1355.blif ; short_names; write_eqn C1355.eqn".
+
+ABC command line: "read_blif ./i2.blif ; short_names; write_eqn i2.eqn".
+
+ABC command line: "read_blif ./i10.blif ; short_names; write_eqn i10.eqn".
+
+ABC command line: "read_blif ./mult16a.blif ; short_names; write_eqn mult16a.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s15850.1.blif ; short_names; write_eqn s15850.1.eqn".
+
+Line 19: Skipping line ".wire_load_slope 0.00".
+Warning: Constant-0 drivers added to 1 non-driven nets in network "s15850.1.bench":
+g1957
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./dalu.blif ; short_names; write_eqn dalu.eqn".
+
+ABC command line: "read_blif ./C432.blif ; short_names; write_eqn C432.eqn".
+
+ABC command line: "read_blif ./i3.blif ; short_names; write_eqn i3.eqn".
+
+ABC command line: "read_blif ./b1.blif ; short_names; write_eqn b1.eqn".
+
+ABC command line: "read_blif ./unreg.blif ; short_names; write_eqn unreg.eqn".
+
+ABC command line: "read_blif ./tcon.blif ; short_names; write_eqn tcon.eqn".
+
+ABC command line: "read_blif ./i5.blif ; short_names; write_eqn i5.eqn".
+
+ABC command line: "read_blif ./i7.blif ; short_names; write_eqn i7.eqn".
+
+ABC command line: "read_blif ./rot.blif ; short_names; write_eqn rot.eqn".
+
+ABC command line: "read_blif ./mm4a.blif ; short_names; write_eqn mm4a.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s526.blif ; short_names; write_eqn s526.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./cm82a.blif ; short_names; write_eqn cm82a.eqn".
+
+ABC command line: "read_blif ./clmb.blif ; short_names; write_eqn clmb.eqn".
+
+Warning: The current network has no primary outputs. Some commands may not work correctly.
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./majority.blif ; short_names; write_eqn majority.eqn".
+
+ABC command line: "read_blif ./x3.blif ; short_names; write_eqn x3.eqn".
+
+ABC command line: "read_blif ./cmb.blif ; short_names; write_eqn cmb.eqn".
+
+ABC command line: "read_blif ./alu2.blif ; short_names; write_eqn alu2.eqn".
+
+ABC command line: "read_blif ./s400.blif ; short_names; write_eqn s400.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./b9.blif ; short_names; write_eqn b9.eqn".
+
+ABC command line: "read_blif ./decod.blif ; short_names; write_eqn decod.eqn".
+
+ABC command line: "read_blif ./C6288.blif ; short_names; write_eqn C6288.eqn".
+
+ABC command line: "read_blif ./des.blif ; short_names; write_eqn des.eqn".
+
+ABC command line: "read_blif ./s510.blif ; short_names; write_eqn s510.eqn".
+
+Line 5: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s1494.blif ; short_names; write_eqn s1494.eqn".
+
+Line 6: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./C17.blif ; short_names; write_eqn C17.eqn".
+
+ABC command line: "read_blif ./f51m.blif ; short_names; write_eqn f51m.eqn".
+
+ABC command line: "read_blif ./z4ml.blif ; short_names; write_eqn z4ml.eqn".
+
+ABC command line: "read_blif ./cm162a.blif ; short_names; write_eqn cm162a.eqn".
+
+ABC command line: "read_blif ./i1.blif ; short_names; write_eqn i1.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+ABC command line: "read_blif ./C7552.blif ; short_names; write_eqn C7552.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+ABC command line: "read_blif ./C5315.blif ; short_names; write_eqn C5315.eqn".
+
+ABC command line: "read_blif ./x4.blif ; short_names; write_eqn x4.eqn".
+
+ABC command line: "read_blif ./i8.blif ; short_names; write_eqn i8.eqn".
+
+ABC command line: "read_blif ./C3540.blif ; short_names; write_eqn C3540.eqn".
+
+ABC command line: "read_blif ./apex6.blif ; short_names; write_eqn apex6.eqn".
+
+ABC command line: "read_blif ./s38417.blif ; short_names; write_eqn s38417.eqn".
+
+Line 14: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./cc.blif ; short_names; write_eqn cc.eqn".
+
+ABC command line: "read_blif ./apex7.blif ; short_names; write_eqn apex7.eqn".
+
+ABC command line: "read_blif ./s1488.blif ; short_names; write_eqn s1488.eqn".
+
+Line 6: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./C499.blif ; short_names; write_eqn C499.eqn".
+
+ABC command line: "read_blif ./s382.blif ; short_names; write_eqn s382.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s349.blif ; short_names; write_eqn s349.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s641.blif ; short_names; write_eqn s641.eqn".
+
+Line 6: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s420.1.blif ; short_names; write_eqn s420.1.eqn".
+
+Line 5: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s1423.blif ; short_names; write_eqn s1423.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s1196.blif ; short_names; write_eqn s1196.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./cordic.blif ; short_names; write_eqn cordic.eqn".
+
+ABC command line: "read_blif ./s298.blif ; short_names; write_eqn s298.eqn".
+
+Line 4: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./x2.blif ; short_names; write_eqn x2.eqn".
+
+ABC command line: "read_blif ./bigkey.blif ; short_names; write_eqn bigkey.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s832.blif ; short_names; write_eqn s832.eqn".
+
+Line 5: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.
+ABC command line: "read_blif ./s38584.1.blif ; short_names; write_eqn s38584.1.eqn".
+
+Line 33: Skipping line ".wire_load_slope 0.00".
+Warning: only combinational portion is being written.

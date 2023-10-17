@@ -1,0 +1,122 @@
+ABC command line: "read_bench ./b14.bench ; short_names; write_eqn b14.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b17.bench ; short_names; write_eqn b17.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b22.bench ; short_names; write_eqn b22.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b05.bench ; short_names; write_eqn b05.eqn".
+
+Warning: PO "U589" appears twice in the list.
+Warning: PO "U590" appears twice in the list.
+Warning: PO "U590" appears twice in the list.
+Warning: PO "U590" appears twice in the list.
+Warning: PO "U792" appears twice in the list.
+Warning: PO "U589" appears twice in the list.
+Warning: PO "U589" appears twice in the list.
+Warning: PO "U591" appears twice in the list.
+Warning: PO "U591" appears twice in the list.
+Warning: PO "U591" appears twice in the list.
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b15_1.bench ; short_names; write_eqn b15_1.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b13.bench ; short_names; write_eqn b13.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b14_1.bench ; short_names; write_eqn b14_1.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b01.bench ; short_names; write_eqn b01.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b19_1.bench ; short_names; write_eqn b19_1.eqn".
+
+Warning: PO "SUB_1487_37_U119" appears twice in the list.
+Warning: PO "SUB_1487_37_U119" appears twice in the list.
+Warning: PO "SUB_1487_37_U119" appears twice in the list.
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b17_1.bench ; short_names; write_eqn b17_1.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b06.bench ; short_names; write_eqn b06.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b18.bench ; short_names; write_eqn b18.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b19.bench ; short_names; write_eqn b19.eqn".
+
+Warning: PO "SUB_1487_37_U119" appears twice in the list.
+Warning: PO "SUB_1487_37_U119" appears twice in the list.
+Warning: PO "SUB_1487_37_U119" appears twice in the list.
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b12.bench ; short_names; write_eqn b12.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b20_1.bench ; short_names; write_eqn b20_1.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b09.bench ; short_names; write_eqn b09.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b20.bench ; short_names; write_eqn b20.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b11.bench ; short_names; write_eqn b11.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b03.bench ; short_names; write_eqn b03.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b21_1.bench ; short_names; write_eqn b21_1.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b18_1.bench ; short_names; write_eqn b18_1.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b22_1.bench ; short_names; write_eqn b22_1.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b08.bench ; short_names; write_eqn b08.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b21.bench ; short_names; write_eqn b21.eqn".
+
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b10.bench ; short_names; write_eqn b10.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b04.bench ; short_names; write_eqn b04.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b02.bench ; short_names; write_eqn b02.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
+ABC command line: "read_bench ./b07.bench ; short_names; write_eqn b07.eqn".
+
+Abc_NtkLogicToNetlist() warning: The network is converted to have simple COs.
+Warning: only combinational portion is being written.
