@@ -5,35 +5,32 @@ import re
 from tqdm import tqdm
 import networkx as nx
 
-# The current network is not in a topo order (run "topo").?
-
+size = 'random'
 
 def run_aigfuzz(file_count):
-    # check aigfuzz/ is esist, if not, create it
-    if not os.path.exists("aigfuzz"): os.mkdir("aigfuzz")
+    global size
+    if not os.path.exists("aigfuzz"):
+        os.mkdir("aigfuzz")
+
+    if not os.path.exists(f"aigfuzz_{size}"):
+        os.mkdir(f"aigfuzz_{size}")
+
     for i in tqdm(range(file_count), desc='Run circuit generator'):
-        #os.system(f"aigfuzz -c > aigfuzz/fuzz_circuit_{i}.aig")
-        os.system(f"aigfuzz -c -s > aigfuzz/fuzz_circuit_{i}.aig")
-        os.system(
-            f"abc -c \"read_aiger aigfuzz/fuzz_circuit_{i}.aig; trim ; write_aiger aigfuzz/fuzz_circuit_{i}.aig\"")
-        
-        '''
-        if i%50 == 0:
-            os.system(f"aigfuzz -c -l > aigfuzz/fuzz_circuit_{i}.aig")
-            os.system(
-                f"abc -c \"read_aiger aigfuzz/fuzz_circuit_{i}.aig; trim ; write_aiger aigfuzz/fuzz_circuit_{i}.aig\"")
+        if size == 'small':
+            os.system(f"aigfuzz -c -s > aigfuzz_{size}/fuzz_circuit_{i}.aig")
         else:
-            os.system(f"aigfuzz -c -s > aigfuzz/fuzz_circuit_{i}.aig")
-            os.system(
-                f"abc -c \"read_aiger aigfuzz/fuzz_circuit_{i}.aig; trim ; write_aiger aigfuzz/fuzz_circuit_{i}.aig\"")
-        '''
+            os.system(f"aigfuzz -c > aigfuzz_{size}/fuzz_circuit_{i}.aig")
+        os.system(f"abc -c \"read_aiger aigfuzz_{size}/fuzz_circuit_{i}.aig; trim ; write_aiger aigfuzz_{size}/fuzz_circuit_{i}.aig\"")
+
+# Other functions here (load_circuits, process_circuits, run_abc, parse_data)
 
 def load_circuits(file_count):
+    global size
     for i in tqdm(range(file_count), desc='Loding circuits and convert to eqn'):
         os.system(
-            f"abc -c \"read_aiger aigfuzz/fuzz_circuit_{i}.aig; write_eqn aigfuzz/fuzz_circuit_{i}.eqn\"")
+            f"abc -c \"read_aiger aigfuzz_{size}/fuzz_circuit_{i}.aig; write_eqn aigfuzz_{size}/fuzz_circuit_{i}.eqn\"")
         os.system(
-            f"aigtoaig aigfuzz/fuzz_circuit_{i}.aig aigfuzz/fuzz_circuit_{i}.aag")
+            f"aigtoaig aigfuzz_{size}/fuzz_circuit_{i}.aig aigfuzz_{size}/fuzz_circuit_{i}.aag")
 
 
 def process_circuits(file_count):
@@ -41,26 +38,26 @@ def process_circuits(file_count):
         print(f"processing No.{i} circuit")
         '''
         parser = CircuitParser(
-            f"aigfuzz/fuzz_circuit_{i}.eqn", f"aigfuzz/fuzz_circuit_{i}_processed.eqn")
+            f"aigfuzz_{size}/fuzz_circuit_{i}.eqn", f"aigfuzz_{size}/fuzz_circuit_{i}_processed.eqn")
         parser.process()
         '''
         os.system(f"../alpha_utils/circuitparser/target/release/circuitparser \
-                  aigfuzz/fuzz_circuit_{i}.eqn aigfuzz/fuzz_circuit_{i}_processed.eqn \
-                  aigfuzz/fuzz_circuit_{i}_input_for_s-converter.txt 0")
+                  aigfuzz_{size}/fuzz_circuit_{i}.eqn aigfuzz_{size}/fuzz_circuit_{i}_processed.eqn \
+                  aigfuzz_{size}/fuzz_circuit_{i}_input_for_s-converter.txt 0")
         '''
-        with open(f"aigfuzz/fuzz_circuit_{i}_processed.eqn", "r") as myfile:
+        with open(f"aigfuzz_{size}/fuzz_circuit_{i}_processed.eqn", "r") as myfile:
             data = myfile.readlines()
         _ = run.conver_to_sexpr(
-            data, multiple_output=True, output_file_path=f"aigfuzz/fuzz_circuit_{i}.sexpr")
+            data, multiple_output=True, output_file_path=f"aigfuzz_{size}/fuzz_circuit_{i}.sexpr")
         '''
-        
+
         os.system(f"../alpha_utils/infix2lisp/target/release/s-converter \
-                  aigfuzz/fuzz_circuit_{i}_input_for_s-converter.txt \
-                  aigfuzz/fuzz_circuit_{i}.sexpr")
-        
+                  aigfuzz_{size}/fuzz_circuit_{i}_input_for_s-converter.txt \
+                  aigfuzz_{size}/fuzz_circuit_{i}.sexpr")
+
         os.system(
-            f"../sym_reg/analyzer/target/release/analyzer aigfuzz/fuzz_circuit_{i}.sexpr {i} > aigfuzz/fuzz_circuit_{i}.data")
-        
+            f"../sym_reg/analyzer/target/release/analyzer aigfuzz_{size}/fuzz_circuit_{i}.sexpr {i} > aigfuzz_{size}/fuzz_circuit_{i}.data")
+
         # preprocess_dot
         with open(f"out_dot/{i}_graph_dot.dot", 'r') as f:
             dot_string = f.read()
@@ -86,7 +83,7 @@ def process_circuits(file_count):
         graph_info['graph_density'] = nx.density(graph)
         graph_info['graph_longest_path'] = nx.algorithms.dag.dag_longest_path_length(graph)
         graph_info['graph_edge_count'] = graph.number_of_edges()
-        
+
         # no need to calculate
         #graph_info['graph_average_node_connectivity'] = nx.average_node_connectivity(graph)
         #graph_info['graph_node_count'] = graph.number_of_nodes()
@@ -100,28 +97,33 @@ def process_circuits(file_count):
         # centrality
         # graph_info['graph_degree_centrality'] = nx.degree_centrality(graph)
         # write graph_info to file
-        with open(f"aigfuzz/fuzz_circuit_{i}_graph_info.txt", 'w') as f:
+        with open(f"aigfuzz_{size}/fuzz_circuit_{i}_graph_info.txt", 'w') as f:
             f.write(str(graph_info))
-        
-        
-        
+
+
+
 
 
 def run_abc(file_count):
     for i in tqdm(range(file_count), desc='Running abc to extract stats'):
         os.system(
-            f"abc -c \"read_eqn aigfuzz/fuzz_circuit_{i}_processed.eqn; strash; dch -f; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; upsize; dnsize; stime; \" > aigfuzz/fuzz_circuit_{i}.stats")
-
+            f"abc -c \"read_eqn aigfuzz_{size}/fuzz_circuit_{i}_processed.eqn; strash; dch -f; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; upsize; dnsize; stime; \" > aigfuzz_{size}/fuzz_circuit_{i}.stats")
 
 def parse_data(file_count):
+    global size
+    if size == 'small':
+        output_file = "fuzz_circuit_analysis_small_size.csv"
+    else:
+        output_file = "fuzz_circuit_analysis_random_size.csv"
+        
     print("---------------------Final Step: Parsing Data---------------------")
     def parser(i):
-        with open(f"aigfuzz/fuzz_circuit_{i}.data", "r") as f:
+        with open(f"aigfuzz_{size}/fuzz_circuit_{i}.data", "r") as f:
             data = f.read().split('\n')
             #print(data)
             op_dict = {line.split(':')[0]: (line.split(':')[1].strip()) for line in data[:] if line}
             #op_dict['AVE_LIB'] = float(line.split(':')[1].strip()) for line in data[-2:] if line
-        with open(f"aigfuzz/fuzz_circuit_{i}.stats", "r") as f:
+        with open(f"aigfuzz_{size}/fuzz_circuit_{i}.stats", "r") as f:
             stats = f.read()
             power_match = re.search(r"power =\s+(\d+\.\d+)", stats)
             power = float(power_match[1]) if power_match else None
@@ -148,20 +150,13 @@ def parse_data(file_count):
                              'AVE_LIB',
                              'lev', 
                              'power', 'area', 'delay'])
-    
-    
-    df.to_csv("fuzz_circuit_analysis_random_size_1.csv", index=False)
 
+    df.to_csv(output_file, index=False)
 
 if __name__ == "__main__":
-    #print(sys.path)
-    sys.path.append("..")
-    #print(sys.path)
-    import run 
-    import run_beta
-    from CircuitParser import CircuitParser
-    print(run.__file__)
-    file_count = 1
+    # ... original code ...
+    file_count = int(sys.argv[1])
+    size = sys.argv[2] if len(sys.argv) > 2 else 'random'
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)
