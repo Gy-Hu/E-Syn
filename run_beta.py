@@ -169,7 +169,7 @@ def convert_to_abc_eqn(data, FORMULA_LIST=None, multiple_output = False, index=N
         # convert dict _ to list
         components = list(_.values())
         # for every component, simplify it
-        #components = [simplify(component, measure=my_measure) for component in components]
+        # components = [simplify(component, measure=my_measure) for component in components]
         # for every result , replace the symbol `|`  to `+` , `~` to `!` , `&` to `*`
         result = [(str(component)).replace("|", "+").replace("~", "!").replace("&", "*") for component in components]
         

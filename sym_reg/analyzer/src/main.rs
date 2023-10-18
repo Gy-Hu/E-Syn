@@ -4,6 +4,61 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::io::Write;
 use std::env;
+// mod utils;
+// use utils::{language::*};
+use std::path::Path;
+
+#[derive(Default)]
+pub struct ConstantFold;
+impl Analysis<Prop> for ConstantFold {
+    type Data = Option<(bool, PatternAst<Prop>)>;
+    fn merge(&mut self, to: &mut Self::Data, from: Self::Data) -> DidMerge {
+        merge_option(to, from, |a, b| {
+            assert_eq!(a.0, b.0, "Merged non-equal constants");
+            DidMerge(false, false)
+        })
+    }
+    fn make(egraph: &egg::EGraph<Prop, ConstantFold>, enode: &Prop) -> Self::Data {
+        let x = |i: &Id| egraph[*i].data.as_ref().map(|c| c.0);
+        let result = match enode {
+            Prop::Let([a, b]) => Some((
+                x(a) == x(b),
+                format!("(let {} {})", x(a)?, x(b)?).parse().unwrap(),
+            )),
+            Prop::Bool(c) => Some((*c, c.to_string().parse().unwrap())),
+            Prop::And([a, b]) => Some((
+                x(a)? && x(b)?,
+                format!("(* {} {})", x(a)?, x(b)?).parse().unwrap(),
+            )),
+            Prop::Not(a) => Some((!x(a)?, format!("(not {})", x(a)?).parse().unwrap())),
+            Prop::Or([a, b]) => Some((
+                x(a)? || x(b)?,
+                format!("(+ {} {})", x(a)?, x(b)?).parse().unwrap(),
+            )),
+            Prop::Implies([a, b]) => Some((
+                !x(a)? || x(b)?,
+                format!("(-> {} {})", x(a)?, x(b)?).parse().unwrap(),
+            )),
+            Prop::Concat([a, b]) => Some((
+                x(a)? > x(b)?,
+                format!("(& {} {})", x(a)?, x(b)?).parse().unwrap(),
+            )),
+            Prop::Symbol(_) => None,
+        };
+        //println!("Make: {:?} -> {:?}", enode, result);
+        result
+    }
+    fn modify(egraph: &mut egg::EGraph<Prop, ConstantFold>, id: Id) {
+        if let Some(c) = egraph[id].data.clone() {
+            egraph.union_instantiations(
+                &c.1,
+                &c.0.to_string().parse().unwrap(),
+                &Default::default(),
+                "analysis".to_string(),
+            );
+        }
+    }
+}
 
 define_language! {
     enum Prop {
@@ -129,18 +184,26 @@ impl<L: Language> CostFunction<L> for AstDepth {
     }
 }
 
-fn count_ast_size_and_depth(s: &str) -> (usize, usize) {
+fn count_ast_size_and_depth(s: &str, dot_name: &str) -> (usize, usize) {
     let expr: RecExpr<Prop> = s.parse().unwrap();
     let mut ast_size = AstSize;
     let mut ast_depth = AstDepth;
     let size = ast_size.cost_rec(&expr);
     let depth = ast_depth.cost_rec(&expr);
+    //let expr: RecExpr<Prop> = result_string.parse().unwrap();
+    let mut egraphout =     ::new(ConstantFold {});
+    egraphout.add_expr(&expr);
+    let output_directory1 = "out_dot/";
+    let output_file_name1 = format!("{}_graph_dot.dot",dot_name);
+    let output_file_path1 = Path::new(output_directory1).join(output_file_name1);
+    let _ = egraphout.dot().to_dot(output_file_path1);
     (size, depth)
 }
 
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
     let input_path = &args[1];
+    let dot_name = &args[2];
     let mut input_file = File::open(input_path)?;
     let mut contents = String::new();
     input_file.read_to_string(&mut contents)?;
@@ -154,7 +217,7 @@ fn main() -> std::io::Result<()> {
             println!("{}: 0", operator);
         }
     }
-    let (size, depth) = count_ast_size_and_depth(&contents);
+    let (size, depth) = count_ast_size_and_depth(&contents, &dot_name);
     //println!("AST size: {}, AST depth: {}", size, depth);
     println!("ASTSize: {}", size);
     println!("ASTDepth: {}", depth);

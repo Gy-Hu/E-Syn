@@ -144,3 +144,4 @@ xgboost_reg/aigfuzz_parallel/
 benchmark/converted_circuit/*/*.eqn
 !benchmark/converted_circuit/summary.csv
 benchmark/converted_circuit_strash/
+xgboost_reg/out_dot/

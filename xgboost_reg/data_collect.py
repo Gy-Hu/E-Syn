@@ -3,6 +3,7 @@ import sys
 import pandas as pd
 import re
 from tqdm import tqdm
+import networkx as nx
 
 # The current network is not in a topo order (run "topo").?
 
@@ -11,8 +12,8 @@ def run_aigfuzz(file_count):
     # check aigfuzz/ is esist, if not, create it
     if not os.path.exists("aigfuzz"): os.mkdir("aigfuzz")
     for i in tqdm(range(file_count), desc='Run circuit generator'):
-        os.system(f"aigfuzz -c > aigfuzz/fuzz_circuit_{i}.aig")
-        #os.system(f"aigfuzz -c -s > aigfuzz/fuzz_circuit_{i}.aig")
+        #os.system(f"aigfuzz -c > aigfuzz/fuzz_circuit_{i}.aig")
+        os.system(f"aigfuzz -c -s > aigfuzz/fuzz_circuit_{i}.aig")
         os.system(
             f"abc -c \"read_aiger aigfuzz/fuzz_circuit_{i}.aig; trim ; write_aiger aigfuzz/fuzz_circuit_{i}.aig\"")
         
@@ -58,7 +59,52 @@ def process_circuits(file_count):
                   aigfuzz/fuzz_circuit_{i}.sexpr")
         
         os.system(
-            f"../sym_reg/analyzer/target/release/analyzer aigfuzz/fuzz_circuit_{i}.sexpr > aigfuzz/fuzz_circuit_{i}.data")
+            f"../sym_reg/analyzer/target/release/analyzer aigfuzz/fuzz_circuit_{i}.sexpr {i} > aigfuzz/fuzz_circuit_{i}.data")
+        
+        # preprocess_dot
+        with open(f"out_dot/{i}_graph_dot.dot", 'r') as f:
+            dot_string = f.read()
+        # Remove subgraph and cluster lines
+        dot_string = re.sub(r'\s*subgraph.*{', '', dot_string)
+        dot_string = re.sub(r'\s*}\s*', '', dot_string)
+        dot_string = re.sub(r'\s*style=.*', '', dot_string)
+        # Remove compass points
+        dot_string = re.sub(r':\w+', '', dot_string)
+
+        # add additional `}` to the end of the string
+        dot_string += "}"
+        with open(f"out_dot/{i}_graph_dot.dot", 'w') as f:
+            f.write(dot_string)
+
+        graph = nx.DiGraph(nx.nx_pydot.read_dot(f"out_dot/{i}_graph_dot.dot"))
+
+        #print("graph density:", nx.density(graph))
+        # assert nx.number_connected_components(graph) == 1
+        # make a dict to store the graph info
+        graph_info = {}
+        # fast calculation
+        graph_info['graph_density'] = nx.density(graph)
+        graph_info['graph_longest_path'] = nx.algorithms.dag.dag_longest_path_length(graph)
+        graph_info['graph_edge_count'] = graph.number_of_edges()
+        
+        # no need to calculate
+        #graph_info['graph_average_node_connectivity'] = nx.average_node_connectivity(graph)
+        #graph_info['graph_node_count'] = graph.number_of_nodes()
+        #graph_info['graph_radius'] = nx.radius(graph)
+        #graph_info['graph_diameter'] = nx.diameter(graph)
+        #graph_info['graph_average_shortest_path'] = nx.average_shortest_path_length(graph)
+        #graph_info['graph_average_clustering'] = nx.average_clustering(graph)
+        #graph_info['graph_average_degree_connectivity'] = nx.average_degree_connectivity(graph)
+        #graph_info['graph_average_degree'] = nx.average_degree_connectivity(graph)
+        #graph_info['graph_average_neighbor_degree'] = nx.average_neighbor_degree(graph)
+        # centrality
+        # graph_info['graph_degree_centrality'] = nx.degree_centrality(graph)
+        # write graph_info to file
+        with open(f"aigfuzz/fuzz_circuit_{i}_graph_info.txt", 'w') as f:
+            f.write(str(graph_info))
+        
+        
+        
 
 
 def run_abc(file_count):
@@ -104,7 +150,7 @@ def parse_data(file_count):
                              'power', 'area', 'delay'])
     
     
-    df.to_csv("fuzz_circuit_analysis_random_size.csv", index=False)
+    df.to_csv("fuzz_circuit_analysis_random_size_1.csv", index=False)
 
 
 if __name__ == "__main__":
@@ -115,7 +161,7 @@ if __name__ == "__main__":
     import run_beta
     from CircuitParser import CircuitParser
     print(run.__file__)
-    file_count = 100
+    file_count = 1
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)

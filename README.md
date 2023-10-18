@@ -32,6 +32,16 @@
 
 ## TODO
 
+- [ ] Enhance feature engineering
+  - [ ] Average fan-out (graph matrix, graph porperty)
+  - [ ] graph kernel
+  - [ ] fan-out (e-class shared)
+  - [ ] Eigen vector (networkx) - dot (one value)
+  - [ ] e-graph + GNN 
+  - [ ] Pi - PO size
+  - [ ] Top-k (average) ASTdepth
+- [ ] Fix the random seed (the extract result is reproduciable)
+- [ ] Support recursive parsing (a * b * c) -> * is arbitrary number of operators
 - [ ] Using DC to read large eqn file at first
 - [ ] Do code review for e-rewriter (any bugs? verify rules? make more efficient? support constant rewrite?)
 - [ ] Review rewrite rules/cost function/egraph selection/egraph merging (analyzer)

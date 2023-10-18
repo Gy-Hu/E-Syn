@@ -102,7 +102,7 @@ if __name__ == "__main__":
     import run_beta
     from CircuitParser import CircuitParser
     print(run.__file__)
-    file_count = 100
+    file_count = 10000
     run_aigfuzz(file_count)
     load_circuits(file_count)
     process_circuits(file_count)
