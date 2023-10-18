@@ -25,13 +25,13 @@ def run_aigfuzz(file_count):
 
 # Other functions here (load_circuits, process_circuits, run_abc, parse_data)
 
-def load_circuits(file_count):
+def load_circuits(i):
     global size
-    for i in tqdm(range(file_count), desc='Loding circuits and convert to eqn'):
-        os.system(
-            f"abc -c \"read_aiger aigfuzz_{size}/fuzz_circuit_{i}.aig; write_eqn aigfuzz_{size}/fuzz_circuit_{i}.eqn\"")
-        os.system(
-            f"aigtoaig aigfuzz_{size}/fuzz_circuit_{i}.aig aigfuzz_{size}/fuzz_circuit_{i}.aag")
+    #for i in tqdm(range(file_count), desc='Loding circuits and convert to eqn'):
+    os.system(
+        f"abc -c \"read_aiger aigfuzz_{size}/fuzz_circuit_{i}.aig; write_eqn aigfuzz_{size}/fuzz_circuit_{i}.eqn\"")
+    os.system(
+        f"aigtoaig aigfuzz_{size}/fuzz_circuit_{i}.aig aigfuzz_{size}/fuzz_circuit_{i}.aag")
 
 
 def process_circuits(i):
@@ -98,16 +98,18 @@ def process_circuits(i):
     # graph_info['graph_degree_centrality'] = nx.degree_centrality(graph)
     # write graph_info to file
     with open(f"aigfuzz_{size}/fuzz_circuit_{i}_graph_info.txt", 'w') as f:
-        f.write(str(graph_info))
+        # write in key: value format
+        for key, value in graph_info.items():
+            f.write('%s:%s\n' % (key, value))
 
 
 
 
 
-def run_abc(file_count):
-    for i in tqdm(range(file_count), desc='Running abc to extract stats'):
-        os.system(
-            f"abc -c \"read_eqn aigfuzz_{size}/fuzz_circuit_{i}_processed.eqn; strash; dch -f; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; upsize; dnsize; stime; \" > aigfuzz_{size}/fuzz_circuit_{i}.stats")
+def run_abc(i):
+    #for i in tqdm(range(file_count), desc='Running abc to extract stats'):
+    os.system(
+        f"abc -c \"read_eqn aigfuzz_{size}/fuzz_circuit_{i}_processed.eqn; strash; dch -f; print_stats -p; read_lib ../asap7_clean.lib ; map ; topo; upsize; dnsize; stime; \" > aigfuzz_{size}/fuzz_circuit_{i}.stats")
 
 def parse_data(file_count):
     global size
@@ -123,6 +125,9 @@ def parse_data(file_count):
             #print(data)
             op_dict = {line.split(':')[0]: (line.split(':')[1].strip()) for line in data[:] if line}
             #op_dict['AVE_LIB'] = float(line.split(':')[1].strip()) for line in data[-2:] if line
+        with open(f"aigfuzz_{size}/fuzz_circuit_{i}_graph_info.txt", "r") as f:
+            data = f.read().split('\n')
+            op_dict.update({line.split(':')[0]: (line.split(':')[1].strip()) for line in data[:] if line})
         with open(f"aigfuzz_{size}/fuzz_circuit_{i}.stats", "r") as f:
             stats = f.read()
             power_match = re.search(r"power =\s+(\d+\.\d+)", stats)
@@ -148,6 +153,9 @@ def parse_data(file_count):
                              'SUM_LIB',
                              'SUM_NODE',
                              'AVE_LIB',
+                             'graph_density',
+                             'graph_longest_path',
+                             'graph_edge_count',
                              'lev', 
                              'power', 'area', 'delay'])
 
@@ -157,12 +165,26 @@ if __name__ == "__main__":
     file_count = int(sys.argv[1])
     size = sys.argv[2] if len(sys.argv) > 2 else 'random'
     run_aigfuzz(file_count)
-    load_circuits(file_count)
+    #load_circuits(file_count)
+    
+    # use concurrent futures to convert the eqn to sexpr
+    tasks_args = list(range(file_count))
+    with concurrent.futures.ProcessPoolExecutor(64) as executor:
+        for task in tasks_args:
+            executor.submit(load_circuits, task)
 
     # use concurrent futures to convert the s-expression to abc eqn
     tasks_args = list(range(file_count))
     with concurrent.futures.ProcessPoolExecutor(64) as executor:
         for task in tasks_args:
             executor.submit(process_circuits, task)
-    run_abc(file_count)
+            
+    # use concurrent futures to run abc
+    tasks_args = list(range(file_count))
+    with concurrent.futures.ProcessPoolExecutor(64) as executor:
+        for task in tasks_args:
+            executor.submit(run_abc, task)
+            
+    # run_abc(file_count)
+    
     parse_data(file_count)
