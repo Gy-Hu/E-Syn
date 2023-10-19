@@ -158,6 +158,11 @@ def parse_data(file_count):
                              'graph_edge_count',
                              'lev', 
                              'power', 'area', 'delay'])
+    
+    # drop colomns named `SUM_LIB` and `SUM_NODE`
+    df = df.drop(columns=['SUM_LIB', 'AVE_LIB'])
+    # add one more column `area_delay_product`, 0.6*delay + 0.4*area
+    df['area_delay_product'] = 0.6*df['delay'] + 0.4*df['area']
 
     df.to_csv(output_file, index=False)
 
