@@ -13,7 +13,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut best_mae = f32::INFINITY;
     let mut best_model: Option<Booster> = None;
 
-    let file = File::open("/data/guangyuh/coding_env/E-Brush/xgboost_reg/data_10000_area.csv")?;
+    let file = File::open("/data/guangyuh/coding_env/E-Brush/xgboost_reg/fuzz_circuit_analysis_small_size.csv")?;
     let mut reader = csv::Reader::from_reader(BufReader::new(file));
 
     let mut data = Vec::new();
@@ -22,10 +22,12 @@ fn main() -> Result<(), Box<dyn Error>> {
         let record = result?;
         let features: Vec<f32> = record
             .iter()
-            .take(8) // first 8 columns are features
+            .take(9) // first 9 columns are features
             .map(|x| x.parse::<f32>().unwrap())
             .collect();
-        let target = record[8].parse::<f32>()?; // 9th column is the target
+        let target_area = record[11].parse::<f32>()?; // 12th column is the target
+        let target_delay = record[12].parse::<f32>()?; // 13th column is the target
+        let target = target_area * 0.4 + target_delay * 0.6;
         data.push((features, target));
     }
 
@@ -123,6 +125,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     avg_mae /= num_folds as f32;
     println!("Average RMSE: {}", avg_rmse);
     println!("Average MAE: {}", avg_mae);
+
     // Save the best model
     if let Some(best_model) = best_model {
         best_model.save("xgb.model")?;
@@ -131,10 +134,12 @@ fn main() -> Result<(), Box<dyn Error>> {
     // load model and predict
     let bst = Booster::load("xgb.model")?;
     //let x_test = &[0.0,73.0,79.0,232.0,14.0,2395.0,152.0,15.756578947368421]; //test delay
-    let x_test = &[7.0,101.0,88.0,316.0,15.0,3027.0,208.0,15.443877551020408];//test area
+    //let x_test = &[7.0,101.0,88.0,316.0,15.0,3027.0,208.0,15.443877551020408];//test area
+    let x_test = &[3.0,2500.0,2435.0,247.0,7871.0,268.0,5185.0,0.0013716248478967393,1781.0];
     let num_rows = 1;
    //let y_test = &[53.05]; //test delay
-    let y_test = &[67.65]; //test area
+   // let y_test = &[67.65]; //test area
+    let y_test = &[162.998];
     let mut dtest = DMatrix::from_dense(x_test, num_rows).unwrap();
     dtest.set_labels(y_test).unwrap();
     println!("Prediction: {:?}", bst.predict(&dtest).unwrap());

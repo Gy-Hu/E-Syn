@@ -81,10 +81,10 @@ def process_circuits(i):
     graph_info = {}
     # fast calculation
     graph_info['graph_density'] = nx.density(graph)
-    graph_info['graph_longest_path'] = nx.algorithms.dag.dag_longest_path_length(graph)
     graph_info['graph_edge_count'] = graph.number_of_edges()
 
     # no need to calculate
+    #graph_info['graph_longest_path'] = nx.algorithms.dag.dag_longest_path_length(graph)
     #graph_info['graph_average_node_connectivity'] = nx.average_node_connectivity(graph)
     #graph_info['graph_node_count'] = graph.number_of_nodes()
     #graph_info['graph_radius'] = nx.radius(graph)
@@ -154,7 +154,7 @@ def parse_data(file_count):
                              'SUM_NODE',
                              'AVE_LIB',
                              'graph_density',
-                             'graph_longest_path',
+                             #'graph_longest_path',
                              'graph_edge_count',
                              'lev', 
                              'power', 'area', 'delay'])
