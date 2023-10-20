@@ -22,11 +22,11 @@ fn main() -> Result<(), Box<dyn Error>> {
         let record = result?;
         let features: Vec<f32> = record
             .iter()
-            .take(9) // first 9 columns are features
+            .take(8) // first 8 columns are features
             .map(|x| x.parse::<f32>().unwrap())
             .collect();
-        let target_area = record[11].parse::<f32>()?; // 12th column is the target
-        let target_delay = record[12].parse::<f32>()?; // 13th column is the target
+        let target_area = record[10].parse::<f32>()?; // 12th column is the target
+        let target_delay = record[11].parse::<f32>()?; // 13th column is the target
         let target = target_area * 0.4 + target_delay * 0.6;
         data.push((features, target));
     }
@@ -74,7 +74,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         // configure the tree-based learning model's parameters
         let tree_params = parameters::tree::TreeBoosterParametersBuilder::default()
-                .max_depth(10)
+                .max_depth(100)
                 .eta(0.3)
                 .build().unwrap();
 
@@ -88,7 +88,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         let training_params = parameters::TrainingParametersBuilder::default()
             .dtrain(&dtrain)
-            .boost_rounds(50)
+            .boost_rounds(500)
             .booster_params(booster_params)          // model parameters
             .evaluation_sets(Some(evaluation_sets))
             .build()
@@ -135,7 +135,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let bst = Booster::load("xgb.model")?;
     //let x_test = &[0.0,73.0,79.0,232.0,14.0,2395.0,152.0,15.756578947368421]; //test delay
     //let x_test = &[7.0,101.0,88.0,316.0,15.0,3027.0,208.0,15.443877551020408];//test area
-    let x_test = &[3.0,2500.0,2435.0,247.0,7871.0,268.0,5185.0,0.0013716248478967393,1781.0];
+    let x_test = &[3.0,2500.0,2435.0,7871.0,268.0,5185.0,0.0013716248478967393,1781.0];
     let num_rows = 1;
    //let y_test = &[53.05]; //test delay
    // let y_test = &[67.65]; //test area

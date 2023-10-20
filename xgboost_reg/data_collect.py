@@ -145,7 +145,7 @@ def parse_data(file_count):
     df = df.fillna(0)
     #print("Date count before removing 0s: ", len(df))
     # remove rows that `power` or `delay` or `lev` or `area` is 0
-    df = df[(df.power != 0) & (df.delay != 0) & (df.lev != 0) & (df.area != 0)]
+    df = df[(df.power != 0) & (df.delay != 0) & (df.lev != 0) & (df.area != 0) & (df.ASTSize !=0)]
     # sort the columns as +,!,*,&,lev, ASTSize,ASTDepth, power, area , delay
     df = df.reindex(columns=['+', '!', '*', '&', 
                              'ASTSize',
@@ -160,9 +160,9 @@ def parse_data(file_count):
                              'power', 'area', 'delay'])
     
     # drop colomns named `SUM_LIB` and `SUM_NODE`
-    df = df.drop(columns=['SUM_LIB', 'AVE_LIB'])
+    #df = df.drop(columns=['SUM_LIB', 'AVE_LIB'])
     # add one more column `area_delay_product`, 0.6*delay + 0.4*area
-    df['area_delay_product'] = 0.6*df['delay'] + 0.4*df['area']
+    #df['area_delay_product'] = 0.6*df['delay'] + 0.4*df['area']
 
     df.to_csv(output_file, index=False)
 

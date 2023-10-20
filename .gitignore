@@ -148,3 +148,5 @@ xgboost_reg/out_dot/
 TestFunc.py
 xgboost_reg/aigfuzz_random
 xgboost_reg/aigfuzz_small
+!xgboost_reg/collect_dataset
+!xgboost_reg/trained_model

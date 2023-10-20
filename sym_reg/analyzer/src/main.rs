@@ -191,7 +191,7 @@ fn count_ast_size_and_depth(s: &str, dot_name: &str) -> (usize, usize) {
     let size = ast_size.cost_rec(&expr);
     let depth = ast_depth.cost_rec(&expr);
     //let expr: RecExpr<Prop> = result_string.parse().unwrap();
-    let mut egraphout =     ::new(ConstantFold {});
+    let mut egraphout = EGraph::new(ConstantFold {});
     egraphout.add_expr(&expr);
     let output_directory1 = "out_dot/";
     let output_file_name1 = format!("{}_graph_dot.dot",dot_name);
