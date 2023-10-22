@@ -288,7 +288,7 @@ if __name__ == "__main__":
 
     with concurrent.futures.ProcessPoolExecutor(max_workers=max_processes) as executor:
         futures = []
-        for i in range(30):
+        for i in range(1):
             future = executor.submit(convert_to_abc_eqn, data, i, None, multiple_output_flag)
             futures.append(future)
     
@@ -335,7 +335,7 @@ if __name__ == "__main__":
         print("----------------------------------------------------------------------------------------")
 
     threads = []
-    for i in range(30):
+    for i in range(1):
         thread = threading.Thread(target=run_command, args=(i,))
         threads.append(thread)
         thread.start()

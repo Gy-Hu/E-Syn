@@ -10,7 +10,7 @@ use crate::utils::{sym_eval::*};
 pub fn xgboost(input_string: &str) -> (f64, Vec<f32>) {
     // load model and predict
     let bst = Booster::load("/data/cchen/E-Brush/e-rewriter/src/model/xgb_delay.model");
-
+    
     let operator_counts = count_operators(&input_string);
     let x1 = operator_counts.get("+").copied().unwrap_or(0);
     let x2 = operator_counts.get("!").copied().unwrap_or(0);
@@ -30,11 +30,42 @@ pub fn xgboost(input_string: &str) -> (f64, Vec<f32>) {
         ave_lib as f32,
     ];
     let num_rows = 1;
-    let y_test = &[53.05];
     let mut dtest = DMatrix::from_dense(x_test.as_slice(), num_rows).unwrap();
 
     let predict = bst.expect("REASON").predict(&dtest).unwrap()[0];
     let predict_f64 = predict as f64;
 
     (predict_f64, x_test)
+    
+}
+
+pub fn xgboost_new(input_string: &str,&graph_density:&f32,&graph_edge:&f32) -> (f64, Vec<f32>) {
+    // load model and predict
+    let bst = Booster::load("/data/cchen/E-Brush/e-rewriter/src/model/xgb.model");
+    
+    let operator_counts = count_operators(&input_string);
+    let x1 = operator_counts.get("+").copied().unwrap_or(0);
+    let x2 = operator_counts.get("!").copied().unwrap_or(0);
+    let x3 = operator_counts.get("*").copied().unwrap_or(0);
+    let (size, depth) = count_ast_size_and_depth(&input_string);
+    let sum_node = sum_of_nodes(&operator_counts);
+    let x_test = vec![
+        x1 as f32,
+        x2 as f32,
+        x3 as f32,
+        size as f32,
+        depth as f32,
+        sum_node as f32,
+        graph_density as f32,
+        graph_edge as f32
+        
+    ];
+    let num_rows = 1;
+    let mut dtest = DMatrix::from_dense(x_test.as_slice(), num_rows).unwrap();
+
+    let predict = bst.expect("REASON").predict(&dtest).unwrap()[0];
+    let predict_f64 = predict as f64;
+
+    (predict_f64, x_test)
+    
 }
