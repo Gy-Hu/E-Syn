@@ -40,11 +40,11 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     let runner_iteration_limit = 10000000;
     let egraph_node_limit = 25000000;
     let start = Instant::now();
-    let iterations = 10 as i32;
+    let iterations = 30 as i32;
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
-        .with_time_limit(std::time::Duration::from_secs(100))
+        .with_time_limit(std::time::Duration::from_secs(300))
         .with_iter_limit(runner_iteration_limit)
         .with_node_limit(egraph_node_limit)
         .run(&make_rules());
@@ -117,20 +117,20 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
       //  sym_cost_dict.insert(i,sym_cost);
         //res_cost.insert(i,best_cost);
     }
-    // for i in 4*iterations+2..11*iterations/2+2 {
-    //     let (best_cost,best )=extractor2.find_best_random(root);
-    //     let ( sym_cost,input_para) =xgboost(&(best.to_string()));
-    //     results.insert(i, best);
-    //     sym_cost_dict.insert(i,sym_cost);
-    //     //res_cost.insert(i,best_cost);
-    // }
-    // for i in 11*iterations/2+2..6*iterations+2 {
-    //     let (best_cost,best )=extractor2.find_best(root);
-    //     let ( sym_cost,input_para) =xgboost(&(best.to_string()));
-    //     results.insert(i, best);
-    //     sym_cost_dict.insert(i,sym_cost);
-    //     //res_cost.insert(i,best_cost);
-    // }
+    for i in 4*iterations+2..11*iterations/2+2 {
+        let (best_cost,best )=extractor2.find_best_random(root);
+        let ( sym_cost,input_para) =xgboost(&(best.to_string()));
+        results.insert(i, best);
+        sym_cost_dict.insert(i,sym_cost);
+        //res_cost.insert(i,best_cost);
+    }
+    for i in 11*iterations/2+2..6*iterations+2 {
+        let (best_cost,best )=extractor2.find_best(root);
+        let ( sym_cost,input_para) =xgboost(&(best.to_string()));
+        results.insert(i, best);
+        sym_cost_dict.insert(i,sym_cost);
+        //res_cost.insert(i,best_cost);
+    }
     
 
     println!("sym_cost_dict");
@@ -160,7 +160,7 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     });
     let output_cmd = Command::new("python")
         .arg("graph_info.py")
-        .arg("42")
+        .arg("182")
         .output()
         .expect("Failed to execute command");
     if output_cmd.status.success() {
@@ -187,7 +187,8 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     for (key, rec_expr) in &results {
         let mut out_string= rec_expr.to_string();
         if let Some(&(graph_density, graph_edge)) = results_graph_info.get(key){
-            let (sym_cost,input_para) =xgboost_new((&out_string),&graph_density,&graph_edge);
+            //let (sym_cost,input_para) =xgboost_new((&out_string),&graph_density,&graph_edge);
+            let (sym_cost,input_para) =xgboost((&out_string));
             sym_cost_dict.insert(*key,sym_cost);
     }  
 
@@ -256,62 +257,62 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
    
 
 
-    let mut min_key = 0; 
-    let mut min_value = INFINITY as f64;
+//     let mut min_key = 0; 
+//     let mut min_value = INFINITY as f64;
 
-    for (key, &value) in &sym_cost_dict {
-         if value  < min_value { min_key = *key; min_value = value; } 
-        } // min_key 和 min_value 分别为最小值对应的键和值
-   //  println!("best_cost{}",min_value);
-   let count =0;
-   let output_directory = "test_data_beta_runner/";
-   let output_file_name = format!("output_from_egg{}.txt",count); 
-   let output_file_path = Path::new(output_directory).join(output_file_name);
-   let output = results.get(&min_key).expect("Value not found");
-   if let Ok(mut output_file) = File::create(output_file_path) {
-           output_file.write_all((output.to_string()).as_bytes()).ok();
-       }  
-    
-//     let mut key_value_pairs: Vec<(&i32, &f64)> = sym_cost_dict.iter().collect();
-//     key_value_pairs.sort_by(|&(_, value1), &(_, value2)| value1.partial_cmp(value2).unwrap());
-//     let min_keys: Vec<&i32> = key_value_pairs.iter().take(30).map(|&(key, _)| key).collect();
-//     println!("done");
-
-//    let mut count = 0;
+//     for (key, &value) in &sym_cost_dict {
+//          if value  < min_value { min_key = *key; min_value = value; } 
+//         } // min_key 和 min_value 分别为最小值对应的键和值
+//    //  println!("best_cost{}",min_value);
+//    let count =0;
 //    let output_directory = "test_data_beta_runner/";
-//    for min_key in min_keys.iter() {
-//        let output = results
-//            .get(min_key)
-//            .map(|result| result.to_string())
-//            .unwrap_or_default();
-//        let output_file_name = format!("output_from_egg{}.txt", count);
-//        let output_file_path = Path::new(output_directory).join(output_file_name);
-//        if let Ok(mut output_file) = File::create(output_file_path) {
-//            output_file.write_all(output.as_bytes()).ok();
-//        }
+//    let output_file_name = format!("output_from_egg{}.txt",count); 
+//    let output_file_path = Path::new(output_directory).join(output_file_name);
+//    let output = results.get(&min_key).expect("Value not found");
+//    if let Ok(mut output_file) = File::create(output_file_path) {
+//            output_file.write_all((output.to_string()).as_bytes()).ok();
+//        }  
+    
+    let mut key_value_pairs: Vec<(&i32, &f64)> = sym_cost_dict.iter().collect();
+    key_value_pairs.sort_by(|&(_, value1), &(_, value2)| value1.partial_cmp(value2).unwrap());
+    let min_keys: Vec<&i32> = key_value_pairs.iter().take(30).map(|&(key, _)| key).collect();
+    println!("done");
+
+   let mut count = 0;
+   let output_directory = "test_data_beta_runner/";
+   for min_key in min_keys.iter() {
+       let output = results
+           .get(min_key)
+           .map(|result| result.to_string())
+           .unwrap_or_default();
+       let output_file_name = format!("output_from_egg{}.txt", count);
+       let output_file_path = Path::new(output_directory).join(output_file_name);
+       if let Ok(mut output_file) = File::create(output_file_path) {
+           output_file.write_all(output.as_bytes()).ok();
+       }
        
-//        let (sym_cost,input_para) =xgboost(&output);
+       let (sym_cost,input_para) =xgboost(&output);
 
 
 
 
-//        let file = File::create("test_data_beta_runner/data.csv")?;
-//         // let file = OpenOptions::new()
-//         //     .create(true)
-//         //     .append(true)
-//         //     .open("test_data_beta_runner/data.csv")?;
-//        let mut writer = WriterBuilder::new().from_writer(file);
+       let file = File::create("test_data_beta_runner/data.csv")?;
+        // let file = OpenOptions::new()
+        //     .create(true)
+        //     .append(true)
+        //     .open("test_data_beta_runner/data.csv")?;
+       let mut writer = WriterBuilder::new().from_writer(file);
         
-//        let mut row_data: Vec<String> = input_para
-//             .iter()
-//             .map(|&value| value.to_string())
-//             .collect();
-//        let str_key=format!("op{}",count);
-//        row_data.push(str_key); 
-//        writer.write_record(&row_data)?;
+       let mut row_data: Vec<String> = input_para
+            .iter()
+            .map(|&value| value.to_string())
+            .collect();
+       let str_key=format!("op{}",count);
+       row_data.push(str_key); 
+       writer.write_record(&row_data)?;
         
-//        writer.flush()?;
-//        count += 1;
-//    }
+       writer.flush()?;
+       count += 1;
+   }
     Ok(())
 }
