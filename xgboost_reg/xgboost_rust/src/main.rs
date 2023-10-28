@@ -13,7 +13,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut best_mae = f32::INFINITY;
     let mut best_model: Option<Booster> = None;
 
-    let file = File::open("/data/guangyuh/coding_env/E-Brush/xgboost_reg/fuzz_circuit_analysis_small_size.csv")?;
+    let file = File::open("/data/guangyuh/coding_env/E-Brush/xgboost_reg/collect_dataset/fuzz_circuit_analysis_merge_size_51000_23_10_26.csv")?;
     let mut reader = csv::Reader::from_reader(BufReader::new(file));
 
     let mut data = Vec::new();
@@ -27,7 +27,8 @@ fn main() -> Result<(), Box<dyn Error>> {
             .collect();
         let target_area = record[10].parse::<f32>()?; // 12th column is the target
         let target_delay = record[11].parse::<f32>()?; // 13th column is the target
-        let target = target_area * 0.4 + target_delay * 0.6;
+        //let target = target_area * 0.4 + target_delay * 0.6;
+        let target = target_area;
         data.push((features, target));
     }
 
@@ -68,13 +69,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         // configure objectives, metrics, etc.
         let learning_params = parameters::learning::LearningTaskParametersBuilder::default()
             .objective(parameters::learning::Objective::GpuRegLinear)
-            .eval_metrics(parameters::learning::Metrics::Custom(vec![EvaluationMetric::MAE]))
+            .eval_metrics(parameters::learning::Metrics::Custom(vec![EvaluationMetric::RMSE]))
             //.eval_metrics(parameters::learning::Metrics::Auto)
             .build().unwrap();
 
         // configure the tree-based learning model's parameters
         let tree_params = parameters::tree::TreeBoosterParametersBuilder::default()
-                .max_depth(100)
+                .max_depth(10)
                 .eta(0.3)
                 .build().unwrap();
 
@@ -88,7 +89,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         let training_params = parameters::TrainingParametersBuilder::default()
             .dtrain(&dtrain)
-            .boost_rounds(500)
+            .boost_rounds(50)
             .booster_params(booster_params)          // model parameters
             .evaluation_sets(Some(evaluation_sets))
             .build()
