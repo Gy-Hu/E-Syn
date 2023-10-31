@@ -24,14 +24,14 @@ with open('sorted_area.csv', 'w', newline='') as csvfile:
 res_data = pd.read_csv('res_data_rc64b.csv')
 
 
-data = pd.read_csv('./test_data_beta_runner/data.csv', header=None)
+# data = pd.read_csv('./test_data_beta_runner/data.csv', header=None)
 
-area_delay = res_data[['Area', 'Delay']].iloc[1:].reset_index(drop=True)
-print(area_delay)
+# area_delay = res_data[['Area', 'Delay']].iloc[1:].reset_index(drop=True)
+# print(area_delay)
 
-data.insert(8, 'area', area_delay['Area'])
-data.insert(9, 'delay', area_delay['Delay'])
+# data.insert(8, 'area', area_delay['Area'])
+# data.insert(9, 'delay', area_delay['Delay'])
 
-data.to_csv('new_data.csv', index=False)  # 省略header=False参数
-new_data = pd.read_csv('new_data.csv')
-new_data.to_csv('total.csv', mode='a', index=False, header=False)
+# data.to_csv('new_data.csv', index=False)  # 省略header=False参数
+# new_data = pd.read_csv('new_data.csv')
+# new_data.to_csv('total.csv', mode='a', index=False, header=False)

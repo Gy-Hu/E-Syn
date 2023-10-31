@@ -35,7 +35,7 @@ where
     pub fn get_node(&self, id: Id) -> &L {
         let random_num = generate_random_float1();
         //println!("random_num{}",random_num);
-        if random_num>(0.8 as f64) {
+        if random_num>(0.5 as f64) {
            let eclass=&self.egraph[id];
            let nodes: Vec<&L> = eclass.iter().collect();
            let mut rng = rand::thread_rng();

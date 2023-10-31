@@ -1,0 +1,2 @@
+read_aiger /data/cchen/E-Brush/test_data_beta_runner/op0.aig
+abc -liberty asap7_clean.lib -D 100

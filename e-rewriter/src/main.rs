@@ -40,7 +40,7 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     let runner_iteration_limit = 10000000;
     let egraph_node_limit = 25000000;
     let start = Instant::now();
-    let iterations = 30 as i32;
+    let iterations = 10 as i32;
     let runner = Runner::default()
         .with_explanations_enabled()
         .with_expr(&expr)
@@ -59,10 +59,11 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     let mut sym_cost_dict: BTreeMap<i32, f64> = BTreeMap::new();
 
     let root = runner.roots[0];
-    let extractor_base_0  = Extractor::new(&runner.egraph, egg::AstDepth);
-    let extractor_base_1  = Extractor::new(&runner.egraph, egg::AstSize);
-    let mut extractor = Extractor1::new(&runner.egraph, egg::AstDepth);
-    let mut extractor1 = Extractor1::new(&runner.egraph, egg::AstSize);
+    
+    let extractor_base_0  = Extractor::new(&runner.egraph, egg::AstSize);
+    let extractor_base_1  = Extractor::new(&runner.egraph, egg::AstDepth);
+    let mut extractor = Extractor1::new(&runner.egraph, egg::AstSize);
+    let mut extractor1 = Extractor1::new(&runner.egraph, egg::AstDepth);
     let mut extractor2 = Extractor1::new(&runner.egraph, Mixcost);
 
     let (best_cost_base_0,best_base_0 )=extractor_base_0.find_best(root);
@@ -158,9 +159,11 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
 
     
     });
+
+    let num = iterations * 6 + 2;
     let output_cmd = Command::new("python")
         .arg("graph_info.py")
-        .arg("182")
+        .arg(num.to_string())
         .output()
         .expect("Failed to execute command");
     if output_cmd.status.success() {
@@ -187,8 +190,8 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
     for (key, rec_expr) in &results {
         let mut out_string= rec_expr.to_string();
         if let Some(&(graph_density, graph_edge)) = results_graph_info.get(key){
-            //let (sym_cost,input_para) =xgboost_new((&out_string),&graph_density,&graph_edge);
-            let (sym_cost,input_para) =xgboost((&out_string));
+            let (sym_cost,input_para) =xgboost_new((&out_string),&graph_density,&graph_edge);
+            //let (sym_cost,input_para) =xgboost_((&out_string));
             sym_cost_dict.insert(*key,sym_cost);
     }  
 
@@ -291,27 +294,24 @@ fn main() ->Result<(), Box<dyn std::error::Error>> {
            output_file.write_all(output.as_bytes()).ok();
        }
        
-       let (sym_cost,input_para) =xgboost(&output);
-
-
-
-
-       let file = File::create("test_data_beta_runner/data.csv")?;
-        // let file = OpenOptions::new()
-        //     .create(true)
-        //     .append(true)
-        //     .open("test_data_beta_runner/data.csv")?;
-       let mut writer = WriterBuilder::new().from_writer(file);
+    //    let (sym_cost,input_para) =xgboost(&output);
+    //    let file = File::create("test_data_beta_runner/data.csv")?;
+    //     // let file = OpenOptions::new()
+    //     //     .create(true)
+    //     //     .append(true)
+    //     //     .open("test_data_beta_runner/data.csv")?;
+    //    let mut writer = WriterBuilder::new().from_writer(file);
         
-       let mut row_data: Vec<String> = input_para
-            .iter()
-            .map(|&value| value.to_string())
-            .collect();
-       let str_key=format!("op{}",count);
-       row_data.push(str_key); 
-       writer.write_record(&row_data)?;
+    //    let mut row_data: Vec<String> = input_para
+    //         .iter()
+    //         .map(|&value| value.to_string())
+    //         .collect();
+    //    let str_key=format!("op{}",count);
+    //    row_data.push(str_key); 
+    //    writer.write_record(&row_data)?;
         
-       writer.flush()?;
+    //    writer.flush()?;
+
        count += 1;
    }
     Ok(())

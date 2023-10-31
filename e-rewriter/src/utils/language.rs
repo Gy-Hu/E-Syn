@@ -121,14 +121,13 @@ pub fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
     rws.extend(rewrite!("consensus2"; "(* (* (+ ?b ?c) (+ (! ?b) ?d)) (+ ?c ?d))" <=> "(* (+ ?b ?c) (+ (! ?b) ?d))"));
     rws.extend(rewrite!("de-morgan1"; "(! (* ?b ?c))" <=> "(+ (! ?b) (! ?c))"));
     rws.extend(rewrite!("de-morgan2"; "(! (+ ?b ?c))" <=> "(* (! ?b) (! ?c))"));
-
     rws
 }
 
 
 
 
-// test_rules_most
+//test_rules_most
 // pub fn make_rules() -> Vec<Rewrite<Prop, ConstantFold>> {
 //     vec![
 //         //version 1
