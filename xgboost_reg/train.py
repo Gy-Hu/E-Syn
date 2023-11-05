@@ -19,11 +19,12 @@ def r(y_true, y_pred):
 
 df = pd.read_csv('collect_dataset/fuzz_circuit_analysis_merge_size_51000_23_10_26.csv')
 X = df.iloc[:, :8].values
-y = (0.4 * df['area'] + 0.6 * df['delay']).values
+#y = ( df['area'] * df['delay']).values
+y = df['delay'].values
 
 # Scale the features
-#scaler = StandardScaler()
-#X = scaler.fit_transform(X)
+# scaler = StandardScaler()
+# X = scaler.fit_transform(X)
 
 # Split the dataset into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)

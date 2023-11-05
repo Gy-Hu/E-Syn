@@ -151,3 +151,5 @@ xgboost_reg/aigfuzz_small
 !xgboost_reg/collect_dataset
 !xgboost_reg/trained_model
 !xgboost_reg/feature_importance.ipynb
+__graph_dot.pdf
+res_visualization/

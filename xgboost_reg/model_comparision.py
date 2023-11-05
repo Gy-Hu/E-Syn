@@ -10,9 +10,10 @@ data = pd.read_csv('/data/guangyuh/coding_env/E-Brush/xgboost_reg/collect_datase
 # X = data.drop('delay', axis=1)
 # y = data['delay']
 # take the first 8 features
-X = data.iloc[:, :8]
+X = data.iloc[:, :8].values
 # y is area * 0.4 + delay * 0.6
-y = (0.4 * data['area'] + 0.6 * data['delay'])
+#y = (0.4 * data['area'] + 0.6 * data['delay'])
+y = data['delay'].values
 
 def cross_val_evaluate(model, X, y, n_folds=10):
     mae_scores = -cross_val_score(model, X, y, cv=n_folds, scoring='neg_mean_absolute_error')
@@ -45,7 +46,7 @@ elastic_net = ElasticNet()
 elastic_net_mae, elastic_net_rrse, elastic_net_r = cross_val_evaluate(elastic_net, X, y)
 
 # KNN Regression
-knn = KNeighborsRegressor(n_neighbors=5)
+knn = KNeighborsRegressor()
 knn_mae, knn_rrse, knn_r = cross_val_evaluate(knn, X, y)
 
 print("Linear Regression: MAE={}, RRSE={}, R={}".format(lr_mae, lr_rrse, lr_r))

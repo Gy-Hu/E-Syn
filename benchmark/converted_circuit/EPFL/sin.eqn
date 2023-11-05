@@ -1,4 +1,4 @@
-# Equations for "/data/guangyuh/coding_env/E-Brush/benchmark/EPFL/sin" written by ABC on Wed Aug 30 14:44:47 2023
+# Equations for "./sin" written by ABC on Wed Sep 20 21:13:01 2023
 INORDER = a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] a[10] a[11] 
  a[12] a[13] a[14] a[15] a[16] a[17] a[18] a[19] a[20] a[21] a[22] a[23];
 OUTORDER = sin[0] sin[1] sin[2] sin[3] sin[4] sin[5] sin[6] sin[7] sin[8] 
