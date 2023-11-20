@@ -153,5 +153,8 @@ xgboost_reg/aigfuzz_small
 !xgboost_reg/feature_importance.ipynb
 __graph_dot.pdf
 res_visualization/var/
-res_visualization/var/*.pdf
+res_visualization/*.pdf
 !res_visualization/PlotResult.ipynb
+res_visualization/extractor_compare/
+res_visualization/pareto/
+res_visualization/pareto_old/
