@@ -1,4 +1,8 @@
-# E-Brush
+# E-Syn
+
+## Note
+
+For reproduce the result of DAC 2024 paper, check `new` branch.
 
 ## Prerequisite
 
@@ -29,54 +33,3 @@
 5. Comperhensive digital benchmark: https://ddd.fit.cvut.cz/www/prj/Benchmarks/index.php?page=download
 6. Addtional benchmark1: https://pld.ttu.ee/~maksim/benchmarks/
 7. Addtional benchmark2: https://github.com/jpsety/verilog_benchmark_circuits
-
-## TODO
-
-- [ ] Enhance feature engineering
-  - [ ] Average fan-out (graph matrix, graph porperty)
-  - [ ] graph kernel
-  - [ ] fan-out (e-class shared)
-  - [ ] Eigen vector (networkx) - dot (one value)
-  - [ ] e-graph + GNN 
-  - [ ] Pi - PO size
-  - [ ] Top-k (average) ASTdepth
-- [ ] Fix the random seed (the extract result is reproduciable)
-- [ ] Support recursive parsing (a * b * c) -> * is arbitrary number of operators
-- [ ] Using DC to read large eqn file at first
-- [ ] Do code review for e-rewriter (any bugs? verify rules? make more efficient? support constant rewrite?)
-- [ ] Review rewrite rules/cost function/egraph selection/egraph merging (analyzer)
-- [ ] Concurrent parsing egg output and using metric (0.6 * delay + 0.4 * area) to select the best optimization result
-- [ ] More features for regression
-  - [ ] Leaf node and its responding boolean operation
-- [ ] More customized for unfolding formula in parsing circuit (smart unfolding strategy, heuristic unfolding strategy, naive unfolding strategy, etc)
-  - [ ] Unfold the longest critical path at first
-  - [ ] Unfold according to bfs/dfs depth ordering
-  - [ ] Unfold according to the number of lines
-  - [ ] Unfold two times/one time (naive unfolding strategy)
-- [ ] Modify Analyzer in egg
-- [x] Enhancing ABC to support reading large eqn file -> in dev branch
-- [X] Support constant value (0, 1) for parsing and rewriting
-- [X] Add bidirectional rewrite rules + constant rewrite rules
-- [X] Add strong regressor for egraph selection (using linfa?)
-- [X] Richer feature for regression (propagation depth, number of nodes, number of edges, number of gates, number of inputs, number of outputs, number of operations, number of constants, etc)
-  - [X] Sum of liberty * node number
-  - [X] Average liberty * node number
-  - [X] Total number of nodes
-- [X] Add multiple-cost function (Astsize, Astdepth, cell library info, etc)
-- [X] Add more variants for the e-graph generation -> enlarge the fluctuation range (e.g. using different cost function, different e-graph merging strategy, etc) -> check how the extractor extract same least cost result?
-- [X] Add experiment to check result without abc optimization
-- [X] Regressor in large circuit (mixed large and small circuit) -> modify data collection script
-- [X] Add node cost to cost function
-- [X] Fix bugs in SymREG - some circuit missed up
-- [X] Support parallel running for multiple egraph rewriting output
-- [X] If eqn fully unfold, then do not concat tmp variable ( `new_nxx_` )
-- [X] Add more rewrite rules in egg
-- [X] Shell script to run all benchmarks
-- [X] Fine-tune the parameters of egg and symREG
-- [X] Using 10000/lines as the auto-termination unfolding condition
-- [X] Add cec check before and after eqn unfolding
-- [X] Add BDD to do equivalence checking
-- [X] Using monotonic cost function in symREG
-- [X] Optimize parser 2, avoid duplicated parsing
-- [X] BUG: EPFL max, 10 times of unfolding, not pass cec in eqn check -> Fixed: eqn unfold too many times
-- [X] BUG: C6288 unfold 1 time, will meet the bug to parse -> Fixed: eqn unfold too many times
